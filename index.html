@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="style.css" rel="stylesheet">
+      <link rel="stylesheet" href="mediaqueries.css"/>
+      <title>M.A.W </title>
+    </head>
+<body>
+
+    <div class="text-wrapper">
+     <!-- <h1>aRT X web</h1>-->
+      <h1>a<img src="https://radostan.rs/wp-content/uploads/2023/07/R.png">t X web</h1>
+      <h1>a<img src="https://radostan.rs/wp-content/uploads/2023/07/R.png">t X web</h1>
+      <h1>a<img src="https://radostan.rs/wp-content/uploads/2023/07/R.png">t X web</h1>
+    </div>
+
+
+<section id="img-intro">
+        <div class="container-intro"></div>
+    </div>
+   
+
+       </section>
+        <nav id="desktop-nav">
+            <!--<div class="logo">Art' X Web</div>-->
+            <div>
+               <ul class ="nav-links">
+                <li><a href="#profile">Profile</a></li>
+                 <li><a href="#about-me"> About</a></li>
+                 <li><a href="#experience"> Experience</a></li>
+                 <li><a href="#hobies"> Passions</a></li>
+                 <li><a href="#contact"> Contact</a></li>
+               </ul>
+           </div>
+        </nav>
+
+        <nav id="hamburger-nav">
+           <div class="logo"> Art' X Web </div>
+            
+            <div class="hamburger-menu">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>     
+                <div class="menu-links">
+                 <li><a href="#about-me" onclick="toggleMenu()"> About</a></li>
+                 <li><a href="#experience" onclick="toggleMenu()"> Experience</a></li>
+                 <li><a href="#hobies" onclick="toggleMenu()"> Passions</a></li>
+                 <li><a href="#contact" onclick="toggleMenu()"> Contact</a></li>
+                </div>
+            </div>
+          </div>
+        </nav>
+
+
+        <section id="profile" class="section animation1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+          <div class="section__pic-container">
+            <img src="./picture/picture_profile.png" alt="">
+           </div>
+            <div class="section__text">
+                <p class="section__text___p1">Hello I'm</p>
+                <h1 class="title">Mohsine Essat</h1>
+                <p class="section__text___p2"> Frontend Developper Junior</p> 
+                <p class="p">48°52'11"N  2°18'59"E<br> Paris, France</p> <br>
+                <div class="btn-container">
+                    <button 
+                       class="btn btn-color-2" 
+                       onclick="window.open('picture/Mohsine Essat CV.pdf')"> 
+                     Download CV
+                    </button>
+                    <button class="btn btn-color-1" onclick="location.href='./#contact'">
+                        Contact Info
+                    </button>
+                </div>
+                <div id="socials-container">
+                    <img src="https://github.com/Ade-mir/html-css-js-portfolio-tutorial-2/blob/main/assets/linkedin.png?raw=true"
+                      alt="My LinkedIn profile" 
+                      class="icon" 
+                      onclick="location.href='https://www.linkedin.com/in/mohsine-e-44368b1a0/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app'"
+                    />
+                    <img src="https://github.com/Ade-mir/html-css-js-portfolio-tutorial-2/blob/main/assets/github.png?raw=true" 
+                     alt="My Github profile" 
+                     class="icon" 
+                     onclick="location.href='https://github.com/mohsine92'"
+                    /> 
+                </div>
+              </div>
+        </section> 
+        <section id="about-me">
+          <p class="section__text__p1">Get To Know</p>  
+          <h1 class="title1">About Me </h1> 
+           <br>
+           <div class="details-container2"> 
+            <img src="https://www.svgrepo.com/show/308016/programmer-software-engineer-coder-software-developer.svg" 
+             alt="Experience icon" 
+             class="icon"
+            />
+         <h3 class="h3">Experience</h3>
+         <h6 class="h3-details">+2 years <br  /> Frontend Development </h6>
+           
+      <br><br>
+        <h2>0</h2><br>
+        <br>
+            <img src="https://github.com/Ade-mir/html-css-js-portfolio-tutorial-2/blob/main/assets/education.png?raw=true" 
+             alt="Education icon" 
+             class="icon"
+            />
+            <h3 class="h3">Education</h3>
+            <h6 class="h3-details">Bachelor Concepteur Développeur d'Application<br />Licence Degree</h6>
+        </div>
+    </div>
+    <br> <br>
+                  <h1> As a Frontend web developer,
+                    I am much more than just a coder I am passionate about innovation, art and learn new things, 
+                   constantly eager to dive into the technologies of today and tomorrow.
+                     My creativity is expressed through every line of code I write, with an ongoing commitment to creating memorable user.
+                      Ready to meet the challenges of the constantly evolving web world, I am a strong advocate of the fusion of passion and technology.
+                  </h1>
+                  <br> 
+        </section>
+
+    
+    
+<br>
+<br>
+<br>
+
+
+
+
+<!--<div class="image-point">
+  <ul>
+    <li><a href="#profile">Profile</a><img src="./picture/affiche.jpeg" class="image"></li>
+    <li><a href="#about-me">About</a><img src="https://i.pinimg.com/564x/91/23/f4/9123f4050702790aced6618757771842.jpg" class="image"></li>
+    <li><a href="#experience">Experience</a><img src="https://i.pinimg.com/564x/91/23/f4/9123f4050702790aced6618757771842.jpg" class="image"></li>
+    <li><a href="hobies">Passions</a><img src="./idea/original_9813ca718e1af63392fcf53b46ae6c71.png" class="image"></li>
+    <li><a href="#contact">Contact</a><img src="./idea/freeyhinking.jpeg" class="image"></li>
+  </ul>
+  </div>-->
+
+
+
+    <section id="experience" class="section animation3" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
+     <p class="section__text__p1">Explore My</p>
+     <h1 class="title1">Experience </h1>
+      <br>
+      <h2 class="experience-sub-title ">Tech Development </h2>
+<br>
+<br>
+<div class="logos">
+  <div class="logos-slide">
+    <img src="./logo/HTML5_logo_black.svg (1).png" />
+    <img src="./logo/css_shiled_logo_icon_145359 (1).png" />
+    <img src="./logo/613b64fe30e8530004ba3a03 (1).png" />
+    <img src="./logo/Java-Logo (1).png" />
+    <img src="https://iconape.com/wp-content/png_logo_vector/react.png" />
+    <img src="./logo/Procreate-Emblem (1).png" />
+    <img src="https://logowik.com/content/uploads/images/git6963.jpg" />
+    
+  </div>
+
+  <div class="logos-slide">
+    <img src="./logo/HTML5_logo_black.svg (1).png" />
+    <img src="./logo/css_shiled_logo_icon_145359 (1).png" />
+    <img src="./logo/613b64fe30e8530004ba3a03 (1).png" />
+    <img src="./logo/Java-Logo (1).png" />
+    <img src="https://iconape.com/wp-content/png_logo_vector/react.png" />
+    <img src="./logo/Procreate-Emblem (1).png" />
+    <img src="https://logowik.com/content/uploads/images/git6963.jpg" />
+    
+  </div>
+</div>
+
+		
+    </section>
+   
+
+
+
+      <section id="hobies" class="section animation4" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
+        <p class="title-hobies"> Welcome to my</p>
+<h1 class="title1"> Passions </h1> 
+<div class="containers">
+
+ 
+   <img src="https://i.pinimg.com/564x/d2/19/85/d2198577aa7626389e3aa1f507bcd5fb.jpg" class="slides" /> 
+   <div class="container-text">
+    <p class="p"> Chess <br><br> The Art of Logic and Strategy</p> 
+   </div>
+
+
+
+   <img src="https://i.pinimg.com/564x/ed/b8/d1/edb8d1186ea031e0a32ffbb30ccd20ed.jpg" class="slides" />
+   <div class="container-text">
+    <p class="p"> Travel & Discovery  <br><br> Curious to learn about people all around me and create together new things </p> 
+   </div>
+
+   
+  <img src="https://i.pinimg.com/564x/71/32/44/713244e2d5334e0fa57bb855736acfed.jpg" class="slides" />
+  <div class="container-text">
+    <p class="p"> Architecture <br>&<br> attention to detail</p> 
+   </div>
+
+  <img src="https://i.pinimg.com/564x/25/4f/9c/254f9c6edf21f16ba1fdcb9d3a4ab32b.jpg" class="slides" />
+  <div class="container-text">
+    <p class="p">Innovation<br>&<br> Creation of new practical tools, Digital and Physical </p> 
+   </div>
+      </div>
+       </section>  
+   
+      <br>
+      <br>
+
+
+
+<section id="contact">
+        <p class="section__text__p1">Get in Touch ↘︎</p>
+        <h1 class="title1">Contact me </h1> 
+          <div class="contact-info-upper-container">
+            <div class="contact-info-container">
+              <img src="https://github.com/Ade-mir/html-css-js-portfolio-tutorial-2/blob/main/assets/email.png?raw=true"
+                alt="Email icon"
+               class="icon contact-icon email-icon" 
+              />
+              <p><a href="mailto:mohsineessatpro@gmail.com">mohsineessatpro@gmail.com →</a></p>
+            </div>
+            <div class="contact-info-container">
+                <img src="https://github.com/Ade-mir/html-css-js-portfolio-tutorial-2/blob/main/assets/linkedin.png?raw=true"
+                  alt="LinkedIn icon"
+                 class="icon contact-icon" 
+                />
+                  <p><a href="https://www.linkedin.com/in/mohsine-e-44368b1a0/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app'">LinkedIn →</a> </p>
+          </div>    
+    </section>
+
+      <footer>
+        <nav>
+            <div class="nav-links-conatiner">
+                <ul class ="nav-links">
+                  <li><a href="#profile">Profile</a></li>
+                    <li><a href="#about"> About</a></li>
+                    <li><a href="#experience"> Experience</a></li>
+                    <li><a href="#hobies"> Passions</a></li>
+                    <li><a href="#contact"> Contact</a></li>
+                  </ul>
+        </div>
+        </nav>
+       <p class="footer-p">Copyright &#169; 2024 Mohsine Essat. All Rights Reserved.</p>
+       <br>
+       <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+
+       
+       <br>
+
+
+       <div class="text-wrapper">
+        <h1> aRT X web</h1>
+        <h1>aRT X web</h1>
+        <h1>aRT X web</h1>
+        <h1>aRT X web</h1>
+       </div> 
+
+            <img src="./picture/Latar BelakangGaris Horizontal Garis Garis Gradien Pola Halftone Latar Belakang Monokrom Digital, Garis, Gradien, Horisontal Latar Belakang untuk Unduhan Gratis.jpeg" class="terra-img">
+          
+      </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
+

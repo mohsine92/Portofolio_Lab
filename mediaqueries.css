@@ -1,0 +1,403 @@
+@media screen and (max-width: 1400px) {
+
+    #profile {
+       height: 83vh;
+    }
+
+    #about,
+    #experience,
+    #contact,
+    #hobies {
+      height: 40vh;
+      justify-content: center;
+    }
+
+    .about-containers {
+       flex-wrap: wrap;
+    }
+
+    #contact {
+        height: fit-content;
+    }
+
+    .logo {
+     width: 60%;
+    height: 50%;
+    
+    }
+
+  .horizon-img {
+    width: 100%;
+  }
+
+body {
+  margin: 0;
+}
+
+
+.title,
+.title1 {
+  font-size: 5rem;
+}
+
+  }
+
+
+
+
+
+@media screen and (max-width: 1200px) {
+
+.image-point {
+  height:10vh;
+}
+
+
+
+  .image-point  ul li a {
+    font-size: 30px;
+  }
+
+
+
+.logos::before,
+.logos::after {
+  background: none;
+}
+
+#about {
+  background-size: 300px;
+}
+
+h5 {
+  font-size: 10px;
+}
+
+
+
+.horizon-img {
+width: 55em;
+}
+
+  .logo1 img {
+    width: 10rem;
+  }
+
+  .logo1 {
+    text-align: center;
+    margin-top: 10%;
+display:flex;
+font-size: 15vh;
+font-weight: 5px;
+  }
+
+  #desktop-nav {
+    display:flex;
+  }
+
+  #img-intro {
+    display: flex;
+    
+   }
+
+    #hamburger-nav {
+      display:none;
+      background: none;
+    }
+
+    #experience,
+    .experience-details-container {
+        margin-top: 2rem;
+    }
+
+    #profile,
+    .section-container {
+        display: block;
+    }
+
+
+    section,
+    .section-container {
+        height: fit-content;
+    }
+
+
+    .section__pic-container {
+        width: 275px;
+        height: 275px;
+        margin : 0 auto 2rem;
+    }
+    .about-containers {
+    margin-top: 0;
+     } 
+   
+ #about-me:hover {
+  transform: none;
+ }
+    .title {
+      font-size: 5rem;
+    }
+    #about-me .title1 {
+      font-size:  5rem; ;
+    }
+
+  .details-container,
+  .details-container2 {
+    margin-right: 20%;
+    margin-left: 20%;
+  }
+
+  #about-me h1{
+    font-size: 30px;
+  }
+  
+  #about-me h2 {
+    font-size: 8rem;
+  }
+
+    .title1 {
+      font-size: 5rem;
+
+    }
+
+  .logo{
+    display: flex;
+  }
+    
+}
+
+.slider { 
+  height: 10%;
+  width: 100%;
+}
+
+    @media screen and (max-width: 600px) {
+
+#about-me:hover {
+  transform: none;
+}
+
+.h3,
+.h3-details {
+color: black;
+font-size: 8px;
+}
+
+#about-me .title1 {
+  text-align: center;
+  display: block;
+}
+     
+#about-me h2 {
+  -webkit-text-stroke: 2px white;
+}
+      .details-container2 {
+          padding: 2%;
+          flex: 1;
+          border-radius: 10%;
+          border: 0.1px solid rgb(0, 0, 0);
+          text-align: center;
+       margin: auto;
+          border-bottom: none;
+      }
+
+      #about-me .title1 {
+        font-size: 2.4rem;
+      }
+
+#about-me h1 {
+  font-size: 20px;
+  -webkit-text-stroke: 0.6px rgb(0, 0, 0);
+}
+
+    #about-me {
+      background-size: 100%;
+    }
+      body {
+        margin: 0;
+      }
+      .scrolling-text-container {
+        display: none;
+      }
+
+      #contact,
+      footer {
+        height: 40vh;
+      }
+
+#profile {
+  background: url(./picture/background_body.jpeg) bottom;
+  border: 1px solid black;
+  border-radius: 10%;
+  height: 83vh;
+   }
+
+
+
+   .title {
+-webkit-text-stroke: black;
+   }
+
+.text-container {
+  margin-top: 0%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+
+        article {
+          font-size: 1rem;
+        }
+        footer nav {
+          height: fit-content;
+          margin-bottom: 2rem;
+        }
+        .about-containers,
+        .contact-info-upper-container,
+        .btn-container {
+          flex-wrap: wrap;
+   
+        }
+        .contact-info-container {
+          margin:0; 
+        }
+
+        .contact-info-container p,
+        .nav-links li a {
+          font-size: 1rem;
+          
+        }
+
+        .experience-sub-title {
+          font-size: 1.25rem;
+        }
+
+        .logo {
+          font-size: 1.5rem;
+        }
+
+
+
+ #about:hover {
+  transform: none;
+ }
+
+
+        .nav-links {
+          flex-direction: column;
+          gap: 0.5rem;
+          text-align: center;
+          margin-top: 100px;
+        }
+
+        .section__pic-container {
+          width: auto;
+          height: 46vw;
+          justify-content: center;
+        }
+
+        .section__text___p2 {
+          font-size: 1rem;
+        }
+       
+        .title,
+        .title1 {
+          font-size: 2.4rem;
+        }
+        
+        .text-container {
+          text-align: justify;
+        
+        }
+        .logo{
+          margin-right: 70%; 
+          border-radius: 70%+70%;
+        }
+
+  .menu-links a {
+    font-size: 1rem;
+  }
+
+ 
+
+  p{ 
+  font-size: 0.7rem; 
+  }
+   
+
+
+.clock{
+  display: flex;
+  text-align: center;
+margin-left: 10%;
+}
+
+
+
+
+.slider { 
+  height: 10%;
+  width: 100%;
+}
+
+
+.text-container {
+  font-size: 12px;
+  text-align: justify;  
+}
+
+
+#img-intro {
+  margin-top: 0;
+    display: flex;
+    height: 10;
+}
+
+.text-wrapper {
+  display: none;
+}
+
+
+#hamburger-nav {
+  margin: 10%;
+  display: flex;
+  background: none;
+}
+
+.logo {
+  color: black;
+  display: flex;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+#desktop-nav {
+  display: none;
+  margin-top: 10%;
+}
+.logo1 {
+  display: none;
+
+}
+
+h5 {
+  margin-top: 1%;
+  font-size: 0.4rem;
+}
+
+
+.horizon-img {
+  margin: 0;
+}
+
+
+
+.clock{
+  display: flex;
+  margin-left: 52%;
+}
+
+
+
+
+
+    }
