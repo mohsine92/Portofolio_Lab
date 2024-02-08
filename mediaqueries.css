@@ -179,7 +179,7 @@ font-weight: 5px;
     }
 
   .logo{
-    display: flex;
+    display: none;
   }
     #contact .title1 {
       font-size: 5rem;
@@ -195,6 +195,10 @@ font-weight: 5px;
 
       
 
+      .text-wrapperr h1 {
+display: flex;
+font-size: 20vh;
+      }
 
 
 #about-me  h1 {
@@ -241,14 +245,22 @@ font-size: 8px;
       #about-me .title1 {
         font-size: 2.4rem;
         color: rgb(0, 0, 0);
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        margin: 0%;
       }
 
 #about-me h1 {
   font-size: 16px;
+  font-weight: 10;
   text-align: center;
-  margin: auto;
-  color: rgb(255, 255, 255);
+  margin: 15%;
+  color: rgb(0, 0, 0);
   -webkit-text-stroke: 0.5px rgb(0, 0, 0);
+  font-family: 'Rubik Glitch Pop', system-ui;
+
 }
 
 #about-me .section__text__p1{
@@ -268,7 +280,7 @@ font-size: 8px;
       }
 
 #profile {
-  background: url(./picture/background_body.jpeg)  top ;
+  background: url(./Aura.png)   no-repeat center, rgb(255, 255, 255) ;
   background-size: 100%;
   border-radius: 10%;
   height: 20vh;
@@ -287,7 +299,7 @@ color: rgb(0, 0, 0);
    }
 
    .p {
-    font-size: 17px;
+    font-size: 10px;
    }
    
 .text-container {
@@ -329,6 +341,20 @@ color: rgb(0, 0, 0);
           font-size: 1.5rem;
         }
 
+#experience .title1,
+#hobies .title1 {
+  color: rgb(0, 0, 0);
+  -webkit-text-stroke: 0px;
+
+}
+
+.container-experience {
+  margin-top: 50%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+
+}
 
 
  #about:hover {
@@ -399,13 +425,13 @@ color: rgb(0, 0, 0);
 
 #img-intro {
   margin-top: 0;
-    display: flex;
-    height: 10;
+    display: none;
+    height: 20;
     background: url(./idea/296FAE26-2B47-4B35-A075-04F199474656.gif) center;
 }
 
 .text-wrapper {
-  display: flex;
+  display: none;
   margin-bottom: 0%;
   border: none;
 }
@@ -419,7 +445,9 @@ color: rgb(0, 0, 0);
 
 .logo {
   display: flex;
-  font-size: 3em;
+  font-size: 1.5em;
+  border-radius: 100%;
+  border: 1px solid black;
 }
 
 #desktop-nav {
@@ -432,7 +460,7 @@ color: rgb(0, 0, 0);
 
 
 .logo1 {
-  display: none;
+  display: flex;
 
 }
 
@@ -453,12 +481,27 @@ h5 {
 
 
 .section__text{
-margin-top: 50%;
+margin-top: 70%;
 }
 
 #contact .title1{
        font-size: 2.8rem;
-  ;
+  
 }
 
+.section__text__p1 {
+  color: black;
+}
+
+#experience{
+  border-radius: 30%;
+  margin-bottom: 50%;
+  margin-top: 50%;
+    background: url(https://i.pinimg.com/originals/28/06/32/280632245663b095081f37cc49a0f17b.gif) no-repeat fixed center;
+    background-size: cover;
+}
+
+#hobies  {
+  display: none;
+}
     }

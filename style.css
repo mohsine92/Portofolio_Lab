@@ -36,10 +36,31 @@ padding: 0;
 
 
 
+.text-wrapperr {
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
+cursor: vertical-text;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
 
 
 
-
+.text-wrapperr h1 {
+  display: none;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  -webkit-text-stroke: 5px #000000;
+  color:hsl(0, 0%, 0%);
+  font-size: 30vh;
+  font-family: 'TheFont';
+  -webkit-text-stroke-width: 0.1px;
+  margin-top: 5%;
+  animation:  letter-breathe 3s ease-in-out infinite;;
+}
 
 .text-wrapper {
   /*border-top: 2px solid #000000;*/
@@ -304,7 +325,7 @@ a:hover {
    /* background-color: #00000011;*/
     width: 10%;
     height: 50%;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     border-radius: 40%/50%;
@@ -370,7 +391,7 @@ a:hover {
     height: 2px;
     background-color:rgb(255, 255, 255);
     border: 2px solid rgb(0, 0, 0);
-    border-radius: 100%;
+    border-radius: 10%;
     transition: all 0.5 ease-in-out;
 }
 
@@ -881,13 +902,10 @@ margin-left:2% ;
 transform: rotate(0.5turn);
 }
 
-/*.boule {
-  width: 10%;
-}*/
+
 
 .details-container2 {
   background: url(./idea/FAC9E293-1DC5-4979-8AB7-21FDC50A7C03_1_201_a.jpeg) center;
- /* background: url(https://i.pinimg.com/564x/91/23/f4/9123f4050702790aced6618757771842.jpg) center;*/
   background-size: cover ;
     display:flow-root;
   border-radius: 10px;
@@ -907,11 +925,14 @@ transform: rotate(0.5turn);
 
 .h3 {
   color: rgb(255, 255, 255);
+  font-family: 'Rubik Glitch Pop', system-ui;
 
 }
 
 .h3-details{
    color: rgb(255, 255, 255);
+   font-family: 'Rubik Glitch Pop', system-ui;
+
     }
 
 
@@ -998,9 +1019,13 @@ ul li:hover .image {
     margin: 0;
 }
 
+
+
 #experience,
 #hobies {
-background: url(./idea/background-gradient.jpg) fixed ;
+background: url(https://i.pinimg.com/originals/28/06/32/280632245663b095081f37cc49a0f17b.gif) fixed ;
+background-size: cover;
+border-radius: 30%;
 }
 
 
