@@ -199,7 +199,7 @@ font-weight: 5px;
       .text-wrapperr h1 {
         margin-top: 15%;
 display: flex;
-font-size: 20vh;
+font-size: 15vh;
 color:    black; 
 ;
       }
@@ -284,7 +284,7 @@ font-size: 8px;
       }
 
 #profile {
-  background: url(./_\ \(13\).png) fixed   center, rgb(221, 255, 2);
+  background: url(./_\ \(13\).png) center;
   background-size: 120%;
   border-radius: 10%;
   height: 20vh;
@@ -307,7 +307,7 @@ color: rgb(255, 255, 255);
    }
 
    .p {
-    font-size: 5px;
+    font-size: 10px;
     color: white;
    }
    
