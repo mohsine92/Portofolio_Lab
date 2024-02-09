@@ -284,8 +284,7 @@ font-size: 8px;
       }
 
 #profile {
-  background: url(./_\ \(13\).png) center;
-  background-size: 120%;
+  background: url(./idea/background-gradient.jpg) center;
   border-radius: 10%;
   height: 20vh;
   margin-bottom: 50%;
@@ -511,7 +510,7 @@ margin-top: 70%;
   width: 3%;
   border-radius: 10px ;   
   margin: 20%;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(231, 231, 231, 0.737);
 
 }
 
@@ -523,7 +522,8 @@ margin-top: 70%;
 }
 
 .slides {
-  height: 30%;
+  box-shadow: 30px 30px 100px rgb(0, 0, 0);
+width: 20%;
 }
 
 #experience .title1,
