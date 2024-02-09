@@ -53,8 +53,6 @@ text-align: center;
   text-align: center;
   justify-content: center;
   align-items: center;
-  -webkit-text-stroke: 5px #000000;
-  color:hsl(0, 0%, 0%);
   font-size: 30vh;
   font-family: 'TheFont';
   -webkit-text-stroke-width: 0.1px;
@@ -390,8 +388,8 @@ a:hover {
     width: 100%;
     height: 2px;
     background-color:rgb(255, 255, 255);
-    border: 2px solid rgb(0, 0, 0);
-    border-radius: 10%;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 2%;
     transition: all 0.5 ease-in-out;
 }
 
@@ -1016,16 +1014,19 @@ ul li:hover .image {
     margin: auto;
     gap: 5rem;
     height: 100vh;
-    margin: 0;
+    margin-top: 20%;
+    
+    border-top-left-radius: 20%;
+border-top-right-radius: 20%;
 }
 
 
 
 #experience,
 #hobies {
-background: url(https://i.pinimg.com/originals/28/06/32/280632245663b095081f37cc49a0f17b.gif) fixed ;
-background-size: cover;
-border-radius: 30%;
+background: url(https://i.pinimg.com/originals/28/06/32/280632245663b095081f37cc49a0f17b.gif) fixed center  ;
+background-size: 100% ;
+
 }
 
 
@@ -1044,7 +1045,6 @@ border-radius: 30%;
     margin-bottom: 2rem;
     text-align: center;
     font-family: 'Rubik Glitch Pop', system-ui;
-    -webkit-text-stroke: 1px black;
 
 }
 
@@ -1063,6 +1063,7 @@ border-radius: 30%;
 }
 
 .logos {
+  padding-bottom: 35%;
   overflow: hidden;
   padding: 60px 0;
   width: 50%;
@@ -1285,6 +1286,9 @@ footer h1 {
 #hobies{
   height: 150vh;
 margin-bottom: 5%;
+border-bottom-left-radius: 20%;
+border-bottom-right-radius: 20%;
+
 }
 
 #hobies .title1 {
@@ -1294,16 +1298,11 @@ margin-bottom: 5%;
 .containers {
   display: flex;
     scroll-snap-type: x mandatory;
-    width: 80%;
-    height: auto;
+    width: 100%;
     margin: auto;
     overflow-x: auto;
     scrollbar-width:none;
-    border-radius:/*9%+40%;*/ 10%+10%;
-    border-top: 2.5px solid rgb(228, 228, 228);
-    border-bottom: 2.5px solid rgb(222, 222, 222);
     transform: none;
-background: rgba(68, 68, 68, 0);
     }
 
   #hobies:hover {
@@ -1312,8 +1311,11 @@ background: rgba(68, 68, 68, 0);
   }
 
 
+ 
+  
+
   .title-hobies {
-    color: #f9f9f9;
+    color: #ffffff;
     font-size: 100%;
     text-align: center;
   }
@@ -1324,13 +1326,12 @@ background: rgba(68, 68, 68, 0);
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 400px;
-    height: 400px;
+    width: 20%;
+    height: 50%;
     color: #fff;
     font-size: 4rem;
-    border-radius: 100px;
     margin: auto;
-
+border-radius: 10%;
 }
   .slides:hover {
     opacity: 0.7;
@@ -1356,9 +1357,10 @@ transition: opacity 2s;
   
 
   #hobies .p {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-size: 15px;
-    margin-top: 100%;
+    font-family: 'Rubik Glitch Pop', system-ui;
+font-weight: 100;
   }
 
   #hobies .title1{
@@ -1367,19 +1369,18 @@ transition: opacity 2s;
   }
 
   .container-text {
-    width: 150px;
-    height: 120%;
-    margin: 5.5%;
+   
+    background: rgb(255, 255, 255);
+    width: 10px;
+    height: 10%;
+    margin: 10%;
+background: rgb(255, 255, 255);
+border-radius: 10px    
 ;
   }
 
 
-/* Style du texte qui sera caché initialement */
-.p {
-    top: 50%;
-    left: 50%;
-    
-}
+
 
 
 

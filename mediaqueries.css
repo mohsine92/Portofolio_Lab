@@ -57,6 +57,7 @@ body {
 #experience .title1,
 #hobies .title1 {
   color: black;
+  -webkit-text-stroke: 0%;
 }
 
 
@@ -130,10 +131,7 @@ font-weight: 5px;
         display: block;
     }
 
-#profile {
-  background: url(./chrntskv\ \(2\).png)  bottom ;
 
-}
     section,
     .section-container {
         height: fit-content;
@@ -194,10 +192,16 @@ font-weight: 5px;
     @media screen and (max-width: 600px) {
 
       
+      .title-hobies {
+        color: black;
+      }
 
       .text-wrapperr h1 {
+        margin-top: 15%;
 display: flex;
 font-size: 20vh;
+color:    black; 
+;
       }
 
 
@@ -280,26 +284,31 @@ font-size: 8px;
       }
 
 #profile {
-  background: url(./Aura.png)   no-repeat center, rgb(255, 255, 255) ;
-  background-size: 100%;
+  background: url(./_\ \(13\).png) fixed   center, rgb(221, 255, 2);
+  background-size: 120%;
   border-radius: 10%;
   height: 20vh;
   margin-bottom: 50%;
    }
 
+   .section__text___p1 {
+color: white;
+   }
+
 #profile .title {
   font-size: 40px;
-  color: black;
+  color: rgb(255, 255, 255);
   -webkit-text-stroke: 0px;
 }
 
    .title,
    .section__text___p2 {
-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
    }
 
    .p {
-    font-size: 10px;
+    font-size: 5px;
+    color: white;
    }
    
 .text-container {
@@ -335,7 +344,13 @@ color: rgb(0, 0, 0);
         .experience-sub-title {
           font-size: 1.25rem;
           color: rgb(0, 0, 0);
+          -webkit-text-stroke: 0.5px rgb(0, 0, 0);
         }
+
+.containers {
+  border: none;
+  width: 100%;
+}
 
         .logo {
           font-size: 1.5rem;
@@ -344,8 +359,7 @@ color: rgb(0, 0, 0);
 #experience .title1,
 #hobies .title1 {
   color: rgb(0, 0, 0);
-  -webkit-text-stroke: 0px;
-
+          -webkit-text-stroke: 0.5px rgb(248, 248, 248);
 }
 
 .container-experience {
@@ -425,7 +439,7 @@ color: rgb(0, 0, 0);
 
 #img-intro {
   margin-top: 0;
-    display: none;
+    display: flex;
     height: 20;
     background: url(./idea/296FAE26-2B47-4B35-A075-04F199474656.gif) center;
 }
@@ -489,19 +503,48 @@ margin-top: 70%;
   
 }
 
-.section__text__p1 {
-  color: black;
+#experience .section__text__p1 {
+  color: rgb(0, 0, 0);
 }
 
-#experience{
-  border-radius: 30%;
-  margin-bottom: 50%;
+.container-text {
+  width: 3%;
+  border-radius: 10px ;   
+  margin: 20%;
+  background-color: rgb(255, 255, 255);
+
+}
+
+
+
+.containers {
+  width: 100%;
+
+}
+
+.slides {
+  height: 30%;
+}
+
+#experience .title1,
+#hobies .title1 {
+  color: rgb(0, 0, 0);
+          -webkit-text-stroke: 0.5px rgb(0, 0, 0);
+}
+
+#experience,
+#hobies {
+  background:url()  ;
+}
+
+#experience {
   margin-top: 50%;
-    background: url(https://i.pinimg.com/originals/28/06/32/280632245663b095081f37cc49a0f17b.gif) no-repeat fixed center;
-    background-size: cover;
+  border-radius: 0%;
 }
 
-#hobies  {
-  display: none;
+#hobies {
+ margin-bottom: 50% ;
+ border-radius: 0%;
+
 }
     }
