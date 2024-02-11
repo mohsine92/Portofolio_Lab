@@ -204,8 +204,8 @@ font-weight: 5px;
         margin-bottom: 5%;
 display: flex;
 font-size: 10vh;
-color:    black; 
-animation: rotateAnimation 5s linear infinite;
+color: black; 
+animation: rotateAnimation 5s linear infinite, letter-breathe 2s ease-in-out infinite;
       }
 
 
@@ -288,7 +288,7 @@ font-size: 8px;
       }
 
 #profile {
-  background: url(./picture/affiche.jpeg) center;
+  background: url(./picture/affiche.jpeg) left;
   border-radius: 10%;
   height: 20vh;
   margin-bottom: 50%;
@@ -440,7 +440,7 @@ color: rgb(0, 0, 0);
 
 #img-intro {
   margin-top: 0;
-    display: flex;
+    display: none;
     height: 10;
     background: url(./idea/296FAE26-2B47-4B35-A075-04F199474656.gif) center;
 }
@@ -573,11 +573,13 @@ display: none;
 
 
 .hobies-text {
+  border-top:none ;
   border-radius: 20%+20%;
   border-bottom: 1px solid rgb(255, 255, 255);
   padding: 10%;
   margin: 10%;
 }
+
 #hobies-phone .slides {
   width: 40%;
   box-shadow: 0px 100px 100px rgba(131, 131, 131, 0.519);

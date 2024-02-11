@@ -55,7 +55,7 @@ text-align: center;
   align-items: center;
   font-size: 30vh;
   font-family: 'TheFont';
-  -webkit-text-stroke-width: 0.1px;
+  -webkit-text-stroke: 1px white;
   animation:  letter-breathe 3s ease-in-out infinite;;
 }
 
