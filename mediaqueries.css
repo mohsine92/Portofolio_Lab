@@ -48,7 +48,9 @@ body {
 
 @media screen and (max-width: 1200px) {
 
-
+#hobies-phone {
+  display: none;
+}
 
 .image-point {
   height:10vh;
@@ -192,16 +194,18 @@ font-weight: 5px;
     @media screen and (max-width: 600px) {
 
       
+
       .title-hobies {
         color: black;
       }
 
       .text-wrapperr h1 {
-        margin-top: 15%;
+        margin-top: 35%;
+        margin-bottom: 5%;
 display: flex;
-font-size: 15vh;
+font-size: 10vh;
 color:    black; 
-;
+animation: rotateAnimation 5s linear infinite;
       }
 
 
@@ -212,7 +216,7 @@ color:    black;
 }
 
 #about-me {
-  height: 110vh;
+  height: 60vh;
   margin-bottom: 45%;
 }
 
@@ -223,7 +227,7 @@ color:    black;
 
 .h3,
 .h3-details {
-color: black;
+color: rgb(255, 247, 247);
 font-size: 8px;
 }
 
@@ -233,7 +237,7 @@ font-size: 8px;
 }
      
 #about-me h2 {
-  -webkit-text-stroke: 2px rgb(255, 255, 255);
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
 }
       .details-container2 {
           padding: 2%;
@@ -284,30 +288,30 @@ font-size: 8px;
       }
 
 #profile {
-  background: url(./idea/background-gradient.jpg) center;
+  background: url(./picture/affiche.jpeg) center;
   border-radius: 10%;
   height: 20vh;
   margin-bottom: 50%;
    }
 
    .section__text___p1 {
-color: white;
+color: rgb(0, 0, 0);
    }
 
 #profile .title {
   font-size: 40px;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   -webkit-text-stroke: 0px;
 }
 
    .title,
    .section__text___p2 {
-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);
    }
 
    .p {
     font-size: 10px;
-    color: white;
+    color: rgb(0, 0, 0);
    }
    
 .text-container {
@@ -370,16 +374,11 @@ color: rgb(255, 255, 255);
 }
 
 
- #about:hover {
-  transform: none;
- }
-
-
         .nav-links {
           flex-direction: column;
           gap: 0.5rem;
           text-align: center;
-          margin-top: 100px;
+          margin-top: 50px;
         }
 
         .section__pic-container {
@@ -435,11 +434,14 @@ color: rgb(255, 255, 255);
   text-align: justify;  
 }
 
+.terra-img {
+  height: 130%;
+}
 
 #img-intro {
   margin-top: 0;
     display: flex;
-    height: 20;
+    height: 10;
     background: url(./idea/296FAE26-2B47-4B35-A075-04F199474656.gif) center;
 }
 
@@ -510,20 +512,22 @@ margin-top: 70%;
   width: 3%;
   border-radius: 10px ;   
   margin: 20%;
-  background-color: rgba(231, 231, 231, 0.737);
-
+  background-color: rgb(229, 229, 229)
+  /* Ajoutez une marge entre chaque commentaire */
+ 
 }
 
 
 
 .containers {
-  width: 100%;
-
+width: 100%;
 }
 
 .slides {
   box-shadow: 30px 30px 100px rgb(0, 0, 0);
-width: 20%;
+width: 27%;
+    max-width: 100%; /* Ajustez la largeur maximale de l'image pour s'adapter au conteneur */
+
 }
 
 #experience .title1,
@@ -540,11 +544,50 @@ width: 20%;
 #experience {
   margin-top: 50%;
   border-radius: 0%;
+  margin-bottom: 0%;
 }
 
 #hobies {
  margin-bottom: 50% ;
  border-radius: 0%;
+display: none;
+}
 
+#hobies-phone {
+  display: block;
+  background-color: black;
+}
+
+
+#hobies-phone  {
+  width: 100%;
+  padding-bottom: 20%;
+  border-radius: 10px;
+  margin-bottom: 30%;
+}
+
+#hobies-phone .title1,
+.title-hobies{
+  color: white;
+}
+
+
+.hobies-text {
+  border-radius: 20%+20%;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  padding: 10%;
+  margin: 10%;
+}
+#hobies-phone .slides {
+  width: 40%;
+  box-shadow: 0px 100px 100px rgba(131, 131, 131, 0.519);
+}
+
+#hobies-phone .p {
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  margin: 3%;
+  font-family: 'Rubik Glitch Pop', system-ui;
+font-weight: 100;
 }
     }

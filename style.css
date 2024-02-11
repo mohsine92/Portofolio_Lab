@@ -703,7 +703,7 @@ h5 {
 .btn-color-1:hover,
 .btn-color-2:hover {
     transition: color 2s;
-    background: whitesmoke;
+    background: rgb(245, 245, 245);
   /* background: linear-gradient(to right, #ffffff, rgb(230, 227, 227)); */
     color: rgb(0, 0, 0);
     border: 1px solid rgb(0, 0, 0);
@@ -948,33 +948,44 @@ transform: rotate(0.5turn);
 
 .image-point {
   display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    justify-content: left;
+    align-items: left;
+    min-height: 80vh;
     overflow: hidden;
-    background: url(./idea/F13ABB9B-14F1-4B5C-AA51-406BCF7646E0_1_201_a.jpeg);
-    background-size: 110rem;
+    background: url(./idea/background-gradient.jpg) center;
+    margin-bottom: 10%;
 }
 
 .image-point ul {
   margin-right: 10px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: end;
     flex-direction: column;
-    text-align: center;
+    text-align: end;
+text-align:left;
+margin: auto;
+margin: 2%;
+
 }
 
 .image-point  ul li {
     list-style: none;
+    border-bottom: 0.5px solid white;
+    margin-bottom: 2%;
+
 }
+
+
 
 .image-point  ul li a {
   justify-content: space-around;
   letter-spacing: 5px;
+  text-align: end;
   position: relative;
-  font-size: 4em;
-  font-weight: 700;
+  font-size: 2em;
+  font-family: 'Rubik Glitch Pop', system-ui;
+  font-weight: 300;
   color: rgb(255, 255, 255);
   line-height: 1.25em;
   text-transform: uppercase;
@@ -1278,7 +1289,9 @@ footer h1 {
 
 /* PASSIONS*/
 
-
+#hobies-phone {
+  display: none;
+}
 
 #hobies{
   height: 150vh;
