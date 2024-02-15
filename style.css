@@ -755,7 +755,7 @@ h5 {
 #about-me {
  position: relative;
     gap: 5rem;
-    height: 180vh;
+    height: 100%;
     margin-bottom: 4%;
 margin: auto;}
 
@@ -1026,9 +1026,8 @@ ul li:hover .image {
     align-items: center;
     margin: auto;
     gap: 5rem;
-    height: 100vh;
-    margin-top: 20%;
-    
+    margin-top: 10%;
+    height: 10%;
     border-top-left-radius: 20%;
 border-top-right-radius: 20%;
 }

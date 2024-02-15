@@ -215,10 +215,6 @@ animation: rotateAnimation 5s linear infinite, letter-breathe 2s ease-in-out inf
 
 }
 
-#about-me {
-  height: 60vh;
-  margin-bottom: 45%;
-}
 
 #about-me:hover {
   transform: none;
@@ -288,7 +284,8 @@ font-size: 8px;
       }
 
 #profile {
-  background: url(./picture/affiche.jpeg) left;
+  background: url(https://i.pinimg.com/564x/10/b3/48/10b3489b159330d7c7416fbad7366045.jpg) top;
+  border: 0.5px solid black;
   border-radius: 10%;
   height: 20vh;
   margin-bottom: 50%;
@@ -366,8 +363,7 @@ color: rgb(0, 0, 0);
 }
 
 .container-experience {
-  margin-top: 50%;
-  height: auto;
+  margin-top: 0%;
   justify-content: center;
   align-items: center;
 
@@ -536,18 +532,17 @@ width: 27%;
           -webkit-text-stroke: 0.5px rgb(0, 0, 0);
 }
 
-#experience,
-#hobies {
-  background:url()  ;
-}
+
 
 #experience {
-  margin-top: 50%;
+  background: none;
   border-radius: 0%;
   margin-bottom: 0%;
+  height: auto;
 }
 
 #hobies {
+  background: none;
  margin-bottom: 50% ;
  border-radius: 0%;
 display: none;
