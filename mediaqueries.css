@@ -204,7 +204,7 @@ font-weight: 5px;
         margin-bottom: 5%;
 display: flex;
 font-size: 10vh;
-color: black; 
+color: rgb(0, 0, 0); 
 animation: rotateAnimation 5s linear infinite, letter-breathe 2s ease-in-out infinite;
       }
 
@@ -233,7 +233,8 @@ font-size: 8px;
 }
      
 #about-me h2 {
-  -webkit-text-stroke: 1px rgb(255, 255, 255);
+  -webkit-text-stroke: 0.5px rgb(0, 0, 0);
+  color: white;
 }
       .details-container2 {
           padding: 2%;
@@ -284,11 +285,11 @@ font-size: 8px;
       }
 
 #profile {
-  background: url(https://i.pinimg.com/564x/10/b3/48/10b3489b159330d7c7416fbad7366045.jpg) top;
-  border: 0.5px solid black;
-  border-radius: 10%;
+  background: url(./idea/_\ \(14\).png);
   height: 20vh;
   margin-bottom: 50%;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius:100% ;
    }
 
    .section__text___p1 {
@@ -569,7 +570,6 @@ display: none;
 
 .hobies-text {
   border-top:none ;
-  border-radius: 20%+20%;
   border-bottom: 1px solid rgb(255, 255, 255);
   padding: 10%;
   margin: 10%;
