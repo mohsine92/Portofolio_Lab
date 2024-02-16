@@ -40,6 +40,10 @@ body {
   font-size: 5rem;
 }
 
+
+
+
+
   }
 
 
@@ -47,6 +51,9 @@ body {
 
 
 @media screen and (max-width: 1200px) {
+  .link2 {
+    display: none;
+  }
 
 #hobies-phone {
   display: none;
@@ -193,8 +200,6 @@ font-weight: 5px;
 
     @media screen and (max-width: 600px) {
 
-      
-
       .title-hobies {
         color: black;
       }
@@ -233,8 +238,8 @@ font-size: 8px;
 }
      
 #about-me h2 {
-  -webkit-text-stroke: 0.5px rgb(0, 0, 0);
-  color: white;
+  -webkit-text-stroke: 0px rgba(0, 0, 0, 0.463);
+  color: rgb(0, 0, 0);
 }
       .details-container2 {
           padding: 2%;
@@ -285,11 +290,12 @@ font-size: 8px;
       }
 
 #profile {
-  background: url(./idea/_\ \(14\).png);
-  height: 20vh;
+  background: url("https://i.pinimg.com/564x/f2/0f/22/f20f22c0b96c927807029c6dbfbced9d.jpg")  ;
+ border-radius: 10%;
+  height: 10vh;
   margin-bottom: 50%;
-  border-bottom-left-radius: 100%;
-  border-bottom-right-radius:100% ;
+  /*border-bottom-left-radius: 100%;
+  border-bottom-right-radius:100% ;*/
    }
 
    .section__text___p1 {
@@ -308,6 +314,8 @@ color: rgb(0, 0, 0);
    }
 
    .p {
+    font-family: 'Rubik Glitch Pop', system-ui;
+font-weight: 100;
     font-size: 10px;
     color: rgb(0, 0, 0);
    }
@@ -390,7 +398,7 @@ color: rgb(0, 0, 0);
        
         .title,
         .title1 {
-          font-size: 2.8rem;
+          font-size: 3rem;
         
         }
         
@@ -457,9 +465,10 @@ color: rgb(0, 0, 0);
 
 .logo {
   display: flex;
-  font-size: 1.5em;
-  border-radius: 100%;
-  border: 1px solid black;
+  font-size: 1em;
+  border-radius: 100px;
+  border: 1.5px solid black;
+  padding: 1px;
 }
 
 #desktop-nav {
@@ -558,7 +567,6 @@ display: none;
 #hobies-phone  {
   width: 100%;
   padding-bottom: 20%;
-  border-radius: 10px;
   margin-bottom: 30%;
 }
 
@@ -586,5 +594,17 @@ display: none;
   margin: 3%;
   font-family: 'Rubik Glitch Pop', system-ui;
 font-weight: 100;
+}
+
+.link2 {
+  display: inline;
+}
+
+.menu-links .link1 {
+  display: none;
+}
+
+.link1 {
+  display: none;
 }
     }

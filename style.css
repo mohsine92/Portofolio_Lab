@@ -55,7 +55,6 @@ text-align: center;
   align-items: center;
   font-size: 30vh;
   font-family: 'TheFont';
-  -webkit-text-stroke: 1px white;
   animation:  letter-breathe 3s ease-in-out infinite;;
 }
 
@@ -400,7 +399,7 @@ a:hover {
     top: 150%;
     right: 0;
     border-radius: 0.4rem;
-    background: white;
+    background: rgba(255, 255, 255, 0.432);
     width: fit-content;
     max-height: 0;
     overflow: hidden;
@@ -1287,6 +1286,13 @@ footer h1 {
 
 
 /* PASSIONS*/
+
+.link2 {
+  display: none;
+}
+.link1 {
+  display: inline;
+}
 
 #hobies-phone {
   display: none;
