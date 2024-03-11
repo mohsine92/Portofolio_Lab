@@ -104,6 +104,7 @@ transition: filter 2s;
 }
 
 #img-intro {
+  display: none;
   filter:  sepia(60%);
   background: url(./idea/tim\ rodenbröker\ creative\ coding\ \(1\).gif) fixed center;
   /*background: url(https://i.pinimg.com/originals/a6/e1/fd/a6e1fd3111e7d499806bec09c00a3012.gif) center no-repeat;*/
@@ -374,23 +375,12 @@ a:hover {
     cursor: pointer;
 }
 
-.hamburger-icon:hover {
-  transform: rotate(0.5turn);  
-  transition: transform 2s;
-}
-
-.hamburger-icon:not(:hover){
-  transform: rotate(0turn);  
-  transition: transform 2s;
- }
-
 .hamburger-icon span{
     width: 100%;
     height: 2px;
     background-color:rgb(255, 255, 255);
-    border: 1px solid rgb(0, 0, 0);
-    border-radius: 10px;
-    padding: 3%;
+    border: 0.5px solid rgb(0, 0, 0);
+    padding: 1.8%;
     transition: all 0.5 ease-in-out;
 }
 
@@ -571,13 +561,13 @@ h5 {
 .title {
   text-align: center;
   font-size: 10.2rem;
-  color: rgba(0, 0, 0, 0.195);
-  -webkit-text-stroke: 1px rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
 
 
 
 .title1 {
+  text-transform: uppercase;
   font-variation-settings: "wght" 100, "ital" 0;
     font-family: Oddval Variable;
     text-align: center;
@@ -775,16 +765,16 @@ line-height: 1;
   cursor:e-resize;
   letter-spacing: 2px;
    text-align:end;
-    color: rgba(255, 255, 255, 0);
+    color: rgb(0, 0, 0);
     margin-right: 2%;
-  -webkit-text-stroke: 0.9px rgb(0, 0, 0);
-  font-family: Oddval Variable;
- /*animation-duration: 3s;
+    font-weight: 100;
+    font-family: "Inter", sans-serif;
+    /*animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-name: change;
   transition-timing-function: ease-in-out;
   font-variation-settings: "wght" 100, "ital" 0;*/
-font-size: 40px;
+font-size: 30px;
 }
 
 #about-me .title1 {

@@ -66,7 +66,7 @@ body {
 #experience .title1,
 #hobies .title1 {
   color: black;
-  -webkit-text-stroke: 0%;
+  -webkit-text-stroke: 0px black;
 }
 
 
@@ -114,7 +114,7 @@ font-weight: 5px;
   }
 
   #img-intro {
-    display: flex;
+    display: none;
     
    }
 
@@ -128,6 +128,11 @@ font-weight: 5px;
     #experience,
     .experience-details-container {
         margin-top: 2rem;
+    }
+
+    #experience,
+    #hobies {
+      background: none;
     }
 
     .experience-sub-title {
