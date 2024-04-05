@@ -71,3 +71,37 @@ document.addEventListener('mousemove', showImage);
 
 
 
+
+      
+      // use a script tag or an external JS file
+      document.addEventListener("DOMContentLoaded", (event) => {
+       gsap.registerPlugin(ScrollTrigger)
+
+      gsap.to("#about-me", {
+        scrollTrigger: "#about-me", // start the animation when ".box" enters the viewport (once)
+        x: 10,
+        duration: 1,
+        
+      });
+
+      gsap.to(" .slides", {
+        scrollTrigger: ".slides",
+        y: 60,
+        rotation: 360,
+        duration: 2,
+      });
+
+      gsap.to(" .icon", {
+        scrollTrigger: ".icon",
+        rotation: 360,
+        duration: 2,
+      });
+
+
+      gsap.to(" #contact", {
+        scrollTrigger: "#contact",
+        y: 10,
+        duration: 3,
+      });
+
+            });

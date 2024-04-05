@@ -379,7 +379,7 @@ a:hover {
     width: 100%;
     height: 2px;
     background-color:rgb(255, 255, 255);
-    border: 0.5px solid rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
     padding: 1.8%;
     transition: all 0.5 ease-in-out;
 }
@@ -469,7 +469,7 @@ min-height: fit-content;margin: 0;
     height: 10vh;
     transform: none;
     margin-bottom: 5%;
-    background: url(./picture/affiche.jpeg)  center fixed;    
+    background: url(./idea/Hacked\ Graffiti\ Tools\ Create\ Evolutionary\ Paintings.jpg)  center fixed;    
 }
 
 #profile .icon {
@@ -505,7 +505,7 @@ color:rgb(0, 0, 0);
 
 
 .section__text___p1 {
-    color: rgb(6, 5, 5);
+    color: rgb(0, 0, 0);
     font-size: 15px;
 }
 
@@ -518,7 +518,7 @@ color:rgb(0, 0, 0);
 
 
 .p{
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 
@@ -545,7 +545,7 @@ h5 {
     font-variation-settings: "wght" 100, "ital" 0;
     font-family: Oddval Variable;
     line-height: 110%;
-    color: #000000;
+    color: #ffffff;
     white-space: nowrap;
    animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -561,7 +561,8 @@ h5 {
 .title {
   text-align: center;
   font-size: 10.2rem;
-  color: rgb(0, 0, 0);
+  color: rgba(255, 255, 255, 0.537);
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
 }
 
 
@@ -746,7 +747,10 @@ h5 {
     gap: 5rem;
     height: 100%;
     margin-bottom: 4%;
-margin: auto;}
+margin-bottom: 10%;
+margin-top: 25%;
+
+}
 
 
 #about-me h5 {
@@ -763,10 +767,11 @@ line-height: 1;
 
 #about-me h1 {
   cursor:e-resize;
-  letter-spacing: 2px;
-   text-align:end;
+  letter-spacing: -1px;
+   text-align:center;
     color: rgb(0, 0, 0);
     margin-right: 2%;
+    margin-top: 5%;
     font-weight: 100;
     font-family: "Inter", sans-serif;
     /*animation-duration: 3s;
@@ -774,8 +779,9 @@ line-height: 1;
   animation-name: change;
   transition-timing-function: ease-in-out;
   font-variation-settings: "wght" 100, "ital" 0;*/
-font-size: 30px;
+font-size: 25px;
 }
+
 
 #about-me .title1 {
   background: none;
@@ -807,15 +813,7 @@ margin-left:2% ;
 }
 
 
-       #about-me:hover{
-        transform: translate(30px, 10%);
-        transition: transform 1s;
-       }   
-
-       #about-me:not(:hover){
-        transform: none;
-        transition: transform 1s;
-       }
+    
     
 .about-containers {
     gap: 2rem;
@@ -936,45 +934,51 @@ transform: rotate(0.5turn);
 }
 
 .image-point {
-  display: flex;
+
     justify-content: left;
     align-items: left;
-    min-height: 80vh;
+    min-height: 90vh;
     overflow: hidden;
     background: url(./idea/background-gradient.jpg) center;
-    margin-bottom: 10%;
+    margin-bottom: 30%;
 }
 
 .image-point ul {
   margin-right: 10px;
     display: flex;
     justify-content: left;
-    align-items: end;
+    align-items: left;
     flex-direction: column;
-    text-align: end;
+    text-align: left;
 text-align:left;
-margin: auto;
-margin: 2%;
+margin: 5%;
 
 }
 
 .image-point  ul li {
-    list-style: none;
+  list-style-type: none;
+  color: white;
     border-bottom: 0.5px solid white;
     margin-bottom: 2%;
 
 }
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
 
 
+.image-point  p {
+  font-family: "Lilita One", sans-serif;
+text-align: end;
+font-weight: 100;
+}
 
 .image-point  ul li a {
   justify-content: space-around;
-  letter-spacing: 5px;
-  text-align: end;
+  letter-spacing: -5px;
+  text-align: left;
   position: relative;
-  font-size: 2em;
+  font-size: 7em;
   font-family: 'Rubik Glitch Pop', system-ui;
-  font-weight: 300;
+  font-weight: 100;
   color: rgb(255, 255, 255);
   line-height: 1.25em;
   text-transform: uppercase;
@@ -1000,12 +1004,16 @@ transition: width 0.5s;
 
 
 ul li:hover .image {
-    width: 300px;
+    width: 650px;
+    height: 400px;
 }
 
 .image {
-    border-radius: 100px;
     background-color: rgba(4, 5, 6, 0.463);
+}
+
+.img-project {
+  margin-top: -100%;
 }
 
 /* EXPERIENCE SECTION*/
@@ -1174,10 +1182,6 @@ align-items: center;
     font-size: 8.5rem;
    }
 
-#contact:not(:hover) {
-  transform: scale(0.900) translate(-0%, -30%);
-  transition: transform 1s;
-}
 
 
  .contact-info-upper-container {

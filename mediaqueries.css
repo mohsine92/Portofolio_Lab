@@ -60,7 +60,11 @@ body {
 }
 
 .image-point {
-  height:10vh;
+  height: 80vh;
+}
+
+.image-point ul li a {
+  letter-spacing: -2px;
 }
 
 #experience .title1,
@@ -180,7 +184,27 @@ font-weight: 5px;
   #about-me h1{
     font-size: 30px;
   }
+
+  .image-point {
+    min-height: 50vh;
+  }
   
+.image-point ul {
+ margin-top: 40%;
+}
+.image-point li{
+  margin: 10%;
+
+}
+
+.image-point p {
+  text-align: right;
+  color: white;
+}
+
+
+
+
   #about-me h2 {
     font-size: 8rem;
   }
@@ -535,7 +559,6 @@ margin-top: 70%;
 }
 
 
-
 .containers {
 width: 100%;
 }
@@ -626,3 +649,4 @@ font-weight: 100;
   margin-bottom: 30%;
 }
     }
+
