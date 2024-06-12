@@ -77,13 +77,7 @@ document.addEventListener('mousemove', showImage);
       document.addEventListener("DOMContentLoaded", (event) => {
        gsap.registerPlugin(ScrollTrigger)
 
-      gsap.to("#about-me", {
-        scrollTrigger: "#about-me", // start the animation when ".box" enters the viewport (once)
-        x: 10,
-        duration: 1,
-        
-      });
-
+     
       gsap.to(" .slides", {
         scrollTrigger: ".slides",
         y: 60,
@@ -101,7 +95,69 @@ document.addEventListener('mousemove', showImage);
       gsap.to(" #contact", {
         scrollTrigger: "#contact",
         y: 10,
-        duration: 3,
+        duration: 1,
       });
+
+
+      gsap.to(" #about-me", {
+        scrollTrigger: "#about-me",
+        duration: 1,
+        opacity: 1,
+      });
+
+   
+      gsap.to(" #about-me h1", {
+        scrollTrigger: "#about-me h1",
+        y: 5,
+        duration: 2,
+        opacity: 1,
+      });
+
+
+
+      gsap.to(" #contact", {
+        scrollTrigger: "#contact",
+        duration: 2,
+        opacity: 1,
+      });
+
+
+      gsap.from(" .contact-info-upper-container", {
+        x: -360,
+      });
+
+      gsap.to(" .contact-info-upper-container", {
+        scrollTrigger: ".contact-info-upper-container",
+        duration: 1,
+        x: 0,
+      });
+
+      gsap.from(" .details-container2", {
+        x: -360,
+      });
+
+      gsap.to(" .details-container2", {
+        scrollTrigger: ".details-container2",
+        duration: 1,
+        x: 0,
+      });
+
+
+
+
+
+      gsap.to(" .image-point", {
+        scrollTrigger: ".image-point",
+        duration: 2,
+        opacity: 1,
+      });
+
+
+      gsap.to(" #hobies-phone", {
+        scrollTrigger: "#hobies-phone",
+        duration: 2,
+        opacity: 1,
+      });
+
 
             });
