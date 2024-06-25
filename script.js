@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var m = date.getMinutes(); // 0 - 59
     var s = date.getSeconds(); // 0 - 59
     var session = "AM";
+    var location ="PARIS"
     
     if(h == 0){
         h = 12;
@@ -41,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     m = (m < 10) ? "0" + m : m;
     s = (s < 10) ? "0" + s : s;
     
-    var time = h + ":" + m + ":" + s + " " + session;
+    var time = location + " " + h + ":" + m + ":" + s + " " + session;
     
     document.getElementById("MyClockDisplay").innerText = time;
     document.getElementById("MyClockDisplay").textContent = time;
@@ -77,6 +78,14 @@ document.addEventListener('mousemove', showImage);
       document.addEventListener("DOMContentLoaded", (event) => {
        gsap.registerPlugin(ScrollTrigger)
 
+
+
+      gsap.to(" #profile", {
+        scrollTrigger: "#profile",
+        y: -10,
+        duration: 0.6,
+      });
+
      
       gsap.to(" .slides", {
         scrollTrigger: ".slides",
@@ -92,9 +101,18 @@ document.addEventListener('mousemove', showImage);
       });
 
 
+      gsap.to(" .btn", {
+        scrollTrigger: ".btn",
+        y: 100,
+        duration: 2,
+        ease : "bounce"
+
+      });
+
+
       gsap.to(" #contact", {
         scrollTrigger: "#contact",
-        y: 10,
+        y: -80,
         duration: 1,
       });
 
@@ -103,7 +121,8 @@ document.addEventListener('mousemove', showImage);
         scrollTrigger: "#about-me",
         duration: 1,
         opacity: 1,
-      });
+        y: -100,
+            });
 
    
       gsap.to(" #about-me h1", {
@@ -112,8 +131,6 @@ document.addEventListener('mousemove', showImage);
         duration: 2,
         opacity: 1,
       });
-
-
 
       gsap.to(" #contact", {
         scrollTrigger: "#contact",
@@ -130,6 +147,7 @@ document.addEventListener('mousemove', showImage);
         scrollTrigger: ".contact-info-upper-container",
         duration: 1,
         x: 0,
+
       });
 
       gsap.from(" .details-container2", {
@@ -138,12 +156,19 @@ document.addEventListener('mousemove', showImage);
 
       gsap.to(" .details-container2", {
         scrollTrigger: ".details-container2",
-        duration: 1,
+        duration: 2,
         x: 0,
+        ease : "bounce"
       });
 
 
 
+      gsap.to(" .about-me-details", {
+        scrollTrigger: ".about-me-details",
+        duration: 3,
+        y: -50,
+        opacity: 1,
+      });
 
 
       gsap.to(" .image-point", {
@@ -157,7 +182,11 @@ document.addEventListener('mousemove', showImage);
         scrollTrigger: "#hobies-phone",
         duration: 2,
         opacity: 1,
+
       });
 
 
             });
+
+
+         

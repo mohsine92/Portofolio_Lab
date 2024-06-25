@@ -55,7 +55,7 @@ text-align: center;
   align-items: center;
   font-size: 30vh;
   font-family: 'TheFont';
-  animation:  letter-breathe 3s ease-in-out infinite;;
+  animation:  letter-breathe 3s  infinite alternate-reverse;
 }
 
 .text-wrapper {
@@ -217,9 +217,8 @@ transition: filter 2s;
 }
 
 body {
-/*background: content-box radial-gradient(rgb(255, 255, 255), rgb(255, 243, 243));  */
+  background-color: rgba(245, 245, 245, 0.829);
     font-family: 'Source Code Pro';
-   /*background: linear-gradient(to bottom right, rgb(255, 255, 255) 25%, rgb(255, 255, 255) 20%, #817d7d 75%, rgb(97, 97, 97))*/
 }
 
 html {
@@ -282,10 +281,12 @@ nav {
     
 }
 
- .nav-links {
-  gap: 2rem;
+.nav-links {
+  gap: 1rem;
+  display: flex;
     list-style: none;
-    font-size: 1.5rem;
+    font-size: 1rem;
+    text-align: center;
 }
 
 
@@ -322,8 +323,9 @@ a:hover {
 
  
 .logo{
+  color:white;
+  border: 0.1px solid rgb(255, 255, 255);
   animation: rotateAnimation 2s linear infinite;
-   /* background-color: #00000011;*/
     width: 10%;
     height: 50%;
     left: 20%;
@@ -372,32 +374,35 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 24px;
-    width: 30px;
-    padding: 0%;
+    height: 23px;
+    width: 20px;
+    margin-left: 19.1vh;
+    padding: 25%;
+    border-radius: 100%;
     align-items: center;
     cursor: pointer;
 }
 
 .hamburger-icon span{
     width: 100%;
-    height: 0.1px;
     background-color:rgb(255, 255, 255);
-    border: 1px solid black;
+    border: 1px solid rgb(0, 0, 0);
     transition: all 0.8 ease-in-out;
 
 }
 
 .menu-links{
     position: absolute;
-    top: 150%;
-    right: 0;
+    top: 80%;
+    right: -20%;
     border-radius: 0.5rem;
-    background: rgb(255, 255, 255);
+    background-color: rgb(245, 245, 245);
     width: fit-content;
     max-height: 0;
     overflow: hidden;
     transition: all 500ms ease;
+    z-index: 1;
+
 }
 
 .menu-links a{
@@ -405,8 +410,7 @@ a:hover {
     padding: 10px;
     text-align: center;
     font-size: 1.5rem;
-    color: rgb(0, 0, 0);
-    background-color: #ffffff00;
+    color: rgb(112, 112, 112);
     transition: all 0.3 ease-in-out;
 }
 
@@ -469,12 +473,11 @@ min-height: fit-content;margin: 0;
 
 #profile {
     display: flex;
+    background: url(./idea/background-gradient.jpg) center;
     justify-content: center;
     gap: 5rem;
-    height: 10vh;
     transform: none;
-    margin-bottom: 5%;
-    background: url("./idea/background-gradient.jpg")  center fixed;
+    margin-bottom: 0%;
     opacity: 1;
 }
 
@@ -524,7 +527,10 @@ color:rgb(0, 0, 0);
 
 
 .p{
-    color: rgb(237, 231, 231);
+    color: rgb(255, 255, 255);
+    font-weight: 100;
+    font-family: Oddval Variable;
+
 }
 
 
@@ -535,13 +541,13 @@ h5 {
     font-style: normal;
  padding-top: 2%;
   letter-spacing: .5rem;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
 
 .h3,
 .h3-details {
-  color: rgba(255, 255, 255, 0.614);
+  color: rgba(0, 0, 0, 0.614);
     letter-spacing: .2rem;
 }
 
@@ -551,7 +557,7 @@ h5 {
     font-variation-settings: "wght" 100, "ital" 0;
     font-family: Oddval Variable;
     line-height: 110%;
-    color: #eae6e6;
+    color: #ffffff;
     white-space: nowrap;
    animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -567,7 +573,7 @@ h5 {
 .title {
   text-align: center;
   font-size: 10.2rem;
-  color: rgb(255, 255, 255);
+  color: rgba(255, 255, 255, 0.634);
   -webkit-text-stroke: 1px rgb(0, 0, 0);
   -webkit-text-stroke-width: 0.11px;
 }
@@ -674,39 +680,46 @@ h5 {
 }
 
 .btn {
-    font-weight: 600;
+    font-weight: 100;
     transition: all 300ms ease;
-    padding: 1rem;
-    width: 8rem;
-    border-radius: 2rem;
+    padding: 2rem;
+    width: 10.5rem;
+    height: 10rem;
+    font-size: 18px;
+    margin-top: 5;
+    margin-left: 90%;
+    text-align: center;
+    border-radius: 100%;
+    animation: none;
 }
 
 .btn-color-2 {
-    border: rgb(0, 0, 0) 0.1rem solid;
-    background: black;
+    background:black;
     color: rgb(255, 255, 255);
-    cursor: pointer;
+    font-weight: 100;
+  
+
 }
 
 
  .btn-color-1 {
-    border: rgb(0, 0, 0) 0.1rem solid;
-    background: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-    cursor: pointer;
+  background:transparent ;
+  color: rgb(255, 255, 255);
+    border: 0.1px solid grey;
+    text-decoration :dashed;
+text-align: center;
+    font-weight: 100;
  }
 
 
 .btn-color-1:hover,
 .btn-color-2:hover {
-    transition: color 2s;
-    background: rgb(245, 245, 245);
+    transition: background-color 2s;
+    background-color: rgb(234, 230, 230);
   /* background: linear-gradient(to right, #ffffff, rgb(230, 227, 227)); */
     color: rgb(0, 0, 0);
-    border: 1px solid rgb(0, 0, 0);
     cursor: pointer;
     transform: scale(0.9);
-    cursor: vertical-text;
   /* transition: transform 1s;*/
 }
 
@@ -744,8 +757,8 @@ h5 {
   animation:  letter-breathe 5s ease-in-out infinite, rotateAnimation 2s linear infinite;
   font-family: 'TheFont';
     font-size: 7em;
-  color:rgb(0, 0, 0);
-  -webkit-text-stroke: 2px rgb(255, 255, 255);
+  color:transparent;
+  -webkit-text-stroke: 1px rgb(0, 0, 0);
   text-align: center;
 }
 
@@ -753,9 +766,8 @@ h5 {
  position: relative;
     gap: 5rem;
     height: 100%;
-    margin-bottom: 4%;
-margin-bottom: 10%;
-margin-top: 25%;
+margin-bottom: 0%;
+margin-top: 15%;
 opacity: 0;
 }
 
@@ -775,18 +787,30 @@ line-height: 1;
 #about-me h1 {
   cursor:e-resize;
   letter-spacing: -1px;
-   text-align:center;
+   text-align:start;
     color: rgb(0, 0, 0);
-    margin-right: 2%;
-    margin-top: 5%;
+    margin-right: 0%;
+    margin-left: 10%;
+    margin-right: 50%;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;
+font-size: 80px;
+opacity: 0;
+}
+
+.about-me-details {
+  cursor:e-resize;
+  letter-spacing: -2px;
+   text-align:end;
+    color: rgb(68, 64, 64);
     font-weight: 100;
     font-family: "Inter", sans-serif;
-    /*animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-name: change;
-  transition-timing-function: ease-in-out;
-  font-variation-settings: "wght" 100, "ital" 0;*/
 font-size: 25px;
+margin: 20%;
+margin-bottom: 5%;
+font-size: 100;
+line-height: 1.66;
+margin-top: 5%;
 opacity: 0;
 }
 
@@ -825,9 +849,7 @@ margin-left:2% ;
     
 .about-containers {
     gap: 2rem;
-    margin-bottom: 2rem;
-    /*margin-top: 2rem;*/
-    
+    margin-bottom: 2rem;    
 }
 
 .about-details-container {
@@ -852,6 +874,9 @@ margin-left:2% ;
     animation-iteration-count: infinite;
     animation-name: change;
     transition-timing-function: ease-in-out;
+    border: none;
+    margin-bottom: 0;
+    margin-right: 2%;
 }
 
 
@@ -869,19 +894,6 @@ margin-left:2% ;
     border-bottom-left-radius: 40px;
 
 }
-
-/*#horizon-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-right: 0%;
-  visibility: inherit;
-  transform: translate3d(0px, 0px, 0px) scale(1.0606, 1.06064);
-  width: 99%;
-  border: 0;
-  padding: 0;
-}*/
 
 
 
@@ -901,7 +913,7 @@ transform: rotate(0.5turn);
 
 .details-container2 {
   background: url(./idea/FAC9E293-1DC5-4979-8AB7-21FDC50A7C03_1_201_a.jpeg) center;
-  background-size: cover ;
+    background-size: cover ;
     display:flow-root;
   border-radius: 10px;
   outline: inset red thick rgb(0, 0, 0);
@@ -979,6 +991,13 @@ text-align: end;
 font-weight: 100;
 }
 
+.image-point  .p {
+  font-family: "Lilita One", sans-serif;
+text-align: end;
+font-weight: 100;
+color: gray;
+}
+
 .image-point  ul li a {
   justify-content: space-around;
   letter-spacing: -5px;
@@ -1014,7 +1033,7 @@ transition: width 0.5s;
 ul li:hover .image {
     width: 650px;
     height: 400px;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 .image {
@@ -1220,8 +1239,15 @@ opacity: 0;
 
 
  .contact-info-container a {
-    font: larger;    
+    font: larger;   
+    margin-top: 2%; 
  }
+
+ .telephone {
+text-align: center;
+margin-top: -5%;
+ }
+
 
  .contact-icon {
  
@@ -1236,9 +1262,8 @@ opacity: 0;
   padding: 3px;
 }
 
-.telephone {
-  text-align: center;
-}
+
+
 
 
  /*FOOTER*/
@@ -1249,8 +1274,6 @@ opacity: 0;
     border-top: 1px solid rgb(0, 0, 0);
     border-top-right-radius: 100px;
     border-top-left-radius: 100px;
-    background-color: #ffffff;
-
   }
 
   footer .text-wrapper {
