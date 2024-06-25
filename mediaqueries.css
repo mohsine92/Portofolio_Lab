@@ -310,7 +310,7 @@ font-size: 8px;
           margin: auto;
           border-bottom: none;
           box-shadow: none;
-          background: linear-gradient( rgba(25, 25, 26, 0.471) 10%,white 90% ) fixed ;
+          background: linear-gradient( rgba(25, 25, 26, 0.471) 10%,white 70% ) fixed ;
         }
 
       #about-me .title1 {
