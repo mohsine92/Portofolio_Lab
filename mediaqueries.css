@@ -560,10 +560,13 @@ font-weight: 100;
   border: none;
 }
 
+.hamburger-menu {
+gap: 2rem;
+}
 
 #hamburger-nav {
-  margin: 5%;
   display: flex;
+  margin: 5%;
   background: none;
 }
 
