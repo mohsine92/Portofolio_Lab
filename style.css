@@ -31,9 +31,16 @@ margin: 0;
 padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+  }
 
+body {
+  background-color:#f0f2f0;
+    font-family: 'Source Code Pro';
+}
 
-
+/*HEADEER*/
 
 
 .text-wrapperr {
@@ -64,7 +71,7 @@ text-align: center;
   justify-content: flex-start;
   overflow: hidden;
 cursor: vertical-text;
-background: #ffffff
+background-color:#f0f2f0;
 }
 
 .text-wrapper img {
@@ -72,7 +79,6 @@ background: #ffffff
 }
 
 .text-wrapper h1 {
-  -webkit-text-stroke: 15px #ffffff;
   color:hsl(0, 0%, 0%);
   font-size: 30vh;
   font-family: 'TheFont';
@@ -102,37 +108,6 @@ transition: filter 2s;
     transform: translateX(-100%);
   }
 }
-
-#img-intro {
-  display: none;
-  filter:  sepia(60%);
-  background: url(./idea/tim\ rodenbröker\ creative\ coding\ \(1\).gif) fixed center;
-  /*background: url(https://i.pinimg.com/originals/a6/e1/fd/a6e1fd3111e7d499806bec09c00a3012.gif) center no-repeat;*/
-  cursor: progress;
-    height: 79vh;  
-   border-bottom: 2px solid black;
-   /*background: url(./idea/296FAE26-2B47-4B35-A075-04F199474656.gif)  center  ;*/
-   /*background: url(./idea/296FAE26-2B47-4B35-A075-04F199474656.gif) center ;*/
-  border-top: 5px solid rgb(0, 0, 0);
-   border-radius: 100vh+100vh;
-   /*border-top-left-radius: 0px;
-   border-top-right-radius:0px;*/
-
-  }
-  
-  #img-intro {
-    transform: rotate(0.5turn);
-    }
-
-  #img-intro:hover {
-    filter: sepia(60%);
-    transition: filter 2s;
-  }
-  
-  #img-intro:not(:hover) {
-    filter: none;
-    transition: filter 2s;
-  }
 
 
   @keyframes scrollAnimation {
@@ -194,13 +169,6 @@ transition: filter 2s;
  
  }
 
-/*
-  .container-intro{
-    text-align:right;
-    align-items: center;
-    margin: 0%;
-}
-*/
 
  
 .clock {
@@ -216,13 +184,8 @@ transition: filter 2s;
     font-family: 'Rubik Glitch Pop', system-ui;
 }
 
-body {
-    font-family: 'Source Code Pro';
-}
 
-html {
-scroll-behavior: smooth;
-}
+
 
 
 
@@ -274,14 +237,14 @@ nav,
 
 
 nav {
-    justify-content: space-around;
+  justify-content: center;
     align-items: center;
     height: 17vh;
     
 }
 
 .nav-links {
-  gap: 1rem;
+  gap: 5rem;
   display: flex;
     list-style: none;
     font-size: 1rem;
@@ -322,10 +285,10 @@ a:hover {
 
  
 .logo{
-  color:white;
-  border: 0.1px solid rgb(255, 255, 255);
+  color: #f0f2f0;
+  border: 1px solid white;
   animation: rotateAnimation 2s linear infinite;
-    width: 10%;
+    width: 8%;
     height: 50%;
     left: 20%;
     display: none;
@@ -355,17 +318,14 @@ a:hover {
   }
 
  
+
 /*HAMBURGER MENU*/
 
-
-
-
-#hamburger-nav{
+#hamburger-nav {
     display: none;
 }
    
 .hamburger-menu {
-    position: relative;
     display: inline-block;
 }
 
@@ -375,7 +335,7 @@ a:hover {
     justify-content: space-between;
     height: 23px;
     width: 20px;
-    margin-left: 15vh;
+    margin-left: 19vh;
     padding: 25%;
     border-radius: 100%;
     align-items: center;
@@ -392,8 +352,8 @@ a:hover {
 
 .menu-links{
     position: absolute;
-    top: 80%;
-    right: -5%;
+    top: 45%;
+    right: 10%;
     border-radius: 0.5rem;
     background-color: rgb(245, 245, 245);
     width: fit-content;
@@ -461,8 +421,6 @@ box-sizing: border-box;
 min-height: fit-content;margin: 0;
 }
 
-
-
 .section-container {
       display: flex;
 }
@@ -510,8 +468,6 @@ text-align: center;
 color:rgb(0, 0, 0);
 }
 
-
-
 .section__text___p1 {
     color: rgb(225, 215, 215);
     font-size: 15px;
@@ -547,7 +503,8 @@ h5 {
 .h3,
 .h3-details {
   color: rgba(0, 0, 0, 0.614);
-    letter-spacing: .2rem;
+    letter-spacing: 2rem;
+    font-weight: 300;
 }
 
 .title,
@@ -576,8 +533,6 @@ h5 {
   -webkit-text-stroke: 1px rgb(0, 0, 0);
   -webkit-text-stroke-width: 0.11px;
 }
-
-
 
 .title1 {
   text-transform: uppercase;
@@ -795,6 +750,7 @@ line-height: 1;
     font-family: "Inter", sans-serif;
 font-size: 80px;
 opacity: 0;
+
 }
 
 .about-me-details {
@@ -896,17 +852,6 @@ margin-left:2% ;
 
 
 
-.terra-img {
-  height:50vh;
-  width: 100%;
-  visibility: inherit;
-  transform: translate3d(0px, 0px, 0px) scale(1.0606, 1.06064);
-  border: 0;
-  margin: auto;
-  margin-bottom: 5%;
-  padding: 90;
-transform: rotate(0.5turn);
-}
 
 
 
@@ -1313,6 +1258,33 @@ footer h1 {
 
 
 
+.terra-img {
+  display: flex;
+  height:50vh;
+  width: 100%;
+  visibility: inherit;
+  transform: translate3d(0px, 0px, 0px) scale(1.0606, 1.06064);
+  border: 0;
+  margin: 0%;
+  margin-bottom: 0%;
+  padding: 90;
+transform: rotate(0.5turn);
+}
+
+
+
+.phone-footer {
+  display: none;
+  height:50vh;
+  width: 100%;
+  visibility: inherit;
+  transform: translate3d(0px, 0px, 0px) scale(1.0606, 1.06064);
+  border: 0;
+  margin: 0%;
+  margin-bottom: 0%;
+  padding: 90;
+transform: rotate(0.5turn);
+}
 
 
 /* PASSIONS*/

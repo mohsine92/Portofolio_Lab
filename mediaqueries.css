@@ -8,7 +8,7 @@
     #experience,
     #contact,
     #hobies {
-      height: 40vh;
+      height: auto;
       justify-content: center;
     }
 
@@ -18,6 +18,7 @@
 
     #contact {
         height: fit-content;
+        margin-top: 40%;
     }
 
     .logo {
@@ -39,7 +40,6 @@ body {
 .title1 {
   font-size: 5rem;
 }
-
 
 
 
@@ -165,7 +165,9 @@ font-size: 1rem;
         display: block;
     }
 
-
+.btn {
+  margin-left: 5%;
+}
     section,
     .section-container {
         height: fit-content;
@@ -194,7 +196,7 @@ font-size: 1rem;
   .details-container,
   .details-container2 {
     margin-right: 30%;
-    margin-left: 30%;
+    margin-left: 10%;
     width: 80%;
   }
 
@@ -261,7 +263,7 @@ display: flex;
 font-size: 10vh;
 font-weight: 300;
 color: rgb(0, 0, 0);
--webkit-text-stroke: 5px rgb(255, 255, 255);
+-webkit-text-stroke: 5px #f0f2f0;
 animation:   rotateAnimation 2s linear infinite;
 }
 
@@ -310,7 +312,8 @@ font-size: 8px;
           margin: auto;
           border-bottom: none;
           box-shadow: none;
-          background: linear-gradient( rgba(25, 25, 26, 0.471) 10%,white 70% ) fixed ;
+          background: linear-gradient( rgba(25, 25, 26, 0.471) 10%,  #f0f2f0 );
+        
         }
 
       #about-me .title1 {
@@ -354,6 +357,18 @@ font-size: 8px;
       #contact,
       footer {
         height: 40vh;
+      }
+
+      footer .nav-links a,
+      .footer-p {
+        color: rgb(0, 0, 0);
+      }
+
+      footer {
+        background-color:rgb(255, 171, 54);
+        border-top:2px solid rgb(0, 0, 0);
+        border-top-right-radius: 100px;
+        border-top-left-radius: 100px;
       }
 
 
@@ -512,7 +527,9 @@ font-weight: 100;
 .clock{
   display: flex;
   justify-content: center;
+  color: rgb(0, 0, 0);
 }
+
 
 
 .slider { 
@@ -554,12 +571,10 @@ font-weight: 100;
   display: flex;
   font-size: 1em;
   border-radius: 100px;
-  border: 1px solid rgb(0, 0, 0);
-  -webkit-text-stroke: 0.4px rgb(0, 0, 0);
   padding: 2%;
   margin-left: -15%;
   height: 70px;
-  width: 60px;
+  width: 55px;
   mix-blend-mode: difference ;
   position: fixed;
 z-index: 20;
@@ -706,10 +721,17 @@ font-weight: 100;
 }
 
 
+.phone-footer {
+  display: flex;
+  margin-bottom: 0%;
+  height: 80vh;
+}
 
 
 .terra-img {
-  margin-bottom: 30%;
+  display: none;
+  margin-bottom: 0%;
+  height: 70vh;
 }
     }
 
