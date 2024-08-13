@@ -60,7 +60,7 @@ body {
 }
 
 .image-point {
-  height: 110vh;
+  height: 120vh;
 }
 
 .image-point ul li a {
@@ -310,9 +310,9 @@ font-size: 8px;
 #about-me h2 {
   font-size: 80px;
   font-weight: 100;
-  -webkit-text-stroke: 1px rgb(255, 255, 255);
-  color: transparent;
-  mix-blend-mode:luminosity;
+  color: white;
+
+  mix-blend-mode: difference;
   font-family: 'TheFont';
 
 }
@@ -446,9 +446,10 @@ color: rgb(255, 255, 255);
 
    .p {
     font-family: 'Rubik Glitch Pop', system-ui;
-font-weight: 100;
-    font-size: 10px;
+font-weight: 400;
+    font-size: 12px;
     color: rgb(255, 255, 255);
+    mix-blend-mode: normal;
    }
    
 .text-container {
@@ -554,7 +555,8 @@ font-weight: 100;
  
 
   p{ 
-  font-size: 0.7rem; 
+  font-size: 0.8rem; 
+  font-weight: 400;
   }
    
 
