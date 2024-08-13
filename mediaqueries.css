@@ -60,7 +60,7 @@ body {
 }
 
 .image-point {
-  height: 100vh;
+  height: 110vh;
 }
 
 .image-point ul li a {
@@ -424,8 +424,11 @@ color: rgb(255, 255, 255);
    }
 
    .btn {
-    position: relative;
+    position: absolute;
     left: 30%;
+    top: 70%;
+
+
    }
 
    .p {
@@ -673,7 +676,7 @@ width: 27%;
 
 #experience {
   margin: 0%;
-  
+
   height: 30%;
 }
 

@@ -395,6 +395,10 @@ a:hover {
     font-size: 1.5rem;
     color: rgb(112, 112, 112);
     transition: all 0.3 ease-in-out;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 100;
 }
 
 
