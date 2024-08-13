@@ -79,7 +79,20 @@ document.addEventListener('mousemove', showImage);
        gsap.registerPlugin(ScrollTrigger)
 
 
+       gsap.to(".image-profile", {
+        scrollTrigger: {
+          trigger: "body",
+          start: "top top",
+          end: "bottom top",
+          scrub: true,
+        },
+        y: -500, 
+          duration:4,
+          scrub: 10,
 
+      });
+    
+    
       gsap.to(" #profile", {
         scrollTrigger: "#profile",
         y: -10,
@@ -90,7 +103,6 @@ document.addEventListener('mousemove', showImage);
       gsap.to(" .slides", {
         scrollTrigger: ".slides",
         y: 60,
-        rotation: 360,
         duration: 2,
       });
 
@@ -100,14 +112,6 @@ document.addEventListener('mousemove', showImage);
         duration: 2,
       });
 
-
-      gsap.to(" .btn", {
-        scrollTrigger: ".btn",
-        y: 100,
-        duration: 2,
-        ease : "bounce"
-
-      });
 
 
       gsap.to(" #contact", {
@@ -132,6 +136,12 @@ document.addEventListener('mousemove', showImage);
         opacity: 1,
       });
 
+
+
+
+
+
+
       gsap.to(" #contact", {
         scrollTrigger: "#contact",
         duration: 2,
@@ -150,19 +160,24 @@ document.addEventListener('mousemove', showImage);
 
       });
 
-      gsap.from(" .details-container2", {
-        x: -360,
+      gsap.to(" .details-container2 ", {
+        scrollTrigger: {
+          trigger: "#profile ",
+          start: "top " ,
+          end: "bottom",
+          scrub: true,
+
+        },
+      scale: 1,
+      scrub: 1,
+      duration: 2,
+
+        
       });
 
-      gsap.to(" .details-container2", {
-        scrollTrigger: ".details-container2",
-        duration: 2,
-        x: 0,
-        ease : "bounce"
-      });
 
 
-
+      
       gsap.to(" .about-me-details", {
         scrollTrigger: ".about-me-details",
         duration: 3,
@@ -187,6 +202,43 @@ document.addEventListener('mousemove', showImage);
 
 
             });
+
+            
+          
+          
+
+
+
+            // Script pour la barre de progression du scroll
+            window.addEventListener('scroll', function() {
+              const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+              const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+              const scrollPercentage = (scrollTop / scrollHeight) * 100;
+    
+              document.getElementById('progress-bar').style.width = scrollPercentage + '%';
+          });
+    
+          // Script pour le scroll infini
+          document.addEventListener('DOMContentLoaded', function() {
+              const scrollContainer = document.body;
+              const content = document.querySelector('.scroll-content');
+    
+              // Clone the content for infinite scrolling
+              const clone = content.cloneNode(true);
+              scrollContainer.appendChild(clone);
+    
+              window.addEventListener('scroll', () => {
+                  if (window.scrollY >= content.scrollHeight) {
+                      window.scrollTo({
+                          top:40,
+                          behavior: 'none' // Scroll instantly to create a seamless loop
+                      });
+                  }
+              });
+          });
+    
+
+
 
 
          

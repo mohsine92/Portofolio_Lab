@@ -24,6 +24,20 @@
     transform: rotate(360deg);
   }
 }
+ /* Barre de progression */
+ .progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color:rgb(255, 255, 255);
+  mix-blend-mode: difference;
+  z-index: 100;
+  transition: width 0.25s ease-out;
+}
 
 
 * {
@@ -36,7 +50,7 @@ html {
   }
 
 body {
-  background-color:#f0f2f0;
+  background-color:#f0f1f0;
     font-family: 'Source Code Pro';
 }
 
@@ -67,7 +81,7 @@ text-align: center;
 
 .text-wrapper {
   /*border-top: 2px solid #000000;*/
-  display: flex;
+  display: none;
   justify-content: flex-start;
   overflow: hidden;
 cursor: vertical-text;
@@ -174,14 +188,15 @@ transition: filter 2s;
 .clock {
    margin-top: 1%;
     margin-left:50%;
-    margin-right: 15%;
+    margin-right: 12%;
     transform: translateX(-50%) translateY(-50%);
-    color:#000000;
+    color:#a8a8a8;
     font-size: 12px;
-    font-weight: 300;
+    letter-spacing: -0.3px;
+    font-weight: 200;
     text-align: center;
     animation-delay: 0.3s;
-    font-family: 'Rubik Glitch Pop', system-ui;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 
@@ -232,6 +247,7 @@ nav,
 .nav-links {
     display: flex;
 
+
 }
 
 
@@ -240,41 +256,48 @@ nav {
   justify-content: center;
     align-items: center;
     height: 17vh;
-    
+display: flex;
+
 }
 
 .nav-links {
-  gap: 5rem;
+  gap: 2rem;
+  padding: 20px;
   display: flex;
     list-style: none;
-    font-size: 1rem;
     text-align: center;
+    position: relative;
+    border-radius: 20px;
+    backdrop-filter: invert(80%);
+    z-index: 2;
+
 }
 
 
-a{
+.nav-links a{
+  cursor:pointer;
   font-family: 'Rubik Glitch Pop', system-ui;
 font-weight: 100;
 text-transform: uppercase;
-  font-size: 15px;
-  text-decoration: none;
-   color: #000000;
-    background:
-    linear-gradient(
-      to right,
-      rgba(255, 250, 250, 0),
-      rgba(255, 255, 255, 0)
-    ),
-    linear-gradient(
-      to right,
-      rgb(0, 0, 0),
-      rgb(0, 0, 0),
-      rgb(0, 0, 0)
-  );
-  background-size: 100% 3px, 0 3px;
+text-decoration: none;
+font-size: 1rem;
+color: #ffffff;
+   background:
+   linear-gradient(
+     to right,
+     rgba(255, 250, 250, 0),
+     rgba(255, 255, 255, 0)
+   ),
+   linear-gradient(
+     to right,
+     rgb(255, 255, 255),
+     rgb(255, 255, 255),
+     rgb(255, 255, 255)
+ );
+  background-size: 10% 3px, 0 3px;
   background-position: 100% 100%, 0% 100%;
   background-repeat:  no-repeat ;
-  transition: background-size 600ms;
+  transition: background-size 400ms;
 }
 
 a:hover {
@@ -330,39 +353,38 @@ a:hover {
 }
 
 .hamburger-icon {
-    display: flex;
+    display:flex;
     flex-direction: column;
     justify-content: space-between;
     height: 23px;
-    width: 20px;
+    width: 40px;
     left: 18vh;
     margin: 0%;
     padding: 30%;
     border-radius: 100%;
     align-items: center;
     cursor: pointer;
-    position: relative;
+    position:relative;
 }
 
 .hamburger-icon span{
     width: 100%;
-    background-color:rgb(255, 255, 255);
-    border: 1px solid rgb(0, 0, 0);
+    border: 0.8px solid black;
     transition: all 0.8 ease-in-out;
 
 }
 
 .menu-links{
-    position: absolute;
-    top: 54%;
+    top: 59%;
     right: 5%;
     border-radius: 0.5rem;
-    background-color: rgb(245, 245, 245);
+        background-color: rgb(245, 245, 245);
     width: fit-content;
     max-height: 0;
     overflow: hidden;
     transition: all 500ms ease;
     z-index: 1;
+    position: fixed;
 
 }
 
@@ -431,14 +453,21 @@ min-height: fit-content;margin: 0;
 /* PROFILE SECTION*/
 
 #profile {
-    display: flex;
-    background: url(./idea/background-gradient.jpg) center;
     justify-content: center;
     gap: 5rem;
     transform: none;
     margin-bottom: 0%;
     opacity: 1;
+    mix-blend-mode:difference;
 }
+
+.image-profile {
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    border-radius: 20px;
+  }
+
 
 #profile .icon {
   background: white;
@@ -459,15 +488,20 @@ min-height: fit-content;margin: 0;
 .section__text {
     align-self: center;
     text-align: center;
+            /* margin-top: 65%; */
+            position: relative;
+            top: 20%;
 }
 
 .section__text p {
-    font-weight: 600;
+    font-weight: 100;
 }
 
 .section__text__p1 {
 text-align: center;
 color:rgb(0, 0, 0);
+font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
 }
 
 .section__text___p1 {
@@ -479,7 +513,7 @@ color:rgb(0, 0, 0);
 .section__text___p2 {
     font-size: 1.75em;
     margin-bottom: 1rem;
-    color: rgb(215, 205, 205);
+    color: rgb(146, 143, 143);
 }
 
 
@@ -625,58 +659,53 @@ h5 {
 }
 
 
-
 /*BUTTON*/
 
 .btn-container {
-    display: flex;
     justify-content: center;
     gap: 1rem;
-    display: flex;
 }
+
+
 
 .btn {
-    font-weight: 100;
     transition: all 300ms ease;
-    padding: 2rem;
-    width: 10.5rem;
-    height: 10rem;
-    font-size: 18px;
-    margin-top: 5;
-    margin-left: 90%;
-    text-align: center;
-    border-radius: 100%;
-    animation: none;
-}
+    padding: 0.5em;
+    width: 7rem;
+    height: 3rem;
+    border-radius: 10px;
+    position: relative;
+    top: 30%;
+    left: 47%;
 
-.btn-color-2 {
-    background:black;
-    color: rgb(255, 255, 255);
-    font-weight: 100;
-  
+letter-spacing: -1px;
+    font-family: Oddval Variable;
+font-weight: 200;
+font-size: 15px;
+color: rgb(0, 0, 0);
+mix-blend-mode: difference;
 
 }
+
+
 
 
  .btn-color-1 {
-  background:transparent ;
-  color: rgb(255, 255, 255);
-    border: 0.1px solid grey;
-    text-decoration :dashed;
+mix-blend-mode: difference;
+  color: rgb(0, 0, 0);
+  border: 0.1px solid rgb(255, 255, 255);
 text-align: center;
-    font-weight: 100;
+
  }
 
 
 .btn-color-1:hover,
 .btn-color-2:hover {
-    transition: background-color 2s;
-    background-color: rgb(234, 230, 230);
-  /* background: linear-gradient(to right, #ffffff, rgb(230, 227, 227)); */
-    color: rgb(0, 0, 0);
+    transition:  1s;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
     cursor: pointer;
     transform: scale(0.9);
-  /* transition: transform 1s;*/
 }
 
 
@@ -714,7 +743,7 @@ text-align: center;
   font-family: 'TheFont';
     font-size: 7em;
   color:transparent;
-  -webkit-text-stroke: 1px rgb(0, 0, 0);
+  -webkit-text-stroke: 1px white;
   text-align: center;
 }
 
@@ -725,6 +754,7 @@ text-align: center;
 margin-bottom: 0%;
 margin-top: 15%;
 opacity: 0;
+
 }
 
 
@@ -742,6 +772,7 @@ line-height: 1;
 
 #about-me h1 {
   cursor:e-resize;
+  mix-blend-mode: difference;
   letter-spacing: -1px;
    text-align:start;
     color: rgb(0, 0, 0);
@@ -752,7 +783,6 @@ line-height: 1;
     font-family: "Inter", sans-serif;
 font-size: 80px;
 opacity: 0;
-
 }
 
 .about-me-details {
@@ -773,7 +803,6 @@ opacity: 0;
 
 
 #about-me .title1 {
-  background: none;
 display: flex;
 margin-left:2% ;
 }
@@ -781,9 +810,8 @@ margin-left:2% ;
 .h3,
 .h3-details {
   text-align: center;
-  color: rgba(255, 255, 255, 0.614);
-    letter-spacing: .2rem;
-    font-weight: 100px;;
+  color: rgb(198, 100, 100);
+    letter-spacing: 2px;
 }
 
 #about-me {
@@ -799,6 +827,9 @@ margin-left:2% ;
 
 #about-me .icon {
   padding: 1%;
+  border-radius: 20px;
+  background-color: rgba(218, 185, 185, 0.256);
+backdrop-filter: sepia(100%);
 }
 
 
@@ -855,44 +886,72 @@ margin-left:2% ;
 
 
 
-
-
 .details-container2 {
-  background: url(./idea/FAC9E293-1DC5-4979-8AB7-21FDC50A7C03_1_201_a.jpeg) center;
-    background-size: cover ;
+  background: url(https://images.unsplash.com/photo-1644843521804-74ec147cb7bf?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) center center;
     display:flow-root;
+    position: relative;
+    left: 50%;
   border-radius: 10px;
-  outline: inset red thick rgb(0, 0, 0);
   margin-top: 2%;
   padding: 1%;
     width: 40%;
     flex: 1;
-    margin-left: 50%;
     align-items: center;
     justify-content: center;
    text-align: center;
-   box-shadow: 30px 30px 100px rgb(0, 0, 0);
+   box-shadow: 30px 30px 100px rgba(0, 0, 0, 0.696);
+   scale: 0;
+
       }
-
-
+     
 
 .h3 {
   color: rgb(255, 255, 255);
-  font-family: 'Rubik Glitch Pop', system-ui;
+  mix-blend-mode: difference;
+
+font-family: 'Rubik Glitch Pop', system-ui;
+
 
 }
 
 .h3-details{
    color: rgb(255, 255, 255);
+   mix-blend-mode: difference;
    font-family: 'Rubik Glitch Pop', system-ui;
 
     }
 
+    .container-service {
+      display: flex;
+      flex-direction:column;
+      justify-content: center;
+      align-items: center;
+      height: 95vh;
+      width: 100%;
+      position: relative;
+      background: url(./idea/background-gradient.jpg) center fixed;
+  }
+  
+  .container-service p {
+    font-size: 6rem; 
+         color: #ffffff;
+         mix-blend-mode: difference;
+     position: relative;
+     left: 0%;
+      display: block;
+      text-align: center;
+      letter-spacing: -.05em;
+      font-weight: 500;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
 
-.section-container {
-    gap: 4rem;
-    height: 80%;
-}
+  .container-service h6 {
+    margin-bottom: 10%;
+    font-size: 15px;
+    color: grey;
+    text-transform: uppercase;
+    font-weight: 100;
+  }
 
 .section-pic-container {
     gap: 4rem;
@@ -905,7 +964,7 @@ margin-left:2% ;
     align-items: left;
     min-height: 90vh;
     overflow: hidden;
-    background: url(./idea/background-gradient.jpg) center;
+    background: url(./idea/background-gradient.jpg)  center fixed ;
     margin-bottom: 30%;
 }
 
@@ -918,6 +977,8 @@ margin-left:2% ;
     text-align: left;
 text-align:left;
 margin: 5%;
+text-decoration: none;
+
 
 }
 
@@ -926,6 +987,7 @@ margin: 5%;
   color: white;
     border-bottom: 0.5px solid white;
     margin-bottom: 2%;
+    
 
 }
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
@@ -942,6 +1004,7 @@ font-weight: 100;
 text-align: end;
 font-weight: 100;
 color: gray;
+
 }
 
 .image-point  ul li a {
@@ -956,12 +1019,18 @@ color: gray;
   line-height: 1.25em;
   text-transform: uppercase;
   transition: 0.5s;
+
 }
+
 
  .image-point ul:hover li:not(:hover) a {
     opacity: 0.5;
     color: white;
--webkit-text-stroke: 1px rgb(0, 0, 0);
+}
+
+.image-point a {
+background: none;
+text-decoration: none;
 }
 
 .image-point ul li .image {
@@ -998,24 +1067,26 @@ ul li:hover .image {
     margin: auto;
     gap: 5rem;
     margin-top: 10%;
-    height: 10%;
-    border-top-left-radius: 20%;
-border-top-right-radius: 20%;
+    margin-bottom: 10%;
+    height: 50%;
+    width: 95%;
+  border-radius: 50px;
+
 }
 
 
 
-#experience,
-#hobies {
-background: url(https://i.pinimg.com/originals/28/06/32/280632245663b095081f37cc49a0f17b.gif) fixed center  ;
-background-size: 100% ;
-
+#experience {
+/*background: url(https://i.pinimg.com/originals/28/06/32/280632245663b095081f37cc49a0f17b.gif) fixed center  ;*/
+background: url(https://images.unsplash.com/photo-1716143493326-a08f2de48edb?q=80&w=3432&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)  center fixed ;
 }
 
 
 #experience .section__text__p1 {
   color: rgb(255, 255, 255);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
 
 #experience:hover {
   transform: none;
@@ -1032,7 +1103,8 @@ background-size: 100% ;
 }
 
 #experience .title1 {
-  color: rgba(245, 245, 245, 0);
+  color: rgba(255, 255, 255, 0);
+  font-size: 23vh;
   -webkit-text-stroke: 1px rgb(255, 255, 255);
 }
 
@@ -1056,6 +1128,8 @@ background-size: 100% ;
   margin: auto;
   box-shadow: 30px 30px 100px rgb(0, 0, 0);
   border-radius: 100px;
+
+
 }
 
 .logos:before,
@@ -1090,6 +1164,8 @@ background-size: 100% ;
 .logos-slide img {
   height: 50px;
   margin: 0 40px;
+  mix-blend-mode: hard-light;
+
 }
 
 
@@ -1143,7 +1219,9 @@ align-items: center;
 /*CONTACT*/
 
  #contact {
+  
   transform: none;
+  height: 50%;
   margin: 0;
     display: flex;
     justify-content: center;
@@ -1153,20 +1231,35 @@ opacity: 0;
 
    }
 
+footer  a  {
+  color: black;
+}
+
    #contact .title1 {
-    font-size: 8.5rem;
+    font-size: 5rem;
+    animation: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    position: relative;
+    text-transform:lowercase;
+
+   }
+
+   #contact span {
+    font-size: 8rem;
+    text-transform: lowercase;
    }
 
 
 
- .contact-info-upper-container {
-    display: flexbox;
-    justify-content: center;
+  
+    .contact-info-upper-container {
+    display: block;
     border-radius: 10px;
-    border: rgb(0, 0, 0) 0.1rem solid;
-    border-color: rgb(0, 0, 0);
-    margin: 2rem auto;
-    padding: 0.5rem;
+    border: rgb(0, 0, 0) 1px solid;
+    margin: 5rem auto;
+    padding: 20px;
+    position: relative;
  }
 
 
@@ -1179,47 +1272,55 @@ opacity: 0;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    margin: 1rem;
+    margin: 1rem;    
+
  }
 
 
 
  .contact-info-container a {
-    font: larger;   
     margin-top: 2%; 
+    font-size: 1rem;
+    font-weight: 100;
+    color: #000000;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+text-transform: uppercase;
+
  }
 
- .telephone {
+
+  .telephone a{
+    display: flex;
 text-align: center;
+align-items: center;
 margin-top: -5%;
- }
+font-size: 1rem;
+font-weight: 100;
+color: #000000;
+justify-content: center;
+  text-align: center;
+  position: relative;
+  width: auto;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
+  text-decoration: none;
 
- .contact-icon {
  
-    cursor:default;
-   
  }
- 
-
-#contact .icon {
-
-  border-radius: 100%;
-  padding: 3px;
-}
-
-
 
 
 
  /*FOOTER*/
  
  footer {
-    height: 26vh;
+    height: 30vh;
     margin: auto;
-    border-top: 1px solid rgb(0, 0, 0);
+    border-top: 1px solid rgba(0, 0, 0, 0.571);
     border-top-right-radius: 100px;
     border-top-left-radius: 100px;
+    background-color: #000000;
+
   }
 
   footer .text-wrapper {
@@ -1231,10 +1332,7 @@ margin-top: -5%;
 filter: none; 
   }
 
-  footer .text-wrapper h1 {
-    color: rgb(255, 255, 255);
-  }
-
+ 
  footer,
  #contact {
   margin: 0; 
@@ -1242,16 +1340,16 @@ filter: none;
   
   footer a {
     color: rgb(0, 0, 0);
+    font-size: 16px;
+  }
+ 
+  footer p {
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    letter-spacing: -1px;
 
   }
  
-
- .footer-p{
- text-align: center;
-    color:#000000;
-    font-family: 'Rubik Glitch Pop', system-ui;
-
- }
 
 footer h1 {
   font-family: 'Libre Barcode 128 Text', system-ui;
@@ -1274,125 +1372,55 @@ transform: rotate(0.5turn);
 }
 
 
+/*CAROUSEL*/
 
-.phone-footer {
-  display: none;
-  height:50vh;
-  width: 100%;
-  visibility: inherit;
-  transform: translate3d(0px, 0px, 0px) scale(1.0606, 1.06064);
-  border: 0;
-  margin: 0%;
-  margin-bottom: 0%;
-  padding: 90;
-transform: rotate(0.5turn);
-}
-
-
-/* PASSIONS*/
-
-.link2 {
-  display: none;
-}
-.link1 {
-  display: inline;
-}
-
-#hobies-phone {
-  display: none;
-}
 
 #hobies{
-  height: 150vh;
-margin-bottom: 5%;
-border-bottom-left-radius: 20%;
-border-bottom-right-radius: 20%;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  top: 50%
 
 }
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
-#hobies .title1 {
-  color: rgb(255, 255, 255);
-}
+
+
 
 .containers {
   display: flex;
-    scroll-snap-type: x mandatory;
-    width: 100%;
-    margin: auto;
-    overflow-x: auto;
-    scrollbar-width:none;
-    transform: none;
-    }
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+  scrollbar-width: none ;
+width: 100%;
+height: 20%;
+position: relative;
+margin: 10px;
 
-  #hobies:hover {
-    transform: none;
-  
-  }
+}
 
-  .title-hobies {
-    color: #ffffff;
-    font-size: 100%;
-    text-align: center;
-  }
 
   .slides {
-    width: 15%;
-    scroll-snap-align: center;
-    flex-shrink: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    font-size: 4rem;
-    margin: auto;
-border-radius: 10%;
-}
+    width: 20%;
+    margin: 10px;
+    flex-shrink: 1;
+  }
+
   .slides:hover {
-    opacity: 0.7;
-    transition: opacity 2s;
+    scale: 1.09;
+    transition: scale 2s;
   }
 
   .slides:not(:hover) {
-opacity: none;
-transition: opacity 2s;
+scale: none;
+transition: scale 2s;
 
-  }
-  .slides:nth-child(2n) {
-    background: #7F7FD5;
-    background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
-    background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
-  }
-  
-  .slides:nth-child(3n) {
-    background: #f12711;
-    background: -webkit-linear-gradient(to right, #f5af19, #f12711);
-    background: linear-gradient(to right, #f5af19, #f12711);
   }
   
 
-  #hobies .p {
-    color: rgb(0, 0, 0);
-    font-size: 15px;
-    font-family: 'Rubik Glitch Pop', system-ui;
-font-weight: 100;
+  #hobies-phone {
+    display: none;
   }
-
-  #hobies .title1{
-    color: transparent;
-    -webkit-text-stroke: 1.5px rgb(255, 255, 255);
-  }
-
-  .container-text {
-   
-    background: rgb(255, 255, 255);
-    width: 10px;
-    height: 10%;
-    margin: 10%;
-background: rgb(255, 255, 255);
-border-radius: 10px;
-  }
-
-
 
 
 @keyframes fadeInUp {
@@ -1476,9 +1504,8 @@ border-radius: 10px;
 
 
 .section{
-min-height: 100vh;
-  /*  opacity: 1; 
-    transition: opacity 0.9s ease; */
+min-height: 90vh;
+ 
   }
   
   

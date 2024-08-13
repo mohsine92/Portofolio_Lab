@@ -60,7 +60,7 @@ body {
 }
 
 .image-point {
-  height: 80vh;
+  height: 100vh;
 }
 
 .image-point ul li a {
@@ -78,11 +78,12 @@ body {
 
 
   .image-point  ul li a {
-    font-size: 30px;
+    font-size: 36px;
+    font-weight: 300;
   }
 
   .section__text {
-margin-top: 25%;
+margin-top: 0%;
   }
 
 .logos::before,
@@ -284,7 +285,7 @@ animation:   rotateAnimation 2s linear infinite;
 
 .h3,
 .h3-details {
-color: rgb(6, 5, 5);
+color: rgb(255, 255, 255);
 font-size: 8px;
 }
 
@@ -297,24 +298,22 @@ font-size: 8px;
 #about-me h2 {
   font-size: 80px;
   font-weight: 100;
-  -webkit-text-stroke: 0.5px rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
+  color: transparent;
+  mix-blend-mode:luminosity;
   font-family: 'TheFont';
 
 }
       .details-container2 {
-          padding: 2%;
+          padding: 5%;
           flex: 1;
           border-radius: 10%;
-          border-bottom-left-radius: 0px ;
-          border-bottom-right-radius: 0px;
           text-align: center;
           margin: auto;
-          border-bottom: none;
           box-shadow: none;
-          background: linear-gradient( rgba(25, 25, 26, 0.471) 10%,  #f0f2f0 );
-        
-        }
+          position: relative;
+          left: 0%;
+         }
 
       #about-me .title1 {
         font-size: 2.4rem;
@@ -347,6 +346,16 @@ font-size: 8px;
   color: rgb(58, 58, 58);
 }
    
+
+.container-service p  {
+  font-size: 6vh;
+  right: 0%;
+  margin-bottom: 5%;
+  text-align: center;
+  position: relative;
+
+}
+
       body {
         margin: 0;
       }
@@ -359,23 +368,40 @@ font-size: 8px;
         height: 40vh;
       }
 
-      footer .nav-links a,
-      .footer-p {
-        color: rgb(0, 0, 0);
+       
+      .footer-p,
+      .clock {
+        color: rgb(255, 255, 255);
       }
 
       footer {
-        background-color:rgb(255, 171, 54);
-        border-top:2px solid rgb(0, 0, 0);
+        mix-blend-mode: darken;
         border-top-right-radius: 100px;
         border-top-left-radius: 100px;
       }
-
+      #contact .title1 {
+        font-size: 30px;
+        animation: none;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        text-align: center;
+        position: relative;
+       }
+    
+       #contact span {
+        font-size: 45px;
+             }
+    
 
       /* PROFILE */
+
+      .image-profile {
+border-radius: 20px;
+      }
+
 #profile {
-background: url(./idea/background-gradient.jpg) center;
- border-radius: 10px;
+  top: -20%;
+  position: relative;
+background: url() center;
   height: 10vh;
   margin-bottom: 50%;
   /*border-bottom-left-radius: 100%;
@@ -398,19 +424,10 @@ color: rgb(255, 255, 255);
    }
 
    .btn {
-    margin-top: 10%;
-    border: 0.1px solid rgb(143, 138, 138);
-    color: rgb(255, 255, 255);
-width: 10rem;
-padding: 1px;
-height: 7rem;
-margin-left: 0%;
-margin-top: 10%;
-border-radius: 40%;
-font-size: 15px;
-text-transform: none;
-background: none;
+    position: relative;
+    left: 30%;
    }
+
    .p {
     font-family: 'Rubik Glitch Pop', system-ui;
 font-weight: 100;
@@ -436,7 +453,7 @@ font-weight: 100;
 
 .title,
 .title1 {
-  font-size: 3rem;
+  font-size: 5rem;
 
 }
 
@@ -487,12 +504,14 @@ font-weight: 100;
           font-size: 1.25rem;
           color: rgb(0, 0, 0);
           -webkit-text-stroke: 0.5px rgb(0, 0, 0);
+
         }
 
 
 #experience .title1,
 #hobies .title1 {
   color: rgb(0, 0, 0);
+  font-size: 5vh;
           -webkit-text-stroke: 0.5px rgb(248, 248, 248);
 }
 
@@ -527,7 +546,7 @@ font-weight: 100;
 .clock{
   display: flex;
   justify-content: center;
-  color: rgb(0, 0, 0);
+  color: rgba(255, 255, 255, 0.466);
 }
 
 
@@ -547,12 +566,7 @@ font-weight: 100;
   height: 130%;
 }
 
-#img-intro {
-  margin-top: 0;
-    display: none;
-    height: 10;
-    background: url(./idea/296FAE26-2B47-4B35-A075-04F199474656.gif) center;
-}
+
 
 .text-wrapper {
   display: none;
@@ -614,8 +628,10 @@ h5 {
 
 
 .section__text{
-margin-top: 65%;
-}
+        position: relative;
+        top: 20%;
+      
+      }
 
 #contact .title1{
        font-size: 2.7rem;
@@ -656,10 +672,9 @@ width: 27%;
 
 
 #experience {
-  background: none;
-  border-radius: 0%;
-  margin-bottom: 0%;
-  height: auto;
+  margin: 0%;
+  
+  height: 30%;
 }
 
 #hobies {
@@ -724,15 +739,10 @@ font-weight: 100;
 }
 
 
-.phone-footer {
-  display: flex;
-  margin-bottom: 0%;
-  height: 80vh;
-}
 
 
 .terra-img {
-  display: none;
+  display: flex;
   margin-bottom: 0%;
   height: 70vh;
 }
