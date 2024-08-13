@@ -372,19 +372,20 @@ a:hover {
     border: 0.8px solid black;
     transition: all 0.8 ease-in-out;
 
+
 }
 
 .menu-links{
     top: 59%;
     right: 5%;
     border-radius: 0.5rem;
-        background-color: rgb(245, 245, 245);
+        background-color: rgba(245, 245, 245, 0.573);
     width: fit-content;
     max-height: 0;
     overflow: hidden;
     transition: all 500ms ease;
     z-index: 1;
-    position: fixed;
+    position: absolute;
 
 }
 
@@ -397,7 +398,8 @@ a:hover {
     transition: all 0.3 ease-in-out;
     text-decoration: none;
     text-transform: uppercase;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Rubik Glitch Pop', system-ui;
+letter-spacing: -1px;
     font-size: 100;
 }
 
@@ -746,8 +748,8 @@ text-align: center;
   animation:  letter-breathe 5s ease-in-out infinite, rotateAnimation 2s linear infinite;
   font-family: 'TheFont';
     font-size: 7em;
-  color:transparent;
-  -webkit-text-stroke: 1px white;
+color: #f0f1f0;
+  mix-blend-mode: difference;
   text-align: center;
 }
 
@@ -968,7 +970,7 @@ font-family: 'Rubik Glitch Pop', system-ui;
     align-items: left;
     min-height: 90vh;
     overflow: hidden;
-    background: url(./idea/background-gradient.jpg)  center fixed ;
+    background: url(./idea/background-gradient.jpg)  fixed ;
     margin-bottom: 30%;
 }
 
@@ -1508,7 +1510,7 @@ transition: scale 2s;
 
 
 .section{
-min-height: 120vh;
+min-height: 90vh;
  
   }
   

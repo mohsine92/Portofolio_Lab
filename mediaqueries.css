@@ -204,28 +204,40 @@ font-size: 1rem;
   #about-me h1{
     font-size: 40px;
   }
+.container-service {
+  background: url(https://images.unsplash.com/photo-1716143493326-a08f2de48edb?q=80&w=3432&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)  center  ;
 
+}
   .image-point {
     min-height: 50vh;
+    background: url(https://images.unsplash.com/photo-1716143493326-a08f2de48edb?q=80&w=3432&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)   center ;
+
   }
   
 .image-point ul {
  margin-top: 12px;
+ text-align: center;
+
 }
 
 .image-point li{
   margin-top: 20%;
   width: 99%;
+  text-align: center;
+  line-height: 3em;
 
 }
 
 .image-point p {
-  text-align: end;
+  text-align: center;
   color: white;
   margin-top: 10px;
 }
 
-
+.image-point .p {
+  text-align: center;
+  margin-top: 10px;
+}
 
 
   #about-me h2 {
@@ -396,6 +408,7 @@ font-size: 8px;
 
       .image-profile {
 border-radius: 20px;
+height: 100vh;
       }
 
 #profile {
@@ -746,8 +759,12 @@ font-weight: 100;
 
 .terra-img {
   display: flex;
+  position: relative;
+  top: -10px;
   margin-bottom: 0%;
   height: 70vh;
+  transform: rotate(0.5turn);
+
 }
     }
 
