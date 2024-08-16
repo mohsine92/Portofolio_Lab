@@ -43,7 +43,6 @@ body {
 
 
 
-
   }
 
 
@@ -210,7 +209,6 @@ font-size: 1rem;
 }
   .image-point {
     min-height: 50vh;
-    background: url(https://images.unsplash.com/photo-1716143493326-a08f2de48edb?q=80&w=3432&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)   center ;
 
   }
   
@@ -275,9 +273,9 @@ color: white;
 display: flex;
 font-size: 10vh;
 font-weight: 300;
-color: rgb(0, 0, 0);
--webkit-text-stroke: 5px #f0f2f0;
+color: rgb(255, 255, 255);
 animation:   rotateAnimation 2s linear infinite;
+mix-blend-mode: difference;
 }
 
 
@@ -329,12 +327,14 @@ font-size: 8px;
 
       #about-me .title1 {
         font-size: 2.4rem;
-        color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+        -webkit-text-stroke: 0px;
         text-align: center;
         justify-content: center;
         display: flex;
         align-items: center;
         margin: 0%;
+        left: 0;
       }
 
 #about-me h1 {
@@ -342,8 +342,8 @@ font-size: 8px;
   font-weight: 300;
   text-align: start;
   margin: 15%;
-  color: rgb(0, 0, 0);
-  -webkit-text-stroke: 0.5px rgb(0, 0, 0);
+  color: rgb(194, 193, 193);
+  -webkit-text-stroke: 0px;
   font-family: 'Rubik Glitch Pop', system-ui;
 
 }
@@ -357,7 +357,34 @@ font-size: 8px;
 #about-me .section__text__p1{
   color: rgb(58, 58, 58);
 }
-   
+.button-about {
+  position: relative;
+  padding: 13px;
+  border-radius: 20px;
+  border: 1px solid rgba(67, 67, 67, 0);
+  background-color:hsl(328, 37%, 18%);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 40%;
+  margin-bottom: 10rem;
+}
+
+
+
+.image-container {
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.image-about {
+  right: 20%;
+}
 
 .container-service p  {
   font-size: 6vh;
@@ -407,18 +434,28 @@ font-size: 8px;
       /* PROFILE */
 
       .image-profile {
-border-radius: 20px;
-height: 100vh;
+height: 140vh;
+width: 95%;
+margin: 10px;
+top: 5px;
       }
+
+      .image-profile {
+        display: flex;
+      }
+
+      .image-mobile {
+        display: none;
+
+      }
+
 
 #profile {
   top: -20%;
   position: relative;
-background: url() center;
   height: 10vh;
   margin-bottom: 50%;
-  /*border-bottom-left-radius: 100%;
-  border-bottom-right-radius:100% ;*/
+
    }
 
    .section__text___p1 {
@@ -431,9 +468,9 @@ color: rgb(255, 255, 255);
   -webkit-text-stroke: 0px ;
 }
 
-   .title,
-   .section__text___p2 {
-color: rgb(255, 255, 255);
+   .title { 
+animation: none;
+padding: 5px;
    }
 
    .btn {
@@ -441,14 +478,13 @@ color: rgb(255, 255, 255);
     left: 30%;
     top: 60%;
 
-
    }
 
    .p {
     font-family: 'Rubik Glitch Pop', system-ui;
 font-weight: 400;
-    font-size: 12px;
-    color: rgb(255, 255, 255);
+    font-size: 15px;
+padding: 5px;    color: rgb(255, 255, 255);
     mix-blend-mode: normal;
    }
    
@@ -465,7 +501,7 @@ font-weight: 400;
 }
 
 .section__text___p2 {
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 
 .title,
@@ -529,7 +565,6 @@ font-weight: 400;
 #hobies .title1 {
   color: rgb(0, 0, 0);
   font-size: 5vh;
-          -webkit-text-stroke: 0.5px rgb(248, 248, 248);
 }
 
 .container-experience {
@@ -540,11 +575,12 @@ font-weight: 400;
 }
 
 
-        .nav-links  {
+        .nav-links2  {
           flex-direction:column;
           gap: 0.4rem;
           text-align: center;
           margin-top: 50px;
+          display: block;
         }
 
 
@@ -647,7 +683,7 @@ h5 {
 
 .section__text{
         position: relative;
-        top: 20%;
+        top:10%;
       
       }
 
@@ -691,7 +727,7 @@ width: 27%;
 
 #experience {
   margin: 0%;
-
+display: none;
   height: 30%;
 }
 
@@ -764,7 +800,7 @@ font-weight: 100;
   position: relative;
   top: -10px;
   margin-bottom: 0%;
-  height: 70vh;
+  height: 50vh;
   transform: rotate(0.5turn);
 
 }

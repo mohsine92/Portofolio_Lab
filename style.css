@@ -24,13 +24,16 @@
     transform: rotate(360deg);
   }
 }
+
+  
+
  /* Barre de progression */
  .progress-bar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 2px;
+  height: 2.5px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   background-color:rgb(255, 255, 255);
@@ -50,7 +53,7 @@ html {
   }
 
 body {
-  background-color:#f0f1f0;
+  background:url(./idea/background-gradient.jpg) fixed;
     font-family: 'Source Code Pro';
 }
 
@@ -77,6 +80,10 @@ text-align: center;
   font-size: 30vh;
   font-family: 'TheFont';
   animation:  letter-breathe 3s  infinite alternate-reverse;
+  z-index: 1;
+  mix-blend-mode: difference;
+  transform: translate(-50%, -50%);
+
 }
 
 .text-wrapper {
@@ -266,44 +273,46 @@ display: flex;
   display: flex;
     list-style: none;
     text-align: center;
-    position: relative;
-    border-radius: 20px;
-    backdrop-filter: invert(80%);
+    position: absolute;
+    left: 40%;
     z-index: 2;
 
 }
 
 
 .nav-links a{
-  cursor:pointer;
-  font-family: 'Rubik Glitch Pop', system-ui;
-font-weight: 100;
-text-transform: uppercase;
-text-decoration: none;
-font-size: 1rem;
-color: #ffffff;
-   background:
-   linear-gradient(
-     to right,
-     rgba(255, 250, 250, 0),
-     rgba(255, 255, 255, 0)
-   ),
-   linear-gradient(
-     to right,
-     rgb(255, 255, 255),
-     rgb(255, 255, 255),
-     rgb(255, 255, 255)
- );
-  background-size: 10% 3px, 0 3px;
-  background-position: 100% 100%, 0% 100%;
-  background-repeat:  no-repeat ;
-  transition: background-size 400ms;
-}
 
-a:hover {
-  background-size: 0 3px, 100% 3px;
-
-}
+  mix-blend-mode:difference;
+    cursor:pointer;
+    font-family: 'Rubik Glitch Pop', system-ui;
+  font-weight: 100;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1rem;
+  color: #ffffff;
+     background:
+     linear-gradient(
+       to right,
+       rgba(255, 250, 250, 0),
+       rgba(255, 255, 255, 0)
+     ),
+     linear-gradient(
+       to right,
+       rgb(255, 255, 255),
+       rgb(255, 255, 255),
+       rgb(255, 255, 255)
+   );
+    background-size: 0% 10%;
+    background-position: 100% 100%, 50% 100%;
+    background-repeat:  no-repeat ;
+    transition: background-size 400ms;
+  }
+  
+  a:hover {
+    background-size: 0 3px, 100% 3px;
+  
+  }
+  
 
 
  
@@ -336,7 +345,7 @@ a:hover {
     }
   
     50% {
-      font-weight: 500;
+      font-weight: 900;
     }
   }
 
@@ -365,6 +374,8 @@ a:hover {
     align-items: center;
     cursor: pointer;
     position:relative;
+    z-index: 1;
+
 }
 
 .hamburger-icon span{
@@ -379,13 +390,14 @@ a:hover {
     top: 59%;
     right: 5%;
     border-radius: 0.5rem;
-        background-color: rgba(245, 245, 245, 0.573);
+        background-color: rgb(245, 245, 245);
     width: fit-content;
     max-height: 0;
     overflow: hidden;
     transition: all 500ms ease;
     z-index: 1;
     position: absolute;
+    z-index: 1;
 
 }
 
@@ -394,13 +406,15 @@ a:hover {
     padding: 10px;
     text-align: center;
     font-size: 1.5rem;
-    color: rgb(112, 112, 112);
+    color: rgb(0, 0, 0);
     transition: all 0.3 ease-in-out;
     text-decoration: none;
     text-transform: uppercase;
-    font-family: 'Rubik Glitch Pop', system-ui;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 letter-spacing: -1px;
     font-size: 100;
+    z-index: 1;
+
 }
 
 
@@ -464,14 +478,21 @@ min-height: fit-content;margin: 0;
     transform: none;
     margin-bottom: 0%;
     opacity: 1;
-    mix-blend-mode:difference;
+    z-index: 3;
+    mix-blend-mode: difference
+    ;
+
 }
 
 .image-profile {
-    width: 100%;
-    height: 90%;
-    position: absolute;
+    width: 98%;
     border-radius: 20px;
+    height: 110%;
+    position: absolute;
+    top: 0%;
+    margin: 20px;
+    mix-blend-mode: difference;
+
   }
 
 
@@ -482,6 +503,7 @@ min-height: fit-content;margin: 0;
 
 #profile img {
   align-items: center;
+
 }
 
 .section__pic-container {
@@ -501,6 +523,7 @@ min-height: fit-content;margin: 0;
 
 .section__text p {
     font-weight: 100;
+
 }
 
 .section__text__p1 {
@@ -555,7 +578,7 @@ h5 {
     font-variation-settings: "wght" 100, "ital" 0;
     font-family: Oddval Variable;
     line-height: 110%;
-    color: #ffffff;
+    
     white-space: nowrap;
    animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -571,8 +594,8 @@ h5 {
 .title {
   text-align: center;
   font-size: 10.2rem;
-  color: rgba(255, 255, 255, 0.634);
-  -webkit-text-stroke: 1px rgb(0, 0, 0);
+  color: whitesmoke;
+
   -webkit-text-stroke-width: 0.11px;
 }
 
@@ -675,21 +698,20 @@ h5 {
 
 
 .btn {
-    transition: all 300ms ease;
-    padding: 0.5em;
-    width: 7rem;
-    height: 3rem;
-    border-radius: 10px;
-    position: relative;
-    top: 30%;
-    left: 47%;
+  
+transition: all 300ms ease;
+padding: 0.5em;
+width: 7rem;
+height: 3rem;
+border-radius: 10px;
+position: absolute;
+top: 75%;
+left: 47%;
 
 letter-spacing: -1px;
-    font-family: Oddval Variable;
+font-family: Oddval Variable;
 font-weight: 200;
 font-size: 15px;
-color: rgb(0, 0, 0);
-mix-blend-mode: difference;
 
 }
 
@@ -697,21 +719,18 @@ mix-blend-mode: difference;
 
 
  .btn-color-1 {
-mix-blend-mode: difference;
   color: rgb(0, 0, 0);
   border: 0.1px solid rgb(255, 255, 255);
 text-align: center;
-
  }
 
 
 .btn-color-1:hover,
 .btn-color-2:hover {
     transition:  1s;
-    background-color: transparent;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     cursor: pointer;
-    transform: scale(0.9);
+    transform: scale(1.1);
 }
 
 
@@ -745,7 +764,7 @@ text-align: center;
 
   
 #about-me h2 {
-  animation:  letter-breathe 5s ease-in-out infinite, rotateAnimation 2s linear infinite;
+  animation:  letter-breathe 1.5s ease-in-out infinite;/* rotateAnimation 2s linear infinite;*/
   font-family: 'TheFont';
     font-size: 7em;
 color: #f0f1f0;
@@ -754,13 +773,12 @@ color: #f0f1f0;
 }
 
 #about-me {
- position: relative;
+ position: sticky;
     gap: 5rem;
     height: 100%;
 margin-bottom: 0%;
 margin-top: 15%;
 opacity: 0;
-
 }
 
 
@@ -771,6 +789,8 @@ font-size: 2em;
 font-weight: 100%;
 letter-spacing: 10px;
 line-height: 1;
+
+
 }
 
 
@@ -781,36 +801,42 @@ line-height: 1;
   mix-blend-mode: difference;
   letter-spacing: -1px;
    text-align:start;
-    color: rgb(0, 0, 0);
+    color: rgb(186, 186, 186);
     margin-right: 0%;
     margin-left: 10%;
     margin-right: 50%;
-    font-weight: 500;
-    font-family: "Inter", sans-serif;
-font-size: 80px;
+    font-size: 5vh;
+    font-weight: 300;
+font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue';
 opacity: 0;
+mix-blend-mode: difference;
+
 }
 
 .about-me-details {
   cursor:e-resize;
-  letter-spacing: -2px;
-   text-align:end;
+  letter-spacing: -6px;
+   text-align:start;
     color: rgb(68, 64, 64);
     font-weight: 100;
     font-family: "Inter", sans-serif;
-font-size: 25px;
-margin: 20%;
-margin-bottom: 5%;
+font-size: 8vh;
 font-size: 100;
 line-height: 1.66;
 margin-top: 5%;
 opacity: 0;
+
+position: relative;
+width: 80%;
+left: 10%;
+line-height: 100%;
 }
 
 
 #about-me .title1 {
 display: flex;
 margin-left:2% ;
+color: rgb(255, 255, 255);
 }
 
 .h3,
@@ -858,11 +884,13 @@ backdrop-filter: sepia(100%);
 }
 
 #about-me .title1 {
+  position: relative;
+  left: 50px;
   font-variation-settings: "wght" 100, "ital" 0;
     font-family: Oddval Variable;
         text-align: center;
   font-size: 10rem;
-    color: black;
+    color: rgb(200, 199, 199);
     white-space: nowrap;
    animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -870,7 +898,6 @@ backdrop-filter: sepia(100%);
     transition-timing-function: ease-in-out;
     border: none;
     margin-bottom: 0;
-    margin-right: 2%;
 }
 
 
@@ -893,9 +920,10 @@ backdrop-filter: sepia(100%);
 
 
 .details-container2 {
-  background: url(https://images.unsplash.com/photo-1644843521804-74ec147cb7bf?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) center center;
+ /*background: url( https://images.unsplash.com/photo-1723460041943-cb93a71ce29e?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);*/
+ background: url(https://images.unsplash.com/photo-1644843521804-74ec147cb7bf?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) center center; 
     display:flow-root;
-    position: relative;
+    position: sticky;
     left: 50%;
   border-radius: 10px;
   margin-top: 2%;
@@ -913,8 +941,6 @@ backdrop-filter: sepia(100%);
 
 .h3 {
   color: rgb(255, 255, 255);
-  mix-blend-mode: difference;
-
 font-family: 'Rubik Glitch Pop', system-ui;
 
 
@@ -922,42 +948,81 @@ font-family: 'Rubik Glitch Pop', system-ui;
 
 .h3-details{
    color: rgb(255, 255, 255);
-   mix-blend-mode: difference;
    font-family: 'Rubik Glitch Pop', system-ui;
 
     }
 
-    .container-service {
-      display: flex;
-      flex-direction:column;
-      justify-content: center;
-      align-items: center;
-      height: 95vh;
-      width: 100%;
-      position: relative;
-      background: url(./idea/background-gradient.jpg) center fixed;
-  }
-  
-  .container-service p {
-    font-size: 6rem; 
-         color: #ffffff;
-         mix-blend-mode: difference;
-     position: relative;
-     left: 0%;
-      display: block;
-      text-align: center;
-      letter-spacing: -.05em;
-      font-weight: 500;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
 
-  .container-service h6 {
-    margin-bottom: 10%;
+
+    .button-about {
+      transition: transform 0.1s ease-out; /* Animation fluide */
+
+        position: relative;
+        padding: 13px;
+        border-radius: 20px;
+        background-color: transparent;
+        border: 1px solid rgb(255, 255, 255);
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        left: 47%;
+        margin-bottom: 10rem;
+
+      }
+    
+  
+
+      .button-about a {
+      text-decoration: none;
+    letter-spacing: -1px;
     font-size: 15px;
-    color: grey;
-    text-transform: uppercase;
-    font-weight: 100;
-  }
+    font-weight: 500;
+    color:rgb(200, 198, 198);
+    mix-blend-mode: difference;
+      }
+    
+    
+      .button-about:hover {
+     scale: 1.2;
+     background-color:hsl(328, 37%, 18%);
+     color: rgb(255, 255, 255);
+     transition: 0.8s;
+          }
+    
+          .button-about:not(:hover) {
+            transition: 2s;
+          }
+    
+    
+      .button-about:hover a{
+        scale: 1.2;
+        color: rgb(255, 255, 255);
+        transition: 0.8s;
+             }
+    
+             .button-about a:not(:hover) {
+               transition: 0.6s;
+             }
+
+             .image-container {
+              margin-top: 20%;
+              margin-bottom: 10%;
+              left: 27%;
+              position: relative;
+              width: 800px;
+              height: 500px;
+              cursor: pointer;
+              perspective: 1000px; /* Donne un effet de profondeur */
+          }
+          
+          .image-container img {
+              width: 100%;
+              rotate: 90deg;
+              transition: transform 0.7s ease-out; /* Animation fluide */
+          }
+
+
 
 .section-pic-container {
     gap: 4rem;
@@ -981,7 +1046,7 @@ font-family: 'Rubik Glitch Pop', system-ui;
     align-items: left;
     flex-direction: column;
     text-align: left;
-text-align:left;
+text-align:start;
 margin: 5%;
 text-decoration: none;
 
@@ -1016,7 +1081,7 @@ color: gray;
 .image-point  ul li a {
   justify-content: space-around;
   letter-spacing: -5px;
-  text-align: left;
+  text-align: center;
   position: relative;
   font-size: 7em;
   font-family: 'Rubik Glitch Pop', system-ui;
@@ -1077,7 +1142,6 @@ ul li:hover .image {
     height: 50%;
     width: 95%;
   border-radius: 50px;
-
 }
 
 
@@ -1096,6 +1160,7 @@ background: url(https://images.unsplash.com/photo-1716143493326-a08f2de48edb?q=8
 
 #experience:hover {
   transform: none;
+
 }
 
 
@@ -1109,9 +1174,9 @@ background: url(https://images.unsplash.com/photo-1716143493326-a08f2de48edb?q=8
 }
 
 #experience .title1 {
-  color: rgba(255, 255, 255, 0);
+  color: transparent;
   font-size: 23vh;
-  -webkit-text-stroke: 1px rgb(255, 255, 255);
+  -webkit-text-stroke: 0.8px rgb(252, 247, 238);
 }
 
 @keyframes slide {
@@ -1134,7 +1199,6 @@ background: url(https://images.unsplash.com/photo-1716143493326-a08f2de48edb?q=8
   margin: auto;
   box-shadow: 30px 30px 100px rgb(0, 0, 0);
   border-radius: 100px;
-
 
 }
 
@@ -1170,7 +1234,6 @@ background: url(https://images.unsplash.com/photo-1716143493326-a08f2de48edb?q=8
 .logos-slide img {
   height: 50px;
   margin: 0 40px;
-  mix-blend-mode: hard-light;
 
 }
 
@@ -1238,7 +1301,7 @@ opacity: 0;
    }
 
 footer  a  {
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
    #contact .title1 {
@@ -1248,11 +1311,12 @@ footer  a  {
     text-align: center;
     position: relative;
     text-transform:lowercase;
-
+color: #a8a8a8;
    }
 
    #contact span {
     font-size: 8rem;
+    font-weight: 500;
     text-transform: lowercase;
    }
 
@@ -1262,7 +1326,7 @@ footer  a  {
     .contact-info-upper-container {
     display: block;
     border-radius: 10px;
-    border: rgb(0, 0, 0) 1px solid;
+    border: rgb(255, 255, 255) 1px solid;
     margin: 5rem auto;
     padding: 20px;
     position: relative;
@@ -1288,7 +1352,7 @@ footer  a  {
     margin-top: 2%; 
     font-size: 1rem;
     font-weight: 100;
-    color: #000000;
+    color: #ffffff;
     text-decoration: none;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 text-transform: uppercase;
@@ -1303,7 +1367,7 @@ align-items: center;
 margin-top: -5%;
 font-size: 1rem;
 font-weight: 100;
-color: #000000;
+color: #ffffff;
 justify-content: center;
   text-align: center;
   position: relative;
@@ -1319,10 +1383,57 @@ justify-content: center;
 
  /*FOOTER*/
  
+
+.nav-links2 {
+    gap: 2rem;
+    padding: 20px;
+    display: flex;
+      list-style: none;
+      text-align: center;
+      position: relative;
+      border-radius: 20px;
+      z-index: 2;
+  
+  }
+  
+  
+  
+.nav-links2 a{
+  mix-blend-mode:difference;
+    cursor:pointer;
+    font-family: 'Rubik Glitch Pop', system-ui;
+  font-weight: 100;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1rem;
+  color: #ffffff;
+     background:
+     linear-gradient(
+       to right,
+       rgba(255, 250, 250, 0),
+       rgba(255, 255, 255, 0)
+     ),
+     linear-gradient(
+       to right,
+       rgb(255, 255, 255),
+       rgb(255, 255, 255),
+       rgb(255, 255, 255)
+   );
+    background-size: 0% 10%;
+    background-position: 100% 100%, 50% 100%;
+    background-repeat:  no-repeat ;
+    transition: background-size 400ms;
+  }
+  
+  a:hover {
+    background-size: 0 3px, 100% 3px;
+  
+  }
+  
  footer {
     height: 30vh;
     margin: auto;
-    border-top: 1px solid rgba(0, 0, 0, 0.571);
+    border-top: 1px solid rgba(255, 255, 255, 0.571);
     border-top-right-radius: 100px;
     border-top-left-radius: 100px;
     background-color: #000000;
@@ -1345,7 +1456,7 @@ filter: none;
 }
   
   footer a {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-size: 16px;
   }
  
@@ -1362,11 +1473,9 @@ footer h1 {
   text-align: center;
 }
 
-
-
 .terra-img {
   display: flex;
-  height:50vh;
+  height:55vh;
   width: 100%;
   visibility: inherit;
   transform: translate3d(0px, 0px, 0px) scale(1.0606, 1.06064);
@@ -1514,7 +1623,4 @@ min-height: 90vh;
  
   }
   
-  
-
-
   

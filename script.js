@@ -72,6 +72,21 @@ document.addEventListener('mousemove', showImage);
 
 
 
+// Tweenmax effect for body
+
+
+TweenMax.staggerFrom(
+  "body ",
+  1.8,
+  {
+    opacity: 0,
+    ease: Expo.easeInOut,
+  },
+  0.01
+);
+
+
+
 
       
       // use a script tag or an external JS file
@@ -91,6 +106,37 @@ document.addEventListener('mousemove', showImage);
           scrub: 10,
 
       });
+      
+      
+    
+      
+
+    
+      gsap.to(".logo", {
+        y: "-50%",
+        scale: 0.8,
+        ease: "none",
+        scrollTrigger: {
+          trigger: "body",
+          start: "top top",
+          end: "100vh top",
+          scrub: 1,
+        },
+      });
+    
+
+      gsap.to(".text-wrapperr", {
+        y: "-50%",
+        scale: 0.8,
+        ease: "none",
+        scrollTrigger: {
+          trigger: "body",
+          start: "top top",
+          end: "100vh top",
+          scrub: 1,
+        },
+      });
+    
     
     
       gsap.to(" #profile", {
@@ -177,6 +223,10 @@ document.addEventListener('mousemove', showImage);
 
 
 
+      gsap.to(" #about-me h2 ", {
+        scrollTrigger: "body ",
+        rotation: 360,
+      });
       
       gsap.to(" .about-me-details", {
         scrollTrigger: ".about-me-details",
@@ -238,7 +288,3 @@ document.addEventListener('mousemove', showImage);
           });
     
 
-
-
-
-         
