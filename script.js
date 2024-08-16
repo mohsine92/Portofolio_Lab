@@ -120,7 +120,7 @@ TweenMax.staggerFrom(
           trigger: "body",
           start: "top top",
           end: "100vh top",
-          scrub: 1,
+          scrub: 1.2,
         },
       });
     
