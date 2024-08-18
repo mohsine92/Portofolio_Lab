@@ -53,7 +53,7 @@ html {
   }
 
 body {  
-  background-color: rgb(243, 243, 243);
+  background-color:rgb(254, 254, 254);
     font-family: 'Source Code Pro';
 }
 
@@ -212,7 +212,7 @@ transition: filter 2s;
 
 
 p{
-color: rgb(3, 3, 3);
+color: rgb(255, 255, 255);
 font-family: Oddval Variable;
 text-align:center ;
 justify-content: center;
@@ -395,11 +395,11 @@ mix-blend-mode: difference;
 .menu-links{
   border-radius: 20px;
 
-    top: 50%;
+    top: 60%;
     right: 10%;
     background-color: rgb(0, 0, 0);
     width: 30%;
-    height: 20%;
+    height: 40%;
     max-height: 0;
     overflow:hidden;
     transition: all 500ms ease;
@@ -436,7 +436,6 @@ letter-spacing: -1px;
 .menu-links.open {
     max-height: 30%;
     z-index: 2;
-    position: fixed;
 }
 
 
@@ -493,7 +492,7 @@ min-height: fit-content;margin: 0;
     margin-bottom: 0%;
     opacity: 1;
     z-index: 1;
-    mix-blend-mode: difference
+    mix-blend-mode: difference;
 
     ;
 
@@ -912,8 +911,8 @@ backdrop-filter: sepia(10%);
 
 
 .details-container2 {
- background: url( https://images.unsplash.com/photo-1723460041943-cb93a71ce29e?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) center center;
- /*background: url(https://images.unsplash.com/photo-1644843521804-74ec147cb7bf?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) center center; */
+ /*background: url( https://images.unsplash.com/photo-1723460041943-cb93a71ce29e?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) center center;*/
+ background: url(https://images.unsplash.com/photo-1522072783977-1117b39ffb58?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)  center center ; 
     display:flow-root;
     position: sticky;
     left: 50%;
@@ -1132,11 +1131,12 @@ ul li:hover .image {
 /* EXPERIENCE SECTION*/
 
 #experience {
+  position: relative;
    justify-content: center;
     align-items: center;
     margin: auto;
     gap: 5rem;
-    margin-top: 10%;
+    margin-top: 20%;
     margin-bottom: 10%;
     height: 50%;
     width: 95%;
@@ -1146,13 +1146,16 @@ ul li:hover .image {
 
 
 #experience {
-/*background: url(https://i.pinimg.com/originals/28/06/32/280632245663b095081f37cc49a0f17b.gif) fixed center  ;*/
-background: url(https://images.unsplash.com/photo-1716143493326-a08f2de48edb?q=80&w=3432&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)  center fixed ;
+  mix-blend-mode: difference;
+
+background: url(https://i.pinimg.com/originals/28/06/32/280632245663b095081f37cc49a0f17b.gif) fixed center no-repeat  ;
+background-size: cover;
 }
 
 
 #experience .section__text__p1 {
-  color: rgb(255, 255, 255);
+  color: transparent;
+  -webkit-text-stroke: 1px white;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -1173,9 +1176,11 @@ background: url(https://images.unsplash.com/photo-1716143493326-a08f2de48edb?q=8
 }
 
 #experience .title1 {
-  color: transparent;
   font-size: 23vh;
-  -webkit-text-stroke: 0.8px rgb(252, 247, 238);
+    color: transparent;
+  -webkit-text-stroke: 0.8px white;
+
+
 }
 
 @keyframes slide {

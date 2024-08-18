@@ -76,8 +76,8 @@ document.addEventListener('mousemove', showImage);
 
 
 TweenMax.staggerFrom(
-  "body ",
-  1.8,
+  "body, .image-profile ",
+  1,
   {
     opacity: 0,
     ease: Expo.easeInOut,
