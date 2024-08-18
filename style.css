@@ -52,8 +52,8 @@ html {
   scroll-behavior: smooth;
   }
 
-body {
-  background:url(./idea/background-gradient.jpg) fixed;
+body {  
+  background-color: rgb(243, 243, 243);
     font-family: 'Source Code Pro';
 }
 
@@ -212,7 +212,7 @@ transition: filter 2s;
 
 
 p{
-color: rgb(255, 255, 255);
+color: rgb(3, 3, 3);
 font-family: Oddval Variable;
 text-align:center ;
 justify-content: center;
@@ -289,7 +289,7 @@ display: flex;
   text-transform: uppercase;
   text-decoration: none;
   font-size: 1rem;
-  color: #ffffff;
+  color: #000000;
      background:
      linear-gradient(
        to right,
@@ -298,9 +298,9 @@ display: flex;
      ),
      linear-gradient(
        to right,
-       rgb(255, 255, 255),
-       rgb(255, 255, 255),
-       rgb(255, 255, 255)
+       rgb(0, 0, 0),
+       rgb(0, 0, 0),
+       rgb(0, 0, 0)
    );
     background-size: 0% 10%;
     background-position: 100% 100%, 50% 100%;
@@ -317,7 +317,7 @@ display: flex;
 
  
 .logo{
-  color: #f0f2f0;
+  color: #fffdfd;
   border: 1px solid white;
   animation: rotateAnimation 2s linear infinite;
     width: 8%;
@@ -374,46 +374,53 @@ display: flex;
     align-items: center;
     cursor: pointer;
     position:relative;
-    z-index: 1;
 
 }
 
 .hamburger-icon span{
     width: 100%;
-    border: 0.8px solid black;
+    border: 1px solid rgb(255, 255, 255);
     transition: all 0.8 ease-in-out;
-
-
+    mix-blend-mode: difference;
+    z-index: 5;
 }
 
+.hamburger-icon.open {
+
+z-index: 7;
+mix-blend-mode: difference;
+}
+
+
 .menu-links{
-    top: 50%;
-    right: 5%;
-    border-radius: 0.5rem;
-        background-color: rgb(245, 245, 245);
-    width: fit-content;
+    top: 0%;
+    right: 0;
+    background: url(https://images.unsplash.com/photo-1723070735827-c1a52f4cfa3a?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    width: 100%;
+    height: 200%;
     max-height: 0;
-    overflow: hidden;
+    overflow:hidden;
     transition: all 500ms ease;
     z-index: 1;
-    position: absolute;
-    z-index: 1;
+position: absolute;
 
 }
 
 .menu-links a{
     display: block;
-    padding: 10px;
+    padding:  130px 10px;
     text-align: center;
     font-size: 1.5rem;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     transition: all 0.3 ease-in-out;
     text-decoration: none;
     text-transform: uppercase;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 letter-spacing: -1px;
-    font-size: 100;
     z-index: 1;
+    font-weight: 100;
+
+    mix-blend-mode: difference;
 
 }
 
@@ -425,8 +432,12 @@ letter-spacing: -1px;
 
 
 .menu-links.open {
-    max-height: 300px;
+    max-height: 100%;
+    z-index: 2;
+    position: fixed;
 }
+
+
 
 .hamburger-icon.open span:first-child {
     transform: rotate(45deg) translate(10px, 5px);
@@ -473,25 +484,24 @@ min-height: fit-content;margin: 0;
 /* PROFILE SECTION*/
 
 #profile {
-    justify-content: center;
+
+    justify-content: end;
     gap: 5rem;
     transform: none;
     margin-bottom: 0%;
     opacity: 1;
-    z-index: 3;
+    z-index: 1;
     mix-blend-mode: difference
+
     ;
 
 }
 
 .image-profile {
-    width: 98%;
-    border-radius: 20px;
+    width: 100%;
     height: 110%;
     position: absolute;
     top: 0%;
-    margin: 20px;
-    mix-blend-mode: difference;
 
   }
 
@@ -504,6 +514,7 @@ min-height: fit-content;margin: 0;
 #profile img {
   align-items: center;
 
+
 }
 
 .section__pic-container {
@@ -514,9 +525,8 @@ min-height: fit-content;margin: 0;
 }
 
 .section__text {
-    align-self: center;
-    text-align: center;
-            /* margin-top: 65%; */
+    align-self: end;
+    text-align: end;
             position: relative;
             top: 20%;
 }
@@ -528,13 +538,12 @@ min-height: fit-content;margin: 0;
 
 .section__text__p1 {
 text-align: center;
-color:rgb(0, 0, 0);
 font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
 }
 
 .section__text___p1 {
-    color: rgb(225, 215, 215);
+    color: rgb(255, 255, 255);
     font-size: 15px;
 }
 
@@ -542,7 +551,7 @@ font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ox
 .section__text___p2 {
     font-size: 1.75em;
     margin-bottom: 1rem;
-    color: rgb(146, 143, 143);
+    color: rgb(5, 5, 5);
 }
 
 
@@ -578,7 +587,7 @@ h5 {
     font-variation-settings: "wght" 100, "ital" 0;
     font-family: Oddval Variable;
     line-height: 110%;
-    
+    text-align: center;
     white-space: nowrap;
    animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -592,10 +601,10 @@ h5 {
 
   
 .title {
-  text-align: center;
+  letter-spacing: -26px;
   font-size: 10.2rem;
   color: whitesmoke;
-
+animation: none;
   -webkit-text-stroke-width: 0.11px;
 }
 
@@ -710,8 +719,8 @@ left: 47%;
 
 letter-spacing: -1px;
 font-family: Oddval Variable;
-font-weight: 200;
-font-size: 15px;
+font-weight: 300;
+font-size: 14px;
 
 }
 
@@ -767,8 +776,7 @@ text-align: center;
   animation:  letter-breathe 1.5s ease-in-out infinite;/* rotateAnimation 2s linear infinite;*/
   font-family: 'TheFont';
     font-size: 7em;
-color: #f0f1f0;
-  mix-blend-mode: difference;
+color: #ffffff;
   text-align: center;
   mix-blend-mode: difference;
 
@@ -803,7 +811,7 @@ line-height: 1;
   mix-blend-mode: difference;
   letter-spacing: -1px;
    text-align:start;
-    color: rgb(226, 226, 226);
+    color: rgb(36, 35, 35);
     margin-right: 0%;
     margin-left: 10%;
     margin-right: 50%;
@@ -819,7 +827,7 @@ mix-blend-mode: difference;
   cursor:e-resize;
   letter-spacing: -6px;
    text-align:start;
-    color: rgb(255, 255, 255);
+    color: rgb(56, 56, 56);
     font-weight: 100;
     font-family: "Inter", sans-serif;
 font-size: 8vh;
@@ -838,7 +846,7 @@ line-height: 100%;
 #about-me .title1 {
 display: flex;
 margin-left:2% ;
-color: rgb(255, 255, 255);
+color: rgb(21, 20, 20);
 }
 
 .h3,
@@ -861,8 +869,7 @@ color: rgb(255, 255, 255);
 #about-me .icon {
   padding: 1%;
   border-radius: 20px;
-  background-color: rgb(255, 255, 255);
-mix-blend-mode: difference;
+backdrop-filter: sepia(10%);
 }
 
 
@@ -891,7 +898,7 @@ mix-blend-mode: difference;
     font-family: Oddval Variable;
         text-align: center;
   font-size: 10rem;
-    color: rgb(200, 199, 199);
+    color: rgb(72, 71, 71);
     white-space: nowrap;
    animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -903,9 +910,8 @@ mix-blend-mode: difference;
 
 
 .details-container2 {
- /*background: url( https://images.unsplash.com/photo-1723460041943-cb93a71ce29e?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);*/
+ background: url( https://images.unsplash.com/photo-1723460041943-cb93a71ce29e?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) center center;
  /*background: url(https://images.unsplash.com/photo-1644843521804-74ec147cb7bf?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) center center; */
- background: url(https://images.unsplash.com/photo-1696875011554-b6a4ebd54997?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) center center;
     display:flow-root;
     position: sticky;
     left: 50%;
@@ -917,20 +923,23 @@ mix-blend-mode: difference;
     align-items: center;
     justify-content: center;
    text-align: center;
-   box-shadow: 30px 30px 100px rgba(0, 0, 0, 0.696);
    scale: 0;
+   box-shadow: 30px 30px 100px rgba(39, 38, 38, 0.803);
+
 
       }
      
+      
 
 .h3 {
-  color: rgb(255, 255, 255);
-font-family: 'Rubik Glitch Pop', system-ui;
+  color: rgb(175, 175, 175);
+font-family: 'Rubik Glitch Pop', system-ui;  
 mix-blend-mode: difference;
+
 }
 
 .h3-details{
-   color: rgb(255, 255, 255);
+  color: rgb(175, 175, 175);
    font-family: 'Rubik Glitch Pop', system-ui;
    mix-blend-mode: difference;
 
@@ -1014,12 +1023,14 @@ mix-blend-mode: difference;
 }
 
 .image-point {
+  mix-blend-mode: normal;
+
+
   opacity: 0;  
     justify-content: left;
     align-items: left;
     min-height: 90vh;
     overflow: hidden;
-    background: url(./idea/background-gradient.jpg)  fixed ;
     margin-bottom: 30%;
 }
 
@@ -1039,8 +1050,8 @@ text-decoration: none;
 
 .image-point  ul li {
   list-style-type: none;
-  color: white;
-    border-bottom: 0.5px solid white;
+  color: rgb(6, 6, 6);
+    border-bottom: 0.5px solid rgb(66, 65, 65);
     margin-bottom: 2%;
     
 
@@ -1052,6 +1063,7 @@ text-decoration: none;
   font-family: "Lilita One", sans-serif;
 text-align: end;
 font-weight: 100;
+color: #000000;
 }
 
 .image-point  .p {
@@ -1070,7 +1082,7 @@ color: gray;
   font-size: 7em;
   font-family: 'Rubik Glitch Pop', system-ui;
   font-weight: 100;
-  color: rgb(255, 255, 255);
+  color: rgb(2, 2, 2);
   line-height: 1.25em;
   text-transform: uppercase;
   transition: 0.5s;
@@ -1078,9 +1090,9 @@ color: gray;
 }
 
 
- .image-point ul:hover li:not(:hover) a {
+.image-point ul:hover li:not(:hover) a {
     opacity: 0.5;
-    color: white;
+    color: rgb(59, 59, 59);
 }
 
 .image-point a {
@@ -1107,7 +1119,8 @@ ul li:hover .image {
 }
 
 .image {
-    background-color: rgba(4, 5, 6, 0.463);
+    background-color: rgb(0, 0, 0);
+
 }
 
 .img-project {
@@ -1272,7 +1285,7 @@ align-items: center;
 /*CONTACT*/
 
  #contact {
-  
+
   transform: none;
   height: 50%;
   margin: 0;
@@ -1285,7 +1298,7 @@ opacity: 0;
    }
 
 footer  a  {
-  color: rgb(255, 255, 255);
+  color: rgb(33, 32, 32);
 }
 
    #contact .title1 {
@@ -1295,7 +1308,7 @@ footer  a  {
     text-align: center;
     position: relative;
     text-transform:lowercase;
-color: #a8a8a8;
+color: #1a1818;
    }
 
    #contact span {
@@ -1310,7 +1323,7 @@ color: #a8a8a8;
     .contact-info-upper-container {
     display: block;
     border-radius: 10px;
-    border: rgb(255, 255, 255) 1px solid;
+    border: rgb(21, 20, 20) 1px solid;
     margin: 5rem auto;
     padding: 20px;
     position: relative;
@@ -1336,7 +1349,7 @@ color: #a8a8a8;
     margin-top: 2%; 
     font-size: 1rem;
     font-weight: 100;
-    color: #ffffff;
+    color: #191717;
     text-decoration: none;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 text-transform: uppercase;
@@ -1351,7 +1364,7 @@ align-items: center;
 margin-top: -5%;
 font-size: 1rem;
 font-weight: 100;
-color: #ffffff;
+color: #141313;
 justify-content: center;
   text-align: center;
   position: relative;
@@ -1377,7 +1390,8 @@ justify-content: center;
       position: relative;
       border-radius: 20px;
       z-index: 2;
-  
+      color: white;
+
   }
   
   
@@ -1390,7 +1404,7 @@ justify-content: center;
   text-transform: uppercase;
   text-decoration: none;
   font-size: 1rem;
-  color: #ffffff;
+  color: #121111;
      background:
      linear-gradient(
        to right,
@@ -1417,17 +1431,12 @@ justify-content: center;
  footer {
     height: 30vh;
     margin: auto;
-    border-top: 1px solid rgba(255, 255, 255, 0.571);
+    border-top: 1px solid rgba(27, 26, 26, 0.571);
     border-top-right-radius: 100px;
     border-top-left-radius: 100px;
-    background-color: #000000;
-
+background-color: transparent ;
   }
 
-  footer .text-wrapper {
-    background-color: #000000;
-  padding-top: 2%;
-  }
 
   footer .text-wrapper:hover {
 filter: none; 
@@ -1445,7 +1454,7 @@ filter: none;
   }
  
   footer p {
-    color: rgb(255, 255, 255);
+    color: rgb(28, 27, 27);
     font-size: 12px;
     letter-spacing: -1px;
 
@@ -1467,7 +1476,8 @@ footer h1 {
   margin: 0%;
   margin-bottom: 0%;
   padding: 90;
-transform: rotate(0.5turn);
+transform: rotate(0turn);
+
 }
 
 

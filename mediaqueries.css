@@ -76,7 +76,7 @@ body {
 }
 
 
-  .image-point  ul li a {
+.image-point  ul li a {
     font-size: 36px;
     font-weight: 300;
   }
@@ -207,12 +207,12 @@ font-size: 1rem;
   background: url(https://images.unsplash.com/photo-1716143493326-a08f2de48edb?q=80&w=3432&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)  center  ;
 
 }
-  .image-point {
+.image-point {
     min-height: 50vh;
 
   }
   
-.image-point ul {
+  .image-point ul {
  margin-top: 12px;
  text-align: center;
 
@@ -228,7 +228,7 @@ font-size: 1rem;
 
 .image-point p {
   text-align: center;
-  color: white;
+  color: rgb(0, 0, 0);
   margin-top: 10px;
 }
 
@@ -273,7 +273,7 @@ color: white;
 display: flex;
 font-size: 10vh;
 font-weight: 300;
-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);
 animation:   rotateAnimation 2s linear infinite;
 mix-blend-mode: difference;
 }
@@ -295,8 +295,10 @@ mix-blend-mode: difference;
 
 .h3,
 .h3-details {
-color: rgb(255, 255, 255);
+  color: white;
 font-size: 8px;
+font-style: 200;
+
 }
 
 #about-me .title1 {
@@ -336,7 +338,7 @@ font-size: 8px;
 
       #about-me .title1 {
         font-size: 2.4rem;
-        color: rgb(255, 255, 255);
+        color: rgb(40, 39, 39);
         -webkit-text-stroke: 0px;
         text-align: center;
         justify-content: center;
@@ -351,7 +353,7 @@ font-size: 8px;
   font-weight: 300;
   text-align: start;
   margin: 15%;
-  color: rgb(255, 255, 255);
+  color: rgb(62, 62, 62);
   -webkit-text-stroke: 0px;
   font-family: 'Rubik Glitch Pop', system-ui;
 
@@ -361,7 +363,7 @@ font-size: 8px;
   font-size: 25px;
   letter-spacing: -1px;
   line-height: -3px;
-  color: rgb(227, 227, 227);
+  color: rgb(0, 0, 0);
 }
 
 #about-me .section__text__p1{
@@ -407,6 +409,7 @@ font-size: 8px;
 
       body {
         margin: 0;
+      background-color: white;
       }
       .scrolling-text-container {
         display: none;
@@ -420,11 +423,10 @@ font-size: 8px;
        
       .footer-p,
       .clock {
-        color: rgb(255, 255, 255);
+        color: rgb(20, 20, 20);
       }
 
       footer {
-        mix-blend-mode: darken;
         border-top-right-radius: 100px;
         border-top-left-radius: 100px;
       }
@@ -445,13 +447,9 @@ font-size: 8px;
 
       .image-profile {
 height: 140vh;
-width: 95%;
-margin: 10px;
-top: 5px;
-      }
-
-      .image-profile {
-        display: flex;
+width: 100%;
+display: none;
+top: 0%;
       }
 
       .image-mobile {
@@ -469,7 +467,7 @@ top: 5px;
    }
 
    .section__text___p1 {
-color: rgb(255, 255, 255);
+color: rgb(19, 19, 19);
    }
 
 #profile .title {
@@ -486,7 +484,7 @@ letter-spacing: -4px;
 
    .btn {
     position: absolute;
-    left: 30%;
+    left: 32%;
     top: 60%;
 
    }
@@ -496,7 +494,6 @@ letter-spacing: -4px;
 font-weight: 400;
     font-size: 15px;
 padding: 5px;    color: rgb(255, 255, 255);
-    mix-blend-mode: normal;
    }
    
 .text-container {
@@ -598,7 +595,9 @@ padding: 5px;    color: rgb(255, 255, 255);
 
 
   .menu-links a {
-    font-size: 1rem;
+    font-size: 2.5rem;
+    position: relative;
+    top: 30%;
   }
 
  
@@ -613,7 +612,7 @@ padding: 5px;    color: rgb(255, 255, 255);
 .clock{
   display: flex;
   justify-content: center;
-  color: rgba(255, 255, 255, 0.466);
+  color: rgb(95, 94, 94)
 }
 
 
@@ -814,7 +813,7 @@ font-weight: 100;
   top: -10px;
   margin-bottom: 0%;
   height: 50vh;
-  transform: rotate(0.5turn);
+  transform: rotate(0turn);
 
 }
     }

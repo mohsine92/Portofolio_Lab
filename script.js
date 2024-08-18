@@ -57,7 +57,7 @@ showTime();
 
 
 
-let image = document.querySelectorAll('.image');
+let image = document.querySelectorAll('  .image');
 function showImage(e) {
   for(var i = 0; i < image.length; i++){
     x = e.pageX;
@@ -287,4 +287,3 @@ TweenMax.staggerFrom(
               });
           });
     
-
