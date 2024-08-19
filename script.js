@@ -103,11 +103,9 @@ TweenMax.staggerFrom(
         },
         y: -500, 
           duration:4,
-          scrub: 10,
+          scrub: 1,
 
       });
-      
-      
     
       
 
@@ -127,7 +125,7 @@ TweenMax.staggerFrom(
 
       gsap.to(".text-wrapperr", {
         y: "-50%",
-        scale: 0.8,
+        scale: 1,
         ease: "none",
         scrollTrigger: {
           trigger: "body",

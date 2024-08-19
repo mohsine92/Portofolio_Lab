@@ -273,7 +273,7 @@ color: white;
 display: flex;
 font-size: 10vh;
 font-weight: 300;
-color: rgb(0, 0, 0);
+color: black;
 animation:   rotateAnimation 2s linear infinite;
 mix-blend-mode: difference;
 }
