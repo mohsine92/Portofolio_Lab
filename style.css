@@ -16,6 +16,10 @@
   @import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch+Pop&display=swap');
 
 
+
+  @import url("https://fonts.cdnfonts.com/css/blanquotey");
+  
+
 @keyframes rotateAnimation {
   from {
     transform: rotate(0deg);
@@ -25,7 +29,13 @@
   }
 }
 
-  
+  .gradient {
+    position: fixed;
+    height: 10%;
+    width: 100%;
+    top: 0%;
+    background: linear-gradient(180deg, #f7f7f7 0, hsla(0, 0%, 97%, .987) 11%, hsla(0, 0%, 97%, .951) 20.8%, hsla(0, 0%, 97%, .896) 29.6%, hsla(0, 0%, 97%, .825) 37.5%, hsla(0, 0%, 97%, .741) 44.6%, hsla(0, 0%, 97%, .648) 51%, hsla(0, 0%, 97%, .55) 57%, hsla(0, 0%, 97%, .45) 62.5%, hsla(0, 0%, 97%, .352) 67.7%, hsla(0, 0%, 97%, .259) 72.7%, hsla(0, 0%, 97%, .175) 77.8%, hsla(0, 0%, 97%, .104) 82.9%, hsla(0, 0%, 97%, .049) 88.2%, hsla(0, 0%, 97%, .013) 93.9%, hsla(0, 0%, 97%, 0));        z-index: 100000;
+  }
 
  /* Barre de progression */
  .progress-bar {
@@ -36,10 +46,10 @@
   height: 2.5px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
-  background-color:rgb(255, 255, 255);
-  mix-blend-mode: difference;
+  background-color:rgb(0, 0, 0);
   z-index: 100;
   transition: width 0.25s ease-out;
+  z-index: 10000;
 }
 
 
@@ -398,7 +408,7 @@ mix-blend-mode: difference;
     right: 10%;
     background-color: rgb(0, 0, 0);
     width: 30%;
-    height: 33%;
+    height: 30%;
     max-height: 0;
     overflow:hidden;
     transition: all 500ms ease;
@@ -605,7 +615,11 @@ h5 {
   font-size: 10.2rem;
   color: whitesmoke;
 animation: none;
-  -webkit-text-stroke-width: 0.11px;
+  -webkit-text-stroke-width: 0.11px;  
+
+  font-weight: 100;
+
+
 }
 
 .title1 {
@@ -1011,7 +1025,8 @@ mix-blend-mode: difference;
           
           .image-container img {
               width: 100%;
-              rotate: 90deg;
+             rotate: 90deg;
+            cursor:cell;
               transition: transform 0.7s ease-out; /* Animation fluide */
           }
 
@@ -1119,8 +1134,8 @@ ul li:hover .image {
 }
 
 .image {
-    background-color: rgb(0, 0, 0);
-
+    background-color: rgba(255, 255, 255, 0.547);
+   
 }
 
 .img-project {
@@ -1135,8 +1150,8 @@ ul li:hover .image {
     align-items: center;
     margin: auto;
     gap: 5rem;
-    margin-top: 20%;
-    margin-bottom: 10%;
+    margin-top: 35%;
+    margin-bottom: 30%;
     height: 50%;
     width: 95%;
   border-radius: 50px;

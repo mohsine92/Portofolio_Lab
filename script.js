@@ -285,3 +285,24 @@ TweenMax.staggerFrom(
               });
           });
     
+
+
+          const button = document.querySelector('.image-about');
+      const image2 = document.querySelector('.image-about');
+      
+      button.addEventListener('mousemove', (e) => {
+          const { left, top, width, height } = button.getBoundingClientRect();
+          const x = (e.clientX - left) / width - 0.5;
+          const y = (e.clientY - top) / height - 0.5;
+      
+          const moveX = x * 200; // Ajuste la valeur pour augmenter ou diminuer le mouvement horizontal
+          const moveY = y * 200; // Ajuste la valeur pour augmenter ou diminuer le mouvement vertical
+      
+          image2.style.transform = `translate(${moveX}px, ${moveY}px)`;
+      });
+      
+      button.addEventListener('mouseleave', () => {
+          image2.style.transform = 'translate(0, 0)'; // Réinitialise la position de l'image lorsqu'on quitte la zone
+      });
+
+
