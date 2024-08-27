@@ -228,7 +228,7 @@ font-size: 1rem;
 
 }
 .image-point {
-  background: url(./idea/background-gradient.jpg) center fixed;
+  background:black;
     min-height: 40vh;
 
   }
@@ -884,9 +884,12 @@ font-weight: 100;
     @media screen and (max-width: 900px) {
 
 
+      #contact  .title1 {
+        font-size: 1.5rem;
+    }
 
       #contact .title1 span {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .nav-links {
@@ -903,7 +906,7 @@ font-weight: 100;
   }
 
 
-  #experience .title1, #hobies .title1 {
+  #experience .title1 {
     color: black;
     font-size: 10vh;
     -webkit-text-stroke: 0px black;
