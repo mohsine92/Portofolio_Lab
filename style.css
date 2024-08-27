@@ -10,14 +10,8 @@
   src: url("https://garet.typeforward.com/assets/fonts/campaigns/OddvalVariable-VariableVF.woff2");}
 
 
-  @import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&display=swap');
+  
 
-  @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@500&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch+Pop&display=swap');
-
-
-
-  @import url("https://fonts.cdnfonts.com/css/blanquotey");
   
 
 @keyframes rotateAnimation {
@@ -207,7 +201,7 @@ transition: filter 2s;
     margin-left:50%;
     margin-right: 12%;
     transform: translateX(-50%) translateY(-50%);
-    color:#a8a8a8;
+    color:#3a3939;
     font-size: 12px;
     letter-spacing: -0.3px;
     font-weight: 200;
@@ -376,7 +370,7 @@ display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 23px;
-    width: 40px;
+    width: 45px;
     left: 18vh;
     margin: 0%;
     padding: 30%;
@@ -408,7 +402,7 @@ mix-blend-mode: difference;
     right: 10%;
     background-color: rgb(0, 0, 0);
     width: 30%;
-    height: 30%;
+    height: 27%;
     max-height: 0;
     overflow:hidden;
     transition: all 500ms ease;
@@ -443,7 +437,7 @@ letter-spacing: -1px;
 
 
 .menu-links.open {
-    max-height: 30%;
+    max-height: 27%;
     z-index: 2;
 }
 
@@ -508,6 +502,7 @@ min-height: fit-content;margin: 0;
 }
 
 .image-profile {
+
     width: 100%;
     height: 110%;
     position: absolute;
@@ -751,7 +746,8 @@ text-align: center;
 .btn-color-1:hover,
 .btn-color-2:hover {
     transition:  1s;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0) ;
     cursor: pointer;
     transform: scale(1.1);
 }
@@ -883,7 +879,7 @@ color: rgb(21, 20, 20);
 #about-me .icon {
   padding: 1%;
   border-radius: 20px;
-backdrop-filter: sepia(10%);
+/*backdrop-filter: sepia(10%);*/
 }
 
 
@@ -912,8 +908,8 @@ backdrop-filter: sepia(10%);
     font-family: Oddval Variable;
         text-align: center;
   font-size: 10rem;
-    color: rgb(72, 71, 71);
-    white-space: nowrap;
+    color: rgb(72, 71, 71); 
+        white-space: nowrap;
    animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-name: change;
@@ -924,6 +920,8 @@ backdrop-filter: sepia(10%);
 
 
 .details-container2 {
+  filter: invert(96%);
+
  /*background: url( https://images.unsplash.com/photo-1723460041943-cb93a71ce29e?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) center center;*/
  background: url(https://images.unsplash.com/photo-1522072783977-1117b39ffb58?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)  center center ; 
     display:flow-root;
@@ -939,11 +937,9 @@ backdrop-filter: sepia(10%);
    text-align: center;
    scale: 0;
    box-shadow: 30px 30px 100px rgba(39, 38, 38, 0.803);
-
-
       }
      
-      
+     
 
 .h3 {
   color: rgb(175, 175, 175);
@@ -1012,24 +1008,26 @@ mix-blend-mode: difference;
                transition: 0.6s;
              }
 
-             .image-container {
-              margin-top: 20%;
-              margin-bottom: 10%;
-              left: 27%;
-              position: relative;
-              width: 800px;
-              height: 500px;
-              cursor: pointer;
-              perspective: 1000px; /* Donne un effet de profondeur */
-          }
-          
-          .image-container img {
-              width: 100%;
-             rotate: 90deg;
-            cursor:cell;
-              transition: transform 0.7s ease-out; /* Animation fluide */
-          }
+            
 
+             .image-container {
+              height: 100%;
+              width: 100%;
+             }
+
+             .image-container img{
+              position: relative;
+             left: 25%;
+             margin-top: 10%;
+              display: flex;
+              height: 60%;
+              width: 50%;
+              filter: invert(85%);
+              transition: 0.1s;
+              cursor: cell;
+             }
+            
+    
 
 
 .section-pic-container {
@@ -1119,18 +1117,17 @@ text-decoration: none;
     position: absolute;
     top: 0;
     left: 0;
-    translate: -50% -50%;
+    translate: -50% -40%;
     pointer-events: none;
     z-index: 1;
 width: 0;
-transition: width 0.5s;
+transition: width 0.7s;
 }
 
 
 ul li:hover .image {
     width: 650px;
     height: 400px;
-    border-radius: 10px;
 }
 
 .image {
@@ -1153,15 +1150,14 @@ ul li:hover .image {
     margin-top: 35%;
     margin-bottom: 30%;
     height: 50%;
-    width: 95%;
+    width:90%; 
   border-radius: 50px;
 }
 
 
 
 #experience {
-  mix-blend-mode: difference;
-
+filter: invert(100%);
 background: url(https://i.pinimg.com/originals/28/06/32/280632245663b095081f37cc49a0f17b.gif) fixed center no-repeat  ;
 background-size: cover;
 }
@@ -1192,7 +1188,8 @@ background-size: cover;
 #experience .title1 {
   font-size: 23vh;
     color: transparent;
-  -webkit-text-stroke: 0.8px white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-text-stroke: 0.8px rgb(255, 255, 255);
 
 
 }
@@ -1487,7 +1484,9 @@ footer h1 {
   text-align: center;
 }
 
+
 .terra-img {
+
   display: flex;
   height:55vh;
   width: 100%;

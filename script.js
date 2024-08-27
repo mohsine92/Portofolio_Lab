@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     m = (m < 10) ? "0" + m : m;
     s = (s < 10) ? "0" + s : s;
     
-    var time = location + " " + h + ":" + m + ":" + s + " " + session;
+    var time = location + " → " + h + ":" + m + ":" + s + " " + session;
     
     document.getElementById("MyClockDisplay").innerText = time;
     document.getElementById("MyClockDisplay").textContent = time;
@@ -57,12 +57,12 @@ showTime();
 
 
 
-let image = document.querySelectorAll('  .image');
+let imagee = document.querySelectorAll('  .image');
 function showImage(e) {
-  for(var i = 0; i < image.length; i++){
+  for(var i = 0; i < imagee.length; i++){
     x = e.pageX;
     y = e.pageY;
-image[i].style.transform = `translate(${x}px, ${y}px)`;
+imagee[i].style.transform = `translate(${x}px, ${y}px)`;
 
   }
 }
@@ -102,7 +102,7 @@ TweenMax.staggerFrom(
           scrub: true,
         },
         y: -500, 
-          duration:4,
+          duration:1,
           scrub: 1,
 
       });
@@ -212,9 +212,10 @@ TweenMax.staggerFrom(
           scrub: true,
 
         },
+        delay: 3,
       scale: 1,
       scrub: 1,
-      duration: 2,
+      duration: 3,
 
         
       });
@@ -226,6 +227,13 @@ TweenMax.staggerFrom(
         rotation: 360,
       });
       
+      gsap.to(" #about-me h1", {
+        scrollTrigger: "#about-me h1",
+        duration: 3,
+        y: -50,
+        opacity: 1,
+      });
+
       gsap.to(" .about-me-details", {
         scrollTrigger: ".about-me-details",
         duration: 3,
@@ -257,6 +265,7 @@ TweenMax.staggerFrom(
 
 
 
+
             // Script pour la barre de progression du scroll
             window.addEventListener('scroll', function() {
               const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -284,11 +293,12 @@ TweenMax.staggerFrom(
                   }
               });
           });
-    
 
 
-          const button = document.querySelector('.image-about');
-      const image2 = document.querySelector('.image-about');
+
+
+          const button = document.querySelector('#image-source');
+      const image = document.querySelector('#image-source');
       
       button.addEventListener('mousemove', (e) => {
           const { left, top, width, height } = button.getBoundingClientRect();
@@ -298,11 +308,9 @@ TweenMax.staggerFrom(
           const moveX = x * 200; // Ajuste la valeur pour augmenter ou diminuer le mouvement horizontal
           const moveY = y * 200; // Ajuste la valeur pour augmenter ou diminuer le mouvement vertical
       
-          image2.style.transform = `translate(${moveX}px, ${moveY}px)`;
+          image.style.transform = `translate(${moveX}px, ${moveY}px)`;
       });
       
       button.addEventListener('mouseleave', () => {
-          image2.style.transform = 'translate(0, 0)'; // Réinitialise la position de l'image lorsqu'on quitte la zone
+          image.style.transform = 'translate(0, 0)'; // Réinitialise la position de l'image lorsqu'on quitte la zone
       });
-
-

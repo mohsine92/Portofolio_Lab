@@ -228,9 +228,8 @@ font-size: 1rem;
 
 }
 .image-point {
-  background: url(./idea/background-gradient.jpg) center center;
+  background: url(./idea/background-gradient.jpg) center fixed;
     min-height: 40vh;
-    border-radius: 20px;
 
   }
   
@@ -315,17 +314,20 @@ animation:   rotateAnimation 2s linear infinite;
   left: 0%;
 right: 0%;
 justify-content: center;
-
+height: auto;
 width: 100%;
 }
 
-.image-container img {
-height: 50%;
-width: 60%;
-right: 0%;  rotate: 90deg;
+
+.image-container img{
   position: relative;
-  transition: transform 0.7s ease-out;
-}
+ left: 3%;
+ margin-top: 10%;
+  display: flex;
+  height: 60%;
+  filter: invert(90%);
+ }
+
 
 
 
@@ -377,7 +379,8 @@ font-weight: 200;
 }
 
       .details-container2 {
-        background: url(https://images.unsplash.com/photo-1522072783977-1117b39ffb58?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)  center center ; 
+        background: url(https://images.unsplash.com/photo-1634655511368-6cd7213719f4?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) center ;
+       
         padding: 5%;
           flex: 1;
           border-radius: 20px;
@@ -387,6 +390,7 @@ font-weight: 200;
           left: 0%;
           top: 20px;
           width: 75%;
+          filter: invert(100%);
          }
 
       #about-me .title1 {
@@ -447,9 +451,7 @@ font-weight: 200;
   justify-content: center;
 }
 
-.image-about {
-  right: 20%;
-}
+
 
 .container-service p  {
   font-size: 6vh;
