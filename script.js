@@ -76,13 +76,14 @@ document.addEventListener('mousemove', showImage);
 
 
 TweenMax.staggerFrom(
-  "body, .image-profile ",
+  "body, #profile ",
   1,
   {
     opacity: 0,
+    duration: 1,
     ease: Expo.easeInOut,
   },
-  0.01
+  0.5
 );
 
 
@@ -165,6 +166,10 @@ TweenMax.staggerFrom(
       });
 
 
+
+
+
+
       gsap.to(" #about-me", {
         scrollTrigger: "#about-me",
         duration: 1,
@@ -212,13 +217,16 @@ TweenMax.staggerFrom(
           scrub: true,
 
         },
-        delay: 3,
       scale: 1,
-      scrub: 1,
+      scrub: 5,
       duration: 3,
 
         
       });
+
+
+
+
 
 
 
@@ -313,4 +321,25 @@ TweenMax.staggerFrom(
       
       button.addEventListener('mouseleave', () => {
           image.style.transform = 'translate(0, 0)'; // Réinitialise la position de l'image lorsqu'on quitte la zone
+      });
+
+
+
+
+      const buttoon = document.querySelector('.button-about');
+      const iimage = document.querySelector('.button-about');
+      
+      buttoon.addEventListener('mousemove', (e) => {
+          const { left, top, width, height } = buttoon.getBoundingClientRect();
+          const x = (e.clientX - left) / width - 0.5;
+          const y = (e.clientY - top) / height - 0.5;
+      
+          const moveX = x * 200; // Ajuste la valeur pour augmenter ou diminuer le mouvement horizontal
+          const moveY = y * 200; // Ajuste la valeur pour augmenter ou diminuer le mouvement vertical
+      
+          iimage.style.transform = `translate(${moveX}px, ${moveY}px)`;
+      });
+      
+      buttoon.addEventListener('mouseleave', () => {
+          iimage.style.transform = 'translate(0, 0)'; // Réinitialise la position de l'image lorsqu'on quitte la zone
       });

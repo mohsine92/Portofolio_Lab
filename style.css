@@ -28,11 +28,17 @@
     height: 10%;
     width: 100%;
     top: 0%;
-    background: linear-gradient(180deg, #f7f7f7 0, hsla(0, 0%, 97%, .987) 11%, hsla(0, 0%, 97%, .951) 20.8%, hsla(0, 0%, 97%, .896) 29.6%, hsla(0, 0%, 97%, .825) 37.5%, hsla(0, 0%, 97%, .741) 44.6%, hsla(0, 0%, 97%, .648) 51%, hsla(0, 0%, 97%, .55) 57%, hsla(0, 0%, 97%, .45) 62.5%, hsla(0, 0%, 97%, .352) 67.7%, hsla(0, 0%, 97%, .259) 72.7%, hsla(0, 0%, 97%, .175) 77.8%, hsla(0, 0%, 97%, .104) 82.9%, hsla(0, 0%, 97%, .049) 88.2%, hsla(0, 0%, 97%, .013) 93.9%, hsla(0, 0%, 97%, 0));        z-index: 100000;
+    background: linear-gradient(180deg, #f7f7f7 0, hsla(0, 0%, 97%, .987) 11%, hsla(0, 0%, 97%, .951) 
+    20.8%, hsla(0, 0%, 97%, .896) 29.6%, hsla(0, 0%, 97%, .825) 37.5%, hsla(0, 0%, 97%, .741)
+     44.6%, hsla(0, 0%, 97%, .648) 51%, hsla(0, 0%, 97%, .55) 57%, hsla(0, 0%, 97%, .45) 62.5%, 
+     hsla(0, 0%, 97%, .352) 67.7%, hsla(0, 0%, 97%, .259) 72.7%, hsla(0, 0%, 97%, .175) 77.8%,
+      hsla(0, 0%, 97%, .104) 82.9%, hsla(0, 0%, 97%, .049) 88.2%, hsla(0, 0%, 97%, .013) 93.9%,
+       hsla(0, 0%, 97%, 0));       
+       z-index: 100000;
   }
 
  /* Barre de progression */
- .progress-bar {
+ /*.progress-bar {
   position: fixed;
   top: 0;
   left: 0;
@@ -44,7 +50,7 @@
   z-index: 100;
   transition: width 0.25s ease-out;
   z-index: 10000;
-}
+} */
 
 
 * {
@@ -90,8 +96,9 @@ text-align: center;
 
 }
 
+/* Dispay none carousel text */
 .text-wrapper {
-  /*border-top: 2px solid #000000;*/
+  border-top: 2px solid #000000;
   display: none;
   justify-content: flex-start;
   overflow: hidden;
@@ -123,7 +130,7 @@ transition: filter 2s;
 .text-wrapper:not(:hover) {
   transition: filter 2s;
   filter:none;
-}
+}  
 
 @keyframes move-rtl {
   0% {
@@ -159,6 +166,7 @@ transition: filter 2s;
     text-align: center;
     font-family: 'TheFont';
     animation: letter-breathe 3s ease-in-out infinite;
+    z-index: -1;
      }
 
      .logo1:hover {
@@ -250,8 +258,6 @@ a,
 
 
 /* DESKTOP NAV*/
-
-
 
 
 nav, 
@@ -380,15 +386,19 @@ display: flex;
     cursor: pointer;
     position:relative;
 
+
 }
 
 .hamburger-icon span{
 overflow-y: hidden;
-    width: 100%;
-    border: 1px solid rgb(255, 255, 255);
-    transition: all 0.8 ease-in-out;
+    width: 50px;
+    border-radius: 10px;
+    margin: 3px;
+    border: 2px solid rgb(255, 255, 255);
     mix-blend-mode: difference;
-    z-index: 5;
+    transition: all 1 ease-in-out;
+z-index: 2;
+
 }
 
 .hamburger-icon.open {
@@ -397,39 +407,52 @@ left: 48%;
 top: 28%;
 z-index: 7;
 mix-blend-mode: difference;
+
 }
 
 
+
 .menu-links{
-  filter: invert(100%);
-filter: sepia(100%);
+  clip-path: polygon(0% 15%, 5% 15%, 5% 0, 95% 0, 95% 16%, 100% 16%, 100% 85%, 96% 85%, 96% 100%, 4% 100%, 4% 85%, 0% 85%);
+  filter: invert(95%);
     top: 0%;
     right: 0%;
-    background: url(https://images.unsplash.com/photo-1522072783977-1117b39ffb58?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size:cover ;
+   /* background: url(https://images.unsplash.com/photo-1522072783977-1117b39ffb58?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+   */
+   background-color: rgb(202, 202, 43);
     width: 100%;
     height: 100%;
     max-height: 0;
     overflow:hidden;
-    transition: all 500ms ease;
-    z-index: 1;
-position: absolute;
+    transition: all 600ms ease;
+position: fixed;
+z-index:3 !important;
+
 
 }
 
+.menu-links p {
+  position: relative;
+  top: 10px;
+  font-size: 50px;
+  mix-blend-mode: difference;
+
+  }
+
 .menu-links a{
     display: block;
-    padding:  100px;
     text-align: center;
     color: rgb(0, 0, 0);
-    transition: all 0.3 ease-in-out;
+    transition: all 0.5s ease-in-out;
     text-decoration: none;
     text-transform: uppercase;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 letter-spacing: -1px;
-    z-index: 1;
-    font-weight: 300;
-
-
+font-weight: 300;
+position: relative;
+margin-top: 25%;
+left: 0%;
 }
 
 
@@ -508,17 +531,15 @@ min-height: fit-content;margin: 0;
 }
 
 .image-profile {
-
     width: 100%;
     height: 110%;
     position: absolute;
     top: 0%;
-
   }
 
 
 #profile .icon {
-  background: white;
+  background: rgb(193, 193, 193);
   border-radius: 100px;
 }
 
@@ -604,6 +625,7 @@ h5 {
     animation-iteration-count: infinite;
     animation-name: change;
     transition-timing-function: ease-in-out;
+    mix-blend-mode: difference;
   }
 
   .section__text__p1 {
@@ -885,7 +907,6 @@ color: rgb(21, 20, 20);
 #about-me .icon {
   padding: 1%;
   border-radius: 20px;
-/*backdrop-filter: sepia(10%);*/
 }
 
 
@@ -969,7 +990,8 @@ mix-blend-mode: difference;
         padding: 13px;
         border-radius: 20px;
         background-color: transparent;
-        border: 1px solid rgb(255, 255, 255);
+        border: 2px solid rgb(0, 0, 0);
+        border-style: dotted;
         cursor: pointer;
         display: flex;
         justify-content: center;
@@ -986,7 +1008,7 @@ mix-blend-mode: difference;
     letter-spacing: -1px;
     font-size: 15px;
     font-weight: 500;
-    color:rgb(200, 198, 198);
+    color:rgb(198, 194, 194);
     mix-blend-mode: difference;
       }
     
@@ -1145,6 +1167,115 @@ ul li:hover .image {
   margin-top: -100%;
 }
 
+/* Project mobile version */
+#project-phone {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: block;
+  margin-bottom: 40%;
+  overflow-x: hidden;
+
+}
+
+.image-point-phone {
+  height: 100%;
+  width: 90%;
+  margin: 18px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  display: block;
+  background-color: #121111;
+
+}
+
+
+
+.image-point-phone a {
+  text-decoration: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: rgb(237, 237, 237);
+    font-weight: 400;
+    letter-spacing: -1.3px;
+  font-size: 1.3rem;
+  text-align: center;
+  align-items: center;
+  position: relative;
+  top: 5px;
+  justify-content: center;
+  display: flex;
+  margin: 0;
+  list-style-type: none;
+
+}
+
+.image-point-phone p {
+  text-decoration: none; 
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: 200;
+  font-size: 0.8rem;
+  text-align: center;
+  position: relative;
+  top: -30px;
+  list-style-type: none;
+
+}
+
+
+.image-point-phone .p {
+  list-style-type: none;
+
+  text-decoration: none; 
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: rgb(172, 171, 171);
+  mix-blend-mode: difference;
+  font-weight: 200;
+  font-size: 0.8rem;
+  text-align: center;
+position: relative;
+left: 36%;
+top: -5px;
+margin-bottom: 20px;
+ border: 1px solid rgba(226, 224, 224, 0.588);
+ border-style:dashed;
+  border-radius: 10px;
+ width: 90px;
+
+
+}
+
+
+
+.image-point-phone li a{
+  margin-bottom: 50px;
+  list-style-type: none;
+
+}
+
+
+.project-image {
+  height: 210px;
+  width: 93%;
+  margin: 13px;
+  display: block;
+  position: relative;
+  border-radius: 10px;
+    image-rendering: pixelated; /* Rend l'image en pixelisé */
+
+
+}
+
+
+
+
+#webgl-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
 /* EXPERIENCE SECTION*/
 
 #experience {
@@ -1154,7 +1285,6 @@ ul li:hover .image {
     margin: auto;
     gap: 5rem;
     margin-top: 35%;
-    margin-bottom: 30%;
     height: 50%;
     width:90%; 
   border-radius: 50px;
@@ -1331,14 +1461,14 @@ footer  a  {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
     position: relative;
-    text-transform:capitalize;
+    text-transform:lowercase;
 color: #1a1818;
    }
 
    #contact span {
     font-size: 8rem;
     font-weight: 500;
-    text-transform: capitalize;
+    text-transform: lowercase;
    }
 
 
