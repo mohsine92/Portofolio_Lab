@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
           scrub: true,
           onUpdate: (self) => {
             let progress = self.progress;
-            let newHeight = 150 + 300 * progress;
+            let newHeight = 150 + 230 * progress;
             gsap.to(service, {
               height: newHeight + "px",
               duration: 0.1,
@@ -69,4 +69,20 @@ document.addEventListener("DOMContentLoaded", function () {
   services.forEach((service) => {
     observer.observe(service);
   });
+});
+
+
+
+
+    
+gsap.to(".col h1", {
+  y: "50%",
+  scale: 1.1,
+  ease: "none",
+  scrollTrigger: {
+    trigger: "body",
+    start: "top top",
+    end: "100vh top",
+    scrub: 1.1,
+  },
 });

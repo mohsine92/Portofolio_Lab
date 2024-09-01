@@ -122,6 +122,8 @@ TweenMax.staggerFrom(
           scrub: 1.1,
         },
       });
+
+      
     
 
       gsap.to(".text-wrapperr", {
@@ -212,22 +214,15 @@ TweenMax.staggerFrom(
       gsap.to(" .details-container2 ", {
         scrollTrigger: {
           trigger: "#profile ",
-          start: "top " ,
-          end: "bottom",
+          start: "bottom top " ,
+          end: "bottom bottom",
           scrub: true,
 
         },
       scale: 1,
-      scrub: 5,
-      duration: 3,
-
+      delay:3,
         
       });
-
-
-
-
-
 
 
       gsap.to(" #about-me h2 ", {
@@ -264,12 +259,33 @@ TweenMax.staggerFrom(
 
       });
 
+      gsap.set("#experience", {
+        scale:1,
+        height: "0%",
+        width: "0%",
+      });
+      
+      // Animation au défilement
+      gsap.to("#experience", {
+        scrollTrigger: {
+          trigger: ".image-point",
+          start: "bottom center",
+          end: "bottom ",
+          scrub: true,
+        },
+        scale: 1,
+        scrub : 5,
+        height: "100%",
+        width: "90%",
+        duration: 1,
+        ease: "power4.inOut"
+      });
 
-            });
 
             
           
-          
+    });
+
 
 
 
@@ -343,3 +359,22 @@ TweenMax.staggerFrom(
       buttoon.addEventListener('mouseleave', () => {
           iimage.style.transform = 'translate(0, 0)'; // Réinitialise la position de l'image lorsqu'on quitte la zone
       });
+
+
+
+
+
+
+      gsap.to(".details-container2", {
+          filter: "invert(0%)",  // Passe à 0% quand on arrive à la section
+          delay:1,
+
+          scrollTrigger: {
+              trigger: "#about-me",
+              start: " center",  // Début de l'animation
+              end: "bottom bottom",  // Fin de l'animation 
+              scrub: true,  // Animation fluide basée sur le scroll
+          }
+          
+
+        });
