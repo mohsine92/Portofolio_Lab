@@ -414,7 +414,9 @@ mix-blend-mode: difference;
 
 
 .menu-links{
-  clip-path: polygon(0% 15%, 5% 15%, 5% 0, 95% 0, 95% 16%, 100% 16%, 100% 85%, 96% 85%, 96% 100%, 4% 100%, 4% 85%, 0% 85%);
+  /*clip-path: polygon(0% 15%, 5% 15%, 5% 0, 95% 0, 95% 16%, 100% 16%, 100% 85%, 96% 85%, 96% 100%, 4% 100%, 4% 85%, 0% 85%);*/
+  clip-path: polygon(0% 15%, 7% 15%, 7% 0, 93% 0, 93% 15%, 100% 15%, 100% 85%, 93% 85%, 93% 100%, 8% 100%, 8% 85%, 0% 85%);
+
   filter: invert(95%);
     top: 0%;
     right: 0%;
@@ -525,7 +527,7 @@ min-height: fit-content;margin: 0;
     margin-bottom: 0%;
     opacity: 1;
     z-index: 1;
-    mix-blend-mode:difference;
+    mix-blend-mode: difference
     ;
 
 }
@@ -1006,7 +1008,6 @@ mix-blend-mode: difference;
         border-radius: 20px;
         background-color: transparent;
         border: 1px solid rgb(161, 159, 159);
-        border-style:dashed;
         cursor: pointer;
         display: flex;
         justify-content: center;
@@ -1023,13 +1024,13 @@ mix-blend-mode: difference;
     letter-spacing: -1px;
     font-size: 15px;
     font-weight: 500;
-    color:rgb(198, 194, 194);
+    color:rgb(0, 0, 0);
     mix-blend-mode: difference;
       }
     
     
       .button-about:hover {
-        border: 1px solid rgb(161, 159, 159);
+        border: 1px solid rgb(57, 57, 57);
      scale: 1.1;
      background-color:hsl(328, 37%, 18%);
      color: rgb(255, 255, 255);
@@ -1081,7 +1082,6 @@ mix-blend-mode: difference;
 }
 
 .image-point {
-  mix-blend-mode: normal;
 
 
   opacity: 0;  
@@ -1197,14 +1197,13 @@ ul li:hover .image {
 }
 
 .image-point-phone {
+
+width: 100%;
   height: 100%;
-  width: 90%;
-  margin: 18px;
-  border-radius: 10px;
   align-items: center;
   justify-content: center;
   display: block;
-  background-color: #121111;
+  background-color: rgb(34, 34, 34);
 
 
 }
@@ -1230,7 +1229,6 @@ ul li:hover .image {
   text-align: center;
   align-items: center;
   position: relative;
-  top: 5px;
   justify-content: center;
   display: flex;
   margin: 0;
@@ -1292,19 +1290,19 @@ font-size: 20px;
 
 
 .project-image {
-  height: 210px;
-  width: 93%;
-  margin: 13px;
-  display: block;
-  position: relative;
+  height: 280px;
+  width: 98%;
+  margin: 4px;
+  margin-bottom: 20%;
+  display: flex;
   border-radius: 10px;
- 
+  opacity: 0; /* Les images commencent invisibles */
+  transform: translateY(50px); /* Les images commencent un peu plus bas */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Ajoute une transition CSS par défaut */
+
 }
 
-
-
-
-
+  
 /* EXPERIENCE SECTION*/
 
 #experience {
@@ -1354,17 +1352,43 @@ clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%,
 
 #experience .title1 {
   font-size: 23vh;
-    color: transparent;
+    color: rgb(136, 130, 130);
+    mix-blend-mode: difference;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  -webkit-text-stroke: 1px rgb(0, 0, 0);
+
+
+} .progress-container {
+  position: fixed;
+  border: 0.1px solid rgba(0, 0, 0, 0.474);
+  top: 5%;
+  left: 90%;
+  width: 5%;
+  background-color: #ffffff;
+  height: 10px; /* Hauteur de la barre de progression */
+  border-radius: 30px;
+  z-index: 1; /* Assure que la barre reste au-dessus du contenu */
+  transition: opacity 0.3s ease; /* Transition pour le fondu d'apparition/disparition */
+}
+
+.progress-bar {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  mix-blend-mode: difference;
+  background-color: #ffffff; /* Couleur de la barre de progression */
+}
+
+.text-final {
+  position: relative;
+  height: 200vh;
 
 
 }
 
-
-
 .text-final p {
+  position: sticky;
   margin: 19%;
+  top: 20%;
   margin-bottom: 20%;
   font-size: 50px;
   text-transform: uppercase;
@@ -1372,6 +1396,8 @@ clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%,
   color: #4d4949;
   font-family: "Inter", sans-serif;
   font-weight: 200;
+  scroll-snap-align: center;
+  flex-shrink: 1;
   letter-spacing: -1.5px;
 }
 .text-final span {

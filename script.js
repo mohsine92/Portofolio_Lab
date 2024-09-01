@@ -123,7 +123,7 @@ TweenMax.staggerFrom(
         },
       });
 
-      
+
     
 
       gsap.to(".text-wrapperr", {
@@ -282,6 +282,8 @@ TweenMax.staggerFrom(
       });
 
 
+
+
             
           
     });
@@ -377,4 +379,66 @@ TweenMax.staggerFrom(
           }
           
 
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+          // Créer un effet sticky avec ScrollTrigger pour la section complète
+          ScrollTrigger.create({
+            trigger: "#project-phone",
+            start: "top top", // Commence quand le haut de la section atteint le haut de la page
+            end: "bottom top", // Termine quand le bas de la section atteint le haut de la page
+            pinSpacing: false // Supprime l'espacement entre le contenu épinglé et le suivant
+          });
+    
+          // Animation pour chaque image
+          gsap.utils.toArray('.project-image').forEach(function (image) {
+            gsap.fromTo(image, 
+              {
+                opacity: 0,
+                y: 50
+              },
+              {
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                ease: "power3.out",
+                scrollTrigger: {
+                  trigger: image,
+                  start: "top 80%", // Animation commence quand le haut de l'image atteint 80% de la fenêtre
+                  end: "top 50%", // Animation se termine quand le haut de l'image atteint 50% de la fenêtre
+                  scrub: true // Animation fluide liée au scroll
+                }
+              });
+          });
+        });
+
+        document.addEventListener('scroll', function () {
+          // Sélectionne le conteneur text-final et la barre de progression
+          const textFinal = document.querySelector('.text-final');
+          const progressBar = document.getElementById('progress-bar');
+          const progressContainer = document.getElementById('progress-container');
+    
+          // Récupère les dimensions et la position de text-final
+          const textFinalRect = textFinal.getBoundingClientRect();
+          const windowHeight = window.innerHeight;
+    
+          // Calcule la hauteur maximale de défilement dans text-final
+          const maxScroll = textFinal.scrollHeight - windowHeight;
+    
+          // Vérifie si l'utilisateur est en train de défiler dans la section text-final
+          if (textFinalRect.top <= windowHeight && textFinalRect.bottom >= 0) {
+            // Calcule la distance de défilement à l'intérieur de text-final
+            const scrollTop = window.scrollY - textFinal.offsetTop;
+    
+            // Calcule le pourcentage de défilement
+            const scrollPercent = Math.min(Math.max(scrollTop / maxScroll, 0), 1);
+    
+            // Met à jour la largeur de la barre de progression
+            progressBar.style.width = scrollPercent * 100 + '%';
+    
+            // Affiche la barre de progression
+            progressContainer.style.opacity = 1;
+          } else {
+            // Masque la barre de progression lorsque l'utilisateur est hors de la section
+            progressContainer.style.opacity = 0;
+          }
         });
