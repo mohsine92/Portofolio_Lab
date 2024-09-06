@@ -302,13 +302,13 @@ color: white;
 
 
      .progress-container {
+      mix-blend-mode: difference;
       position: fixed;
-      border: 0.1px solid rgba(0, 0, 0, 0.474);
       top: 5%;
       left: 80%;
       width: 10%;
-      background-color: #ffffff;
-      height: 10px; /* Hauteur de la barre de progression */
+      background-color: #c2c2c2;
+      height: 2px; /* Hauteur de la barre de progression */
       border-radius: 30px;
       z-index: 1; /* Assure que la barre reste au-dessus du contenu */
       transition: opacity 0.3s ease; /* Transition pour le fondu d'apparition/disparition */
