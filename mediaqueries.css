@@ -307,7 +307,7 @@ color: white;
       top: 5%;
       left: 80%;
       width: 10%;
-      background-color: #c2c2c2;
+      background-color: #e9e9e9;
       height: 2px; /* Hauteur de la barre de progression */
       border-radius: 30px;
       z-index: 1; /* Assure que la barre reste au-dessus du contenu */
@@ -319,7 +319,7 @@ color: white;
       height: 100%;
       border-radius: 30px;
       mix-blend-mode: difference;
-      background-color: #ffffff; /* Couleur de la barre de progression */
+      background-color: #fd6a6a; /* Couleur de la barre de progression */
     }
 
       .gradient {

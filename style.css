@@ -1370,7 +1370,7 @@ clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%,
   left: 90%;
   width: 5%;
   background-color: #dad5d5;
-  height: 2px; /* Hargb(169, 169, 169)e la barre de progression */
+  height: 2px !important; /* Hargb(169, 169, 169)e la barre de progression */
   border-radius: 30px;
   z-index: 1; /* Assure que la barre reste au-dessus du contenu */
   transition: opacity 0.3s ease; /* Transition pour le fondu d'apparition/disparition */
