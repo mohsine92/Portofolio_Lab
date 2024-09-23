@@ -12,7 +12,7 @@
 
 html,
 body {
-  background-color: rgb(60, 60, 180);
+  background-color:rgb(28, 27, 27);
   font-family: "PP Neue Montreal";
 }
 
@@ -43,14 +43,12 @@ h1 {
 
 
 .col h1 {
-  border: 1px solid rgb(0, 0, 0);
-  background-color: blue;
+  background-color: rgb(27, 27, 27);  
   border-radius: 20px ;
   padding: 8px;
   filter: invert(100%);
   color: #ffffff;
   z-index: 2;
-  mix-blend-mode: difference;
   position: fixed;
   margin-top: 15px;
   top: 20px;
@@ -79,7 +77,7 @@ span {
   color: white;
 }
 .services {
-  background-color: rgb(60, 60, 180);
+  background-color:rgb(28, 27, 27);
   padding: 12em 2em;
   display: flex;
   flex-direction: column;
@@ -237,7 +235,7 @@ filter: none;
  footer,
  #contact {
   margin: 0; 
-  background-color: rgb(60, 60, 180);
+  background-color:rgb(28, 27, 27);
 
 }
   

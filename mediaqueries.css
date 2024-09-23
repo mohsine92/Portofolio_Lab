@@ -302,12 +302,11 @@ color: white;
 
 
      .progress-container {
-      mix-blend-mode: difference;
       position: fixed;
       top: 5%;
       left: 80%;
       width: 10%;
-      background-color: #e9e9e9;
+      background-color: #d0d0d0;
       height: 2px; /* Hauteur de la barre de progression */
       border-radius: 30px;
       z-index: 1; /* Assure que la barre reste au-dessus du contenu */
@@ -318,8 +317,7 @@ color: white;
       width: 100%;
       height: 100%;
       border-radius: 30px;
-      mix-blend-mode: difference;
-      background-color: #fd6a6a; /* Couleur de la barre de progression */
+      background-color: rgb(255, 255, 255); /* Couleur de la barre de progression */
     }
 
       .gradient {
@@ -358,6 +356,7 @@ width: 100%;
   display: flex;
   height: 60%;
   filter: invert(90%);
+  
  }
 
 
@@ -401,7 +400,6 @@ font-weight: 300;
 }
 
       .details-container2 {
-        background: url(https://images.unsplash.com/photo-1634655511368-6cd7213719f4?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) center center no-repeat;
         padding: 5%;
           flex: 1;
           border-radius: 20px;
@@ -412,6 +410,8 @@ font-weight: 300;
           top: 20px;
           width: 75%;
           filter: invert(100%);
+          box-shadow: none;
+          border: 0.8px solid rgb(185, 185, 185);
          }
 
       #about-me .title1 {
@@ -427,10 +427,11 @@ font-weight: 300;
       }
 
 #about-me h1 {
-  font-size: 36px;
+  font-size: 25px;
   font-weight: 300;
   text-align: start;
   margin: 15%;
+  margin-top: 40%;
   color: rgb(62, 62, 62);
   -webkit-text-stroke: 0px;
   font-family: 'Rubik Glitch Pop', system-ui;
@@ -438,7 +439,7 @@ font-weight: 300;
 }
 
 .about-me-details {
-  text-align: center;
+  text-align: start;
   font-size: 25px;
   letter-spacing: -1px;
   line-height: -3px;
@@ -449,10 +450,11 @@ font-weight: 300;
   color: rgb(58, 58, 58);
 }
 .button-about {
+  margin-top: 5%;
   position: relative;
-  padding: 13px;
+  padding: 10px;
   border-radius: 20px;
-  border: 1px solid rgb(0, 0, 0);
+  border: 0.8px solid rgb(0, 0, 0);
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -465,6 +467,8 @@ font-weight: 300;
 
 .button-about a {
  color: rgb(0, 0, 0) ;
+ font-size: 14px;
+ font-weight: 100;
  
 }
 
@@ -505,7 +509,7 @@ font-weight: 300;
        
       .footer-p,
       .clock {
-        color: rgb(20, 20, 20);
+        color: rgb(0, 0, 0);
       }
 
       footer {
@@ -657,26 +661,7 @@ padding: 5px;    color: rgb(255, 255, 255);
 
 /* EXPERIENCE */
 
-        .experience-sub-title {
-          font-size: 1.25rem;
-          color: rgb(0, 0, 0);
-          -webkit-text-stroke: 0.5px rgb(0, 0, 0);
-
-        }
-
-
-#experience .title1,
-#hobies .title1 {
-  color: rgb(0, 0, 0);
-  font-size: 5vh;
-}
-
-.container-experience {
-  margin-top: 0%;
-  justify-content: center;
-  align-items: center;
-
-}
+       
 
 
         .nav-links2  {
@@ -691,6 +676,14 @@ padding: 5px;    color: rgb(255, 255, 255);
           display: none;
         }
 
+
+  span img {
+    height: 40px;
+    width: auto;
+    rotate: 90deg;
+    padding-left: 20px;
+    margin-right: 0;
+  }
 
   .menu-links a {
     font-size: 1.75rem;
@@ -710,7 +703,7 @@ padding: 5px;    color: rgb(255, 255, 255);
 .clock{
   display: flex;
   justify-content: center;
-  color: rgb(95, 94, 94)
+  color: rgb(0, 0, 0);
 }
 
 
@@ -758,7 +751,7 @@ gap: 2rem;
   width: 55px;
   mix-blend-mode: difference ;
   position: fixed;
-z-index: 20;
+z-index: 1;
 }
 
 #desktop-nav {
@@ -843,16 +836,79 @@ width: 27%;
 
 #experience .title1,
 #hobies .title1 {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
           -webkit-text-stroke: 0.5px rgb(0, 0, 0);
 }
 
 
 
+.container-experience {
+  margin-top: 40%;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
 #experience {
-  margin: 0%;
-display: none;
-  height: 30%;
+  position: relative;
+   justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 0%;
+    margin-bottom: 30%;
+    height: 50%;
+    width:90%; 
+    gap: 0;
+}
+
+
+
+#experience {
+ background: rgb(0, 0, 0)
+  fixed center no-repeat  ;
+  filter: invert(100%);
+filter: invert(10%);
+background-size: cover;
+clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+}
+
+
+#experience .section__text__p1 {
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+#experience:hover {
+  transform: none;
+
+}
+
+
+.experience-sub-title {
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-family: 'Rubik Glitch Pop', system-ui;
+
+}
+
+#experience .title1 {
+  font-size: 10vh;
+    color: rgb(255, 255, 255);
+    mix-blend-mode: normal;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+
+}
+
+.logos {
+  filter: invert(100%);
+  box-shadow: none;
+  background: rgba(0, 0, 0, 0.749);
 }
 
 
@@ -874,10 +930,8 @@ display: none;
 .terra-img {
   display: flex;
   position: relative;
-  top: -10px;
   margin-bottom: 0%;
-  height: 50vh;
-  transform: rotate(0turn);
+  height: 100%;
 
 }
 
@@ -892,7 +946,7 @@ display: none;
   }
 
 .services {
- background-color: rgb(60, 60, 180);
+  background-color:rgb(28, 27, 27);
    padding: 8em 1em;
   display: flex;
   flex-direction: column;
@@ -917,9 +971,8 @@ display: none;
   left: 30%;
   border: 1px solid rgb(0, 0, 0);
   padding: 8px; 
-  background-color: blue;
+  background-color:rgb(28, 27, 27);
   border-radius: 20px ;
-  filter: invert(100%);
   color: #ffffff;
   font-size: 2rem;
   font-weight: 100;
@@ -988,8 +1041,6 @@ text-align: start;
 
 
   #experience .title1 {
-    color: black;
-    font-size: 10vh;
     -webkit-text-stroke: 0px black;
 }
 

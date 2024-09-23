@@ -367,6 +367,9 @@ TweenMax.staggerFrom(
 
 
 
+
+
+
       gsap.to(".details-container2", {
           filter: "invert(0%)",  // Passe à 0% quand on arrive à la section
           delay:1,

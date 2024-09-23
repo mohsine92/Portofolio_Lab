@@ -1,3 +1,26 @@
+
+
+// Tweenmax effect for body
+
+
+TweenMax.staggerFrom(
+  "body, #profile ",
+  1,
+  {
+    opacity: 0,
+    duration: 1,
+    ease: Expo.easeInOut,
+  },
+  0.5
+);
+
+
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const lenis = new Lenis();
 
