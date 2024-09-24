@@ -190,7 +190,7 @@ justify-content: center;
   font-weight: 100;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   color: #ffffff;
      background:
      linear-gradient(
@@ -220,7 +220,7 @@ justify-content: center;
   top: 20%;
     height: 20%;
     margin: auto;
-    border-top: 1.5px solid rgba(223, 223, 223, 0.571);
+    border-top: 1.5px solid rgba(255, 255, 255, 0.571);
     border-top-right-radius: 100px;
     border-top-left-radius: 100px;
 background-color: transparent ;

@@ -686,7 +686,8 @@ padding: 5px;    color: rgb(255, 255, 255);
   }
 
   .menu-links a {
-    font-size: 1.75rem;
+    font-size: 2rem;
+    font-weight: 200;
     position: relative;
     top: 30%;
   }
@@ -865,12 +866,12 @@ width: 27%;
 
 
 #experience {
- background: rgb(0, 0, 0)
-  fixed center no-repeat  ;
-  filter: invert(100%);
-filter: invert(10%);
+filter: invert(0%);
 background-size: cover;
-clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+background: #1d1c1c;
+border-radius: 20px;
+clip-path: url(https://images.unsplash.com/photo-1717954681480-0f7c64733dd8?q=80&w=3432&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) ;
+
 }
 
 
@@ -899,16 +900,17 @@ clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%,
 #experience .title1 {
   font-size: 10vh;
     color: rgb(255, 255, 255);
-    mix-blend-mode: normal;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
 
 }
 
 .logos {
-  filter: invert(100%);
+  padding: 8%;
+  border-radius: 50px;
+  filter: invert(10%);
   box-shadow: none;
-  background: rgba(0, 0, 0, 0.749);
+  background: rgba(113, 113, 113, 0.761);
 }
 
 
