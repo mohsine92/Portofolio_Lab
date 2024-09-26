@@ -99,12 +99,11 @@ TweenMax.staggerFrom(
         scrollTrigger: {
           trigger: "body",
           start: "top top",
-          end: "bottom top",
+          end: "bottom center",
           scrub: true,
         },
-        y: -500, 
-          duration:1,
-          scrub: 1,
+        y: -460, 
+        scrub: 1,
 
       });
     
