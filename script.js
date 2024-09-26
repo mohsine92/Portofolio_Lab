@@ -396,7 +396,8 @@ TweenMax.staggerFrom(
             gsap.fromTo(image, 
               {
                 opacity: 0,
-                y: 50
+                y: 50,
+                
               },
               {
                 opacity: 1,
@@ -412,6 +413,10 @@ TweenMax.staggerFrom(
               });
           });
         });
+
+
+
+
 
         document.addEventListener('scroll', function () {
           // Sélectionne le conteneur text-final et la barre de progression
