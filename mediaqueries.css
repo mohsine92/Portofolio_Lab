@@ -545,16 +545,6 @@ filter: invert(0%);
 
 
 
-      .image-mobile {
-        clip-path: none;
-height: 140vh;
-width: 100%;
-display: none;
-filter: invert(0%);
-
-      }
-
-
 
 
 #profile {
