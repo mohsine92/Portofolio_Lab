@@ -563,12 +563,13 @@ color: rgb(255, 255, 255);
 
 #profile .title {
   font-size: 4rem;
-  font-weight: 300;
+  font-weight: 320;
   color: rgb(250, 250, 250);
   -webkit-text-stroke: 0px ;
 }
 
    .title { 
+   
     color: #151414;
 padding: 5px;
 letter-spacing: -4px;
@@ -605,7 +606,6 @@ padding: 5px;    color: rgb(255, 255, 255);
 
 .section__text___p2 {
   font-size: 1.3rem;
-  animation: none;
   letter-spacing: -1px;
   font-weight: 300;
 }
