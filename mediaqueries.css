@@ -295,7 +295,7 @@ font-size: 1rem;
 }
 
 .section__text___p2 {
-color: rgb(86, 0, 0);
+color: rgb(255, 255, 255);
 font-weight: 300;
 }
 
@@ -525,8 +525,7 @@ font-weight: 300;
 
 .disponibilty {
   color: #000000;
-  border: 1px solid rgb(201, 200, 197);
-  background-color: #dcdcdc;
+  background-color: #ffffff;
   border-radius: 20px;
   padding: 10px;
   width: 40%;
@@ -540,7 +539,7 @@ font-weight: 300;
         clip-path: none;
 height: 130vh;
 width: 100%;
-display: flex;
+display: none;
 filter: invert(0%);
 
       }
@@ -550,7 +549,7 @@ filter: invert(0%);
 
 
 #profile {
-  mix-blend-mode: color-burn;
+  mix-blend-mode: difference;
   top: -20%;
   position: relative;
   height: 10vh;
@@ -559,26 +558,29 @@ filter: invert(0%);
    }
 
    .section__text___p2 {
-color: rgb(77, 4, 4);
+color: rgb(255, 255, 255);
    }
 
 #profile .title {
   font-size: 4rem;
   font-weight: 300;
-  color: rgb(76, 0, 0);
+  color: rgb(250, 250, 250);
   -webkit-text-stroke: 0px ;
 }
 
    .title { 
+    color: #151414;
 padding: 5px;
 letter-spacing: -4px;
    }
 
     .btn {
+      color: rgb(56, 56, 56);
+      background-color: #ffffff;
     position: absolute;
     left: 37%;
     top: 63%;
-    height: 40px;
+    height: 60px;
 
    }
 

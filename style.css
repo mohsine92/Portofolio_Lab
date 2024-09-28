@@ -386,24 +386,25 @@ display: flex;
     cursor: pointer;
     position:relative;
     z-index: 23 !important;
+    mix-blend-mode: difference;
+
 
 }
 
 .hamburger-icon span{
 overflow-y: hidden;
-mix-blend-mode: color-burn;
+mix-blend-mode: difference;
 width: 30px;
     border-radius: 10px;
     margin: 3.7px;
-    border: 1.5px solid rgb(67, 0, 0);
+    border: 1.5px solid rgb(255, 255, 255);
     transition: all 0.4s ease-in-out;
     z-index: 22 !important;
 
 }
 
 .hamburger-icon.open {
-  filter: invert(100%);
-
+mix-blend-mode: difference;
 left: 18vh;
 top: 28%;
 z-index: 20 !important;
@@ -521,14 +522,11 @@ justify-content: end;
     margin-bottom: 0%;
     opacity: 1;
     z-index: 1;
-mix-blend-mode:color-burn;
+mix-blend-mode:difference;
 }
 
 
 .image-profile {
-
-clip-path: polygon(0% 15%, 0 0, 15% 0%, 85% 0%, 100% 0, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
-
   display: flex;
     width: 100%;
     margin: 0%;
@@ -636,7 +634,8 @@ h5 {
 
   
 .title {
-  
+  animation:none;
+
   font-family: "Handjet", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
@@ -644,10 +643,9 @@ h5 {
   font-variation-settings:
     "ELGR" 1,
     "ELSH" 2;
-
-  letter-spacing: -14px;
+  letter-spacing: -10px;
   font-size: 15.2rem;
-  color: rgb(87, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
 .title1 {
@@ -657,7 +655,7 @@ h5 {
     font-family: Oddval Variable;
     text-align: center;
   font-size: 15rem;
-    color: rgb(22, 21, 21);
+    color: rgb(32, 32, 32);
     white-space: nowrap;
    animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -758,7 +756,7 @@ height: 3rem;
 border-radius: 10px;
 position: absolute;
 top: 100%;
-left: 48%;
+left: 47%;
 letter-spacing: -1px;
 font-family: Oddval Variable;
 font-weight: 400;
@@ -768,25 +766,28 @@ font-size: 15px;
 
 
  .btn-color-1 {
-  filter: invert(100%);
-  color: rgb(0, 0, 0);
+  filter: invert(00%);
+  color: rgb(56, 56, 56);
   background-color: rgb(255, 255, 255) ;
 text-align: center;
 border: 0;
  }
 
 
+
 .btn-color-1:hover,
 .btn-color-2:hover {
     transition:  1s;
-    color: rgb(75, 71, 71);
-    background-color: rgb(159, 0, 0) ;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255) ;
     cursor: pointer;
     transform: scale(1.1);
 }
 
+
+
 .btn .icon {
-  background-color: #c8c2c2;
+  background-color: #ab1818;
 }
 
 
@@ -796,9 +797,8 @@ border: 0;
 
 
 .disponibilty {
-filter:contrast(100%); 
- color: #ffffff;
-  background-color: #5b0000;
+color: #000000;
+  background-color: #ffffff;
   border-radius: 20px;
   padding: 10px;
   width: 10%;
