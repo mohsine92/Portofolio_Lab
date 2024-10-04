@@ -361,11 +361,24 @@ animation:   rotateAnimation 2s linear infinite;
   
 }
 
-.h3,
+.h3 {
+  font-size: 15px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 100;
+filter: invert(100%);
+color: white;
+}
+
+
 .h3-details {
-font-size: 10px;
+  filter: invert(100%);
+  color: white;
+
+  text-align: center;
 font-style: 100;
-font-weight: 300;
+font-weight: 100;
+font-size: 9px;
+
 
 }
 
@@ -385,15 +398,18 @@ font-weight: 300;
 }
 
       .details-container2 {
-        padding: 5%;
+        background: url(https://i.pinimg.com/564x/3b/c0/d0/3bc0d08128d0fc89b703ed7c5e1854e5.jpg) center center ;
+        padding: 4%;
           flex: 1;
+          background-size: 100%;
           text-align: center;
           margin: auto;
           position: relative;
           left: 0%;
           top: 20px;
           width: 75%;
-          filter: invert(100%);
+          filter: invert(0%);
+
           box-shadow: none;
          }
 
@@ -749,6 +765,7 @@ padding: 5px;    color: rgb(255, 255, 255);
 }
 
 .terra-img {
+  margin: 0%;
   height: 130%;
 }
 
