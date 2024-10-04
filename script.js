@@ -94,22 +94,44 @@ TweenMax.staggerFrom(
       document.addEventListener("DOMContentLoaded", (event) => {
        gsap.registerPlugin(ScrollTrigger)
 
+     
 
-       gsap.to(".image-profile", {
+      gsap.to(" .image-profile", {
         scrollTrigger: {
           trigger: "body",
           start: "top top",
           end: "bottom center",
           scrub: true,
+          scrub: 1,
+
         },
-        y: -460, 
-        scrub: 1,
+        y: 1000, 
+        scale: -0.5,
+        rotation: 1000,
+
+
 
       });
-    
+
+
+     
+
+      gsap.to(" #about-me h2", {
+        scrollTrigger: {
+          trigger: "body",
+          start: "top top",
+          end: "bottom center",
+          scrub: true,
+          scrub: 1,
+
+        },
+        rotation: 1060,
+
+
+
+      });
       
 
-    
       gsap.to(".logo", {
         y: "-50%",
         scale: 0.8,
@@ -175,7 +197,7 @@ TweenMax.staggerFrom(
         scrollTrigger: "#about-me",
         duration: 1,
         opacity: 1,
-        y: -100,
+        y: -300,
             });
 
    
@@ -218,8 +240,9 @@ TweenMax.staggerFrom(
           scrub: true,
 
         },
-      scale: 1,
+      scale: 1.1,
       delay:3,
+      opacity:1,
         
       });
 
@@ -312,7 +335,8 @@ TweenMax.staggerFrom(
               window.addEventListener('scroll', () => {
                   if (window.scrollY >= content.scrollHeight) {
                       window.scrollTo({
-                          top:40,
+                          top:100,
+                        
                           behavior: 'none' // Scroll instantly to create a seamless loop
                       });
                   }
@@ -343,16 +367,16 @@ TweenMax.staggerFrom(
 
 
 
-      const buttoon = document.querySelector('.button-about');
-      const iimage = document.querySelector('.button-about');
+      const buttoon = document.querySelector('#profile .btn');
+      const iimage = document.querySelector('#profile .btn');
       
       buttoon.addEventListener('mousemove', (e) => {
           const { left, top, width, height } = buttoon.getBoundingClientRect();
           const x = (e.clientX - left) / width - 0.5;
           const y = (e.clientY - top) / height - 0.5;
       
-          const moveX = x * 200; // Ajuste la valeur pour augmenter ou diminuer le mouvement horizontal
-          const moveY = y * 200; // Ajuste la valeur pour augmenter ou diminuer le mouvement vertical
+          const moveX = x * 700; // Ajuste la valeur pour augmenter ou diminuer le mouvement horizontal
+          const moveY = y * 700; // Ajuste la valeur pour augmenter ou diminuer le mouvement vertical
       
           iimage.style.transform = `translate(${moveX}px, ${moveY}px)`;
       });
@@ -368,20 +392,6 @@ TweenMax.staggerFrom(
 
 
 
-
-      gsap.to(".details-container2", {
-          filter: "invert(0%)",  // Passe à 0% quand on arrive à la section
-          delay:1,
-
-          scrollTrigger: {
-              trigger: "#about-me",
-              start: " center",  // Début de l'animation
-              end: "bottom bottom",  // Fin de l'animation 
-              scrub: true,  // Animation fluide basée sur le scroll
-          }
-          
-
-        });
         document.addEventListener("DOMContentLoaded", function () {
           // Créer un effet sticky avec ScrollTrigger pour la section complète
           ScrollTrigger.create({
@@ -396,8 +406,7 @@ TweenMax.staggerFrom(
             gsap.fromTo(image, 
               {
                 opacity: 0,
-                y: 50,
-                
+                y: 50,                
               },
               {
                 opacity: 1,
@@ -449,3 +458,6 @@ TweenMax.staggerFrom(
             progressContainer.style.opacity = 0;
           }
         });
+
+
+

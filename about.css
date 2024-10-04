@@ -12,7 +12,7 @@
 
 html,
 body {
-  background-color:rgb(28, 27, 27);
+  background-color: rgb(27, 27, 27);  
   font-family: "PP Neue Montreal";
 }
 
@@ -43,7 +43,7 @@ h1 {
 
 
 .col h1 {
-  background-color: rgb(27, 27, 27);  
+  background-color: rgb(70, 48, 48);  
   border-radius: 20px ;
   padding: 8px;
   filter: invert(100%);
