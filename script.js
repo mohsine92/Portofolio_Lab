@@ -96,7 +96,7 @@ TweenMax.staggerFrom(
 
      
 
-      gsap.to(" .image-profile", {
+      gsap.to(" .canvas", {
         scrollTrigger: {
           trigger: "body",
           start: "top top",
@@ -105,9 +105,8 @@ TweenMax.staggerFrom(
           scrub: 1,
 
         },
-        y: 1000, 
+        x: 100, 
         scale: -0.5,
-        rotation: 1000,
 
 
 
@@ -460,4 +459,79 @@ TweenMax.staggerFrom(
         });
 
 
+// Initialisation de la scène
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true }); // Antialias pour des bords plus doux
 
+renderer.setSize(window.innerWidth, window.innerHeight);
+document.getElementById('three-container').appendChild(renderer.domElement);
+
+const loader = new THREE.TextureLoader();
+const texture = loader.load('https://images.unsplash.com/photo-1638830674269-da3fc1999484?q=80&w=3286&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); // Remplacez par l'URL de la texture
+const material = new THREE.MeshStandardMaterial({
+    map: texture,
+    roughness: 0.5,
+    metalness: 0.2,
+    transparent: true,
+    opacity: 1.0,
+});
+
+// Créer un cube avec MeshStandardMaterial pour plus de réalisme
+const geometry = new THREE.BoxGeometry(2.5, 2.5, 2.5);
+
+
+const cube = new THREE.Mesh(geometry, material);
+scene.add(cube);
+
+// Ajouter une lumière ambiante pour un éclairage doux
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.5); // Lumière ambiante
+scene.add(ambientLight);
+
+// Ajouter une lumière directionnelle pour créer des ombres
+const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+directionalLight.position.set(5, 5, 5);
+directionalLight.castShadow = true; // Activer les ombres
+scene.add(directionalLight);
+
+// Configurer les ombres
+renderer.shadowMap.enabled = true; // Activer le rendu des ombres
+cube.castShadow = true; // Le cube projette des ombres
+cube.receiveShadow = true; // Le cube reçoit des ombres
+
+// Position de la caméra
+camera.position.z = 9;
+
+// Fonction pour animer le rendu
+function animate() {
+    requestAnimationFrame(animate);
+    renderer.render(scene, camera);
+}
+animate();
+
+// Fonction de déformation de la géométrie au scroll
+window.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY;
+
+    // Rotation en fonction du scroll
+    const rotationSpeed = 0.008;
+    cube.rotation.y = scrollPosition * rotationSpeed;
+    cube.rotation.x = scrollPosition * rotationSpeed / 8;
+
+    // Déformation du cube en fonction du scroll
+    const deformationFactor = Math.sin(scrollPosition * 0.05) * 0.9; // Facteur de déformation basé sur une fonction sinusoïdale
+    geometry.vertices.forEach((vertex) => {
+        vertex.x += (Math.random() - 0.5) * deformationFactor;
+        vertex.y += (Math.random() - 0.5) * deformationFactor;
+        vertex.z += (Math.random() - 0.5) * deformationFactor;
+    });
+
+    geometry.verticesNeedUpdate = true; // Signaler que les sommets ont été modifiés
+});
+
+// Ajuster la taille du canvas au redimensionnement de la fenêtre
+window.addEventListener('resize', () => {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+}); 
