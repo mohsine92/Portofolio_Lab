@@ -140,7 +140,6 @@ TweenMax.staggerFrom(
           start: "top top ",
           end: "100vh top",
           scrub: 1.3,
-          roatation: 360,
         },
       });
     
@@ -259,9 +258,10 @@ TweenMax.staggerFrom(
 
       gsap.to(" .about-me-details", {
         scrollTrigger: ".about-me-details",
-        duration: 3,
+        duration: 1,
         y: -50,
         opacity: 1,
+        color:"black"
       });
 
 
@@ -409,7 +409,7 @@ TweenMax.staggerFrom(
             gsap.fromTo(image, 
               {
                 opacity: 0,
-                y: 50,                
+                y: 20,                
               },
               {
                 opacity: 1,
@@ -473,7 +473,7 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById('three-container').appendChild(renderer.domElement);
 
 const loader = new THREE.TextureLoader();
-const texture = loader.load('https://plus.unsplash.com/premium_photo-1670271544820-462bffe5930d?q=80&w=3468&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); // Remplacez par l'URL de la texture
+const texture = loader.load('https://images.unsplash.com/photo-1695041678277-9395160fc70e?q=80&w=3000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); // Remplacez par l'URL de la texture
 //const texture = loader.load('https://images.unsplash.com/photo-1585511582331-14e7c5f89735?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); // Remplacez par l'URL de la texture
 const material = new THREE.MeshStandardMaterial({
     map: texture,
