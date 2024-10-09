@@ -10,7 +10,6 @@ function toggleMenu() {
 }
 
 
-
 //O'Clock
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -256,12 +255,24 @@ TweenMax.staggerFrom(
         opacity: 1,
       });
 
-      gsap.to(" .about-me-details", {
-        scrollTrigger: ".about-me-details",
-        duration: 1,
-        y: -50,
-        opacity: 1,
-        color:"black"
+
+
+      
+      // Animation au défilement
+      gsap.to(".about-me-details", {
+        scrollTrigger: {
+          trigger: "#about-me h1",
+          start: " top top",
+          end: "bottom   ",
+          scrub: true,
+
+        },
+        x: 0,
+
+        color: "black",
+        scrub : 0,
+        duration: 3,
+        ease: "power4.inOut"
       });
 
 
@@ -430,51 +441,16 @@ TweenMax.staggerFrom(
 
 
 
-        document.addEventListener('scroll', function () {
-          // Sélectionne le conteneur text-final et la barre de progression
-          const textFinal = document.querySelector('.text-final');
-          const progressBar = document.getElementById('progress-bar');
-          const progressContainer = document.getElementById('progress-container');
-    
-          // Récupère les dimensions et la position de text-final
-          const textFinalRect = textFinal.getBoundingClientRect();
-          const windowHeight = window.innerHeight;
-    
-          // Calcule la hauteur maximale de défilement dans text-final
-          const maxScroll = textFinal.scrollHeight - windowHeight;
-    
-          // Vérifie si l'utilisateur est en train de défiler dans la section text-final
-          if (textFinalRect.top <= windowHeight && textFinalRect.bottom >= 0) {
-            // Calcule la distance de défilement à l'intérieur de text-final
-            const scrollTop = window.scrollY - textFinal.offsetTop;
-    
-            // Calcule le pourcentage de défilement
-            const scrollPercent = Math.min(Math.max(scrollTop / maxScroll, 0), 1);
-    
-            // Met à jour la largeur de la barre de progression
-            progressBar.style.width = scrollPercent * 100 + '%';
-    
-            // Affiche la barre de progression
-            progressContainer.style.opacity = 1;
-          } else {
-            // Masque la barre de progression lorsque l'utilisateur est hors de la section
-            progressContainer.style.opacity = 0;
-          }
-        });
-
-
-
 // Initialisation de la scène
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true }); // Antialias pour des bords plus doux
+const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
 
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById('three-container').appendChild(renderer.domElement);
 
 const loader = new THREE.TextureLoader();
-const texture = loader.load('https://images.unsplash.com/photo-1695041678277-9395160fc70e?q=80&w=3000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); // Remplacez par l'URL de la texture
-//const texture = loader.load('https://images.unsplash.com/photo-1585511582331-14e7c5f89735?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); // Remplacez par l'URL de la texture
+const texture = loader.load('https://images.unsplash.com/photo-1695041678277-9395160fc70e?q=80&w=3000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
 const material = new THREE.MeshStandardMaterial({
     map: texture,
     roughness: 50,
@@ -483,46 +459,58 @@ const material = new THREE.MeshStandardMaterial({
     opacity: 1,
 });
 
-
 // Créer un cube avec MeshStandardMaterial pour plus de réalisme
 const geometry = new THREE.BoxGeometry(2.3, 2.3, 2.3);
 const cube = new THREE.Mesh(geometry, material);
 scene.add(cube);
 
-
 // Ajouter une lumière ambiante pour un éclairage doux
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.9); // Lumière ambiante
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.9);
 scene.add(ambientLight);
 
 // Ajouter une lumière directionnelle pour créer des ombres
 const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
 directionalLight.position.set(0, 0, 0);
-directionalLight.castShadow = true; // Activer les ombres
+directionalLight.castShadow = true;
 scene.add(directionalLight);
 
 // Configurer les ombres
-renderer.shadowMap.enabled = true; // Activer le rendu des ombres
-cube.castShadow = true; // Le cube projette des ombres
-cube.receiveShadow = true; // Le cube reçoit des ombres
+renderer.shadowMap.enabled = true;
+cube.castShadow = true;
+cube.receiveShadow = true;
 
 // Position de la caméra
 camera.position.z = 10;
 
+// Variables pour une rotation lissée
+let targetRotationY = 0;
+let targetRotationX = 0;
+let currentRotationY = 0;
+let currentRotationX = 0;
+
 // Fonction pour animer le rendu
 function animate() {
-    requestAnimationFrame(animate);
+    // Interpolation pour lisser la rotation vers les valeurs cibles
+    currentRotationY += (targetRotationY - currentRotationY) * 0.05;
+    currentRotationX += (targetRotationX - currentRotationX) * 0.05;
+    
+    // Appliquer les rotations lissées
+    cube.rotation.y = currentRotationY;
+    cube.rotation.x = currentRotationX;
+    
     renderer.render(scene, camera);
+    requestAnimationFrame(animate);
 }
 animate();
 
-// Fonction de rotation du cube au scroll
+// Fonction de gestion du scroll pour définir les cibles de rotation
 window.addEventListener('scroll', () => {
     const scrollPosition = window.scrollY;
 
-    // Rotation en fonction du scroll
+    // Rotation cible en fonction du scroll
     const rotationSpeed = 0.008;
-    cube.rotation.y = scrollPosition * rotationSpeed;
-    cube.rotation.x = scrollPosition * rotationSpeed / 8;
+    targetRotationY = scrollPosition * rotationSpeed;
+    targetRotationX = scrollPosition * rotationSpeed / 8;
 });
 
 // Ajuster la taille du canvas au redimensionnement de la fenêtre
@@ -531,6 +519,5 @@ window.addEventListener('resize', () => {
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
 });
-
 
 

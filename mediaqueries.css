@@ -412,7 +412,7 @@ font-size: 13px;
           top: 20px;
           width: 70%;
           height: 120% !important;
-          filter: invert(0%);
+          filter: invert(100%);
 
           box-shadow: none;
          }
@@ -467,14 +467,16 @@ font-size: 13px;
 .button-about {
   margin-top: 0%;
   position: relative;
-  padding: 10px;
+  padding: 5px;
+  width: 30%;
   border-radius: 20px;
   border: 0.8px solid rgb(0, 0, 0);
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  left: 37%;
+  left: 35%;
+  margin-top: 5%;
   margin-bottom: 10rem;
 }
 
@@ -482,7 +484,7 @@ font-size: 13px;
 
 .button-about a {
  color: rgb(0, 0, 0) ;
- font-size: 25px;
+ font-size: 23px;
  font-weight: 300;
  
 }
@@ -562,8 +564,8 @@ font-size: 13px;
   color: #ffffff;
   background-color: #000000;
   border-radius: 20px;
-  padding: 13px;
-  width: 40%;
+  padding: 10px;
+  width: 43%;
   top:-3%;
   font-weight: 200;
   position: relative;
@@ -621,7 +623,7 @@ letter-spacing: -4px;
       color: rgb(56, 56, 56);
       background-color: #ffffff;
     position: absolute;
-    left: 39%;
+    left: 37%;
     top: 60%;
     height: 60px;
 
@@ -850,18 +852,18 @@ h5 {
 
 
       .text-final p  {
-        margin: 5%;
+        margin: 7%;
         margin-bottom: 100%;
-        font-size: 35px;
+        font-size: 34px;
         text-align: center;
         color: #000000;
-        font-weight: 200;
+        font-weight: 100;
         letter-spacing: -1.5px;
       }
 
 
 #contact .title1{
-       font-size: 2.7rem;
+       font-size: 3.7rem;
        font-family: "Handjet", sans-serif;
 
   
@@ -912,7 +914,7 @@ width: 27%;
 
 
 #experience {
-background-color: rgb(255, 120, 255);
+background-color: rgb(255, 80, 255);
   position: relative;
    justify-content: center;
     align-items: center;
@@ -968,13 +970,14 @@ background-size: cover;
 }
 
 .logos {
-  border: 1px solid black;
-  background-color: rgb(255, 115, 255);
+  background-color: rgb(255, 255, 255);
   padding: 5%;
+  width: 60%;
   border-radius: 20px;
   filter: invert(10%);
   box-shadow: none;
 }
+
 
 
 .link2 {
@@ -1088,11 +1091,11 @@ text-align: start;
         background-color: white;
       }
       #contact  .title1 {
-        font-size: 1.5rem;
-    }
+        font-size: 2.2rem;
+      }
 
       #contact .title1 span {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
     .nav-links {
