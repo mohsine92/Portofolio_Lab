@@ -80,10 +80,10 @@ TweenMax.staggerFrom(
   1,
   {
     opacity: 0,
-    duration: 1,
+    duration: 10,
     ease: Expo.easeInOut,
   },
-  0.5
+  0.04
 );
 
 
@@ -95,22 +95,6 @@ TweenMax.staggerFrom(
        gsap.registerPlugin(ScrollTrigger)
 
      
-
-      gsap.to(" .canvas", {
-        scrollTrigger: {
-          trigger: "body",
-          start: "top top",
-          end: "bottom center",
-          scrub: true,
-          scrub: 1,
-
-        },
-        x: 100, 
-        scale: -0.5,
-
-
-
-      });
 
 
      
@@ -136,7 +120,7 @@ TweenMax.staggerFrom(
         scale: 0.8,
         ease: "none",
         scrollTrigger: {
-          trigger: "body",
+          trigger: "#profile",
           start: "top top",
           end: "100vh top",
           scrub: 1.1,
@@ -144,6 +128,21 @@ TweenMax.staggerFrom(
       });
 
 
+
+
+
+      gsap.to("canvas", {
+        y: "5%",
+        scale:0.8,
+        ease: "none",
+        scrollTrigger: {
+          trigger: "body",
+          start: "top top ",
+          end: "100vh top",
+          scrub: 1.3,
+          roatation: 360,
+        },
+      });
     
 
       gsap.to(".text-wrapperr", {
@@ -254,7 +253,7 @@ TweenMax.staggerFrom(
       gsap.to(" #about-me h1", {
         scrollTrigger: "#about-me h1",
         duration: 3,
-        y: -50,
+        y: 40,
         opacity: 1,
       });
 
@@ -281,24 +280,29 @@ TweenMax.staggerFrom(
       });
 
       gsap.set("#experience", {
-        scale:1,
+        scale:0,
         height: "0%",
         width: "0%",
+        x: -100,
+
       });
       
       // Animation au défilement
       gsap.to("#experience", {
         scrollTrigger: {
           trigger: ".image-point",
-          start: "bottom center",
-          end: "bottom ",
+          start: "bottom bottom",
+          end: "bottom  ",
           scrub: true,
+
         },
-        scale: 1,
-        scrub : 5,
+        x: 0,
+
+        scale: 1.1,
+        scrub : 1,
         height: "100%",
-        width: "90%",
-        duration: 1,
+        width: "100%",
+        duration: 5,
         ease: "power4.inOut"
       });
 
@@ -459,6 +463,7 @@ TweenMax.staggerFrom(
         });
 
 
+
 // Initialisation de la scène
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -468,29 +473,30 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById('three-container').appendChild(renderer.domElement);
 
 const loader = new THREE.TextureLoader();
-const texture = loader.load('https://images.unsplash.com/photo-1638830674269-da3fc1999484?q=80&w=3286&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); // Remplacez par l'URL de la texture
+const texture = loader.load('https://plus.unsplash.com/premium_photo-1670271544820-462bffe5930d?q=80&w=3468&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); // Remplacez par l'URL de la texture
+//const texture = loader.load('https://images.unsplash.com/photo-1585511582331-14e7c5f89735?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); // Remplacez par l'URL de la texture
 const material = new THREE.MeshStandardMaterial({
     map: texture,
-    roughness: 0.5,
-    metalness: 0.2,
+    roughness: 50,
+    metalness: 0.010,
     transparent: true,
-    opacity: 1.0,
+    opacity: 1,
 });
 
+
 // Créer un cube avec MeshStandardMaterial pour plus de réalisme
-const geometry = new THREE.BoxGeometry(2.5, 2.5, 2.5);
-
-
+const geometry = new THREE.BoxGeometry(2.3, 2.3, 2.3);
 const cube = new THREE.Mesh(geometry, material);
 scene.add(cube);
 
+
 // Ajouter une lumière ambiante pour un éclairage doux
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.5); // Lumière ambiante
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.9); // Lumière ambiante
 scene.add(ambientLight);
 
 // Ajouter une lumière directionnelle pour créer des ombres
 const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-directionalLight.position.set(5, 5, 5);
+directionalLight.position.set(0, 0, 0);
 directionalLight.castShadow = true; // Activer les ombres
 scene.add(directionalLight);
 
@@ -500,7 +506,7 @@ cube.castShadow = true; // Le cube projette des ombres
 cube.receiveShadow = true; // Le cube reçoit des ombres
 
 // Position de la caméra
-camera.position.z = 9;
+camera.position.z = 10;
 
 // Fonction pour animer le rendu
 function animate() {
@@ -509,7 +515,7 @@ function animate() {
 }
 animate();
 
-// Fonction de déformation de la géométrie au scroll
+// Fonction de rotation du cube au scroll
 window.addEventListener('scroll', () => {
     const scrollPosition = window.scrollY;
 
@@ -517,16 +523,6 @@ window.addEventListener('scroll', () => {
     const rotationSpeed = 0.008;
     cube.rotation.y = scrollPosition * rotationSpeed;
     cube.rotation.x = scrollPosition * rotationSpeed / 8;
-
-    // Déformation du cube en fonction du scroll
-    const deformationFactor = Math.sin(scrollPosition * 0.05) * 0.9; // Facteur de déformation basé sur une fonction sinusoïdale
-    geometry.vertices.forEach((vertex) => {
-        vertex.x += (Math.random() - 0.5) * deformationFactor;
-        vertex.y += (Math.random() - 0.5) * deformationFactor;
-        vertex.z += (Math.random() - 0.5) * deformationFactor;
-    });
-
-    geometry.verticesNeedUpdate = true; // Signaler que les sommets ont été modifiés
 });
 
 // Ajuster la taille du canvas au redimensionnement de la fenêtre
@@ -534,4 +530,7 @@ window.addEventListener('resize', () => {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
-}); 
+});
+
+
+

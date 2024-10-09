@@ -63,9 +63,8 @@ html {
   }
 
 body {  
-  overflow-x: hidden;
   width: 100% !important;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(231, 231, 231);
       font-family: 'Source Code Pro';
 }
 
@@ -270,7 +269,6 @@ nav,
 .nav-links {
     display: flex;
 
-
 }
 
 
@@ -305,7 +303,7 @@ display: flex;
   text-transform:capitalize;
   text-decoration: none;
   font-size: 1rem;
-  color: #0e0e0e;
+  color: #000000;
      background:
      linear-gradient(
        to right,
@@ -424,7 +422,7 @@ z-index: 20 !important;
     background-size:cover ;
    /* background: url(https://images.unsplash.com/photo-1522072783977-1117b39ffb58?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
    */
-   background-color:rgb(30, 30, 255);
+   background-color:rgb(182, 182, 182);
     width: 100%;
     height: 100%;
     max-height: 0;
@@ -441,19 +439,19 @@ z-index: 20 ;
   position: relative;
   top: 10px;
   font-size: 50px;
-  color: rgb(227, 227, 227); 
+  color: rgb(0, 0, 0); 
   -webkit-text-stroke: 0.3px black;
 }
 
 .menu-links a{
     display: block;
     text-align: start ;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     transition: all 0.5s ease-in-out;
     text-decoration: none;
     text-transform:capitalize;
     font-family: "Handjet", sans-serif;
-    letter-spacing: -1px;
+   letter-spacing: -1px;
 font-weight: 300;
 position: relative;
 margin-top: 16.20%;
@@ -554,8 +552,8 @@ background-size: 100%;
   #profile .arrow {
 filter: invert(100%);
     height: 50px;
-    left: 90%;
-    top: 23%;
+    left: 94%;
+    top: 20% ;
     position: relative;
     rotate: 90deg;
   }
@@ -818,7 +816,7 @@ border: 0;
 .disponibilty {
   filter: invert(100%);
 color: #ffffff;
-  background-color: #000000;
+  background-color: #373636;
   border-radius: 20px;
   padding: 10px;
   width: 10%;
@@ -833,7 +831,7 @@ color: #ffffff;
 .dot {
   width: 8px;
   height: 8px;
-  background-color: #bfff00;
+  background-color: #abde12;
   display: inline-block;
   border-radius: 50px;
   position: relative;
@@ -905,13 +903,13 @@ line-height: 1;
   cursor:e-resize;
   letter-spacing: -1px;
    text-align:start;
-   color: rgb(27, 27, 27);
+   color: rgb(46, 46, 46);
    margin-right: 0%;
-    left: 4%;
+    left: 10%;
     margin-right: 0%;
     margin-top: 5%;
     font-size: 6vh;
-    font-weight: 350;
+    font-weight: 100;
 font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue';
 opacity: 0;
 
@@ -929,10 +927,10 @@ opacity: 0;
   letter-spacing: -1px;
    text-align:start;
    opacity: 0;
-            color: rgb(0, 0, 0);
+            color:rgb(134, 134, 134);
             mix-blend-mode: difference;
-            font-weight:150;
-    font-size: 8vh;
+            font-weight:100;
+    font-size: 7.5vh;
 margin-top: 5%;
 z-index: -10;
 position: relative;
@@ -991,9 +989,19 @@ color: rgb(32, 31, 31);
 
 
 
+
+
+
+
+
+
+
+
+
+
 #about-me .title1 {
   position: relative;
-  left:40px;
+  left:8%;
   font-variation-settings: "wght" 100, "ital" 0;
     font-family: Oddval Variable;
         text-align: center;
@@ -1010,12 +1018,13 @@ color: rgb(32, 31, 31);
 
 
 .details-container2 {
-  filter: invert(0%);
+
+ 
+  filter: invert(100%);
  /* background: url(https://images.unsplash.com/photo-1522072783977-1117b39ffb58?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) center center ;
      background: url(https://images.unsplash.com/photo-1714548213564-8551f051cb02?q=80&w=3432&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) center center;
     background: linear-gradient(rgba(0, 0, 0, 0.67), rgb(0, 0, 0) 50%);*/
-    background: url(https://i.pinimg.com/564x/5c/ab/df/5cabdf2bc1a812b539debd5edc49912a.jpg) center center no-repeat;
-
+    background: url(https://i.pinimg.com/564x/7d/f7/d0/7df7d07415922208bcda152ad5551275.jpg)  center no-repeat;
          position: relative;
     display:block;
 padding: 4%;
@@ -1028,6 +1037,7 @@ padding: 4%;
    scale: 0;
    cursor: wait;
    transition: 1s;
+
       }
 
      
@@ -1036,10 +1046,10 @@ padding: 4%;
   font-family: Oddval Variable;
 letter-spacing: -1Px;
   text-align: start;
-  font-size: 15px;
-  font-weight: 200;
-  color: rgb(255, 255, 255);
-
+  font-size: 20px;
+  font-weight: 900;
+  color: rgb(0, 0, 0);
+mix-blend-mode: normal;
 }
 
 .h3-details{
@@ -1049,7 +1059,7 @@ letter-spacing: -1Px;
   text-align: end;
   text-transform: capitalize;
 font-weight: 200;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   font-size: 11px;
 
     }
@@ -1060,9 +1070,9 @@ font-weight: 200;
       transition: 0.1s;
       margin-top:0%;
         position: relative;
-        padding: 13px;
+        padding: 5px;
         border-radius: 20px;
-        background-color: black;
+        background-color:transparent;
         border: 1px solid rgb(0, 0, 0);
         cursor: pointer;
         display: flex;
@@ -1074,13 +1084,13 @@ font-weight: 200;
       }
     
       .button-about a {
-        font-family: 'Rubik Glitch Pop', system-ui;
+        font-family: "Handjet", sans-serif;
 
       text-decoration: none;
-    letter-spacing: -0.5px;
-    font-size: 15px;
+    letter-spacing: -0.2px;
+    font-size: 25px;
     font-weight: 300;
-    color:rgb(229, 229, 229);
+    color:rgb(0, 0, 0);
     mix-blend-mode: difference;
       }
     
@@ -1089,10 +1099,9 @@ font-weight: 200;
         border: 1px solid rgb(57, 57, 57);
      scale: 1.1;
      padding: 17px;
-     background-color:hsl(0, 0%, 0%);
+     background-color:transparent;
      color: rgb(0, 0, 0);
      transition: 0.8s;
-     mix-blend-mode: difference;
 
           }
     
@@ -1103,7 +1112,7 @@ font-weight: 200;
     
       .button-about:hover a{
         scale: 1.2;
-        color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
         transition: 0.8s;
              }
     
@@ -1137,7 +1146,6 @@ font-weight: 200;
 }
 
 .image-point {
-z-index: 100;
   opacity: 0;  
     justify-content: left;
     align-items: left;
@@ -1162,8 +1170,8 @@ text-decoration: none;
 
 .image-point  ul li {
   list-style-type: none;
-  color: rgb(6, 6, 6);
-    border-bottom: 0.5px solid rgb(62, 62, 62);
+  color: rgb(42, 37, 37);
+    border-bottom: 0.5px solid rgb(157, 157, 157);
     margin-bottom: 2%;
     
 
@@ -1232,7 +1240,8 @@ ul li:hover .image {
 
 .image {
   clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
-  background-color: rgba(255, 255, 255, 0.547);
+  background-color: rgba(255, 255, 255, 0);
+
 }
 
 .img-project {
@@ -1376,16 +1385,19 @@ animation: none;
     margin: auto;
     gap: 5rem;
     margin-top: 15%;
-    height: 50%;
-    width:90%; 
+    margin-bottom: 35%;
+
+    width:100%; 
+    scale: 0;
 }
 
 
-
 #experience {
-background: url(https://images.unsplash.com/photo-1696875011554-b6a4ebd54997?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) fixed center no-repeat  ;
-clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
 
+  clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 100% 0, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 0 100%, 0% 85%);
+  /*background: url(https://images.unsplash.com/photo-1696875011554-b6a4ebd54997?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) fixed center no-repeat  ;
+clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);*/
+background-color: #000000;
 }
 
 
@@ -1412,17 +1424,21 @@ clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%,
 }
 
 #experience .title1 {
-  font-size: 16vh;
-    color: rgb(136, 130, 130);
+  font-family: "Handjet", sans-serif;
+  font-variation-settings: "wght" 500, "ital" 0;
+  font-size: 20vh;
+  font-weight: 500;
+  animation: none;
+  text-transform: lowercase;
+    color: rgb(255, 255, 255);
     mix-blend-mode: difference;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
-
 } 
 
 .container-experience {
+  height: 50%;
   position: relative;
-  margin-top: 15% !important;
+  margin-top: 10% !important;
+  left: 0%;
 }
 
 
@@ -1470,9 +1486,10 @@ clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%,
   flex-shrink: 1;
   letter-spacing: -1.5px;
 }
+
 .text-final span {
-font-weight: 850;
-color: #000000;
+  font-weight: 700;
+  color: #000000;
 }
 
 @keyframes slide {
@@ -1489,7 +1506,7 @@ color: #000000;
   overflow: hidden;
   padding: 30px 0;
   width: 50%;
-  background: rgba(245, 245, 245, 0.466);
+  background: rgb(245, 245, 245);
   white-space: nowrap;
   position: relative;
   margin: auto;
@@ -1623,11 +1640,12 @@ color: #000000;
     .contact-info-upper-container {
     display: block;
     border-radius: 10px;
+    border: 1px solid black;
     margin: 5rem auto;
     padding: 20px;
     position: relative;
-    background-color: #ffffff;
-    box-shadow: 30px 30px 100px rgba(39, 38, 38, 0.836);
+    background-color: #eae8e8;
+    box-shadow: 10px 30px 100px rgba(186, 185, 185, 0.836);
 
  }
 
@@ -1653,7 +1671,7 @@ color: #000000;
     margin-top: 2%; 
     font-size: 1rem;
     font-weight:100;
-    color: #303030;
+    color: #000000;
     text-decoration: none;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 text-transform: uppercase;
@@ -1700,6 +1718,7 @@ justify-content: center;
   }
 
   span img {
+    filter: invert(0%);
     height: 100px;
     width: auto;
     rotate: 90deg;
@@ -1863,14 +1882,18 @@ min-height: 90vh;
   }
   
   
-
-
-
+canvas {
+position: relative;
+z-index: 1;
+}
 
 #three-container {
+  
+  mix-blend-mode: difference;
+  filter: invert(100%);
     width: 100%;
-    height: 10%;
+    height: 30%;
     position: fixed;
-    top: -15%;
-    left: 0%;
+    top: -20%;
+    left: 2%;
 }
