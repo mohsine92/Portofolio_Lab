@@ -87,15 +87,6 @@ TweenMax.staggerFrom(
 
 
 
-
-      
-      // use a script tag or an external JS file
-      document.addEventListener("DOMContentLoaded", (event) => {
-       gsap.registerPlugin(ScrollTrigger)
-
-     
-
-
      
 
       gsap.to(" #about-me h2", {
@@ -267,12 +258,12 @@ TweenMax.staggerFrom(
           scrub: true,
 
         },
-        x: 0,
+        x: 40,
 
-        color: "black",
-        scrub : 0,
-        duration: 3,
-        ease: "power4.inOut"
+        color: "white",
+        scrub : 5,
+        duration: 5,
+        ease: "power5.inOut"
       });
 
 
@@ -309,11 +300,11 @@ TweenMax.staggerFrom(
         },
         x: 0,
 
-        scale: 1.1,
+        scale: 1,
         scrub : 1,
         height: "100%",
-        width: "100%",
-        duration: 5,
+        width: "80%",
+        duration: 1,
         ease: "power4.inOut"
       });
 
@@ -322,7 +313,7 @@ TweenMax.staggerFrom(
 
             
           
-    });
+   
 
 
 
@@ -438,40 +429,54 @@ TweenMax.staggerFrom(
         });
 
 
-
-
-
 // Initialisation de la scène
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById('three-container').appendChild(renderer.domElement);
 
+// Charger la texture
 const loader = new THREE.TextureLoader();
-const texture = loader.load('https://images.unsplash.com/photo-1695041678277-9395160fc70e?q=80&w=3000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-const material = new THREE.MeshStandardMaterial({
-    map: texture,
-    roughness: 50,
-    metalness: 0.010,
+const baseTexture = loader.load('https://images.unsplash.com/photo-1595418917831-ef942bd9f9ec?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+
+// Ajuster la texture pour qu'elle ne se répète pas sur chaque face
+baseTexture.wrapS = THREE.ClampToEdgeWrapping;
+baseTexture.wrapT = THREE.ClampToEdgeWrapping;
+baseTexture.minFilter = THREE.LinearFilter;
+
+// Créer un canvas pour le bruit glitch
+const glitchCanvas = document.createElement('canvas');
+const glitchContext = glitchCanvas.getContext('2d');
+glitchCanvas.width = 512;
+glitchCanvas.height = 512;
+
+// Créer le matériau en utilisant MeshPhysicalMaterial pour un effet de verre
+const material = new THREE.MeshPhysicalMaterial({
+    color: 0x000000, // Couleur noire
+    roughness: 0.1,
+    metalness: 0.5,
+    transmission: 0.30,
+    thickness: 1.5,
+    clearcoat: 1,
+    clearcoatRoughness: 0,
     transparent: true,
-    opacity: 1,
+    opacity: 0.9,
+    side: THREE.DoubleSide,
 });
 
-// Créer un cube avec MeshStandardMaterial pour plus de réalisme
+// Créer un cube avec MeshPhysicalMaterial pour plus de réalisme
 const geometry = new THREE.BoxGeometry(2.3, 2.3, 2.3);
 const cube = new THREE.Mesh(geometry, material);
 scene.add(cube);
 
 // Ajouter une lumière ambiante pour un éclairage doux
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.9);
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.7);
 scene.add(ambientLight);
 
-// Ajouter une lumière directionnelle pour créer des ombres
-const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-directionalLight.position.set(0, 0, 0);
-directionalLight.castShadow = true;
+// Ajouter une lumière directionnelle pour créer des ombres et des reflets
+const directionalLight = new THREE.DirectionalLight(0xffffff, 2);
+directionalLight.position.set(5, 5, 5);
 scene.add(directionalLight);
 
 // Configurer les ombres
@@ -480,24 +485,50 @@ cube.castShadow = true;
 cube.receiveShadow = true;
 
 // Position de la caméra
-camera.position.z = 10;
+camera.position.set(0, 0, 7);
 
 // Variables pour une rotation lissée
-let targetRotationY = 0;
-let targetRotationX = 0;
-let currentRotationY = 0;
-let currentRotationX = 0;
+let targetRotationY = 80;
+let targetRotationX = 80;
+let currentRotationY = 80;
+let currentRotationX = 80;
+
+// Fonction pour générer un bruit glitch avec des points noir et blanc
+function generateGlitchTexture() {
+    glitchContext.clearRect(0, 0, glitchCanvas.width, glitchCanvas.height);
+    
+    // Créer des points noir et blanc aléatoires
+  const numPoints = 4000; // Augmenter le nombre de points pour une couverture plus dense
+    for (let i = 0; i < numPoints; i++) {
+        const x = Math.random() * glitchCanvas.width;
+        const y = Math.random() * glitchCanvas.height;
+        const size = Math.random() * 0.7 + 0.7; // Taille des points (0.5 à 1.5 pixels)
+        const color = Math.random() < 0.9 ? 'white' : 'white'; // Alternance entre noir et blanc
+        
+        glitchContext.fillStyle = color;
+        glitchContext.beginPath();
+        glitchContext.arc(x, y, size, 0, Math.PI * 5); // Dessiner des cercles
+        glitchContext.fill();
+    }
+    
+    // Mettre à jour la texture
+    material.map = new THREE.Texture(glitchCanvas);
+    material.map.needsUpdate = true;
+}
 
 // Fonction pour animer le rendu
 function animate() {
     // Interpolation pour lisser la rotation vers les valeurs cibles
     currentRotationY += (targetRotationY - currentRotationY) * 0.05;
     currentRotationX += (targetRotationX - currentRotationX) * 0.05;
-    
+
     // Appliquer les rotations lissées
     cube.rotation.y = currentRotationY;
     cube.rotation.x = currentRotationX;
-    
+
+    // Générer le bruit glitch
+    generateGlitchTexture();
+
     renderer.render(scene, camera);
     requestAnimationFrame(animate);
 }
@@ -508,7 +539,7 @@ window.addEventListener('scroll', () => {
     const scrollPosition = window.scrollY;
 
     // Rotation cible en fonction du scroll
-    const rotationSpeed = 0.008;
+    const rotationSpeed = 0.005;
     targetRotationY = scrollPosition * rotationSpeed;
     targetRotationX = scrollPosition * rotationSpeed / 8;
 });
@@ -519,5 +550,4 @@ window.addEventListener('resize', () => {
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
 });
-
 

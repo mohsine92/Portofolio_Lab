@@ -323,14 +323,14 @@ font-weight: 300;
       background-color: rgb(184, 184, 184);  /* Couleur de la barre de progression */
     }
 
-      .gradient {
+      /*.gradient {
         position: fixed;
         height: 15%;
         width: 100%;
         top: 0%;
         background: linear-gradient(180deg, #f7f7f7 0, hsla(0, 0%, 97%, .987) 11%, hsla(0, 0%, 97%, .951) 20.8%, hsla(0, 0%, 97%, .896) 29.6%, hsla(0, 0%, 97%, .825) 37.5%, hsla(0, 0%, 97%, .741) 44.6%, hsla(0, 0%, 97%, .648) 51%, hsla(0, 0%, 97%, .55) 57%, hsla(0, 0%, 97%, .45) 62.5%, hsla(0, 0%, 97%, .352) 67.7%, hsla(0, 0%, 97%, .259) 72.7%, hsla(0, 0%, 97%, .175) 77.8%, hsla(0, 0%, 97%, .104) 82.9%, hsla(0, 0%, 97%, .049) 88.2%, hsla(0, 0%, 97%, .013) 93.9%, hsla(0, 0%, 97%, 0)); 
         z-index: 100000;
-      }
+      }*/
       
       .text-wrapperr h1 {
         margin-top: 35%;
@@ -351,7 +351,7 @@ animation:   rotateAnimation 2s linear infinite;
 /* ABOUT ME SECTION */
 
 #about-me  h1 {
-  color: rgb(20, 18, 18);
+  color: rgb(255, 255, 255);
   -webkit-text-stroke: 2px rgb(255, 255, 255);
 }
 
@@ -396,8 +396,8 @@ font-size: 13px;
   font-size: 80px;
   font-weight: 100;
   color: rgb(255, 255, 255);
-  mix-blend-mode: difference;
 -webkit-text-stroke: 0px;
+mix-blend-mode: difference;
   font-family: 'TheFont';
 }
 
@@ -412,14 +412,14 @@ font-size: 13px;
           top: 20px;
           width: 70%;
           height: 120% !important;
-          filter: invert(100%);
+          filter: invert(0%);
 
           box-shadow: none;
          }
 
       #about-me .title1 {
         font-size: 2.4rem;
-        color: rgb(24, 24, 24);
+        color: rgb(223, 223, 223);
         -webkit-text-stroke: 0px;
         text-align: center;
         justify-content: center;
@@ -438,7 +438,7 @@ font-size: 13px;
   line-height: 10%;
   margin-bottom: 20%;
   margin-top: 10%;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   -webkit-text-stroke: 0px;
   font-family: 'Rubik Glitch Pop', system-ui;
 
@@ -452,12 +452,14 @@ font-size: 13px;
 }
 
 .about-me-details {
+  left: 0%;
   text-align: start;
   line-height: 27px;
   font-size: 30px;
   font-weight: 100;
   letter-spacing: -0.5px;
   color: rgb(0, 0, 0);
+  transition: 1s;
 
 }
 
@@ -470,7 +472,7 @@ font-size: 13px;
   padding: 5px;
   width: 30%;
   border-radius: 20px;
-  border: 0.8px solid rgb(0, 0, 0);
+  border: 0.8px solid rgb(113, 113, 113);
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -478,6 +480,8 @@ font-size: 13px;
   left: 35%;
   margin-top: 5%;
   margin-bottom: 10rem;
+
+  background-color: rgb(198, 198, 198);
 }
 
 
@@ -486,6 +490,8 @@ font-size: 13px;
  color: rgb(0, 0, 0) ;
  font-size: 23px;
  font-weight: 300;
+ mix-blend-mode: normal;
+ text-transform: lowercase;
  
 }
 
@@ -499,6 +505,7 @@ font-size: 13px;
   justify-content: center;
 }
 .image-container img{
+  filter: invert(100%);
   position: relative;
  left: 0%;
  margin-bottom: 0;
@@ -524,7 +531,7 @@ font-size: 13px;
 
       body {
         margin: 0;
-        background-color: rgb(255, 255, 255) !important;
+        background-color: rgb(0, 0, 0) !important;
       }
       .scrolling-text-container {
         display: none;
@@ -561,13 +568,13 @@ font-size: 13px;
       /* PROFILE */
 
 .disponibilty {
-  color: #ffffff;
-  background-color: #000000;
-  border-radius: 20px;
+  color: #000000;
+  background-color: #ededed;
+  border-radius: 30px;
   padding: 10px;
   width: 43%;
   top:-3%;
-  font-weight: 200;
+  font-weight: 150;
   position: relative;
   left: 28%;
   mix-blend-mode: difference;
@@ -852,11 +859,11 @@ h5 {
 
 
       .text-final p  {
-        margin: 7%;
+        margin: 10%;
         margin-bottom: 100%;
-        font-size: 34px;
+        font-size: 30px;
         text-align: center;
-        color: #000000;
+        color: #ffffff;
         font-weight: 100;
         letter-spacing: -1.5px;
       }
@@ -914,7 +921,8 @@ width: 27%;
 
 
 #experience {
-background-color: rgb(255, 80, 255);
+  filter: blur(100%);
+background-color: rgba(45, 45, 45, 0.637);
   position: relative;
    justify-content: center;
     align-items: center;
@@ -922,16 +930,18 @@ background-color: rgb(255, 80, 255);
     margin-top: 0%;
     margin-bottom: 30%;
   height: 50% ;
-    width:100% !important; 
+    width: 85% !important; 
     gap: 0%;
     left: 0%;
+    border-radius: 20px;
+    border: 0.2px solid whitesmoke;
 
 }
 
 
 
 #experience {
-
+clip-path: none;
   object-fit: cover;
 background-size: cover;
 }
@@ -962,8 +972,8 @@ background-size: cover;
 #experience .title1 {
   text-transform: capitalize;
   font-size: 9vh;
-  mix-blend-mode: difference;
     color: rgb(255, 255, 255);
+    mix-blend-mode: normal;
     font-family: "Handjet", sans-serif;
 
 
@@ -1091,8 +1101,9 @@ text-align: start;
         background-color: white;
       }
       #contact  .title1 {
-        font-size: 2.2rem;
-      }
+        font-size: 2.555rem;
+text-transform: lowercase;   
+   }
 
       #contact .title1 span {
         font-size: 3rem;
