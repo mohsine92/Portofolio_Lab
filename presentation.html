@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - Mohsine Essat</title>
+    <link rel="stylesheet" href="presentation.css" />
+
+    <link rel="icon" href="https://i.pinimg.com/564x/e1/10/e4/e110e48ba488aae80151c287e6ce9abc.jpg">
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  </head>
+  <body>
+<nav>
+  <li>
+    <a href="./index.html"><span>M</span>ohsine Essa<span>t</span></a>
+  </li>
+</nav>
+
+<div class="container-text">
+  <p>Hey, I’m Mohsine, a freelance creative developer based in Paris. As a
+    self-taught developer, I studied design for 3 years, in parallel to doing freelance
+    work as a developer. After three enriching years, I tackled a lot of
+    challenging interactive projects.</p>
+    <br>
+    <br>
+    
+</div>
+
+<p class="p1">Today, I bring a unique blend of technical and creative expertise to every project I take on. 
+  Whether it’s developing sleek interfaces, implementing complex animations, or experimenting with cutting-edge technologies,
+   I’m always striving to deliver digital experiences that stand out.
+  
+   <br>
+   <br>
+
+   My focus is on building projects that not only function seamlessly but also create a sense of wonder for the users.
+   If you're looking for a developer who can bring both creativity and technical precision to your project, let's connect !
+  </p>
+
+
+
+
+
+    <div class="container">
+      <div class="img-container">
+        <div class="img">
+          <img src="https://i.pinimg.com/564x/e1/10/e4/e110e48ba488aae80151c287e6ce9abc.jpg" alt="" />
+        </div>
+        <div class="img-overlay"></div>
+        <div class="img-blocks">
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+        </div>
+      </div>
+    </div>
+
+
+<!--footer-->
+<footer class="footer-service">
+  <!--nav footer-->
+  <nav>
+      <div class="nav-links-conatiner">
+          <ul class ="nav-links2">
+            
+              <li><a href="./index.html"> Home</a></li>
+            </ul>
+  </div>
+
+  </nav>
+
+  
+</footer>   
+
+  </body>
+  <script>
+    const blocks = document.querySelectorAll(".block");
+    const resetDuration = 300;
+
+    blocks.forEach((block) => {
+      let timeoutId;
+
+      block.addEventListener("mouseover", () => {
+        clearTimeout(timeoutId);
+        block.classList.add("active");
+        timeoutId = setTimeout(() => {
+          block.classList.remove("active");
+        }, resetDuration);
+      });
+    });
+
+
+
+    gsap.to("img, .container", {
+opacity:1,       
+ scale: 1.1,
+        ease: "bounce",
+        scrollTrigger: {
+          trigger: ".p1",
+          start: "top top",
+          end: "100vh top",
+          scrub: 3,
+        },
+      });
+
+
+
+  </script>
+</html>

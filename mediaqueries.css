@@ -370,15 +370,21 @@ animation:   rotateAnimation 2s linear infinite;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 300;
 filter: invert(0%);
-color: rgb(0, 0, 0);
+color: rgb(144, 144, 144);
+mix-blend-mode: difference;
+
+left: 10px;
+position: relative;
 }
 
 
 .h3-details {
-  filter: invert(0%);
-  color: rgb(0, 0, 0);
-
-  text-align: center;
+  color: rgb(144, 144, 144);
+  mix-blend-mode: difference;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+position: relative;
+  text-align: end;
+  right: 10px;
 font-style: 100;
 font-weight: 300;
 font-size: 13px;
@@ -395,14 +401,14 @@ font-size: 13px;
 #about-me h2 {
   font-size: 80px;
   font-weight: 100;
-  color: rgb(255, 255, 255);
+  color: rgb(152, 152, 152);
 -webkit-text-stroke: 0px;
 mix-blend-mode: difference;
   font-family: 'TheFont';
 }
 
       .details-container2 {
-        padding: 4%;
+        padding: 2%;
           flex: 1;
           background-size: 105%;
           text-align: center;
@@ -410,35 +416,36 @@ mix-blend-mode: difference;
           position: relative;
           left: 0%;
           top: 20px;
-          width: 70%;
+          width:80%;
           height: 120% !important;
-          filter: invert(0%);
+          filter: invert(100%);
 
           box-shadow: none;
          }
 
       #about-me .title1 {
         font-size: 2.4rem;
-        color: rgb(223, 223, 223);
+        color: rgb(0, 0, 0);
         -webkit-text-stroke: 0px;
         text-align: center;
         justify-content: center;
         display: flex;
         align-items: center;
-        margin-top: 10%;
+        margin-top: 14%;
         left: 10%;
       }
 
 #about-me h1 {
-  width: 75%;
-  font-size: 28px;
-  font-weight: 100;
-  text-align: start;
+  font-size: 30px;
+  font-weight: 200;
+  text-align: center;
   margin: 0%;
-  line-height: 10%;
+  left: 14%;
+  position: relative;
+  line-height: 100%;
   margin-bottom: 20%;
   margin-top: 10%;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   -webkit-text-stroke: 0px;
   font-family: 'Rubik Glitch Pop', system-ui;
 
@@ -451,44 +458,59 @@ mix-blend-mode: difference;
   height: 50px;
 }
 
-.about-me-details {
-  left: 0%;
+.about-me-details span {
+  transition: all 1s;
+  left: 5%;
   text-align: start;
-  line-height: 27px;
-  font-size: 30px;
-  font-weight: 100;
-  letter-spacing: -0.5px;
+  line-height: 0%;
+  font-size: 22px;
+  font-weight: 130;
+  margin: -0.4%;
+  letter-spacing: -0.8px;
   color: rgb(0, 0, 0);
-  transition: 1s;
 
+}
+
+
+.about-me-details  {
+  cursor:e-resize;
+   text-align:start;
+            color:rgb(0, 0, 0);
+            font-weight:100;
+margin-top: 0%;
+z-index: -10;
+position: relative;
+left: 5%;
+top: 15%;
+line-height:80%;
+width: 80%;
+margin-bottom: 10%;
 }
 
 #about-me .section__text__p1{
   color: rgb(58, 58, 58);
 }
 .button-about {
-  margin-top: 0%;
+  margin-top:0%;
   position: relative;
-  padding: 5px;
-  width: 30%;
-  border-radius: 20px;
-  border: 0.8px solid rgb(113, 113, 113);
+  padding: 8px;
+  width: 22%;
+
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  left: 35%;
+  left: 23%;
   margin-top: 5%;
   margin-bottom: 10rem;
 
-  background-color: rgb(198, 198, 198);
 }
 
 
 
 .button-about a {
- color: rgb(0, 0, 0) ;
- font-size: 23px;
+ color: rgb(255, 255, 255) ;
+ font-size: 18px;
  font-weight: 300;
  mix-blend-mode: normal;
  text-transform: lowercase;
@@ -505,7 +527,7 @@ mix-blend-mode: difference;
   justify-content: center;
 }
 .image-container img{
-  filter: invert(100%);
+  filter: invert(0%);
   position: relative;
  left: 0%;
  margin-bottom: 0;
@@ -531,7 +553,7 @@ mix-blend-mode: difference;
 
       body {
         margin: 0;
-        background-color: rgb(0, 0, 0) !important;
+        background-color: rgb(255, 255, 255) !important;
       }
       .scrolling-text-container {
         display: none;
@@ -568,8 +590,8 @@ mix-blend-mode: difference;
       /* PROFILE */
 
 .disponibilty {
-  color: #000000;
-  background-color: #ededed;
+  color: #ffffff;
+  background-color: #000000;
   border-radius: 30px;
   padding: 10px;
   width: 43%;
@@ -714,11 +736,20 @@ padding: 5px;    color: rgb(255, 255, 255);
 
 
         .nav-links2  {
+          left: 0%;
           flex-direction:column;
-          gap: 0.4rem;
+          gap: 1rem;
           text-align: center;
-          margin-top: 50px;
+          margin-top: -30px;
           display: block;
+        }
+
+
+        .nav-links2 a {
+          display: inline-block;
+          gap: 1rem;
+
+          right: 40%;
         }
 
         .nav-links2 li:nth-child(3) {
@@ -738,7 +769,7 @@ padding: 5px;    color: rgb(255, 255, 255);
 
   .menu-links a {
     font-size: 3rem;
-    font-weight: 360;
+    font-weight: 260;
     position: relative;
   }
 
@@ -922,7 +953,6 @@ width: 27%;
 
 #experience {
   filter: blur(100%);
-background-color: rgba(45, 45, 45, 0.637);
   position: relative;
    justify-content: center;
     align-items: center;
@@ -934,7 +964,6 @@ background-color: rgba(45, 45, 45, 0.637);
     gap: 0%;
     left: 0%;
     border-radius: 20px;
-    border: 0.2px solid whitesmoke;
 
 }
 
@@ -970,9 +999,10 @@ background-size: cover;
 }
 
 #experience .title1 {
-  text-transform: capitalize;
+  text-transform: lowercase;
   font-size: 9vh;
-    color: rgb(255, 255, 255);
+  left: 0%;
+    color: rgb(0, 0, 0);
     mix-blend-mode: normal;
     font-family: "Handjet", sans-serif;
 
@@ -1086,10 +1116,7 @@ text-align: start;
   font-weight: 100;
   letter-spacing: -0.5px;
 }
-    
-
-
-
+   
 
 
     }
@@ -1101,12 +1128,17 @@ text-align: start;
         background-color: white;
       }
       #contact  .title1 {
-        font-size: 2.555rem;
-text-transform: lowercase;   
+        font-size: 2rem;
+text-transform: lowercase;  
+font-weight: 200 !important; 
    }
 
       #contact .title1 span {
-        font-size: 3rem;
+        font-size: 2rem;
+        font-weight: 200; 
+        text-transform: lowercase;  
+
+
     }
 
     .nav-links {

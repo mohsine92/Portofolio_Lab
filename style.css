@@ -68,7 +68,7 @@ body {
   scroll-behavior: smooth; /* Assure le défilement doux */
 
   width: 100% !important;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
       font-family: 'Source Code Pro';
 }
 
@@ -220,7 +220,7 @@ mix-blend-mode: normal;
     color:#ffffff;
     font-size: 12.555555px;
     letter-spacing: -0.3px;
-    font-weight: 200;
+    font-weight: 300;
     text-align: center;
     animation-delay: 0.3s;
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -302,11 +302,11 @@ display: flex;
 .nav-links a{
     cursor:pointer;
     font-family: 'Rubik Glitch Pop', system-ui;
-  font-weight: 200;
+  font-weight: 300;
   text-transform:capitalize;
   text-decoration: none;
   font-size: 1rem;
-  color: #ffffff;
+  color: #000000;
      background:
      linear-gradient(
        to right,
@@ -420,11 +420,12 @@ z-index: 20 !important;
 .menu-links{
   top: 0%;
     right: 0%;
-    background-size:cover ;
+    background-size:130% ;
    /* background: url(https://images.unsplash.com/photo-1522072783977-1117b39ffb58?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
    */
-   background-color:rgb(255, 255, 255);
-    width: 100%;
+   filter: invert(100%);
+   background-color: blue;
+   width: 100%;
     height: 100%;
     max-height: 0;
     overflow:hidden;
@@ -441,22 +442,24 @@ z-index: 20 ;
   top: 10px;
   font-weight: 100;
   font-size: 50px;
-  color: rgb(0, 0, 0); 
+  color: rgb(255, 255, 255);
+  mix-blend-mode: difference; 
   -webkit-text-stroke: 0.3px black;
 }
 
 .menu-links a{
+  mix-blend-mode: difference;
     display: block;
     text-align: start ;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     transition: all 0.5s ease-in-out;
     text-decoration: none;
     text-transform:capitalize;
     font-family: "Handjet", sans-serif;
    letter-spacing: -1px;
-font-weight: 300;
+font-weight: 200;
 position: relative;
-margin-top: 14.20%;
+margin-top: 15%;
 left: 5%;
 }
 
@@ -817,9 +820,9 @@ border: 0;
 
 
 .disponibilty {
-  filter: invert(0%);
-color: #000000;
-  background-color: #dbdbdb;
+  filter: invert(100%);
+color: #ffffff;
+  background-color: #000000;
   border-radius: 20px;
   padding: 10px;
   width: 10%;
@@ -867,8 +870,10 @@ color: #000000;
   animation:  letter-breathe 1.5s ease-in-out infinite;/* rotateAnimation 2s linear infinite;*/
   font-family: 'TheFont';
     font-size: 5em;
-color: #000000;
-  text-align: center;
+    color: rgb(106, 106, 106);
+    text-align: center;
+
+  mix-blend-mode: difference;
 
 }
 
@@ -905,7 +910,7 @@ line-height: 1;
   cursor:e-resize;
   letter-spacing: -1px;
    text-align:start;
-   color: rgb(255, 255, 255);
+   color: rgb(45, 45, 45);
    margin-right: 0%;
     left: 10%;
     margin-right: 0%;
@@ -919,25 +924,42 @@ opacity: 0;
 
 #about-me h1 .icon {
   position: relative;
-  top: 45px;
+  top: 30px;
   filter: invert(0%);
-  height: 100px;
+  height: 80px;
 }
 
-.about-me-details {
+.about-me-details span {
   cursor:e-resize;
-  letter-spacing: -1px;
    text-align:start;
-            color:rgb(0, 0, 0);
+            color:rgb(45, 45, 45);
             font-weight:100;
-    font-size: 7.5vh;
+    font-size: 7vh;
 margin-top: 5%;
 z-index: -10;
 position: relative;
-width: 80%;
-left: 10%;
-line-height: 100%;
+left: 0%;
+letter-spacing: -1px;
+top: 10%;
+line-height: 120%;
+margin: 1px;
 
+}
+
+
+.about-me-details  {
+  cursor:e-resize;
+   text-align:start;
+            color:rgb(255, 255, 255);
+            font-weight:100;
+    font-size: 7vh;
+margin-top: 5%;
+z-index: -10;
+position: relative;
+left: 10%;
+top: 10%;
+line-height: 0%;
+width: 80%;
 }
 
 #about-me .title1 {
@@ -964,6 +986,7 @@ color: rgb(233, 233, 233);
 
 
 #about-me .icon {
+  
   padding: 1%;
   border-radius: 50%;
 }
@@ -1006,7 +1029,8 @@ color: rgb(233, 233, 233);
     font-family: Oddval Variable;
         text-align: center;
   font-size: 10rem;
-    color: rgb(222, 222, 222); 
+  mix-blend-mode: difference;
+    color: rgb(0, 0, 0); 
         white-space: nowrap;
    animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -1020,11 +1044,12 @@ color: rgb(233, 233, 233);
 .details-container2 {
 
  
-  filter: invert(0%);
+  filter: invert(100%);
  /* background: url(https://images.unsplash.com/photo-1522072783977-1117b39ffb58?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) center center ;
      background: url(https://images.unsplash.com/photo-1714548213564-8551f051cb02?q=80&w=3432&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) center center;
     background: linear-gradient(rgba(0, 0, 0, 0.67), rgb(0, 0, 0) 50%);*/
-    background: url(https://i.pinimg.com/564x/7d/f7/d0/7df7d07415922208bcda152ad5551275.jpg)  center no-repeat;
+   /* background: url(https://i.pinimg.com/564x/7d/f7/d0/7df7d07415922208bcda152ad5551275.jpg)  center no-repeat;*/
+   background: url(https://i.pinimg.com/736x/3e/d7/bb/3ed7bb06c6b00e67e71abf1b368a20ba.jpg);
          position: relative;
     display:block;
 padding: 4%;
@@ -1047,51 +1072,54 @@ padding: 4%;
 letter-spacing: -1Px;
   text-align: start;
   font-size: 20px;
-  font-weight: 900;
-  color: rgb(0, 0, 0);
+  font-weight: 500;
+  color: rgb(255, 255, 255);
 mix-blend-mode: normal;
 }
 
 .h3-details{
   font-family: Oddval Variable;
   letter-spacing: -1Px;
+  mix-blend-mode: screen;
 
   text-align: end;
   text-transform: capitalize;
-font-weight: 200;
-  color: rgb(0, 0, 0);
-  font-size: 11px;
+font-weight: 500;
+color: rgb(255, 255, 255);
+font-size: 14px;
 
     }
 
-
+.button-container {
+  display: flex;
+  gap: 2rem;
+}
 
     .button-about {
+      clip-path: polygon(0% 15%, 0 0, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 100% 100%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+
       transition: 0.1s;
       margin-top:5%;
         position: relative;
-        padding: 5px;
-        border-radius: 10px;
-        background-color:transparent;
-        border: 1px solid rgb(0, 0, 0);
+        padding: 15px;
+        background-color:rgb(0, 0, 0);
+        border: 0px solid rgb(121, 121, 121);
         cursor: pointer;
         display: flex;
         justify-content: center;
         align-items: center;
         left: 10%;
         margin-bottom: 10rem;
-
       }
     
       .button-about a {
         font-family: "Handjet", sans-serif;
-
+padding: 5px;
       text-decoration: none;
     letter-spacing: -0.2px;
     font-size: 25px;
     font-weight: 300;
-    color:rgb(0, 0, 0);
-    mix-blend-mode: difference;
+    color:rgb(255, 255, 255);
       }
     
     
@@ -1106,7 +1134,7 @@ font-weight: 200;
           }
     
           .button-about:not(:hover) {
-            transition: 2s;
+            transition: 0.8s;
           }
     
     
@@ -1122,24 +1150,24 @@ font-weight: 200;
 
             
              .image-container {
-              height: 100%;
+              height: 50%;
               width: 60%;
              }
 
              .image-container img{
-              filter: invert(100%);
-
               position: relative;
-             left: 57%;
+             left: 110%;
+             right: 0%;
              margin-top: 0%;
               display: flex;
               height: 100%;
               width: 50%;
               cursor: crosshair;
-              rotate: 0deg;
+              rotate:0deg;
               transition: transform 0.7s ease-out;
-             }
-    
+filter: invert(0%);
+            }
+
 
 
 .section-pic-container {
@@ -1148,6 +1176,7 @@ font-weight: 200;
 }
 
 .image-point {
+
   opacity: 0;  
     justify-content: left;
     align-items: left;
@@ -1172,8 +1201,8 @@ text-decoration: none;
 
 .image-point  ul li {
   list-style-type: none;
-  color: rgb(42, 37, 37);
-    border-bottom: 0.5px solid rgb(73, 73, 73);
+  color: rgb(0, 0, 0);
+    border-bottom: 0.5px solid rgb(171, 171, 171);
     margin-bottom: 2%;
     
 
@@ -1185,14 +1214,14 @@ text-decoration: none;
   font-family: "Lilita One", sans-serif;
 text-align: end;
 font-weight: 100;
-color: #ffffff;
+color: #000000;
 }
 
 .image-point  .p {
   font-family: "Lilita One", sans-serif;
 text-align: end;
 font-weight: 100;
-color: rgb(188, 188, 188);
+color: rgb(141, 141, 141);
 
 }
 
@@ -1204,7 +1233,7 @@ color: rgb(188, 188, 188);
   font-size: 7em;
   font-family: 'Rubik Glitch Pop', system-ui;
   font-weight: 100;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   line-height: 1.25em;
   text-transform: uppercase;
   transition: 0.5s;
@@ -1214,7 +1243,7 @@ color: rgb(188, 188, 188);
 
 .image-point ul:hover li:not(:hover)  a {
     opacity: 0.5;
-    color: rgb(93, 93, 93);
+    color: rgb(208, 208, 208);
 }
 
 .image-point a {
@@ -1285,11 +1314,12 @@ border-radius: 30px;
   text-decoration: none;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
     font-weight: 400;
     letter-spacing: -1.3px;
-  font-size: 1.55rem;
+  font-size: 1.5rem;
   font-weight: 200;
+  left: 0%;
   text-align: start;
   align-items: center;
   position: relative;
@@ -1302,7 +1332,7 @@ a.visit {
   font-weight: 300;
   width: 100%;
   right: 9%; 
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-size: 2rem;
 
 }
@@ -1311,9 +1341,9 @@ a.visit {
   text-decoration: none;
   left: 5%; 
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   font-weight: 300;
-  font-size: 0.8rem;
+  font-size: 12px;
   text-align: start;
   position: relative;
   letter-spacing: -0.4px;
@@ -1326,15 +1356,15 @@ a.visit {
   list-style-type: none;
   text-decoration: none; 
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: rgb(255, 255, 255);
+  color: rgb(39, 38, 38);
   font-weight: 200;
-  font-size: 0.8rem;
+  font-size: 12px;
   text-align: center;
 position: relative;
 left: 7%;
 top: -5px;
 margin-bottom: 30px;
- border: 1.5px solid rgba(255, 255, 255, 0.588);
+ border: 1.5px solid rgba(0, 0, 0, 0.588);
  border-style:dashed;
   border-radius: 10px;
  width: 90px;
@@ -1349,7 +1379,7 @@ margin-bottom: 30px;
 
 
 .image-point-phone .section__text___p2 {
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 font-size: 20px;
 animation: none;
 
@@ -1388,20 +1418,14 @@ animation: none;
     align-items: center;
     margin: auto;
     gap: 5rem;
-    margin-top: 15%;
+    margin-top: 10%;
     margin-bottom: 35%;
 border-radius: 30px;
     width:100%; 
-    scale: 0;
-}
+
+  }
 
 
-#experience {
-border: 1px solid white;
-  /*background: url(https://images.unsplash.com/photo-1696875011554-b6a4ebd54997?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) fixed center no-repeat  ;
-clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);*/
-background-color:rgba(121, 121, 121, 0.206);
-}
 
 
 #experience .section__text__p1 {
@@ -1432,8 +1456,11 @@ background-color:rgba(121, 121, 121, 0.206);
   font-size: 20vh;
   font-weight: 500;
   animation: none;
+  right: 25%;
+  margin-bottom: 10%;
+  position: relative;
   text-transform: lowercase;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 } 
 
 .container-experience {
@@ -1508,10 +1535,10 @@ background-color:rgba(121, 121, 121, 0.206);
   overflow: hidden;
   padding: 30px 0;
   width: 50%;
-  background: rgb(107, 107, 107);
   white-space: nowrap;
   position: relative;
   margin: auto;
+  background-color: rgba(255, 255, 255, 0);
   /*box-shadow: 30px 30px 100px rgb(0, 0, 0);*/
   border-radius: 20px;
 
@@ -1529,12 +1556,12 @@ background-color:rgba(121, 121, 121, 0.206);
 
 .logos:before {
   left: 0;
-  background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(0, 0, 0));
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(255, 255, 255));
 }
 
 .logos:after {
   right: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0),  rgb(0, 0, 0));
+  background: linear-gradient(to right, rgba(255, 255, 255, 0),  rgb(255, 255, 255));
 }
 
 .logos:hover .logos-slide {
@@ -1549,7 +1576,6 @@ background-color:rgba(121, 121, 121, 0.206);
 .logos-slide img {
   height: 40px;
   margin: 0 40px;
-
 }
 
 
@@ -1634,7 +1660,7 @@ font-weight: 400;
    #contact span {
     font-size: 8rem;
     font-weight: 100;
-    text-transform: uppercase;
+    text-transform: lowercase;
     color: rgb(255, 255, 255);
 
    }
@@ -1709,16 +1735,17 @@ justify-content: center;
 
 .nav-links2 {
   z-index: 200;
-    gap: 2rem;
-    padding: 20px;
+    gap: 1rem;
+    padding: 100px;
     display: flex;
       list-style: none;
       text-align: center;
       position: relative;
       border-radius: 20px;
       z-index: 2;
+      left: 34%;
       color: rgb(0, 0, 0);
-
+margin-bottom: -4%;
   }
 
   span img {
@@ -1739,7 +1766,7 @@ justify-content: center;
     cursor:pointer;
     font-family: 'Rubik Glitch Pop', system-ui;
   font-weight: 100;
-  text-transform: uppercase;
+  text-transform: capitalize;
   text-decoration: none;
   font-size: 1rem;
   color: #f1f1f1;
@@ -1902,3 +1929,10 @@ position: relative;
     top: -20%;
     left: 0%;
 }
+
+
+
+
+
+
+

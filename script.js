@@ -121,18 +121,18 @@ TweenMax.staggerFrom(
 
 
 
-      gsap.to("canvas", {
-        y: "5%",
-        scale:0.8,
+      gsap.to("#three-container", {
+        y: "50%",
+        scale: 0.8,
         ease: "none",
         scrollTrigger: {
-          trigger: "body",
-          start: "top top ",
+          trigger: "#profile",
+          start: "top top",
           end: "100vh top",
-          scrub: 1.3,
+          scrub: 1.1,
         },
       });
-    
+
 
       gsap.to(".text-wrapperr", {
         y: "-50%",
@@ -216,6 +216,7 @@ TweenMax.staggerFrom(
         scrollTrigger: ".contact-info-upper-container",
         duration: 1,
         x: 0,
+        ease:"sine",
 
       });
 
@@ -249,22 +250,25 @@ TweenMax.staggerFrom(
 
 
       
-      // Animation au défilement
-      gsap.to(".about-me-details", {
-        scrollTrigger: {
-          trigger: "#about-me h1",
-          start: " top top",
-          end: "bottom   ",
-          scrub: true,
+const words = document.querySelectorAll(".about-me-details span");
 
-        },
-        x: 40,
-
-        color: "white",
-        scrub : 5,
-        duration: 5,
-        ease: "power5.inOut"
-      });
+gsap.fromTo(
+  words,
+  { opacity: 0,  }, // État initial : invisible et légèrement décalé vers le bas
+  {
+    opacity: 1,
+    y: 0, // Le mot remonte à sa position initiale
+    scrollTrigger: {
+      trigger: "#about-me .title1",
+      start: "top top",
+      end: "bottom top",
+      scrub: true,
+      color :"white,"
+    },
+    stagger: 0.1, // Décalage entre chaque mot
+    duration: 2,
+  }
+);
 
 
       gsap.to(" .image-point", {
@@ -281,29 +285,25 @@ TweenMax.staggerFrom(
 
       });
 
-      gsap.set("#experience", {
+      gsap.set("#experience .title1", {
         scale:0,
-        height: "0%",
-        width: "0%",
-        x: -100,
+       
 
       });
       
       // Animation au défilement
-      gsap.to("#experience", {
+      gsap.to("#experience .title1", {
         scrollTrigger: {
           trigger: ".image-point",
-          start: "bottom bottom",
+          start: "bottom center",
           end: "bottom  ",
           scrub: true,
 
         },
-        x: 0,
+        scrub : 5,
+        scale:1,
+        
 
-        scale: 1,
-        scrub : 1,
-        height: "100%",
-        width: "80%",
         duration: 1,
         ease: "power4.inOut"
       });
@@ -347,6 +347,7 @@ TweenMax.staggerFrom(
                   }
               });
           });
+
 
 
 
@@ -429,6 +430,9 @@ TweenMax.staggerFrom(
         });
 
 
+
+
+
 // Initialisation de la scène
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -475,7 +479,7 @@ const ambientLight = new THREE.AmbientLight(0xffffff, 0.7);
 scene.add(ambientLight);
 
 // Ajouter une lumière directionnelle pour créer des ombres et des reflets
-const directionalLight = new THREE.DirectionalLight(0xffffff, 2);
+const directionalLight = new THREE.DirectionalLight(0xffffff, 10);
 directionalLight.position.set(5, 5, 5);
 scene.add(directionalLight);
 
@@ -498,12 +502,12 @@ function generateGlitchTexture() {
     glitchContext.clearRect(0, 0, glitchCanvas.width, glitchCanvas.height);
     
     // Créer des points noir et blanc aléatoires
-  const numPoints = 4000; // Augmenter le nombre de points pour une couverture plus dense
+  const numPoints = 7000; // Augmenter le nombre de points pour une couverture plus dense
     for (let i = 0; i < numPoints; i++) {
         const x = Math.random() * glitchCanvas.width;
         const y = Math.random() * glitchCanvas.height;
-        const size = Math.random() * 0.7 + 0.7; // Taille des points (0.5 à 1.5 pixels)
-        const color = Math.random() < 0.9 ? 'white' : 'white'; // Alternance entre noir et blanc
+        const size = Math.random() * 0.5 + 0.5; // Taille des points (0.5 à 1.5 pixels)
+        const color = Math.random() < 50 ? 'black' : 'black'; // Alternance entre noir et blanc
         
         glitchContext.fillStyle = color;
         glitchContext.beginPath();
@@ -539,9 +543,9 @@ window.addEventListener('scroll', () => {
     const scrollPosition = window.scrollY;
 
     // Rotation cible en fonction du scroll
-    const rotationSpeed = 0.005;
+    const rotationSpeed = 0.003;
     targetRotationY = scrollPosition * rotationSpeed;
-    targetRotationX = scrollPosition * rotationSpeed / 8;
+    targetRotationX = scrollPosition * rotationSpeed / 2;
 });
 
 // Ajuster la taille du canvas au redimensionnement de la fenêtre
@@ -551,3 +555,12 @@ window.addEventListener('resize', () => {
     renderer.setSize(window.innerWidth, window.innerHeight);
 });
 
+
+window.addEventListener('mousemove', (event) => {
+  const mouseX = (event.clientX / window.innerWidth) * 6 - 1;
+  const mouseY = (event.clientY / window.innerHeight) * 6 - 1;
+
+  // Ajuster les rotations cibles en fonction des coordonnées de la souris
+  targetRotationY = mouseX * 2; // La vitesse de rotation peut être ajustée
+  targetRotationX = mouseY * 2;
+});
