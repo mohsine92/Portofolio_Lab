@@ -207,5 +207,30 @@ opacity:1,
 
 
 
+      
+      const words = document.querySelectorAll(".p1");
+
+gsap.fromTo(
+  words,
+  { opacity: 0,  }, // État initial : invisible et légèrement décalé vers le bas
+  {
+    opacity: 1,
+    y: "30%", // Le mot remonte à sa position initiale
+    scrollTrigger: {
+      trigger: "body",
+      start: "top top",
+      end: "bottom top",
+      scrub: true,
+      color :"black,"
+    },
+    stagger: 0.1, // Décalage entre chaque mot
+    duration: 2,
+  }
+);
+
+
+
+
+
   </script>
 </html>

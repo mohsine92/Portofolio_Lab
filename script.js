@@ -106,32 +106,18 @@ TweenMax.staggerFrom(
       
 
       gsap.to(".logo", {
-        y: "-50%",
+        y: "10%",
         scale: 0.8,
         ease: "none",
         scrollTrigger: {
           trigger: "#profile",
           start: "top top",
           end: "100vh top",
-          scrub: 1.1,
+          scrub: 1,
         },
       });
 
 
-
-
-
-      gsap.to("#three-container", {
-        y: "50%",
-        scale: 0.8,
-        ease: "none",
-        scrollTrigger: {
-          trigger: "#profile",
-          start: "top top",
-          end: "100vh top",
-          scrub: 1.1,
-        },
-      });
 
 
       gsap.to(".text-wrapperr", {
@@ -381,8 +367,8 @@ gsap.fromTo(
           const x = (e.clientX - left) / width - 0.5;
           const y = (e.clientY - top) / height - 0.5;
       
-          const moveX = x * 700; // Ajuste la valeur pour augmenter ou diminuer le mouvement horizontal
-          const moveY = y * 700; // Ajuste la valeur pour augmenter ou diminuer le mouvement vertical
+          const moveX = x * 400; // Ajuste la valeur pour augmenter ou diminuer le mouvement horizontal
+          const moveY = y * 400; // Ajuste la valeur pour augmenter ou diminuer le mouvement vertical
       
           iimage.style.transform = `translate(${moveX}px, ${moveY}px)`;
       });
@@ -430,63 +416,90 @@ gsap.fromTo(
         });
 
 
-
-
-
 // Initialisation de la scène
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById('three-container').appendChild(renderer.domElement);
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
 // Charger la texture
 const loader = new THREE.TextureLoader();
 const baseTexture = loader.load('https://images.unsplash.com/photo-1595418917831-ef942bd9f9ec?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+baseTexture.wrapS = THREE.RepeatWrapping;
+baseTexture.wrapT = THREE.RepeatWrapping;
+baseTexture.repeat.set(1, 6);
 
-// Ajuster la texture pour qu'elle ne se répète pas sur chaque face
-baseTexture.wrapS = THREE.ClampToEdgeWrapping;
-baseTexture.wrapT = THREE.ClampToEdgeWrapping;
-baseTexture.minFilter = THREE.LinearFilter;
-
-// Créer un canvas pour le bruit glitch
-const glitchCanvas = document.createElement('canvas');
-const glitchContext = glitchCanvas.getContext('2d');
-glitchCanvas.width = 512;
-glitchCanvas.height = 512;
-
-// Créer le matériau en utilisant MeshPhysicalMaterial pour un effet de verre
+// Créer le matériau en utilisant MeshPhysicalMaterial pour une meilleure simulation des propriétés physiques
 const material = new THREE.MeshPhysicalMaterial({
-    color: 0x000000, // Couleur noire
-    roughness: 0.1,
-    metalness: 0.5,
-    transmission: 0.30,
-    thickness: 1.5,
-    clearcoat: 1,
-    clearcoatRoughness: 0,
-    transparent: true,
-    opacity: 0.9,
+    map: baseTexture,
+    roughness: 0.05,
+    metalness: 0.3,
+    clearcoat: 0.5,
+    clearcoatRoughness: 0.1,
+    reflectivity: 0.6,
+    transmission: 0.3,
     side: THREE.DoubleSide,
+    transparent: true,
+    opacity: 1,
 });
 
-// Créer un cube avec MeshPhysicalMaterial pour plus de réalisme
-const geometry = new THREE.BoxGeometry(2.3, 2.3, 2.3);
+// Fonction pour créer une géométrie avec des coins arrondis
+function createRoundedBox(width, height, depth, radius, smoothness) {
+    const shape = new THREE.Shape();
+    const eps = 0.00001;
+    shape.absarc(eps, eps, eps, -Math.PI / 2, -Math.PI, true);
+    shape.absarc(eps, height - radius * 2, eps, Math.PI, Math.PI / 2, true);
+    shape.absarc(width - radius * 2, height - radius * 2, eps, Math.PI / 2, 0, true);
+    shape.absarc(width - radius * 2, eps, eps, 0, -Math.PI / 2, true);
+
+    const geometry = new THREE.ExtrudeGeometry(shape, {
+        amount: depth - radius * 2,
+        bevelEnabled: true,
+        bevelSegments: smoothness * 2,
+        steps: 1,
+        bevelSize: radius,
+        bevelThickness: radius,
+        curveSegments: smoothness,
+    });
+
+    geometry.center();
+    return geometry;
+}
+
+// Créer un cube arrondi
+const geometry = createRoundedBox(2.3, 2.3, 2.3, 0.3, 16);
 const cube = new THREE.Mesh(geometry, material);
-scene.add(cube);
-
-// Ajouter une lumière ambiante pour un éclairage doux
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.7);
-scene.add(ambientLight);
-
-// Ajouter une lumière directionnelle pour créer des ombres et des reflets
-const directionalLight = new THREE.DirectionalLight(0xffffff, 10);
-directionalLight.position.set(5, 5, 5);
-scene.add(directionalLight);
-
-// Configurer les ombres
-renderer.shadowMap.enabled = true;
 cube.castShadow = true;
 cube.receiveShadow = true;
+scene.add(cube);
+
+// Ajouter une lumière ambiante douce
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
+scene.add(ambientLight);
+
+// Ajouter une lumière directionnelle avec une intensité légèrement accrue pour des ombres mieux définies
+const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+directionalLight.position.set(5, 5, 5);
+directionalLight.castShadow = true;
+directionalLight.shadow.mapSize.width = 2048;
+directionalLight.shadow.mapSize.height = 2048;
+directionalLight.shadow.camera.near = 0.5;
+directionalLight.shadow.camera.far = 50;
+scene.add(directionalLight);
+
+// Ajouter une lumière de remplissage pour adoucir les ombres du côté opposé
+const fillLight = new THREE.PointLight(0xffffff, 0.5);
+fillLight.position.set(-5, -5, 3);
+fillLight.castShadow = true;
+scene.add(fillLight);
+
+// Ajouter une lumière de bord pour ajouter un effet de contre-jour
+const rimLight = new THREE.DirectionalLight(0xffffff, 0.3);
+rimLight.position.set(-5, 5, -5);
+scene.add(rimLight);
 
 // Position de la caméra
 camera.position.set(0, 0, 7);
@@ -497,41 +510,13 @@ let targetRotationX = 80;
 let currentRotationY = 80;
 let currentRotationX = 80;
 
-// Fonction pour générer un bruit glitch avec des points noir et blanc
-function generateGlitchTexture() {
-    glitchContext.clearRect(0, 0, glitchCanvas.width, glitchCanvas.height);
-    
-    // Créer des points noir et blanc aléatoires
-  const numPoints = 7000; // Augmenter le nombre de points pour une couverture plus dense
-    for (let i = 0; i < numPoints; i++) {
-        const x = Math.random() * glitchCanvas.width;
-        const y = Math.random() * glitchCanvas.height;
-        const size = Math.random() * 0.5 + 0.5; // Taille des points (0.5 à 1.5 pixels)
-        const color = Math.random() < 50 ? 'black' : 'black'; // Alternance entre noir et blanc
-        
-        glitchContext.fillStyle = color;
-        glitchContext.beginPath();
-        glitchContext.arc(x, y, size, 0, Math.PI * 5); // Dessiner des cercles
-        glitchContext.fill();
-    }
-    
-    // Mettre à jour la texture
-    material.map = new THREE.Texture(glitchCanvas);
-    material.map.needsUpdate = true;
-}
-
 // Fonction pour animer le rendu
 function animate() {
-    // Interpolation pour lisser la rotation vers les valeurs cibles
     currentRotationY += (targetRotationY - currentRotationY) * 0.05;
     currentRotationX += (targetRotationX - currentRotationX) * 0.05;
 
-    // Appliquer les rotations lissées
     cube.rotation.y = currentRotationY;
     cube.rotation.x = currentRotationX;
-
-    // Générer le bruit glitch
-    generateGlitchTexture();
 
     renderer.render(scene, camera);
     requestAnimationFrame(animate);
@@ -541,8 +526,6 @@ animate();
 // Fonction de gestion du scroll pour définir les cibles de rotation
 window.addEventListener('scroll', () => {
     const scrollPosition = window.scrollY;
-
-    // Rotation cible en fonction du scroll
     const rotationSpeed = 0.003;
     targetRotationY = scrollPosition * rotationSpeed;
     targetRotationX = scrollPosition * rotationSpeed / 2;
@@ -555,12 +538,11 @@ window.addEventListener('resize', () => {
     renderer.setSize(window.innerWidth, window.innerHeight);
 });
 
-
+// Ajuster la rotation en fonction de la position de la souris
 window.addEventListener('mousemove', (event) => {
-  const mouseX = (event.clientX / window.innerWidth) * 6 - 1;
-  const mouseY = (event.clientY / window.innerHeight) * 6 - 1;
-
-  // Ajuster les rotations cibles en fonction des coordonnées de la souris
-  targetRotationY = mouseX * 2; // La vitesse de rotation peut être ajustée
-  targetRotationX = mouseY * 2;
+    const mouseX = (event.clientX / window.innerWidth) * 6 - 1;
+    const mouseY = (event.clientY / window.innerHeight) * 6 - 1;
+    targetRotationY = mouseX * 2;
+    targetRotationX = mouseY * 2;
 });
+
