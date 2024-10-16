@@ -44,7 +44,7 @@ nav a:hover  {
 }
 
 
-span:hover  {
+a span:hover  {
   
   color: rgb(0, 0, 0);
 }
@@ -73,7 +73,7 @@ font-family: "Tiny5", sans-serif;
 }
 
 
- .p1 {
+ .p1  {
   color: rgb(226, 254, 157);
 position: relative;
   padding:10%;
@@ -223,9 +223,6 @@ text-align: center;
 
 
 
-
-
-
   .container-text {
   width: 100%;
   
@@ -251,18 +248,47 @@ text-align: center;
   position: relative;
     padding:10%;
     width: 100%;
+  right: 10%;
   left: 0%;
   top: -30%;
     font-size: 20px;
     letter-spacing: -1px;
-    font-weight: 300;
+    font-weight: 200;
       font-style: normal;
     text-align: start;
     font-family: "Roboto Slab", serif;
     }
 
+    #three-container {
 
-
+      filter:invert(0%);
+      mix-blend-mode:difference;
+        width: 80% !important;
+        height: 30%;
+        position:fixed;
+        top: -20%;
+        left:0% !important;
+    
+    
+    }
 
 
 }
+
+
+
+#three-container {
+
+  filter:invert(0%);
+  mix-blend-mode:difference;
+    width: 80% !important;
+    height: 30%;
+    position:fixed;
+    top: -20%;
+    left:36%;
+
+
+}
+
+
+

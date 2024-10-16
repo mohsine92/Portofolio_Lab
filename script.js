@@ -75,14 +75,14 @@ document.addEventListener('mousemove', showImage);
 
 
 TweenMax.staggerFrom(
-  "body, #profile ",
+  "body ",
   1,
   {
-    opacity: 0,
+    opacity: 2,
     duration: 10,
     ease: Expo.easeInOut,
   },
-  0.04
+  0.06
 );
 
 
@@ -234,27 +234,54 @@ TweenMax.staggerFrom(
       });
 
 
+      const words = document.querySelectorAll(".about-me-details span");
 
+      gsap.fromTo(
+        words,
+        {
+          opacity: 0,
+          y: 20, // Légèrement décalé vers le bas
+          filter: "blur(10px)", // État initial : flou
+        },
+        {
+          opacity: 1,
+          y: 0, // Le mot remonte à sa position initiale
+          filter: "blur(0px)", // Retire le flou
+          scrollTrigger: {
+            trigger: "#about-me .title1",
+            start: "top top",
+            end: "bottom top",
+            scrub: 1, // Augmentez la valeur pour un effet de défilement plus fluide
+          },
+          stagger: 0.2, // Augmentez le décalage entre chaque mot
+          duration: 6, // Augmentez la durée pour ralentir l'animation
+        }
+      );
       
-const words = document.querySelectorAll(".about-me-details span");
+      const words2 = document.querySelectorAll("#about-me h1 span");
 
-gsap.fromTo(
-  words,
-  { opacity: 0,  }, // État initial : invisible et légèrement décalé vers le bas
-  {
-    opacity: 1,
-    y: 0, // Le mot remonte à sa position initiale
-    scrollTrigger: {
-      trigger: "#about-me .title1",
-      start: "top top",
-      end: "bottom top",
-      scrub: true,
-      color :"white,"
-    },
-    stagger: 0.1, // Décalage entre chaque mot
-    duration: 2,
-  }
-);
+      gsap.fromTo(
+        words2,
+        {
+          opacity: 0,
+          y: 20, // Légèrement décalé vers le bas
+          filter: "blur(10px)", // État initial : flou
+        },
+        {
+          opacity: 1,
+          y: 0, // Le mot remonte à sa position initiale
+          filter: "blur(0px)", // Retire le flou
+          scrollTrigger: {
+            trigger: ".details-container2", // Déclencheur sur le h1
+            start: "top top", // Début de l'animation quand le h1 est au centre de la vue
+            end: "bottom top", // Fin de l'animation quand le h1 sort de la vue
+            scrub: 1, // Augmentez la valeur pour un effet de défilement plus fluide
+          },
+          stagger: 0.2, // Décalage entre chaque mot
+          duration: 6, // Durée de l'animation
+        }
+      );
+      
 
 
       gsap.to(" .image-point", {
@@ -398,11 +425,17 @@ gsap.fromTo(
             gsap.fromTo(image, 
               {
                 opacity: 0,
-                y: 20,                
+                y: 10,
+                x: -200,
+                rotation:10,
               },
               {
                 opacity: 1,
                 y: 0,
+                x:0,                 
+                rotation:0,
+              
+
                 duration: 1,
                 ease: "power3.out",
                 scrollTrigger: {
@@ -416,6 +449,9 @@ gsap.fromTo(
         });
 
 
+
+
+
 // Initialisation de la scène
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -427,36 +463,43 @@ renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
 // Charger la texture
 const loader = new THREE.TextureLoader();
+
 const baseTexture = loader.load('https://images.unsplash.com/photo-1595418917831-ef942bd9f9ec?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+
 baseTexture.wrapS = THREE.RepeatWrapping;
 baseTexture.wrapT = THREE.RepeatWrapping;
 baseTexture.repeat.set(1, 6);
 
+
+
 // Créer le matériau en utilisant MeshPhysicalMaterial pour une meilleure simulation des propriétés physiques
 const material = new THREE.MeshPhysicalMaterial({
-    map: baseTexture,
-    roughness: 0.05,
-    metalness: 0.3,
-    clearcoat: 0.5,
-    clearcoatRoughness: 0.1,
-    reflectivity: 0.6,
-    transmission: 0.3,
-    side: THREE.DoubleSide,
-    transparent: true,
-    opacity: 1,
+  map: baseTexture,
+  roughness: 0.5,
+  metalness: 0.1,
+  clearcoat: 0.2,
+  clearcoatRoughness: 0.2,
+  reflectivity: 0.5,
+  transmission: 0.1,
+  ior: 1.3,
+  side: THREE.DoubleSide,
+  transparent: true,
+  opacity: 0.85,
+  color: new THREE.Color(0xffffff)
 });
+
 
 // Fonction pour créer une géométrie avec des coins arrondis
 function createRoundedBox(width, height, depth, radius, smoothness) {
     const shape = new THREE.Shape();
     const eps = 0.00001;
-    shape.absarc(eps, eps, eps, -Math.PI / 2, -Math.PI, true);
-    shape.absarc(eps, height - radius * 2, eps, Math.PI, Math.PI / 2, true);
-    shape.absarc(width - radius * 2, height - radius * 2, eps, Math.PI / 2, 0, true);
-    shape.absarc(width - radius * 2, eps, eps, 0, -Math.PI / 2, true);
+    shape.absarc(0, 0, radius, -Math.PI / 2, -Math.PI, true);
+    shape.absarc(0, height - radius * 2, radius, Math.PI, Math.PI / 2, true);
+    shape.absarc(width - radius * 2, height - radius * 2, radius, Math.PI / 2, 0, true);
+    shape.absarc(width - radius * 2, 0, radius, 0, -Math.PI / 2, true);
 
     const geometry = new THREE.ExtrudeGeometry(shape, {
-        amount: depth - radius * 2,
+        depth: depth - radius * 2,
         bevelEnabled: true,
         bevelSegments: smoothness * 2,
         steps: 1,
@@ -470,45 +513,50 @@ function createRoundedBox(width, height, depth, radius, smoothness) {
 }
 
 // Créer un cube arrondi
-const geometry = createRoundedBox(2.3, 2.3, 2.3, 0.3, 16);
+const geometry = createRoundedBox(2.3, 2.3, 2.3, 0.3, 26);
 const cube = new THREE.Mesh(geometry, material);
 cube.castShadow = true;
 cube.receiveShadow = true;
 scene.add(cube);
 
 // Ajouter une lumière ambiante douce
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
 scene.add(ambientLight);
 
-// Ajouter une lumière directionnelle avec une intensité légèrement accrue pour des ombres mieux définies
+// Ajouter une lumière directionnelle pour des ombres et des reflets
 const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
 directionalLight.position.set(5, 5, 5);
 directionalLight.castShadow = true;
-directionalLight.shadow.mapSize.width = 2048;
-directionalLight.shadow.mapSize.height = 2048;
-directionalLight.shadow.camera.near = 0.5;
-directionalLight.shadow.camera.far = 50;
 scene.add(directionalLight);
 
-// Ajouter une lumière de remplissage pour adoucir les ombres du côté opposé
-const fillLight = new THREE.PointLight(0xffffff, 0.5);
-fillLight.position.set(-5, -5, 3);
-fillLight.castShadow = true;
-scene.add(fillLight);
-
-// Ajouter une lumière de bord pour ajouter un effet de contre-jour
-const rimLight = new THREE.DirectionalLight(0xffffff, 0.3);
+// Ajouter une lumière de bord pour un effet de contre-jour
+const rimLight = new THREE.DirectionalLight(0xffffff, 0.5);
 rimLight.position.set(-5, 5, -5);
 scene.add(rimLight);
 
 // Position de la caméra
-camera.position.set(0, 0, 7);
+camera.position.set(0, 0, 8);
 
 // Variables pour une rotation lissée
-let targetRotationY = 80;
-let targetRotationX = 80;
-let currentRotationY = 80;
-let currentRotationX = 80;
+let targetRotationY = 100;
+let targetRotationX = 100;
+let currentRotationY = 100;
+let currentRotationX = 100;
+
+// Variables pour l'animation de la lumière
+let pulseSpeed = 1; // Vitesse de pulsation
+let pulseScale = 0.5; // Amplitude de pulsation
+
+// Fonction pour animer la lumière
+function animateLights() {
+    const time = Date.now() * 0.001; // Obtenir le temps écoulé en secondes
+
+    // Pulsation de l'intensité de la lumière directionnelle
+    directionalLight.intensity = 1 + Math.sin(time * pulseSpeed) * pulseScale;
+
+    // Pulsation de la lumière de bord
+    rimLight.intensity = 0.5 + Math.sin(time * pulseSpeed) * pulseScale * 0.5; // Diminuer l'effet
+}
 
 // Fonction pour animer le rendu
 function animate() {
@@ -518,6 +566,9 @@ function animate() {
     cube.rotation.y = currentRotationY;
     cube.rotation.x = currentRotationX;
 
+    // Animer les lumières
+    animateLights();
+
     renderer.render(scene, camera);
     requestAnimationFrame(animate);
 }
@@ -526,7 +577,7 @@ animate();
 // Fonction de gestion du scroll pour définir les cibles de rotation
 window.addEventListener('scroll', () => {
     const scrollPosition = window.scrollY;
-    const rotationSpeed = 0.003;
+    const rotationSpeed = 0.006;
     targetRotationY = scrollPosition * rotationSpeed;
     targetRotationX = scrollPosition * rotationSpeed / 2;
 });
@@ -545,4 +596,3 @@ window.addEventListener('mousemove', (event) => {
     targetRotationY = mouseX * 2;
     targetRotationX = mouseY * 2;
 });
-
