@@ -254,7 +254,7 @@ TweenMax.staggerFrom(
             scrub: 1, // Augmentez la valeur pour un effet de défilement plus fluide
           },
           stagger: 0.2, // Augmentez le décalage entre chaque mot
-          duration: 6, // Augmentez la durée pour ralentir l'animation
+          duration: 3, // Augmentez la durée pour ralentir l'animation
         }
       );
       
