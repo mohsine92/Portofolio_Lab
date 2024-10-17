@@ -596,3 +596,4 @@ window.addEventListener('mousemove', (event) => {
     targetRotationY = mouseX * 2;
     targetRotationX = mouseY * 2;
 });
+

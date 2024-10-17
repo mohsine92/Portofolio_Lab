@@ -4,6 +4,8 @@
   src: url("https://garet.typeforward.com/assets/fonts/shared/TFMixVF.woff2") format('woff2');
 }
 
+
+
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +14,7 @@
 
 html,
 body {
-  background-color: rgb(27, 27, 27);  
+  background-color:rgb(23, 23, 20);
   font-family: "PP Neue Montreal";
 }
 
@@ -38,14 +40,13 @@ h1 {
   font-size: 130px;
   font-weight: 100;
   text-align: start;
-  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;}
 
 
 .col h1 {
-  background-color: rgb(70, 48, 48);  
+  background-color:rgb(0, 0, 0);
   border-radius: 20px ;
-  padding: 8px;
+  padding: 9px;
   filter: invert(100%);
   color: #ffffff;
   z-index: 2;
@@ -59,6 +60,8 @@ h1 {
   text-align: start;
 
 }
+
+
 
 p {
   position: relative;
@@ -74,10 +77,10 @@ p {
 
 span {
   font-weight: 500;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 .services {
-  background-color:rgb(28, 27, 27);
+  background-color:rgb(23, 23, 20);
   padding: 12em 2em;
   display: flex;
   flex-direction: column;
@@ -167,7 +170,7 @@ footer  a  {
  /*FOOTER*/
  
 
-.nav-links2 {
+.nav-links3 {
     gap: 2rem;
     padding: 100px;
     display: flex;
@@ -179,18 +182,19 @@ footer  a  {
       color: white;
 justify-content: center;
 
+
   }
   
   
   
-.nav-links2 a {
+.nav-links3 a {
   mix-blend-mode:difference;
     cursor:pointer;
-    font-family: 'Rubik Glitch Pop', system-ui;
-  font-weight: 100;
+    font-weight: 150;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1.7rem;
   color: #ffffff;
      background:
      linear-gradient(
@@ -220,7 +224,7 @@ justify-content: center;
   top: 20%;
     height: 20%;
     margin: auto;
-    border-top: 1.5px solid rgba(255, 255, 255, 0.571);
+    border-top: 1.5px solid rgb(255, 255, 255);
     border-top-right-radius: 100px;
     border-top-left-radius: 100px;
 background-color: transparent ;
@@ -235,13 +239,15 @@ filter: none;
  footer,
  #contact {
   margin: 0; 
-  background-color:rgb(28, 27, 27);
+  background-color:rgb(23, 23, 20);
+  ;
 
 }
   
   footer a {
-    color: rgb(255, 255, 255);
-    background:#4444AE;
+    color: rgb(0, 0, 0);
+    background-color:rgb(23, 23, 20);
+
 
   }
  
@@ -250,7 +256,7 @@ filter: none;
     text-align: center;
     position: relative;
     bottom: 0%;
-    font-size: 1rem;
+    font-size: 0.8rem;
     letter-spacing: -0.1px;
 
   }
@@ -262,3 +268,11 @@ footer h1 {
 }
 
 
+
+
+@media screen and (max-width: 900px) {
+
+  body {
+    background-color:rgb(23, 23, 20);
+  }
+}

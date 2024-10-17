@@ -137,7 +137,7 @@ img {
 }
 
 .block {
-  clip-path: inset(5% 20% 15% 10%);
+  clip-path: polygon(0 25%, 43% 0, 100% 19%, 100% 87%, 25% 100%, 0 77%);
 
   margin: 2px;
   width: 50px;
