@@ -1056,7 +1056,7 @@ background-size: cover;
   }
 
 .services {
-  background-color:rgb(28, 27, 27);
+  background-color:rgb(23, 23, 20);
    padding: 8em 1em;
   display: flex;
   flex-direction: column;
@@ -1109,7 +1109,7 @@ text-align: start;
 
 .footer-service .footer-p {
   color: white;
-  font-size: 15px;
+  font-size: 13px;
   left: 0;
   right: 0;
 
