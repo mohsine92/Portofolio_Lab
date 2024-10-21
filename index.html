@@ -12,16 +12,15 @@
       <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+      <script src="https://unpkg.com/lenis@1.1.3/dist/lenis.min.js"></script>
 
-      <script src="path/to/SplitText.min.js"></script>
-
-
-      
 
 
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
+      
+
       
 
 
@@ -47,7 +46,6 @@
 
 
 
-
        <!--NAVBAR-->
         <nav id="desktop-nav">
           <a href="#profile">
@@ -57,7 +55,7 @@
 
                <ul class ="nav-links">
 
-                    <li><a href="#about-me"> About,</a></li>
+                   <li><a href="#about-me"> About,</a></li>
                     <li><a href="#project"> Work,</a></li>
                     <li><a href="./about.html"> Services,</a></li>
                     <li><a href="#experience">Technologie,</a></li>
@@ -93,11 +91,13 @@
         </nav>
        <!--<div class="gradient"></div>-->
 
-<!--<img src="https://images.unsplash.com/photo-1568607184887-647b905c0966?q=80&w=3327&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="image-profile">-->
+<!--<img src="https://images.unsplash.com/photo-1568607184887-647b905c0966?q=80&w=3327&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="image-profile">
 
-<!--<img src="https://i.pinimg.com/564x/84/05/35/840535db7f979868724cbcef46b9ca26.jpg" class="image-profile"> -->
+  <img src="https://images.unsplash.com/photo-1699343481899-b20bd561c64e?q=80&w=3432&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="image-profile"> -->
 
-      
+  <img src="https://images.unsplash.com/photo-1614622686704-f24cdef196a0?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="image-profile"> 
+
+   <!--<div class="image-profile"></div>-->
 
 <div id="three-container"></div>
 
@@ -109,29 +109,32 @@
             <div class="section__text">
 
                <!--- <p class="section__text___p1">Hello I'm</p>-->
-                <h1 class="title">Mohsine <span>Essat</span>  </h1>
-                <p class="section__text___p2">  Creative Front End Developer. </p> 
-              <p class="p">48°52'11"N  2°18'59"E <br> <br>
 
-                <div class="btn-container">
-                    <!--<button 
-                       class="btn btn-color-2" 
-                       onclick="window.open('Mohsine Essat (8).pdf')"> 
-                     download CV
-                    </button>-->
-                </div>
-                <div id="socials-container">
-                  <img src="https://github.com/Ade-mir/html-css-js-portfolio-tutorial-2/blob/main/assets/linkedin.png?raw=true"
-                    alt="My LinkedIn profile" 
-                    class="icon" 
-                    onclick="location.href='https://www.linkedin.com/in/mohsine-e-44368b1a0/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app'"
-                  />
-                  <img src="https://github.com/Ade-mir/html-css-js-portfolio-tutorial-2/blob/main/assets/github.png?raw=true" 
-                   alt="My Github profile" 
-                   class="icon" 
-                   onclick="location.href='https://github.com/mohsine92'"  
-                  />              
-              </div>
+               <p class="section__text___p2">  Creative Front End Developer ✦</p> 
+               <br>
+               <p class="p">48°52'11"N <br> 2°18'59"E </p> 
+            
+               <div class="btn-container">
+                <!--<button 
+                   class="btn btn-color-2" 
+                   onclick="window.open('Mohsine Essat (8).pdf')"> 
+                 download CV
+                </button>-->
+            </div>
+            <div id="socials-container">
+              <img src="https://github.com/Ade-mir/html-css-js-portfolio-tutorial-2/blob/main/assets/linkedin.png?raw=true"
+                alt="My LinkedIn profile" 
+                class="icon" 
+                onclick="location.href='https://www.linkedin.com/in/mohsine-e-44368b1a0/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app'"
+              />
+             <!-- <img src="https://github.com/Ade-mir/html-css-js-portfolio-tutorial-2/blob/main/assets/github.png?raw=true" 
+               alt="My Github profile" 
+               class="icon" 
+               onclick="location.href='https://github.com/mohsine92'"  
+              />         -->     
+          </div>
+             
+
 
               </div>
               <button class="btn btn-color-1" onclick="location.href='./#contact'">
@@ -140,41 +143,36 @@
 
             </button>
 
-            <img src="https://i.pinimg.com/564x/76/32/79/7632791c5edcf1e9f398c438994bfa0e.jpg" class="arrow">
           </section> 
 
 
+ 
 
+          <p class="presentation">
+            Mohsine Essat <br>
+             2001 <br>
+            Paris → France
+          </p>         
+<br> <br>
+<p class="presentation">Passionate about creativity, I began teaching myself for a year, focusing on building interactive websites, 3D experiences, and animations using JavaScript and libraries like  GSAP and WebGL.
+</p>
 
-
-
+<br> <br>
+          <div>
+            <img id="image-source" src="https://i.pinimg.com/control/564x/e1/10/e4/e110e48ba488aae80151c287e6ce9abc.jpg">
+          
+          </div>
         <!--aboute me section-->
         <section id="about-me">
+ 
+          <br> <br>
 
-          <div class="details-container2"> 
-           
-            <h3 class="h3">Experience</h3>
-            <br>
-            <h6 class="h3-details">+3 YEARS <br  /> Front End Development </h6>
-              
-         <br><br>
-           <h2>0</h2> <br>
-           <br>
-              
-               <h3 class="h3">I can help you with </h3>
-               <br>
-              
-               <h6 class="h3-details">  Design <br>  Development <br>  Implementation</h6>
-           </div>
-       </div>
-
+ <br> <br>
+         
           <h1 class="title1">About  </h1> 
            <br>
 
-        
 
-          
-    <br> <br>
     <h1>
       <span>Transforming</span>
       <span>brands</span>
@@ -183,13 +181,17 @@
       <span>success</span>
       
   </h1>
+
+          
+    <br> <br>
+    <br> <br>
   
                     <br> <br> 
                     
                     <p class="about-me-details">
                       <span>I</span> <span>provide</span> <span>customized</span> <span>solutions</span>
                        <span>for</span> <span>businesses</span> <span>around</span> <span>the</span> <span>globe</span> 
-                      <span>✳︎</span> <span>For</span> <span>every</span> <span>project,</span> <span>I</span> 
+                      <span>✦</span> <span>For</span> <span>every</span> <span>project,</span> <span>I</span> 
                       <span>strive</span> <span>to</span> <span>push</span> <span>boundaries</span>
                        <span>and</span> <span>reach</span> <span>new</span> <span>heights,</span>
                         <span>always</span> <span>prioritizing</span> <span>quality.</span> 
@@ -199,7 +201,7 @@
                         <span>to</span> <span>craft</span> <span>bespoke</span> <span>digital</span> 
                         <span>experiences</span> <span>that</span> 
                         <span>captivate</span> <span>users</span> <span>and</span> <span>deliver</span> <span>genuine</span> <span>value</span>
-                         <span>for</span> <span>every</span> <span>project.</span>
+                         <span>for</span> <span>every</span> <span>project ∙•</span>
 
                     </p>
                   <br> 
@@ -207,21 +209,51 @@
                   <div class="button-container">
 
                     <button class="button-about">
-                      <a href="./presentation.html"> More About ▪︎
+                      <a href="./presentation.html"> Lab ∙
                       </a>
                    </button>
                     <button class="button-about">
-                        <a href="./about.html">Serivces ▪︎
+                        <a href="./about.html">Serivces ∙
                         </a>
                      </button>
 
                   </div>
-                 <div class="image-container" >
 
-                    <img id="image-source" src="https://i.pinimg.com/control/564x/e3/dc/e6/e3dce6e737f9cbee08ccaaef5ef7f4fd.jpg"                  
-                    >
 
-                  </div>
+                  <!--<div class="details-container2"> 
+           
+                    <h3 class="h3">Experience</h3>
+                    <br>
+                    <h6 class="h3-details">+3 YEARS <br  /> Front End Development </h6>
+                      
+                 <br><br>
+                   <h2>0</h2> <br>
+                   <br>
+                      
+                       <h3 class="h3">I can help you with </h3>
+                       <br>
+                      
+                       <h6 class="h3-details">  Design <br>  Development <br>  Implementation</h6>
+                   </div>
+               </div>-->
+
+
+                  <svg id="filter">
+                    <filter id="turbulence" x="-10%" y="-20%" width="140%" height="140%">
+                      <feTurbulence baseFrequency="0" numOctaves="20" seed="1" id="feturbulence" type="fractalNoise" result="NOISE"></feTurbulence>
+                      <feDisplacementMap xChannelSelector="R" yChannelSelector="G" in="SourceGraphic" in2="NOISE" scale="30"></feDisplacementMap>
+                    </filter>
+                  </svg>
+
+
+                  <svg id="filter">
+                    <filter id="turbulence2" x="-10%" y="-20%" width="140%" height="140%">
+                      <feTurbulence baseFrequency="0" numOctaves="20" seed="1" id="feturbulence" type="fractalNoise" result="NOISE"></feTurbulence>
+                      <feDisplacementMap xChannelSelector="R" yChannelSelector="G" in="SourceGraphic" in2="NOISE" scale="40"></feDisplacementMap>
+                    </filter>
+                  </svg>
+                  
+          <br>
 
         <!--<div class="container-slide">
           <p>  ART x WEB 
@@ -230,19 +262,15 @@
         </div>-->
         </section>
 
-<br>
+
 <br>
 <br>
 
-<!--project section-->
 <section id="project">
 <div class="image-point"> 
   <ul>
     <p class="section__text___p2"> RECENT PROJECT</p> 
 
-   <!-- <li><a href="#profile">PORTOFOLIO</a></li> 
-    <p>Design & Development</p>-->
-    <br>
 
     <li><a href="https://boesiagallery.com/">The Boesia Gallery</a><img src="./picture/Boeisa mockup.jpg" class="image"></li>
     <p>Art Gallery ⎯ Development ⋅ Design</p>
@@ -352,6 +380,7 @@
 
 
 
+
 <div class="text-final">
   <p>
 My mission is to create and deliver digital solutions that drive the success of my clients. 
@@ -381,11 +410,12 @@ My goal is to <span>create modern websites, develop impactful brand identities a
 
 <!--Contact section-->
 <section id="contact">
-        <h1 class="title1">Wanna create 
+        <h1 class="title1">
+          <span> Wanna create 
           <br>
-           something <span>awesome</span>
-           together ?
-           <br>
+           something awesome
+           together ? </span>
+           <br> 
            <br>
             <span>  Let's make it happen <img src="https://i.pinimg.com/564x/76/32/79/7632791c5edcf1e9f398c438994bfa0e.jpg" class="arrow"></span>
           
@@ -441,7 +471,7 @@ My goal is to <span>create modern websites, develop impactful brand identities a
         </div>
   <p class="footer-p"> &#169; MOHSINE ESSAT </p>
 
-       <p class="footer-p"> DEVELOPED BY ME ✳︎ </p>
+       <p class="footer-p"> DEVELOPED BY ME ✳︎ <br> V-01 </p>
 
        <br>
 <!--O'Clock-->

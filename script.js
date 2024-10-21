@@ -10,6 +10,8 @@ function toggleMenu() {
 }
 
 
+
+
 //O'Clock
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -118,6 +120,30 @@ TweenMax.staggerFrom(
       });
 
 
+      gsap.to("#image-source", {
+        x: "-75%",
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".presentation",
+          start: "top %",
+          end: "100vh top",
+          scrub: 1,
+        },
+      });
+
+
+      gsap.to(".presentation", {
+        x: "20%",
+        ease: "none",
+        scrollTrigger: {
+          trigger: "#profile",
+          start: "top top",
+          end: "100vh top",
+          scrub: 1,
+        },
+      });
+
+
 
 
       gsap.to(".text-wrapperr", {
@@ -212,10 +238,24 @@ TweenMax.staggerFrom(
           start: "bottom top " ,
           end: "bottom bottom",
           scrub: true,
-
+opacity:1,
         },
       scale: 1.1,
       delay:3,
+      opacity:1,
+        
+      });
+
+
+      gsap.to("  .image-container img ", {
+        scrollTrigger: {
+          trigger: ".about-me-details ",
+          start: "bottom top " ,
+          end: "bottom bottom",
+          scrub: true,
+scale: 0,
+        },
+      scale: 1.2,
       opacity:1,
         
       });
@@ -248,8 +288,8 @@ TweenMax.staggerFrom(
           y: 0, // Le mot remonte à sa position initiale
           filter: "blur(0px)", // Retire le flou
           scrollTrigger: {
-            trigger: "#about-me .title1",
-            start: "top top",
+            trigger: "#about-me h1 span ",
+            start: "top 20%",
             end: "bottom top",
             scrub: 1, // Augmentez la valeur pour un effet de défilement plus fluide
           },
@@ -272,13 +312,13 @@ TweenMax.staggerFrom(
           y: 0, // Le mot remonte à sa position initiale
           filter: "blur(0px)", // Retire le flou
           scrollTrigger: {
-            trigger: ".details-container2", // Déclencheur sur le h1
-            start: "top top", // Début de l'animation quand le h1 est au centre de la vue
+            trigger: "#image-source", // Déclencheur sur le h1
+            start: "bottom 10%", // Début de l'animation quand le h1 est au centre de la vue
             end: "bottom top", // Fin de l'animation quand le h1 sort de la vue
             scrub: 1, // Augmentez la valeur pour un effet de défilement plus fluide
           },
-          stagger: 0.2, // Décalage entre chaque mot
-          duration: 6, // Durée de l'animation
+          stagger: 0.7, // Décalage entre chaque mot
+          duration: 3, // Durée de l'animation
         }
       );
       
@@ -426,10 +466,11 @@ TweenMax.staggerFrom(
               {
                 opacity: 0,
                 y: 10,
-                x: -200,
+                scale: 0,
                 rotation:10,
               },
               {
+                scale:1,
                 opacity: 1,
                 y: 0,
                 x:0,                 
@@ -461,139 +502,147 @@ document.getElementById('three-container').appendChild(renderer.domElement);
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
-// Charger la texture
+// Charger la texture de base
 const loader = new THREE.TextureLoader();
-
 const baseTexture = loader.load('https://images.unsplash.com/photo-1595418917831-ef942bd9f9ec?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-
 baseTexture.wrapS = THREE.RepeatWrapping;
 baseTexture.wrapT = THREE.RepeatWrapping;
 baseTexture.repeat.set(1, 6);
 
-
-
-// Créer le matériau en utilisant MeshPhysicalMaterial pour une meilleure simulation des propriétés physiques
+// Créer le matériau pour l'effet de verre net
 const material = new THREE.MeshPhysicalMaterial({
   map: baseTexture,
-  roughness: 0.5,
-  metalness: 0.1,
-  clearcoat: 0.2,
-  clearcoatRoughness: 0.2,
-  reflectivity: 0.5,
-  transmission: 0.1,
-  ior: 1.3,
+  roughness: 0.5, // Réduit la rugosité pour un aspect plus lisse
+  metalness: 0.6, // Un peu de métal pour améliorer le rendu
+  clearcoat: 0.1, // Augmente la brillance
+  clearcoatRoughness: 0.1,
+  reflectivity: 10, // Maximise la réflexion
+  transmission: 0.8, // Permet une plus grande transparence
+  ior: 15,
   side: THREE.DoubleSide,
   transparent: true,
-  opacity: 0.85,
-  color: new THREE.Color(0xffffff)
+  opacity: 6,
 });
-
 
 // Fonction pour créer une géométrie avec des coins arrondis
 function createRoundedBox(width, height, depth, radius, smoothness) {
-    const shape = new THREE.Shape();
-    const eps = 0.00001;
-    shape.absarc(0, 0, radius, -Math.PI / 2, -Math.PI, true);
-    shape.absarc(0, height - radius * 2, radius, Math.PI, Math.PI / 2, true);
-    shape.absarc(width - radius * 2, height - radius * 2, radius, Math.PI / 2, 0, true);
-    shape.absarc(width - radius * 2, 0, radius, 0, -Math.PI / 2, true);
+  const shape = new THREE.Shape();
+  shape.absarc(0, 0, radius, -Math.PI / 2, -Math.PI, true);
+  shape.absarc(0, height - radius * 2, radius, Math.PI, Math.PI / 2, true);
+  shape.absarc(width - radius * 2, height - radius * 2, radius, Math.PI / 2, 0, true);
+  shape.absarc(width - radius * 2, 0, radius, 0, -Math.PI / 2, true);
 
-    const geometry = new THREE.ExtrudeGeometry(shape, {
-        depth: depth - radius * 2,
-        bevelEnabled: true,
-        bevelSegments: smoothness * 2,
-        steps: 1,
-        bevelSize: radius,
-        bevelThickness: radius,
-        curveSegments: smoothness,
-    });
+  const geometry = new THREE.ExtrudeGeometry(shape, {
+    depth: depth - radius * 2,
+    bevelEnabled: true,
+    bevelSegments: smoothness * 2,
+    steps: 1,
+    bevelSize: radius,
+    bevelThickness: radius,
+    curveSegments: smoothness,
+  });
 
-    geometry.center();
-    return geometry;
+  geometry.center();
+  return geometry;
 }
 
 // Créer un cube arrondi
-const geometry = createRoundedBox(2.3, 2.3, 2.3, 0.3, 26);
+const geometry = createRoundedBox(2.3, 2.3, 2.3, 0.5, 50);
 const cube = new THREE.Mesh(geometry, material);
 cube.castShadow = true;
 cube.receiveShadow = true;
 scene.add(cube);
 
 // Ajouter une lumière ambiante douce
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
 scene.add(ambientLight);
 
-// Ajouter une lumière directionnelle pour des ombres et des reflets
-const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-directionalLight.position.set(5, 5, 5);
-directionalLight.castShadow = true;
-scene.add(directionalLight);
+// Ajouter plusieurs lumières directionnelles pour des reflets et ombres
+const directionalLight1 = new THREE.DirectionalLight(0xffffff, 1);
+directionalLight1.position.set(5, 5, 5);
+directionalLight1.castShadow = true;
+scene.add(directionalLight1);
 
-// Ajouter une lumière de bord pour un effet de contre-jour
-const rimLight = new THREE.DirectionalLight(0xffffff, 0.5);
-rimLight.position.set(-5, 5, -5);
-scene.add(rimLight);
+const directionalLight2 = new THREE.DirectionalLight(0xffffff, 0.7);
+directionalLight2.position.set(-5, -5, 5);
+scene.add(directionalLight2);
+
+const directionalLight3 = new THREE.DirectionalLight(0xffffff, 0.5);
+directionalLight3.position.set(5, -5, -5);
+scene.add(directionalLight3);
+
+// Ajouter une lumière ponctuelle pour des reflets plus intenses
+const pointLight = new THREE.PointLight(0xffffff, 1.2, 50);
+pointLight.position.set(0, 5, 5);
+scene.add(pointLight);
 
 // Position de la caméra
-camera.position.set(0, 0, 8);
+camera.position.set(0, 0, 9);
 
 // Variables pour une rotation lissée
-let targetRotationY = 100;
-let targetRotationX = 100;
-let currentRotationY = 100;
-let currentRotationX = 100;
-
-// Variables pour l'animation de la lumière
-let pulseSpeed = 1; // Vitesse de pulsation
-let pulseScale = 0.5; // Amplitude de pulsation
-
-// Fonction pour animer la lumière
-function animateLights() {
-    const time = Date.now() * 0.001; // Obtenir le temps écoulé en secondes
-
-    // Pulsation de l'intensité de la lumière directionnelle
-    directionalLight.intensity = 1 + Math.sin(time * pulseSpeed) * pulseScale;
-
-    // Pulsation de la lumière de bord
-    rimLight.intensity = 0.5 + Math.sin(time * pulseSpeed) * pulseScale * 0.5; // Diminuer l'effet
-}
+let targetRotationY = 0;
+let targetRotationX = 0;
+let currentRotationY = 0;
+let currentRotationX = 0;
 
 // Fonction pour animer le rendu
 function animate() {
-    currentRotationY += (targetRotationY - currentRotationY) * 0.05;
-    currentRotationX += (targetRotationX - currentRotationX) * 0.05;
+  currentRotationY += (targetRotationY - currentRotationY) * 0.05;
+  currentRotationX += (targetRotationX - currentRotationX) * 0.05;
 
-    cube.rotation.y = currentRotationY;
-    cube.rotation.x = currentRotationX;
+  cube.rotation.y = currentRotationY;
+  cube.rotation.x = currentRotationX;
 
-    // Animer les lumières
-    animateLights();
-
-    renderer.render(scene, camera);
-    requestAnimationFrame(animate);
+  renderer.render(scene, camera);
+  requestAnimationFrame(animate);
 }
 animate();
 
 // Fonction de gestion du scroll pour définir les cibles de rotation
 window.addEventListener('scroll', () => {
-    const scrollPosition = window.scrollY;
-    const rotationSpeed = 0.006;
-    targetRotationY = scrollPosition * rotationSpeed;
-    targetRotationX = scrollPosition * rotationSpeed / 2;
+  const scrollPosition = window.scrollY;
+  const rotationSpeed = 0.004;
+  targetRotationY = scrollPosition * rotationSpeed;
+  targetRotationX = scrollPosition * rotationSpeed / 1;
 });
 
 // Ajuster la taille du canvas au redimensionnement de la fenêtre
 window.addEventListener('resize', () => {
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
 });
 
 // Ajuster la rotation en fonction de la position de la souris
 window.addEventListener('mousemove', (event) => {
-    const mouseX = (event.clientX / window.innerWidth) * 6 - 1;
-    const mouseY = (event.clientY / window.innerHeight) * 6 - 1;
-    targetRotationY = mouseX * 2;
-    targetRotationX = mouseY * 2;
+  const mouseX = (event.clientX / window.innerWidth) * 6 - 1;
+  const mouseY = (event.clientY / window.innerHeight) * 6 - 1;
+  targetRotationY = mouseX * Math.PI; // Utilise un angle pour la rotation
+  targetRotationX = mouseY * Math.PI; // Utilise un angle pour la rotation
 });
+
+
+
+
+
+
+
+
+
+const tl = gsap.timeline({
+  defaults: {
+    ease: "none",
+    // ease: 'power3.out',
+    repeat: -10,
+    yoyo: true,
+    duration: 4
+  }
+});
+
+tl.to("#feturbulence", {
+  attr: { baseFrequency: "0.01" }
+});
+
+
+
 
