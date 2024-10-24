@@ -17,11 +17,8 @@
 
 
       <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
-      
-
-      
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Danfo&display=swap" rel="stylesheet">
 
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,10 +32,13 @@
       <title>Mohsine Essat - Creative developer </title>
     </head>
 <body>
+  <canvas id="canvas"></canvas>
 
 
+ <!--<canvas></canvas>-->
 
-  <!--<div class="gradient"></div>-->
+  <!--<div class="cursor" data-cursor-type=""></div>
+  <div class="gradient"></div>-->
 
 <div class="progress-container">
   <div class="progress-bar" id="progress-bar"></div>
@@ -49,16 +49,16 @@
        <!--NAVBAR-->
         <nav id="desktop-nav">
           <a href="#profile">
-            <div class="logo">Art' X Web</div>
+            <div class="logo">Art' + Web</div>
             <div>
             </a>
 
                <ul class ="nav-links">
 
-                   <li><a href="#about-me"> About,</a></li>
-                    <li><a href="#project"> Work,</a></li>
-                    <li><a href="./about.html"> Services,</a></li>
-                    <li><a href="#experience">Technologie,</a></li>
+                   <li><a href="#about-me"> About+</a></li>
+                    <li><a href="#project"> Work</a></li>
+                    <li><a href="./about.html"> Services+</a></li>
+                    <li><a href="#experience">Technologie+</a></li>
                     <li><a href="#contact"> Contact </a></li>
                </ul>
            </div>
@@ -95,22 +95,22 @@
 
   <img src="https://images.unsplash.com/photo-1699343481899-b20bd561c64e?q=80&w=3432&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="image-profile"> -->
 
-  <img src="https://images.unsplash.com/photo-1614622686704-f24cdef196a0?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="image-profile"> 
+<!--<img src="https://images.unsplash.com/photo-1614622686704-f24cdef196a0?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="image-profile"> -->
 
    <!--<div class="image-profile"></div>-->
 
-<div id="three-container"></div>
 
 
         <section id="profile" class="section animation1">
           <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
           <p class="disponibilty">  <span class="dot"></span> AVAILABLE FOR WORK  </p> <br>
+         
 
             <div class="section__text">
 
                <!--- <p class="section__text___p1">Hello I'm</p>-->
 
-               <p class="section__text___p2">  Creative Front End Developer ✦</p> 
+               <p class="section__text___p2">  Creative developer ✦</p> 
                <br>
                <p class="p">48°52'11"N <br> 2°18'59"E </p> 
             
@@ -146,18 +146,18 @@
           </section> 
 
 
- 
-
+<!--<p class="name"> Mohsine Essat </p>-->
           <p class="presentation">
-            Mohsine Essat <br>
-             2001 <br>
-            Paris → France
+
+            Based in Paris working globally ⟢  </span>
           </p>         
+
 <br> <br>
 <p class="presentation">Passionate about creativity, I began teaching myself for a year, focusing on building interactive websites, 3D experiences, and animations using JavaScript and libraries like  GSAP and WebGL.
 </p>
 
 <br> <br>
+
           <div>
             <img id="image-source" src="https://i.pinimg.com/control/564x/e1/10/e4/e110e48ba488aae80151c287e6ce9abc.jpg">
           
@@ -191,7 +191,7 @@
                     <p class="about-me-details">
                       <span>I</span> <span>provide</span> <span>customized</span> <span>solutions</span>
                        <span>for</span> <span>businesses</span> <span>around</span> <span>the</span> <span>globe</span> 
-                      <span>✦</span> <span>For</span> <span>every</span> <span>project,</span> <span>I</span> 
+                       <span>For</span> <span>every</span> <span>project,</span> <span>I</span> 
                       <span>strive</span> <span>to</span> <span>push</span> <span>boundaries</span>
                        <span>and</span> <span>reach</span> <span>new</span> <span>heights,</span>
                         <span>always</span> <span>prioritizing</span> <span>quality.</span> 
@@ -252,6 +252,14 @@
                       <feDisplacementMap xChannelSelector="R" yChannelSelector="G" in="SourceGraphic" in2="NOISE" scale="40"></feDisplacementMap>
                     </filter>
                   </svg>
+
+
+                  <svg id="filter">
+                    <filter id="turbulence3" x="-10%" y="-10%" width="140%" height="140%">
+                      <feTurbulence baseFrequency="1" numOctaves="20" seed="1" id="feturbulence" type="fractalNoise" result="NOISE"></feTurbulence>
+                      <feDisplacementMap xChannelSelector="R" yChannelSelector="G" in="SourceGraphic" in2="NOISE" scale="40"></feDisplacementMap>
+                    </filter>
+                  </svg>
                   
           <br>
 
@@ -262,9 +270,11 @@
         </div>-->
         </section>
 
+        <div id="three-container"></div>
 
 <br>
 <br>
+<br> <br>
 
 <section id="project">
 <div class="image-point"> 
@@ -355,6 +365,7 @@
     <img src="./logo/613b64fe30e8530004ba3a03 (1).png" />
     <img src="https://images.prismic.io/toyfight/65e1e07d27237c2bb829b9dc_GSAP-Meta-image.jpg?auto=format%2Ccompress&rect=0%2C0%2C2400%2C1260&w=2400&h=1260" />
 <img src="https://miro.medium.com/v2/resize:fit:687/1*m0zrCLd2wY29-jiHaxYsgA.png" alt="">   
+<img src="https://images.ctfassets.net/23aumh6u8s0i/6pjUKboBuFLvCKkE3esaFA/5f2101d6d2add5c615db5e98a553fc44/nextjs.jpeg" alt="">
  <img src="https://iconape.com/wp-content/png_logo_vector/react.png" />
     <img src="./logo/Procreate-Emblem (1).png" />
     <img src="git6963.png" />
@@ -366,7 +377,8 @@
     <img src="./logo/css_shiled_logo_icon_145359 (1).png" />
     <img src="./logo/613b64fe30e8530004ba3a03 (1).png" />
     <img src="https://images.prismic.io/toyfight/65e1e07d27237c2bb829b9dc_GSAP-Meta-image.jpg?auto=format%2Ccompress&rect=0%2C0%2C2400%2C1260&w=2400&h=1260" />
-    <img src="https://miro.medium.com/v2/resize:fit:687/1*m0zrCLd2wY29-jiHaxYsgA.png" alt="">   
+    <img src="https://miro.medium.com/v2/resize:fit:687/1*m0zrCLd2wY29-jiHaxYsgA.png" alt="">
+    <img src="https://images.ctfassets.net/23aumh6u8s0i/6pjUKboBuFLvCKkE3esaFA/5f2101d6d2add5c615db5e98a553fc44/nextjs.jpeg" alt="">   
     <img src="https://iconape.com/wp-content/png_logo_vector/react.png" />
     <img src="./logo/Procreate-Emblem (1).png" />
     <img src="git6963.png" />

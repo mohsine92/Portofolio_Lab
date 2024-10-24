@@ -366,6 +366,11 @@ animation:   rotateAnimation 2s linear infinite;
   display: none;
 }
 
+
+#profile .icon {
+  filter: none;
+}
+
 .h3 {
   font-size: 15px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -426,7 +431,7 @@ mix-blend-mode: difference;
 
       #about-me .title1 {
         font-size: 2.4rem;
-        color: rgb(0, 0, 0);
+        color: rgb(158, 158, 158);
         -webkit-text-stroke: 0px;
         text-align: center;
         justify-content: center;
@@ -444,9 +449,9 @@ mix-blend-mode: difference;
   left: 14%;
   position: relative;
   line-height: 100%;
-  margin-bottom: 20%;
-  margin-top: 10%;
-  color: rgb(0, 0, 0);
+  margin-bottom: 5%;
+  margin-top: 20%;
+  color: rgb(158, 158, 158);
   -webkit-text-stroke: 0px;
   font-family: 'Rubik Glitch Pop', system-ui;
 
@@ -468,7 +473,7 @@ mix-blend-mode: difference;
   font-weight: 130;
   margin: -0.4%;
   letter-spacing: -0.8px;
-  color: rgb(0, 0, 0);
+  color: rgb(207, 207, 207);
 
 }
 
@@ -478,26 +483,22 @@ mix-blend-mode: difference;
   height: 30vh;
   margin-right: 0%;
   transition:  transform 2s ease-out;
-  filter: url(#turbulence);
+  filter: url(#turbulence3);
 
 }
 
-.presentation {
-  color: rgb(0, 0, 0);
-  width: 60%;
-  text-align: start;
-  font-size: 1.5rem;
-  font-weight: 250;
-  left: 4%;
-  letter-spacing: -0.7px;
-  position: relative;
+.presentation  {
+  font-size: 20px;
+ text-align: start;
+ left: 0%;
+ width: 65%;
 }
 
 .about-me-details  {
   cursor:e-resize;
    text-align:start;
-            color:rgb(0, 0, 0);
-            font-weight:100;
+            color:rgb(255, 255, 255);
+            font-weight:300;
 margin-top: 0%;
 z-index: -10;
 position: relative;
@@ -505,18 +506,24 @@ left: 5%;
 margin-top: 15%;
 line-height:80%;
 width: 75%;
-margin-bottom: 20%;
+margin-bottom: 30%;
+}
+
+
+.about-me-details span {
+  font-weight: 300;
 }
 
 #about-me .section__text__p1{
   color: rgb(58, 58, 58);
 }
 .button-about {
+  border: none;
   margin-top:0%;
   position: relative;
-  padding: 5px;
+  padding: 10px;
   width: 27%;
-background-color: black;
+background-color: rgb(255, 255, 255);
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -530,12 +537,14 @@ background-color: black;
 
 
 
+
+
 .button-about a {
- color: rgb(255, 255, 255) ;
- font-size: 17px;
- font-weight: 300;
+  letter-spacing: 1px;
+ color: rgb(0, 0, 0) ;
+ font-size: 20px;
+ font-weight: 200;
  mix-blend-mode: normal;
- text-transform: lowercase;
  
 }
 
@@ -564,7 +573,6 @@ background-color: black;
 
 
  .project-image {
-  border-radius: 10px;
   height: 270px;
   width: 93%;
   margin: 15px;
@@ -589,7 +597,7 @@ filter: none;
 
       body {
         margin: 0;
-        background-color: rgb(255, 255, 255) !important;
+        background-color: rgb(0, 0, 0) !important;
       }
       .scrolling-text-container {
         display: none;
@@ -627,7 +635,7 @@ filter: none;
 
 .disponibilty {
   color: #000000;
-  background-color: #d0d0d0;
+  background-color: #7d7d7d;
   border-radius: 30px;
   padding: 10px;
   width: 43%;
@@ -635,7 +643,7 @@ filter: none;
   font-weight: 150;
   position: relative;
   left: 28%;
-  filter: invert(100%);
+  filter: invert(0%);
 }
 
 
@@ -693,7 +701,6 @@ letter-spacing: -4px;
     top: 90%;
     height: 60px;
     filter: none;
-
 
    }
 
@@ -938,6 +945,7 @@ h5 {
         color: #ffffff;
         font-weight: 100;
         letter-spacing: -1.5px;
+        filter: none;
       }
 
 
@@ -978,7 +986,7 @@ width: 27%;
 #hobies .title1 {
   font-family: "Handjet", sans-serif;
 letter-spacing: 1px;
-  color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255) !important;
           -webkit-text-stroke: 0.5px rgb(0, 0, 0);
 }
 
@@ -1044,7 +1052,8 @@ background-size: cover;
   text-transform: lowercase;
   font-size: 9vh;
   left: 0%;
-    color: rgb(0, 0, 0);
+  letter-spacing: -3px;
+    color: rgb(255, 255, 255);
     mix-blend-mode: normal;
     font-family: "Handjet", sans-serif;
 
