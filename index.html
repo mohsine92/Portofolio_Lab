@@ -1,319 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link href="style.css" rel="stylesheet">
-      <link rel="stylesheet" href="mediaqueries.css"/>
-
-      <link rel="icon" href="https://i.pinimg.com/564x/e1/10/e4/e110e48ba488aae80151c287e6ce9abc.jpg">
-
-      <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-      <script src="https://unpkg.com/lenis@1.1.3/dist/lenis.min.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mohsine Essat - Creative developer </title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./mediaqueries.css" />
 
 
+<link rel="icon" href="https://i.pinimg.com/564x/99/85/49/9985492327065a2fda98d8b5079df4f3.jpg">
 
-      <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <script src="https://unpkg.com/lenis@1.1.3/dist/lenis.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+
+
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Danfo&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
 
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap" rel="stylesheet">
-
-
-<script src="https://cdn.jsdelivr.net/npm/three@0.137.5/examples/js/loaders/GLTFLoader.js"></script>
-
-
-      <title>Mohsine Essat - Creative developer </title>
-    </head>
-<body>
-  <canvas id="canvas"></canvas>
-
-
- <!--<canvas></canvas>-->
-
-  <!--<div class="cursor" data-cursor-type=""></div>
-  <div class="gradient"></div>-->
-
-<div class="progress-container">
-  <div class="progress-bar" id="progress-bar"></div>
-</div>
-
-
-
-       <!--NAVBAR-->
-        <nav id="desktop-nav">
-          <a href="#profile">
-            <div class="logo">Art' + Web</div>
-            <div>
-            </a>
-
-               <ul class ="nav-links">
-
-                   <li><a href="#about-me"> About+</a></li>
-                    <li><a href="#project"> Work</a></li>
-                    <li><a href="./about.html"> Services+</a></li>
-                    <li><a href="#experience">Technologie+</a></li>
-                    <li><a href="#contact"> Contact </a></li>
-               </ul>
-           </div>
-        </nav>
-
-        <!--Logo version phone-->
-        <nav id="hamburger-nav">
-           <div class="logo"> Art' X Web</div>
-            
-
-           <!--Hamburger menu-->
-            <div class="hamburger-menu">
-                <div class="hamburger-icon" onclick="toggleMenu()">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-                <div class="menu-links">
-                  <p>+</p>
-                 <li><a href="#about-me" onclick="toggleMenu()"> About</a></li>
-                 <li><a href="#project" onclick="toggleMenu()"> Work</a></li>
-                 <li><a href="#experience" onclick="toggleMenu()"> Technologie</a></li>
-
-                <li><a href="./about.html" onclick="toggleMenu()"> Services</a></li>
-                 <li><a href="#contact" onclick="toggleMenu()"> Contact</a></li>
-                </div>
-            </div>
-          </div>
-
-        </nav>
-       <!--<div class="gradient"></div>-->
-
-<!--<img src="https://images.unsplash.com/photo-1568607184887-647b905c0966?q=80&w=3327&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="image-profile">
-
-  <img src="https://images.unsplash.com/photo-1699343481899-b20bd561c64e?q=80&w=3432&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="image-profile"> -->
-
-<!--<img src="https://images.unsplash.com/photo-1614622686704-f24cdef196a0?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="image-profile"> -->
-
-   <!--<div class="image-profile"></div>-->
-
-
-
-        <section id="profile" class="section animation1">
-          <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
-          <p class="disponibilty">  <span class="dot"></span> AVAILABLE FOR WORK  </p> <br>
-         
-
-            <div class="section__text">
-
-               <!--- <p class="section__text___p1">Hello I'm</p>-->
-
-               <p class="section__text___p2">  Creative developer ✦</p> 
-               <br>
-               <p class="p">48°52'11"N <br> 2°18'59"E </p> 
-            
-               <div class="btn-container">
-                <!--<button 
-                   class="btn btn-color-2" 
-                   onclick="window.open('Mohsine Essat (8).pdf')"> 
-                 download CV
-                </button>-->
-            </div>
-            <div id="socials-container">
-              <img src="https://github.com/Ade-mir/html-css-js-portfolio-tutorial-2/blob/main/assets/linkedin.png?raw=true"
-                alt="My LinkedIn profile" 
-                class="icon" 
-                onclick="location.href='https://www.linkedin.com/in/mohsine-e-44368b1a0/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app'"
-              />
-             <!-- <img src="https://github.com/Ade-mir/html-css-js-portfolio-tutorial-2/blob/main/assets/github.png?raw=true" 
-               alt="My Github profile" 
-               class="icon" 
-               onclick="location.href='https://github.com/mohsine92'"  
-              />         -->     
-          </div>
-             
-
-
-              </div>
-              <button class="btn btn-color-1" onclick="location.href='./#contact'">
-                Get in Touch
-                <img src="https://i.pinimg.com/564x/76/32/79/7632791c5edcf1e9f398c438994bfa0e.jpg" class="icon">
-
-            </button>
-
-          </section> 
-
-
-<!--<p class="name"> Mohsine Essat </p>-->
-          <p class="presentation">
-
-            Based in Paris working globally ⟢  </span>
-          </p>         
-
-<br> <br>
-<p class="presentation">Passionate about creativity, I began teaching myself for a year, focusing on building interactive websites, 3D experiences, and animations using JavaScript and libraries like  GSAP and WebGL.
-</p>
-
-<br> <br>
-
-          <div>
-            <img id="image-source" src="https://i.pinimg.com/control/564x/e1/10/e4/e110e48ba488aae80151c287e6ce9abc.jpg">
-          
-          </div>
-        <!--aboute me section-->
-        <section id="about-me">
- 
-          <br> <br>
-
- <br> <br>
-         
-          <h1 class="title1">About  </h1> 
-           <br>
-
-
-    <h1>
-      <span>Transforming</span>
-      <span>brands</span>
-      <span>for</span>
-      <span>digital</span>
-      <span>success</span>
-      
-  </h1>
-
-          
-    <br> <br>
-    <br> <br>
-  
-                    <br> <br> 
-                    
-                    <p class="about-me-details">
-                      <span>I</span> <span>provide</span> <span>customized</span> <span>solutions</span>
-                       <span>for</span> <span>businesses</span> <span>around</span> <span>the</span> <span>globe</span> 
-                       <span>For</span> <span>every</span> <span>project,</span> <span>I</span> 
-                      <span>strive</span> <span>to</span> <span>push</span> <span>boundaries</span>
-                       <span>and</span> <span>reach</span> <span>new</span> <span>heights,</span>
-                        <span>always</span> <span>prioritizing</span> <span>quality.</span> 
-                        <span>My</span> <span>approach,</span> <span>centered</span> <span>on</span>
-                       <span>creativity</span> <span>and</span> <span>technical</span> <span>precision,</span>
-                        <span>allows</span> <span>me</span>
-                        <span>to</span> <span>craft</span> <span>bespoke</span> <span>digital</span> 
-                        <span>experiences</span> <span>that</span> 
-                        <span>captivate</span> <span>users</span> <span>and</span> <span>deliver</span> <span>genuine</span> <span>value</span>
-                         <span>for</span> <span>every</span> <span>project ∙•</span>
-
-                    </p>
-                  <br> 
-
-                  <div class="button-container">
-
-                    <button class="button-about">
-                      <a href="./presentation.html"> Lab ∙
-                      </a>
-                   </button>
-                    <button class="button-about">
-                        <a href="./about.html">Serivces ∙
-                        </a>
-                     </button>
-
-                  </div>
-
-
-                  <!--<div class="details-container2"> 
-           
-                    <h3 class="h3">Experience</h3>
-                    <br>
-                    <h6 class="h3-details">+3 YEARS <br  /> Front End Development </h6>
-                      
-                 <br><br>
-                   <h2>0</h2> <br>
-                   <br>
-                      
-                       <h3 class="h3">I can help you with </h3>
-                       <br>
-                      
-                       <h6 class="h3-details">  Design <br>  Development <br>  Implementation</h6>
-                   </div>
-               </div>-->
-
-
-                  <svg id="filter">
-                    <filter id="turbulence" x="-10%" y="-20%" width="140%" height="140%">
-                      <feTurbulence baseFrequency="0" numOctaves="20" seed="1" id="feturbulence" type="fractalNoise" result="NOISE"></feTurbulence>
-                      <feDisplacementMap xChannelSelector="R" yChannelSelector="G" in="SourceGraphic" in2="NOISE" scale="30"></feDisplacementMap>
-                    </filter>
-                  </svg>
-
-
-                  <svg id="filter">
-                    <filter id="turbulence2" x="-10%" y="-20%" width="140%" height="140%">
-                      <feTurbulence baseFrequency="0" numOctaves="20" seed="1" id="feturbulence" type="fractalNoise" result="NOISE"></feTurbulence>
-                      <feDisplacementMap xChannelSelector="R" yChannelSelector="G" in="SourceGraphic" in2="NOISE" scale="40"></feDisplacementMap>
-                    </filter>
-                  </svg>
-
-
-                  <svg id="filter">
-                    <filter id="turbulence3" x="-10%" y="-10%" width="140%" height="140%">
-                      <feTurbulence baseFrequency="1" numOctaves="20" seed="1" id="feturbulence" type="fractalNoise" result="NOISE"></feTurbulence>
-                      <feDisplacementMap xChannelSelector="R" yChannelSelector="G" in="SourceGraphic" in2="NOISE" scale="40"></feDisplacementMap>
-                    </filter>
-                  </svg>
-                  
-          <br>
-
-        <!--<div class="container-slide">
-          <p>  ART x WEB 
     
-          </p>
-        </div>-->
-        </section>
+  </head>
+  <body>
 
-        <div id="three-container"></div>
-
-<br>
-<br>
-<br> <br>
-
-<section id="project">
-<div class="image-point"> 
-  <ul>
-    <p class="section__text___p2"> RECENT PROJECT</p> 
+  
+  
+  
+  
+    <div class="noise"></div>
 
 
-    <li><a href="https://boesiagallery.com/">The Boesia Gallery</a><img src="./picture/Boeisa mockup.jpg" class="image"></li>
-    <p>Art Gallery ⎯ Development ⋅ Design</p>
+    <div id="cursor"></div>
 
-    <p class="p"></p>
-
-<br>
-    <li><a href="">Maison Almas</a><img src="./picture/Maisons Almas.png" class="image"></li>
-    <p>E-commerce artisanal jewerly ⎯ Development ⋅ Design</p>
-
-    <p class="p">Soon</p>
+    <canvas id="myCanvas"></canvas>
 
 
-    <li><a href="">Kudos Architecte</a><img src="./picture/Kudos.png" class="image"></li>
-    <p> Architecture Creator Website ⎯ Development ⋅ Design</p>
 
-    <p class="p">Soon</p>
+    <div id="hello">
+      <p>F0liO</p>
+    </div>
+    <br/>
+    <div id="hello2">
+      <p>Paris</p>
+   </div>
+  
 
-    <br>
 
-    <li><a href="">EQ⋱</a><img src="./picture/Capture d’écran 2024-08-24 à 18.16.55.png" class="image"></li>
-    <p> Astophysic & Spacial Website ⎯ Development ⋅ Design</p>
-    <p class="p">Soon</p>
 
-  </ul>
+   <img src="https://images.unsplash.com/photo-1729830374987-977a8982ea5e?q=80&w=3415&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img">
+
+
+      
+<nav>
+  <div class="logo"><a href="#">Mohsine ⎯ Essat</a></div>
+
+  <div class="info"><p>Creative Developer </p></div>
+  <p class="disponibilty">  <span class="dot"></span> AVAILABLE FOR WORK  </p> 
+
+</nav>
 
   </div>
-</section>
+
+
+  <svg id="filter">
+    <filter id="turbulence" x="-10%" y="-20%" width="140%" height="140%">
+      <feTurbulence baseFrequency="0" numOctaves="20" seed="-21" id="feturbulence" type="fractalNoise" result="NOISE"></feTurbulence>
+      <feDisplacementMap xChannelSelector="R" yChannelSelector="G" in="SourceGraphic" in2="NOISE" scale="30"></feDisplacementMap>
+    </filter>
+  </svg>
+
+
+ <img src="https://images.unsplash.com/photo-1703801602658-ee1840697ef8?q=80&w=3280&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-home">
+
+  
+       
+  <div id="MyClockDisplay" class="clock" onload="showTime()"> </div>
+      
+<br> <br>
+<p class="presentation2">
+
+<br> <br>
+
+Creative developer passionate about creativity, I started self-learning for a year, 
+focusing on creating interactive websites, experiences and 3D animations using JavaScript and libraries like GSAP and WebGL.
+Based in Paris (92i), France.
+</p> 
+
+
+<!--<div class="container-service">
+<li><p> Creative website</p></li>
+<li><p>Mobile Design</p></li>
+<li><p> Motion & Animation</p></li>
+<li><p> Maintenance</p></li>
+
+<h1></h1>
+<li><h5>HTML</h5></li>
+<li><h5>CSS</h5></li>
+<li><h5>JS</h5></li>
+<li><h5>ThreeJs</h5></li>
+
+</div>-->
+ 
+
+
+<h2>
+  <span>My</span> <span>mission</span> <span>is</span> <span>to</span> <span>create</span> <span>and</span> <span>deliver</span> <span>digital</span> <span>solutions</span>
+  <span>that</span> <span>drive</span> <span>the</span> <span>success</span> <span>of</span> <span>my</span> <span>clients.</span>
+  <span>My</span> <span>goal</span> <span>is</span> <span>to</span>
+  <div class="image__wrapper"><img src="https://i.pinimg.com/originals/2c/61/9b/2c619b5bea0e79e79fae9c078f2e04ce.gif" alt="image-1"></div>
+  <span>create</span> <span>modern</span> <span>websites,</span>
+  <div class="image__wrapper"><img src="https://i.pinimg.com/736x/97/05/ab/9705abc78353eab2a393c6d61b2aa5e6.jpg" alt="another image"></div>
+  <span>develop</span> <span>impactful</span> <span>brand</span> <span>identities</span> <span>and</span> <span>produce</span> <span>engaging</span>
+  <div class="image__wrapper"><img src="https://i.pinimg.com/564x/78/18/70/781870e834a8882753c334bfd7b4b6dd.jpg" alt="creative image"></div>
+  <span>creative</span> <span>content.</span>
+</h2>
 
 
 
-<br>
-<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section id="project">
+      <div class="image-point"> 
+        <ul>
+          <p class="section__text___p2">  RECENT PROJECT</p> 
+      
+      
+          <li><a href="https://boesiagallery.com/"> The Boesia Gallery</a>  <video class="image" src="Black and White Minimalist Elegant Fashion Banner.mp4" autoplay loop muted playsinline ></video></li>
+      
+          <p>Art Gallery ⎯ Development ⋅ Design <br> ◼︎ 2024</p>
+      
+          <p class="p"></p>
+      
+      <br>
+          <li><a href="">Maison Almas</a><video class="image" src="Black and White Minimalist Elegant Fashion Banner (1).mp4" autoplay loop muted playsinline ></video></li>
+          <p>E-commerce artisanal jewerly ⎯ Development ⋅ Design</p>
+      
+          <p class="p">Soon</p>
+      
+      
+          <li><a href="">Kudos Architecte</a><video class="image" src="Black and White Minimalist Elegant Fashion Banner (3).mp4" autoplay loop muted playsinline ></video></li>
+          <p> Architecture Creator Website ⎯ Development ⋅ Design</p>
+      
+          <p class="p">Soon</p>
+      
+          <br>
+      
+          <li><a href="">EQ⋱</a><video class="image" src="Black and White Minimalist Elegant Fashion Banner (2).mp4" autoplay loop muted playsinline ></video></li>
+          <p> Astophysic & Spacial Website ⎯ Development ⋅ Design</p>
+          <p class="p">Soon</p>
+      
+        </ul>
+      
+        </div>
+      </section>
+
+
+
+
+
+
 
 <!--project section phone-->
 <section id="project-phone">
@@ -322,185 +193,270 @@
       <p class="section__text___p2"> RECENT PROJECT</p> 
   
       
-        <img src="./picture/Boeisa mockup.jpg" class="project-image"></li>
+      <img src="./assets/Boesia.png" class="project-image"></li>
 
       <p>Art Gallery ⎯ Development ⋅ Design</p>
-      <a href="https://boesiagallery.com/" class="visit">→ The Boesia Gallery 
+      <a href="" class="visit">→ The Boesia Gallery 
 
       </a>
 
-        <img src="./picture/Maisons Almas.png" class="project-image" ></li>
+        <img src="./assets/Maisons Almas.png" class="project-image" ></li>
           <p>E-commerce artisanal jewerly <br> Development ⋅ Design</p>
       <p class="p">Soon</p>
 
   
   
-        <img src="./picture/Kudos.png" class="project-image" ></li>
+        <img src="./assets/Capture d’écran 2024-08-10 à 15.02.15.jpeg" class="project-image" ></li>
       <p> Architecture Creator Website ⎯ Development ⋅ Design</p>
       <p class="p">Soon</p>
 
   
-        <img src="./picture/Capture d’écran 2024-08-24 à 18.16.55.png" class="project-image" ></li>
+        <img src="./assets/Capture d’écran 2024-08-24 à 18.16.55.png" class="project-image" ></li>
       <p> Astophysic & Spacial Website ⎯ Development ⋅ Design</p>
       <p class="p">Soon</p>
-  
     </ul>
   
     </div>
   </section>
 
-<br>
-<br>
-  <!--experience section-->
-    <section id="experience" class="section animation3">
-      <div class="container-experience">
-     <h1 class="title1"> Technologie </h1>
-      <br>
-<br>
-<br>
-<div class="logos">
-  <div class="logos-slide">
-    <img src="./logo/HTML5_logo_black.svg (1).png" />
-    <img src="./logo/css_shiled_logo_icon_145359 (1).png" />
-    <img src="./logo/613b64fe30e8530004ba3a03 (1).png" />
-    <img src="https://images.prismic.io/toyfight/65e1e07d27237c2bb829b9dc_GSAP-Meta-image.jpg?auto=format%2Ccompress&rect=0%2C0%2C2400%2C1260&w=2400&h=1260" />
-<img src="https://miro.medium.com/v2/resize:fit:687/1*m0zrCLd2wY29-jiHaxYsgA.png" alt="">   
-<img src="https://images.ctfassets.net/23aumh6u8s0i/6pjUKboBuFLvCKkE3esaFA/5f2101d6d2add5c615db5e98a553fc44/nextjs.jpeg" alt="">
- <img src="https://iconape.com/wp-content/png_logo_vector/react.png" />
-    <img src="./logo/Procreate-Emblem (1).png" />
-    <img src="git6963.png" />
-    
-  </div>
-
-  <div class="logos-slide">
-    <img src="./logo/HTML5_logo_black.svg (1).png" />
-    <img src="./logo/css_shiled_logo_icon_145359 (1).png" />
-    <img src="./logo/613b64fe30e8530004ba3a03 (1).png" />
-    <img src="https://images.prismic.io/toyfight/65e1e07d27237c2bb829b9dc_GSAP-Meta-image.jpg?auto=format%2Ccompress&rect=0%2C0%2C2400%2C1260&w=2400&h=1260" />
-    <img src="https://miro.medium.com/v2/resize:fit:687/1*m0zrCLd2wY29-jiHaxYsgA.png" alt="">
-    <img src="https://images.ctfassets.net/23aumh6u8s0i/6pjUKboBuFLvCKkE3esaFA/5f2101d6d2add5c615db5e98a553fc44/nextjs.jpeg" alt="">   
-    <img src="https://iconape.com/wp-content/png_logo_vector/react.png" />
-    <img src="./logo/Procreate-Emblem (1).png" />
-    <img src="git6963.png" />
-  </section>
-
-  </div>
-</div>
-</div>
-</div>
 
 
 
 
 
-<div class="text-final">
-  <p>
-My mission is to create and deliver digital solutions that drive the success of my clients. 
-My goal is to <span>create modern websites, develop impactful brand identities and produce engaging creative content </span>⊡
-  </p>
-</div>
 
 
 
-<!--Carousel
 
-<section id="hobies">
-  <div class="containers">
-  <img src="https://images.unsplash.com/photo-1631125915800-4008fc1072ec?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="slides" />
-<img src="https://images.unsplash.com/photo-1601845392340-c5cd9a3f9e35?q=80&w=2500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="slides" />
-<img src="https://images.unsplash.com/photo-1540638349517-3abd5afc5847?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="slides" />
-<img src="https://images.unsplash.com/photo-1489269637500-aa0e75768394?q=80&w=3482&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="slides" /> 
-<img src="https://images.unsplash.com/photo-1656356594084-aba6bcb8fae2?q=80&w=3336&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="slides" /> 
-<img src="https://images.unsplash.com/photo-1600421684846-e7ebc943403b?q=80&w=3386&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="slides">
-</div>
-
-</section> -->
-
-
-      <br>
-      <br>
-
-<!--Contact section-->
-<section id="contact">
-        <h1 class="title1">
-          <span> Wanna create 
-          <br>
-           something awesome
-           together ? </span>
-           <br> 
-           <br>
-            <span>  Let's make it happen <img src="https://i.pinimg.com/564x/76/32/79/7632791c5edcf1e9f398c438994bfa0e.jpg" class="arrow"></span>
+      <div class="container">
+        <p aria-label="Geist Sans">service.</p>
+        <div class="container-service">
           
-          </h1> 
+        <li>E-commerce</li>
+        <li>Strategy, design & motion</li>
+        <li>3D experience</li>
+        <li>SEO</li>
+        <li>Maintenance</li>
+        <li></li>
 
-         
-<br>
-<br>
-<br>
-        
-          <div class="contact-info-upper-container">
-        
+        <div class="container-stack">
 
-            <div class="contact-info-container">
-              <!--<img src="https://github.com/Ade-mir/html-css-js-portfolio-tutorial-2/blob/main/assets/email.png?raw=true"
-                alt="Email icon"
-               class="icon contact-icon email-icon" 
-              />-->
-              <p><a href="mailto:mohsineessatpro@gmail.com">mohsineessatpro@gmail.com →</a></p>
-              <br>
-            </div>
-            <div class="contact-info-container">
-               <!--<img src="https://github.com/Ade-mir/html-css-js-portfolio-tutorial-2/blob/main/assets/linkedin.png?raw=true"
-                  alt="LinkedIn icon"
-                 class="icon contact-icon" 
-                />-->
-                  <p><a href="https://www.linkedin.com/in/mohsine-e-44368b1a0/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app'">LinkedIn →</a> </p> 
-          </div>    
-          <br>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>ThreeJs</li>
 
-          <div class="telephone">
-            <a href="https://calendly.com/mohsineessatpro/30min"> BOOK A CALL →
-            </a>
-              </div>
-
-    </section>
-
-    </div>
-
-<!--footer-->
-      <footer>
-        <!--nav footer-->
-       
-            <div class="nav-links-conatiner">
-                <ul class ="nav-links2">
-                  <li><a href="#profile">Profile</a></li>
-                    <li><a href="#about-me"> About</a></li>
-                    <li><a href="#experience">Stack</a></li>
-                    <li><a href="#project"> Work</a></li>
-                    <li><a href="./about.html"> Services</a></li>
-                    <li><a href="#contact"> Contact</a></li>
-                  </ul>
         </div>
-  <p class="footer-p"> &#169; MOHSINE ESSAT </p>
+      </div>
+      </div>
 
-       <p class="footer-p"> DEVELOPED BY ME ✳︎ <br> V-01 </p>
 
-       <br>
-<!--O'Clock-->
 
-       <br>
-<!--logo footer-->
-       <div class="text-wrapper">
-        <h1> aRT X web</h1>
-        <h1>aRT X web</h1>
-        <h1>aRT X web</h1>
-        <h1>aRT X web</h1>
-       </div> 
-   
-           <img src="./picture/Latar BelakangGaris Horizontal Garis Garis Gradien Pola Halftone Latar Belakang Monokrom Digital, Garis, Gradien, Horisontal Latar Belakang untuk Unduhan Gratis.jpeg" class="terra-img">            
-      </footer>
-    </div>
-    <script src="script.js"></script>
+      <main id="app">
+
+        <section class="ticket">
+    
+            <header class="front">
+                <div class="holo"></div>
+                <p>aRt <br> X <br> weB</p>
+                <aside class="divider"></aside>
+            </header>
+    
+            <section class="back">
+                <div class="holo"></div>
+                <img class="logoo" src="https://i.pinimg.com/736x/1f/fc/c9/1ffcc979f1ea0d5d828e1c6571a9f61e.jpg" alt="The logo for the Application called Threads, an instagram App. It's a '@' symbol but with the tail going in the opposite direction.">
+                <div class="data">
+                    <h3>Contact Access</h3>
+                    <a href="mailto:mohsine.essat@gmail.com">mohsine.essat@gmail.com</a>
+                    <!--<button onclick="copyEditableText()">Copie</button>-->
+                    
+                    <h3></h3>
+                    <p contenteditable spellcheck=false></p>
+                    <h3>Social link</h3>
+                    <p contenteditable spellcheck=false>LinkedIn</p>
+                    <a class="qr" href="https://www.linkedin.com/in/mohsine-essat-dev/" target="_blank">
+                        <img src="./file (1).png" alt="A code to use for accessing the simeydotme codepen profile">
+                    </a>
+                </div>
+    
+                <aside class="divider">
+                    <div class="username">
+                        <img class="profile" src="https://i.pinimg.com/736x/69/de/4b/69de4bb24577cf6994778daf7e36c89c.jpg">
+                        <span contenteditable spellcheck=false>Mohsine Essat</span> <img class="verified" src="https://assets.codepen.io/13471/verified.png">
+                    </div>
+                    <span class="usernum" contenteditable spellcheck=false>17082001</span>
+                </aside>
+            </section>
+    
+        </section>
+    
+    </main>
+
+
+
+    <script type="x-shader/x-fragment" id="vertShader">
+      precision highp float;
+  
+      attribute vec2 aPosition;
+      varying vec2 vUv;
+      varying vec2 vL;
+      varying vec2 vR;
+      varying vec2 vT;
+      varying vec2 vB;
+      uniform vec2 u_vertex_texel;
+  
+      void main () {
+          vUv = aPosition * 0.5 + 0.5;
+          vL = vUv - vec2(u_vertex_texel.x, 0.);
+          vR = vUv + vec2(u_vertex_texel.x, 0.);
+          vT = vUv + vec2(0., u_vertex_texel.y);
+          vB = vUv - vec2(0., u_vertex_texel.y);
+          gl_Position = vec4(aPosition, 0., 1.);
+      }
+  </script>
+  
+  <script type="x-shader/x-fragment" id="fragShaderAdvection">
+      precision highp float;
+      precision highp sampler2D;
+  
+      varying vec2 vUv;
+      uniform sampler2D u_velocity_txr;
+      uniform sampler2D u_input_txr;
+      uniform vec2 u_vertex_texel;
+      uniform vec2 u_output_textel;
+      uniform float u_dt;
+      uniform float u_dissipation;
+  
+      vec4 bilerp (sampler2D sam, vec2 uv, vec2 tsize) {
+          vec2 st = uv / tsize - 0.5;
+  
+          vec2 iuv = floor(st);
+          vec2 fuv = fract(st);
+  
+          vec4 a = texture2D(sam, (iuv + vec2(0.5, 0.5)) * tsize);
+          vec4 b = texture2D(sam, (iuv + vec2(1.5, 0.5)) * tsize);
+          vec4 c = texture2D(sam, (iuv + vec2(0.5, 1.5)) * tsize);
+          vec4 d = texture2D(sam, (iuv + vec2(1.5, 1.5)) * tsize);
+  
+          return mix(mix(a, b, fuv.x), mix(c, d, fuv.x), fuv.y);
+      }
+  
+      void main () {
+          vec2 coord = vUv - u_dt * bilerp(u_velocity_txr, vUv, u_vertex_texel).xy * u_vertex_texel;
+          gl_FragColor = u_dissipation * bilerp(u_input_txr, coord, u_output_textel);
+          gl_FragColor.a = 1.;
+      }
+  </script>
+  
+  <script type="x-shader/x-fragment" id="fragShaderDivergence">
+      precision highp float;
+      precision highp sampler2D;
+  
+      varying highp vec2 vUv;
+      varying highp vec2 vL;
+      varying highp vec2 vR;
+      varying highp vec2 vT;
+      varying highp vec2 vB;
+      uniform sampler2D u_velocity_txr;
+  
+      void main () {
+          float L = texture2D(u_velocity_txr, vL).x;
+          float R = texture2D(u_velocity_txr, vR).x;
+          float T = texture2D(u_velocity_txr, vT).y;
+          float B = texture2D(u_velocity_txr, vB).y;
+  
+          float div = .5 * (R - L + T - B);
+          gl_FragColor = vec4(div, 0., 0., 1.);
+      }
+  </script>
+  
+  <script type="x-shader/x-fragment" id="fragShaderPressure">
+      precision highp float;
+      precision highp sampler2D;
+  
+      varying highp vec2 vUv;
+      varying highp vec2 vL;
+      varying highp vec2 vR;
+      varying highp vec2 vT;
+      varying highp vec2 vB;
+      uniform sampler2D u_pressure_txr;
+      uniform sampler2D u_divergence_txr;
+  
+      void main () {
+          float L = texture2D(u_pressure_txr, vL).x;
+          float R = texture2D(u_pressure_txr, vR).x;
+          float T = texture2D(u_pressure_txr, vT).x;
+          float B = texture2D(u_pressure_txr, vB).x;
+          float C = texture2D(u_pressure_txr, vUv).x;
+          float divergence = texture2D(u_divergence_txr, vUv).x;
+          float pressure = (L + R + B + T - divergence) * 0.25;
+          gl_FragColor = vec4(pressure, 0., 0., 1.);
+      }
+  </script>
+  
+  <script type="x-shader/x-fragment" id="fragShaderGradientSubtract">
+      precision highp float;
+      precision highp sampler2D;
+  
+      varying highp vec2 vUv;
+      varying highp vec2 vL;
+      varying highp vec2 vR;
+      varying highp vec2 vT;
+      varying highp vec2 vB;
+      uniform sampler2D u_pressure_txr;
+      uniform sampler2D u_velocity_txr;
+  
+      void main () {
+          float L = texture2D(u_pressure_txr, vL).x;
+          float R = texture2D(u_pressure_txr, vR).x;
+          float T = texture2D(u_pressure_txr, vT).x;
+          float B = texture2D(u_pressure_txr, vB).x;
+          vec2 velocity = texture2D(u_velocity_txr, vUv).xy;
+          velocity.xy -= vec2(R - L, T - B);
+          gl_FragColor = vec4(velocity, 0., 1.);
+      }
+  </script>
+  
+  <script type="x-shader/x-fragment" id="fragShaderPoint">
+      precision highp float;
+      precision highp sampler2D;
+  
+      varying vec2 vUv;
+      uniform sampler2D u_input_txr;
+      uniform float u_ratio;
+      uniform vec3 u_point_value;
+      uniform vec2 u_point;
+      uniform float u_point_size;
+  
+      void main () {
+          vec2 p = vUv - u_point.xy;
+          p.x *= u_ratio;
+          vec3 splat = pow(2., -dot(p, p) / u_point_size) * u_point_value;
+          vec3 base = texture2D(u_input_txr, vUv).xyz;
+          gl_FragColor = vec4(base + splat, 1.);
+      }
+  </script>
+  
+  <script type="x-shader/x-fragment" id="fragShaderDisplay">
+    precision highp float;
+    precision highp sampler2D;
+
+    varying vec2 vUv;
+    uniform sampler2D u_output_texture;
+
+    void main () {
+        vec3 C = texture2D(u_output_texture, vUv).rgb;
+        float a = max(C.r, max(C.g, C.b));
+        a = pow(.4 - a, .1);
+        a = clamp(a, 0., 1.);
+        gl_FragColor = vec4(4. - C, 4. - a);
+    }
+  </script>
+
+
+</div>
+
+    <script src="./script.js"></script>
+
   </body>
 </html>
-
