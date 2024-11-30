@@ -292,7 +292,8 @@ body {
       }
       
           .presentation2 {
-            margin-top: -20%;
+            font-weight: 300;
+            position: relative;
             font-size: 1.3rem;
           }
       
@@ -485,7 +486,7 @@ body {
       }
       
       .container-service p {
-        color: #000000;
+        color: #ffffff;
         font-weight: 100;
       }
     
@@ -498,7 +499,7 @@ body {
         justify-content: center;
         display: flex;
         left: 0%;
-        margin-top: 30%;
+        margin-top: 20%;
         filter: invert(0%);
       }
       
@@ -531,7 +532,7 @@ position: relative;
     left: -10%;
     margin: 12px;
     top: 0%;
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
     border-radius: 100px;
     display: none;
    position: relative;
@@ -544,7 +545,7 @@ position: relative;
     animation: letter-breathe 3s ease-in-out infinite;  animation-iteration-count: infinite;
     animation-delay: 1s;
     animation-fill-mode: both;
-    color: #000000;
+    color: #ffffff;
     font-size: 5rem;
   }
 
@@ -557,7 +558,7 @@ position: relative;
     letter-spacing: -2px;
     justify-content: center;
     display: block;
-      color: #000000;
+      color: #c0c0c0;
       font-size: 2.5rem;
       left: 0%;
       top: 65% ;
