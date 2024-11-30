@@ -64,7 +64,6 @@ mix-blend-mode: normal;
 
 canvas {
   border-bottom: 3px solid rgb(0, 0, 0);
- z-index: 2;
   position: absolute;
   top: 0%;
   left: 0%;
@@ -269,9 +268,9 @@ html.lenis body {
 
 
 .disponibilty {
-  filter: invert(100%);
-color: #ffffff;
-  background-color: rgb(0, 0, 0);
+  filter: invert(0%);
+color: #000000;
+  background-color: rgb(226, 226, 226);
   padding: 10px;
   width: 11.5%;
   position: relative;
@@ -319,7 +318,6 @@ border-radius: 30px;
   padding: 0px;
   width: 60%;
   text-align: start;
-border-radius: 30px;
   font-weight: 250;
   left: 3%;
   letter-spacing: -0.7px;
@@ -481,9 +479,8 @@ font-family: 'Rubik Glitch Pop', system-ui;    font-weight: 100;
 #project-phone {
   border-radius: 100px;
   filter: invert(100%);
-  background: url(https://i.pinimg.com/originals/d8/3d/66/d83d66b3cb06df9ce1b99c21ad064446.gif) fixed center center   ;
-  background-position: 100%;
-  background-size: cover;
+ 
+  background-size: 100%;
   width: 100%;
   position: relative;
   display: block;
@@ -495,6 +492,7 @@ font-family: 'Rubik Glitch Pop', system-ui;    font-weight: 100;
 
 
 .image-point-phone {
+  background: url(https://i.pinimg.com/originals/d8/3d/66/d83d66b3cb06df9ce1b99c21ad064446.gif) fixed no-repeat center center   ;
 width: 100%;
   height: 100%;
   align-items: center;
@@ -1089,6 +1087,16 @@ left: 0%;
   color: #ffffff;
   transition:all 1s ;
  }
+
+
+
+.container-stack li:not(:hover) {
+  background-color: none;
+  color: #000000;
+  transition:all 1s ;
+ }
+
+
 
 
 .container li  {
