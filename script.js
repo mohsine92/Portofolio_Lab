@@ -14,8 +14,8 @@ function showTime(){
   var h = date.getHours(); // 0 - 23
   var m = date.getMinutes(); // 0 - 59
   var s = date.getSeconds(); // 0 - 59
-  var session = "AM 〕";
-  var location ="〔 PARIS";
+  var session = "AM ";
+  var location =" PARIS";
   
   if(h == 0){
       h = 12;
@@ -30,7 +30,7 @@ function showTime(){
   m = (m < 10) ? "0" + m : m;
   s = (s < 10) ? "0" + s : s;
   
-  var time = location + " ◼︎ " + h + ":" + m + ":" + s + " " + session + "";
+  var time =  " ✦ " + h + ":" + m + ":" + s + " " + session + "";
   
   document.getElementById("MyClockDisplay").innerText = time;
   document.getElementById("MyClockDisplay").textContent = time;
@@ -189,7 +189,7 @@ const params = {
   PRESSURE_ITERATIONS: 20,
   SPLAT_RADIUS: 2 / window.innerHeight,
 
-  color: { r: 10.9, g: -0.7, b: -0.5 } // Mélange de rose, vert et jaune
+  color: { r: -0.09, g: -0.7, b: 0.15 } // Mélange de rose, vert et jaune
 
 
 };

@@ -243,8 +243,9 @@
 
   @media screen and (max-width: 600px) {
 
+
 body {
-  background-color: black;
+  background-color: rgb(255, 255, 255);
 }
 #cursor {
   display: none;
@@ -256,10 +257,10 @@ body {
       
       }
     canvas {
-      
-        border-bottom-left-radius: 40px;
-        border-bottom-right-radius: 40px;
-        filter: invert(0%);
+      height: 80%;
+      border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+        filter: invert(100%);
     }
     
         #hello p, #hello2 p {
@@ -358,9 +359,9 @@ body {
         width: 50%;
       position: relative;
       left: 70%;
-      top:105%;
+      top:100%;
       transform: translateX(-50%) translateY(-50%);
-          color:#fefefe;
+          color:#000000;
           font-size: 12.555555px;
           letter-spacing: -0.3px;
           font-weight: 300;
@@ -500,7 +501,7 @@ body {
         display: flex;
         left: 0%;
         margin-top: 20%;
-        filter: invert(0%);
+        filter: invert(100%);
       }
       
 
@@ -545,7 +546,7 @@ position: relative;
     animation: letter-breathe 3s ease-in-out infinite;  animation-iteration-count: infinite;
     animation-delay: 1s;
     animation-fill-mode: both;
-    color: #ffffff;
+    color: #000000;
     font-size: 5rem;
   }
 
@@ -558,7 +559,7 @@ position: relative;
     letter-spacing: -2px;
     justify-content: center;
     display: block;
-      color: #c0c0c0;
+      color: #000000;
       font-size: 2.5rem;
       left: 0%;
       top: 65% ;
@@ -567,6 +568,26 @@ position: relative;
 margin-bottom: 2rem; 
 font-weight: 100;  
  }
+
+
+
+
+
+footer {
+  padding-top: 10%;
+  padding-bottom: 26%;
+
+}
+
+
+footer p {
+  text-transform: none;
+  animation: letter-breathe 3s ease-in-out infinite;
+  font-family: 'TheFont';
+  color: #000000;
+  font-size: 3.6rem;
+  text-align: center;
+}
 
 
       }
