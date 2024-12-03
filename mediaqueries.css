@@ -257,7 +257,6 @@ body {
       
       }
     canvas {
-      height: 80%;
       border-bottom-left-radius: 50px;
         border-bottom-right-radius: 50px;
         filter: invert(100%);
@@ -384,7 +383,7 @@ body {
         font-family: 'Helvetica';
       mix-blend-mode: difference;
       color: #ffffff;
-      margin-top: 5%;
+      margin-top: -15%;
       
       }
     
@@ -500,8 +499,7 @@ body {
         justify-content: center;
         display: flex;
         left: 0%;
-        margin-top: 20%;
-        filter: invert(100%);
+        margin-top: -10%;
       }
       
 
