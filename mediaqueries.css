@@ -243,10 +243,16 @@
 
   @media screen and (max-width: 600px) {
 
+.noise {
+  display: none;
+}
+
+
 
 body {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
 }
+
 #cursor {
   display: none;
 }
@@ -259,7 +265,7 @@ body {
     canvas {
       border-bottom-left-radius: 50px;
         border-bottom-right-radius: 50px;
-        filter: invert(100%);
+        filter: invert(0%);
     }
     
         #hello p, #hello2 p {
@@ -284,8 +290,8 @@ body {
           font-weight: 200;
           text-align: center;
       
-            padding:13% 0px;
-            margin:0%;
+          padding:13% 0px;
+          margin:0%;
             font-size: 200%;
             line-height: 10%;
             color: #ffffff;
@@ -305,14 +311,14 @@ body {
       
       
       h2  {
-        padding: 5% !important;
+        padding: 15% !important;
         font-size: 15px !important;
         margin: 0 0;
-        margin-top: 85%;
+        margin-top: 90%;
         margin-bottom: 30%;
       width: 100%;
-      font-weight: 200;
-      text-align: end;
+      font-weight: 350;
+      text-align: center;
       }
       
       .section__text___p2 {
@@ -357,10 +363,10 @@ body {
       
         width: 50%;
       position: relative;
-      left: 70%;
-      top:100%;
+      left: 80%;
+      top:95%;
       transform: translateX(-50%) translateY(-50%);
-          color:#000000;
+          color:#ffffff;
           font-size: 12.555555px;
           letter-spacing: -0.3px;
           font-weight: 300;
@@ -377,13 +383,14 @@ body {
         width: 90%;
         text-align: start;
       border-radius: 30px;
-        font-weight: 250;
+        font-weight: 350;
         letter-spacing: -0.7px;
         position: relative;
         font-family: 'Helvetica';
       mix-blend-mode: difference;
       color: #ffffff;
-      margin-top: -15%;
+      margin-top: 15%;
+
       
       }
     
@@ -494,12 +501,13 @@ body {
     
     
     .img-home {
-        top: 130%;
+        top: 160%;
         position: absolute;
         justify-content: center;
         display: flex;
-        left: 0%;
-        margin-top: -10%;
+        left: 10%;
+        margin-top: -25%;
+        filter: invert(0%);
       }
       
 
@@ -544,7 +552,7 @@ position: relative;
     animation: letter-breathe 3s ease-in-out infinite;  animation-iteration-count: infinite;
     animation-delay: 1s;
     animation-fill-mode: both;
-    color: #000000;
+    color: #ffffff;
     font-size: 5rem;
   }
 
@@ -557,7 +565,7 @@ position: relative;
     letter-spacing: -2px;
     justify-content: center;
     display: block;
-      color: #000000;
+      color: #ffffff;
       font-size: 2.5rem;
       left: 0%;
       top: 65% ;
@@ -582,7 +590,7 @@ footer p {
   text-transform: none;
   animation: letter-breathe 3s ease-in-out infinite;
   font-family: 'TheFont';
-  color: #000000;
+  color: #ffffff;
   font-size: 3.6rem;
   text-align: center;
 }

@@ -105,8 +105,8 @@ gsap.fromTo(
     y: 0, // Le mot remonte à sa position initiale
     filter: "blur(0px)", // Retire le flou
     scrollTrigger: {
-      trigger: ".img-home ",
-      start: "top 100%%", // Début de l'animation quand le h1 est au centre de la vue
+      trigger: ".presentation2",
+      start: "top 0%", // Début de l'animation quand le h1 est au centre de la vue
       end: "bottom top",
       scrub: 3, // Augmentez la valeur pour un effet de défilement plus fluide
     },
