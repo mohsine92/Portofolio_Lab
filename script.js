@@ -23,7 +23,7 @@ function showTime(){
   
   if(h > 12){
       h = h - 12;
-      session = "PM 〕";
+      session = "PM ";
   }
   
   h = (h < 10) ? "0" + h : h;
@@ -102,13 +102,15 @@ gsap.fromTo(
   },
   {
     opacity: 1,
+    ease: "power1.out",
+
     y: 0, // Le mot remonte à sa position initiale
     filter: "blur(0px)", // Retire le flou
     scrollTrigger: {
-      trigger: ".presentation2",
-      start: "top 0%", // Début de l'animation quand le h1 est au centre de la vue
+      trigger: ".img-home",
+      start: "top -20%", // Début de l'animation quand le h1 est au centre de la vue
       end: "bottom top",
-      scrub: 3, // Augmentez la valeur pour un effet de défilement plus fluide
+      scrub: 5, // Augmentez la valeur pour un effet de défilement plus fluide
     },
     stagger: 0.4, // Augmentez le décalage entre chaque mot
     duration: 3, // Augmentez la durée pour ralentir l'animation
@@ -123,13 +125,63 @@ gsap.fromTo(
 
 
 
+
+gsap.to("#hello p, #hello2, canvas", {
+
+  y: -160,
+      ease: "none",
+      scrollTrigger: {
+        trigger: "body",
+        start: "top top",
+        end: "100vh top",
+        scrub: 3,
+        ease: "power1.out",
+
+      },
+    });
+
+
+
+
+
+gsap.to(".presentation2", {
+
+  y: 60,
+      ease: "none",
+      scrollTrigger: {
+        trigger: "canvas",
+        start: "top top",
+        end: "bottom top",
+        scrub: 1,
+        ease: "power1.out",
+
+      },
+    });
+
   
+
+gsap.to(".img-home", {
+
+  y: "30%",
+      scrollTrigger: {
+        trigger: ".presentation2",
+        start: "top top ",
+        end: " bottom",
+        scrub: 5,
+        ease: "power1.out",
+
+      },
+    });
+
+
   
+
+
+
 
 
 
   gsap.to("h2 span", {
-
     y: 90,
         ease: "none",
         scrollTrigger: {
@@ -632,7 +684,7 @@ document.addEventListener("DOMContentLoaded", function () {
         opacity: 0,
         y: 10,
         scale: 0,
-        rotation:10,
+        rotation: 5,
       },
       {
         scale:1,
