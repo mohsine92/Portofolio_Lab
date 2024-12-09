@@ -25,7 +25,7 @@ background-color: rgb(255, 255, 255);
     width: 20%;
   position: relative;
   left: 90%;
-  top:-115%;
+  top:-15%;
   transform: translateX(-50%) translateY(-50%);
       color:#000000;
       font-size: 16.555555px;
@@ -64,17 +64,18 @@ background-color: rgb(255, 255, 255);
 
 
 canvas {
-
   z-index: 5;
   border-bottom: 3px solid rgb(0, 0, 0);
   position: absolute;
   top: 0%;
   left: 0%;
   width: 100%;
-  height: 96%;
-  filter: invert(100%);
+  height: 98%;
+  filter: invert(0%);
   mix-blend-mode:difference;
   border-radius: 10%;
+border-top-right-radius: 0%;
+border-top-left-radius: 0%;
 
 }
 
@@ -151,7 +152,7 @@ canvas {
 
 font-weight: 600;
 text-align: center;
-  padding:13% ;
+  padding:15% ;
   margin-top:5%;
   font-size: 1300%;
   line-height: 10%;
@@ -275,9 +276,9 @@ html.lenis body {
 
 
 .disponibilty {
-  filter: invert(100%);
-color: #ffffff;
-  background-color: rgb(28, 28, 28);
+  filter: invert(0%);
+color: #000000;
+  background-color: rgb(255, 255, 255);
   padding: 10px;
   width: 11.5%;
   position: relative;
@@ -332,8 +333,7 @@ border-radius: 30px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   mix-blend-mode: difference;
 color: #ececec;
-margin-top: -5%;
-
+margin-top: -15%;
 }
 
 
@@ -479,13 +479,13 @@ font-family: 'Rubik Glitch Pop', system-ui;    font-weight: 100;
 
 /* Project mobile version */
 #project-phone {
+  background-color: #000000;
 
-
+mix-blend-mode: difference;
+color: rgb(0, 0, 0);
   border-radius: 50px;
   filter: invert(100%);
  /*background: url(https://i.pinimg.com/originals/9c/14/86/9c14863b9e64ffc65cdfda4cdc9a0b99.gif) center center ;*/
- background: url(https://i.pinimg.com/736x/8c/e1/f1/8ce1f1c9af18f0b622070b6443a6b4af.jpg);
-width: 100%;
   position: relative;
   display: block;
   margin-top: 0%;
@@ -526,7 +526,7 @@ border-radius: 50px;
   text-decoration: none;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
-  color: rgb(33, 33, 33);
+  color: rgb(255, 255, 255);
   mix-blend-mode: difference;
     font-weight: 400;
     letter-spacing: -1.3px;
@@ -557,7 +557,7 @@ a.visit {
   left: 5%; 
   width: 90%;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: rgb(46, 46, 46);
+  color: rgb(255, 255, 255);
   mix-blend-mode: difference;
   font-weight: 400;
   font-size: 11px;
@@ -574,7 +574,7 @@ a.visit {
   list-style-type: none;
   text-decoration: none; 
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: rgb(55, 55, 55);
+  color: rgb(149, 149, 149);
   mix-blend-mode: difference;
   font-weight: 200;
   font-size: 11px;
@@ -642,11 +642,11 @@ border-radius: 10px;
   justify-content: start;
   display: flex;
   left: 67%;
-  height: 40%;
+  height: 50%;
   width: 30%;
   rotate: 0deg;
   border-radius: 0px;
-  margin-top: 20%;
+  margin-top: 10%;
   filter: invert(100%);
 }
 
