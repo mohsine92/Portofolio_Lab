@@ -160,19 +160,6 @@ gsap.to(".presentation2", {
 
   
 
-gsap.to(".img-home", {
-
-  y: "30%",
-      scrollTrigger: {
-        trigger: ".presentation2",
-        start: "top top ",
-        end: " bottom",
-        scrub: 5,
-        ease: "power1.out",
-
-      },
-    });
-
 
   
 

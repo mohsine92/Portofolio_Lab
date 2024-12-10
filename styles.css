@@ -13,7 +13,7 @@ body {
   font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: #ebebeb;
 cursor: none;
-background-color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
 
 
 }
@@ -27,7 +27,7 @@ background-color: rgb(255, 255, 255);
   left: 90%;
   top:-15%;
   transform: translateX(-50%) translateY(-50%);
-      color:#000000;
+      color:#ffffff;
       font-size: 16.555555px;
       letter-spacing: -0.3px;
       font-weight: 300;
@@ -73,9 +73,8 @@ canvas {
   height: 98%;
   filter: invert(0%);
   mix-blend-mode:difference;
-  border-radius: 10%;
-border-top-right-radius: 0%;
-border-top-left-radius: 0%;
+  clip-path: polygon(0% 15%, 0 0, 15% 0%, 85% 0%, 100% 0, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+
 
 }
 
@@ -149,14 +148,13 @@ border-top-left-radius: 0%;
 #hello p {
   font-family: 'TheFont';
   z-index: 5;
-
 font-weight: 600;
 text-align: center;
-  padding:15% ;
+  padding:12% ;
   margin-top:5%;
   font-size: 1300%;
   line-height: 10%;
-  color: #000000;
+  color: #ffffff;
   animation: letter-breathe 3s ease-in-out infinite;
 
 }
@@ -164,17 +162,15 @@ text-align: center;
 
 #hello2 p {
   letter-spacing: 1px;
-  animation: letter-breathe 3s ease-in-out infinite;
     font-family: 'TheFont';
-    mix-blend-mode: normal;
     font-weight: 500;
     text-align: center;
 mix-blend-mode: normal;
       padding:13% 0px;
       margin:0%;
-      font-size: 230%;
+      font-size: 1230%;
       line-height: 10%;
-      color: #000000;
+      color: #ffffff;
       z-index: 15;
 
 }
@@ -276,16 +272,16 @@ html.lenis body {
 
 
 .disponibilty {
-  filter: invert(0%);
-color: #000000;
-  background-color: rgb(255, 255, 255);
+  filter: invert(100%);
+color: #ffffff;
+  background-color: rgb(0, 0, 0);
   padding: 10px;
   width: 11.5%;
   position: relative;
   left: 0%;
   top: -120%;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
- font-weight: 200;
+ font-weight: 220;
  border-radius: 30px;
 }
 
@@ -340,6 +336,7 @@ margin-top: -15%;
 
 .img {
   height: 0.1px;
+  
 }
 
 
@@ -396,7 +393,7 @@ margin-top: -15%;
   text-align: end;
   margin-top: 40px;
   font-weight: 100;
-  color: #373737;
+  color: #ffffff;
   font-size: 12px;
 
   }
@@ -419,7 +416,7 @@ margin-top: -15%;
 font-family: 'Rubik Glitch Pop', system-ui;    font-weight: 100;
     font-style: normal;
 
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     line-height: 1.25em;
     text-transform: uppercase;
     transition: 0.5s;
@@ -479,12 +476,15 @@ font-family: 'Rubik Glitch Pop', system-ui;    font-weight: 100;
 
 /* Project mobile version */
 #project-phone {
-  background-color: #000000;
+  /*background:url(https://i.pinimg.com/originals/9c/14/86/9c14863b9e64ffc65cdfda4cdc9a0b99.gif);*/
+  background: url(https://i.pinimg.com/736x/ff/59/c4/ff59c4616eef370c3a2e2e7f389bf24a.jpg)   ;
+border-top: 1px solid white;
+border-bottom: 1px solid white;
 
 mix-blend-mode: difference;
 color: rgb(0, 0, 0);
   border-radius: 50px;
-  filter: invert(100%);
+  filter: invert(0%);
  /*background: url(https://i.pinimg.com/originals/9c/14/86/9c14863b9e64ffc65cdfda4cdc9a0b99.gif) center center ;*/
   position: relative;
   display: block;
@@ -499,7 +499,8 @@ color: rgb(0, 0, 0);
 
 
 .image-point-phone {
-  
+  mix-blend-mode: difference;
+
  /* background: url(https://i.pinimg.com/originals/d8/3d/66/d83d66b3cb06df9ce1b99c21ad064446.gif) fixed no-repeat center center   ;*/
 width: 100%;
   height: 100%;
@@ -642,12 +643,12 @@ border-radius: 10px;
   justify-content: start;
   display: flex;
   left: 67%;
-  height: 50%;
-  width: 30%;
+  height: 60%;
+  width: 33%;
   rotate: 0deg;
-  border-radius: 0px;
+  border-radius: 0%;
   margin-top: 10%;
-  filter: invert(100%);
+  filter: invert(0%);
 }
 
 :root{
@@ -707,7 +708,7 @@ h2 span {
   position: absolute;
   inset: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-filter: invert(100%);
+filter: invert(0%);
 
 }
 
@@ -718,7 +719,6 @@ filter: invert(100%);
 filter: invert(0%);
 
 }
-
 
 
 
@@ -756,15 +756,18 @@ z-index: 100000;
 
 
 :root {
-  --bg: #ffffff;
+  --bg: #000000;
   --logo: url(https://i.pinimg.com/originals/ac/7f/7e/ac7f7e64678e2f95ebd56cf30719fb0b.gif);
   --logopng: rgb(0, 0, 0);
-  --ticket: rgb(255, 255, 255);
+  --ticket: rgb(0, 0, 0);
   --ar: 20/30;
   --gutter: 8%;
 }
 
 #app {
+  background-color: white;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
   perspective: 1200px;
   --o: 0;
   --p: 100%;
@@ -847,7 +850,7 @@ text-transform: none;
   background-image: linear-gradient(
       -70deg,
       transparent 40%,
-      rgba(255, 255, 255, 0.508) 40.5%,
+      rgba(244, 231, 255, 0.508) 40.5%,
       transparent
   );
   background-size: 200% 200%;
@@ -872,12 +875,11 @@ text-transform: none;
 
 
 .holo {
-  
   --space: 5%;
-  --red: hsla(0, 10%, 61%, 0.5);
-  --orange: hsla(0, 0%, 100%, 0.5);
-  --yellow: hsla(60, 25%, 68%, 0.5);
-  --green: hsla(120, 7%, 30%, 0.5);
+  --red: hsl(0, 12%, 70%);
+  --orange: hsl(0, 0%, 100%);
+  --yellow: hsl(60, 25%, 68%);
+  --green: hsla(120, 7%, 30%, 0.877);
   --cyan: hsla(180, 12%, 31%, 0.5);
   --blue: hsla(222, 10%, 26%, 0.5);
   --purple: hsla(257, 7%, 47%, 0.5);
@@ -893,7 +895,7 @@ text-transform: none;
 
   mix-blend-mode: screen;
   
-  filter: blur(10px) brightness(0.8) contrast(1.2) ; /* Ajustements pour un effet glass subtil */
+  filter: blur(10px) brightness(0.8) contrast(10.2) ; /* Ajustements pour un effet glass subtil */
   opacity: var(--o);
 }
 
@@ -953,8 +955,8 @@ h3 {
 font-weight: 100;
 }
 [contenteditable]:focus {
-  background: rgba(0,0,0,0.8);
-  color: white;
+  background: rgba(0, 0, 0, 0.8);
+  color: rgb(255, 255, 255);
 }
 
 .qr {
@@ -979,9 +981,9 @@ font-weight: 100;
   background-image: repeating-linear-gradient(
           90deg,
           rgb(255, 255, 255) 0px,
-          #fff0 8px,
-          #0005 8px,
-          #0005 16px
+          rgba(213, 187, 187, 0.675) 8px,
+          rgba(220, 214, 214, 0.333) 8px,
+          rgba(255, 250, 250, 0.333) 16px
       ),
       radial-gradient(ellipse at center center, #fff0 10%, transparent 50%);
   background-size: 100% 1.5px, 250% 1.5px;
@@ -1003,8 +1005,8 @@ font-weight: 100;
 
 .profile {
   border-radius: 100%;
-  width: 30px;
-  box-shadow: 0 0 0 0.33px rgb(255, 255, 255);
+  width: 28px;
+  box-shadow: 0 0 0 0.33px rgb(0, 0, 0);
   margin-right: 10px;
   image-rendering: optimize-speed;
   image-rendering: crisp-edges;
@@ -1078,7 +1080,7 @@ margin-left: 35%;
   position: relative;
   padding: 20% 5% 30%;
   left: 0%;
-
+ 
 }
 
 .container p  {
@@ -1086,7 +1088,7 @@ margin-left: 35%;
   animation: letter-breathe 3s ease-in-out infinite;  animation-iteration-count: infinite;
   animation-delay: 1s;
   animation-fill-mode: both;
-  color: #000000;
+  color: #ffffff;
   font-size: 15rem;
 }
 
@@ -1094,9 +1096,11 @@ margin-left: 35%;
 
 .container-service {
   width: auto;
+
+
   border-radius: 20px;
   padding: 10% 5%;
-  border: 1px solid rgb(0, 0, 0);
+  border: 1px solid rgb(255, 255, 255);
 
 }
 
@@ -1128,8 +1132,8 @@ left: 0%;
 
 
 .container-stack li:hover {
-  background-color: blue;
-  color: #f8f8f8;
+  background-color: rgb(255, 255, 255);
+  color: #000000;
   transition:all 1s ;
  }
 
@@ -1137,7 +1141,7 @@ left: 0%;
 
 .container-stack li:not(:hover) {
   background-color: none;
-  color: #000000;
+  color: #ffffff;
   transition:all 1s ;
  }
 
@@ -1146,7 +1150,7 @@ left: 0%;
 
 .container li  {
 display: flex;
-  color: #000000;
+  color: #ffffff;
   font-size: 1rem;
   left: 5%;
   position: relative;
@@ -1170,7 +1174,10 @@ display: flex;
 }
 
 footer {
-  padding-top: 10%;
+  padding-top: 20%;
+ 
+
+  background-color: white;
 }
 
 footer p span{
