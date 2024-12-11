@@ -514,7 +514,7 @@ body {
         position: absolute;
         justify-content: center;
         display: flex;
-        left: 0%;
+        left: 5%;
         margin-top: -85%;
         height: 50%;        
         filter: invert(0%);
@@ -532,9 +532,11 @@ body {
         position: relative;
         padding: 50% 5% 30%;
         left: 0%;
-      
+        width: 100%;
+        background: url(https://i.pinimg.com/originals/d8/e6/eb/d8e6eb6b345ada088e2448947c483ab4.gif) no-repeat center center;
       }
       
+
 
 
 
@@ -564,6 +566,8 @@ position: relative;
     color: #ffffff;
     text-align: center;
     font-size: 5rem;
+    mix-blend-mode: difference;
+
   }
 
 
@@ -580,6 +584,7 @@ position: relative;
       color: #ffffff;
       font-size: 2rem;
       left: 0%;
+
       top: 65% ;
       position: relative;
       text-align: center;

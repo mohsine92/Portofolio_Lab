@@ -162,6 +162,19 @@ gsap.to(".presentation2", {
 
 
   
+gsap.to(".img-home", {
+  rotation: 360,
+
+      scrollTrigger: {
+        trigger: ".presentation2",
+        start: "top top",
+        end: "bottom top",
+        scrub: 3,
+        ease: "power4.out",
+
+      },
+    });
+
 
 
 
