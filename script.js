@@ -47,6 +47,9 @@ showTime();
 
 
 
+
+
+
 // lenis scroll
 const lenis = new Lenis();
 
@@ -225,13 +228,13 @@ canvas.height = canvas.clientHeight;
 
 const params = {
   SIM_RESOLUTION: 128,
-    DYE_RESOLUTION: 2000,
+    DYE_RESOLUTION: 2400,
   DENSITY_DISSIPATION: .999,
   VELOCITY_DISSIPATION: .9,
-  PRESSURE_ITERATIONS: 20,
-  SPLAT_RADIUS: 2 / window.innerHeight,
+  PRESSURE_ITERATIONS: 1,
+  SPLAT_RADIUS: 4 / window.innerHeight,
 
-  color: { r: -0.09, g: -0.7, b: 0.15 } // Mélange de rose, vert et jaune
+  color: { r: 0.8, g: 0.7, b: 0.15 } // Mélange de rose, vert et jaune
 
 
 };
