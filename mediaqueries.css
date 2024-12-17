@@ -297,7 +297,6 @@ border-radius: 0px;
       }
       
           .presentation2 {
-
             font-weight: 230;
             position: relative;
             font-size: 1.3rem;
@@ -385,6 +384,8 @@ border-radius: 0px;
       
     
       .presentation2  {
+        font-family: "Doto", sans-serif;
+
         text-transform: none;
         padding: 0px;
         width: 90%;
@@ -394,8 +395,6 @@ border-radius: 0px;
         letter-spacing: 0px;
         position: relative;
         mix-blend-mode: difference;
-        font-family: "Doto", sans-serif;
-
       color: #ffffff;
       margin-top: 25%;
 
@@ -411,12 +410,14 @@ border-radius: 0px;
       text-decoration: none;
       text-transform: uppercase;
       font-size: 13px;
-      font-weight: 300;
+      font-weight: 700;
       color: #000000;
     }
     
 
     nav a,p {
+      font-family: "Doto", sans-serif;
+font-weight: 700;
         color: white;
     }
     
@@ -468,7 +469,7 @@ border-radius: 0px;
     
     .logo a {
       filter: none;
-      font-weight: 400;
+      font-weight: 700;
       font-size: 13px;
       left: 5%;
       mix-blend-mode: difference;
@@ -515,7 +516,7 @@ border-radius: 0px;
         justify-content: center;
         display: flex;
         left: 0%;
-        margin-top: -85%;
+        margin-top: -65%;
         height: 50%;        
         filter: invert(0%);
       }
@@ -533,6 +534,7 @@ border-radius: 0px;
         padding: 50% 5% 30%;
         left: 0%;
         width: 100%;
+        filter: sepia(100%);
         background: url(https://i.pinimg.com/originals/d8/e6/eb/d8e6eb6b345ada088e2448947c483ab4.gif) no-repeat center center;
       }
       

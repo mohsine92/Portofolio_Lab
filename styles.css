@@ -486,11 +486,10 @@ font-family: 'Rubik Glitch Pop', system-ui;    font-weight: 100;
 
 /* Project mobile version */
 #project-phone {
-  /*background:url(https://i.pinimg.com/originals/9c/14/86/9c14863b9e64ffc65cdfda4cdc9a0b99.gif);*/
-  background: url(https://i.pinimg.com/736x/ff/59/c4/ff59c4616eef370c3a2e2e7f389bf24a.jpg)  ;
+  background:url(https://i.pinimg.com/originals/9c/14/86/9c14863b9e64ffc65cdfda4cdc9a0b99.gif) center center;
+  /*background: url(https://i.pinimg.com/736x/ff/59/c4/ff59c4616eef370c3a2e2e7f389bf24a.jpg)  ;*/
   border-top: 1px solid white;
 border-bottom: 1px solid white;
-mix-blend-mode: difference;
 color: rgb(0, 0, 0);
   border-radius: 50px;
   filter: invert(0%);
