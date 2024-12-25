@@ -250,7 +250,7 @@
 
 
 body {
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
 }
 
 #cursor {
@@ -264,7 +264,7 @@ body {
 
     canvas {
       clip-path: polygon(0% 15%, 0 0, 15% 0%, 85% 0%, 100% 0, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 0 100%, 0% 85%);
-border-radius: 0px;
+      border-radius: 0px;
         filter: invert(0%);
     }
     
@@ -278,7 +278,7 @@ border-radius: 0px;
             right: 20%;
             font-size: 200%;
             line-height: 4%;
-            color: #ffffff;    
+            color: #000000;    
           }
     
     
@@ -292,7 +292,7 @@ border-radius: 0px;
           padding: 9% 0px;
             font-size: 230%;
             line-height: 10%;
-            color: #eeeeee;
+            color: #000000;
             animation: none;
       }
       
@@ -311,7 +311,7 @@ border-radius: 0px;
       
       
       h2  {
-        padding:  10% 10%!important;
+        padding:  40% -40%!important;
         font-size: 13px !important;
         margin: 0 0;
         margin-top: 130%;
@@ -373,7 +373,7 @@ border-radius: 0px;
       left: 80%;
       margin-top:-25% !important;
       transform: translateX(-50%) translateY(-50%);
-          color:#ffffff;
+          color:#000000;
           font-size: 13.555555px;
           letter-spacing: -0.3px;
           font-weight: 300;
@@ -424,7 +424,7 @@ font-weight: 700;
     .image-point {
     display: none;
         background-color: #000000;
-        border-radius: 10px;
+        border-radius: 5px;
         width: 90%;
         margin: 23px;
     }
@@ -511,14 +511,14 @@ font-weight: 700;
     
     .img-home {
         top: 200%;
-        width: auto;
+        width: 100%;
         position: absolute;
         justify-content: center;
         display: flex;
         left: 0%;
         margin-top: -65%;
         height: 50%;        
-        filter: invert(0%);
+        filter: invert(100%);
       }
       
 
@@ -534,8 +534,8 @@ font-weight: 700;
         padding: 50% 5% 30%;
         left: 0%;
         width: 100%;
-        filter: sepia(100%);
-        background: url(https://i.pinimg.com/originals/d8/e6/eb/d8e6eb6b345ada088e2448947c483ab4.gif) no-repeat center center;
+        filter: invert(0%);
+        /*background: url(https://i.pinimg.com/originals/d8/e6/eb/d8e6eb6b345ada088e2448947c483ab4.gif) no-repeat center center;*/
       }
       
 
@@ -565,7 +565,7 @@ position: relative;
 .container p  {
     animation-delay: 1s;
     animation-fill-mode: both;
-    color: #ffffff;
+    color: #000000;
     text-align: center;
     font-size: 3rem;
     mix-blend-mode: difference;
@@ -583,7 +583,7 @@ position: relative;
     letter-spacing: -1px;
     justify-content: center;
     display: block;
-      color: #ffffff;
+      color: #000000;
       font-size: 2rem;
       left: 0%;
 

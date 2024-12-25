@@ -13,9 +13,7 @@ body {
   font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: #ebebeb;
 cursor: none;
-background-color: rgb(0, 0, 0);
-
-
+background-color: white;
 }
 
 
@@ -27,7 +25,7 @@ background-color: rgb(0, 0, 0);
   left: 90%;
   top:-15%;
   transform: translateX(-50%) translateY(-50%);
-      color:#ffffff;
+      color:#000000;
       font-size: 16.555555px;
       letter-spacing: -0.3px;
       font-weight: 300;
@@ -68,8 +66,8 @@ canvas {
   top: 0%;
   left: 0%;
   width: 100%;
-  height: 98%;
-  filter: invert(00%);
+  height: 100%;
+  filter: invert(100%);
   mix-blend-mode:difference;
 
 border-bottom-left-radius: 0px;
@@ -79,17 +77,19 @@ border-bottom-right-radius: 0px;
 
 
 .noise {
-  display: none;
+  display: flex;
   -webkit-animation: noise 2s steps(3) infinite both;
   animation: noise 2s steps(3) infinite both;
   background: url(https://contra.com/freelance-industry-report-2021/images/background-noise.png?0140508b3ca119631050c945a1c2987c);
-  height: 300%;
+  height: 300%; 
+
   left: -50%;
   pointer-events: none;
   position: fixed;
   top: -50%;
   width: 200%;
   will-change: auto;
+  z-index: 100;
 }
 
 
@@ -152,7 +152,7 @@ text-align: center;
   margin-top:5%;
   font-size: 799%;
   line-height: 10%;
-  color: #ffffff;
+  color: #000000;
 
   animation: letter-breathe 3s ease-in-out infinite;
 
@@ -173,7 +173,7 @@ mix-blend-mode: normal;
       font-size: 1030%;
       font-weight: 300;
       line-height: 10%;
-      color: #ffffff;
+      color: #000000;
       z-index: 15;
 
 }
@@ -279,8 +279,8 @@ html.lenis body {
 
 .disponibilty {
   filter: invert(100%);
-color:  #525252;
-  background-color: rgb(225, 225, 225);
+color: #79981d ;
+  background-color: rgb(0, 0, 0);
   padding: 10px;
   width: 11.5%;
   position: relative;
@@ -325,7 +325,7 @@ border-radius: 30px;
 
 .presentation2  {
   padding: 0px;
-  width: 60%;
+  width: 70%;
   text-align: start;
   font-weight: 450;
   left: 3%;
@@ -338,7 +338,7 @@ border-radius: 30px;
   font-variation-settings:
     "ROND" 0; 
      mix-blend-mode: difference;
-color: #ececec;
+color: #ffffff;
 margin-top: -15%;
 }
 
@@ -368,7 +368,6 @@ margin-top: -15%;
   
   .image-point {
     border-radius: 30px;
-    border: 1px solid white;
       justify-content: left;
       align-items: left;
       min-height: 90vh;
@@ -391,7 +390,7 @@ margin-top: -15%;
   
   .image-point  ul li {
     list-style-type: none;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
       border-radius: 0%;
       margin-bottom: 0%;
       
@@ -403,7 +402,7 @@ margin-top: -15%;
   text-align: end;
   margin-top: 40px;
   font-weight: 100;
-  color: #ffffff;
+  color: #000000;
   font-size: 12px;
 
   }
@@ -426,7 +425,7 @@ margin-top: -15%;
 font-family: 'Rubik Glitch Pop', system-ui;    font-weight: 100;
     font-style: normal;
 
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     line-height: 1.25em;
     text-transform: uppercase;
     transition: 0.5s;
@@ -453,6 +452,7 @@ font-family: 'Rubik Glitch Pop', system-ui;    font-weight: 100;
       z-index: 1;
   width: 0;
   transition: width 0.5s;
+
   }
   
   
@@ -460,14 +460,13 @@ font-family: 'Rubik Glitch Pop', system-ui;    font-weight: 100;
       width: 550px;
       height: 350px;
       filter: url(#turbulence);
-
   }
   
 
   
   .img-project {
     margin-top: -10%;
-  
+
   }
 
 
@@ -486,14 +485,16 @@ font-family: 'Rubik Glitch Pop', system-ui;    font-weight: 100;
 
 /* Project mobile version */
 #project-phone {
-  background:url(https://i.pinimg.com/originals/9c/14/86/9c14863b9e64ffc65cdfda4cdc9a0b99.gif) center center;
+  /*background:url(https://i.pinimg.com/originals/9c/14/86/9c14863b9e64ffc65cdfda4cdc9a0b99.gif) center center;*/
+
+
   /*background: url(https://i.pinimg.com/736x/ff/59/c4/ff59c4616eef370c3a2e2e7f389bf24a.jpg)  ;*/
   border-top: 1px solid white;
 border-bottom: 1px solid white;
 color: rgb(0, 0, 0);
   border-radius: 50px;
   filter: invert(0%);
- /*background: url(https://i.pinimg.com/originals/9c/14/86/9c14863b9e64ffc65cdfda4cdc9a0b99.gif) center center ;*/
+ background: url(https://i.pinimg.com/originals/9c/14/86/9c14863b9e64ffc65cdfda4cdc9a0b99.gif) center center ;
   position: relative;
   display: block;
   margin-top: 0%;
@@ -656,7 +657,7 @@ border-radius: 10px;
   rotate: 0deg;
   border-radius: 0%;
   margin-top: 5%;
-  filter: invert(0%);
+  filter: invert(100%);
 }
 
 :root{
@@ -669,10 +670,10 @@ h2{
   text-transform: uppercase;
   -webkit-font-smoothing:antialiased;
   mix-blend-mode: difference;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   text-align: start;
   max-width: 100%;
-  margin-top: 45%;
+  margin-top: 49%;
   margin-bottom: 30%;
   font-weight: 200;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -680,7 +681,7 @@ h2{
 
 
 h2 span {
-  margin-top: 35%;
+  margin-top: 38%;
   width: 100%;
   max-width: 100%;
   padding: 0.5%;
@@ -688,7 +689,7 @@ h2 span {
   letter-spacing: -3px;
   white-space: nowrap;
   text-align: start;
-  color: #fff;
+  color: #ffffff;
 
 }
 
@@ -772,9 +773,11 @@ clip-path: polygon(0 0, 0 0, 30% 50%, 0 100%, 0 98%, 50% 70%, 100% 100%, 100% 10
 }
 
 #app {
-  background-color: white;
-  border-top-right-radius: 50px;
-  border-top-left-radius: 50px;
+
+  
+
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
   perspective: 1200px;
   --o: 0;
   --p: 100%;
@@ -789,11 +792,11 @@ clip-path: polygon(0 0, 0 0, 30% 50%, 0 100%, 0 98%, 50% 70%, 100% 100%, 100% 10
   transform-style: preserve-3d;
   pointer-events: auto;
   left: 30%;
+  margin-top: 0%;
 }
 
 .ticket p {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
 }
 
 .front p {
@@ -921,7 +924,7 @@ text-transform: none;
 }
 
 .logoo {
-  filter: invert(100%);
+  filter: invert(0%);
   border-radius: 100%;
   width: 50%;
   place-self: center;
@@ -929,7 +932,7 @@ text-transform: none;
 }
 
 .back .logoo {
-  filter: invert(100%);
+  filter: invert(0%);
   position: absolute;
   right: var(--gutter);
   top: 13%;
@@ -1072,7 +1075,6 @@ margin-left: 35%;
 
 
 
-
 @import url('https://fonts.googleapis.com/css2?family=Yuji+Mai&display=swap');
 
 
@@ -1089,7 +1091,7 @@ margin-left: 35%;
   animation: letter-breathe 3s ease-in-out infinite;  animation-iteration-count: infinite;
   animation-delay: 1s;
   animation-fill-mode: both;
-  color: #ffffff;
+  color: #000000;
   font-size: 15rem;
   font-family: 'TheFont';
 text-align: center;
@@ -1101,7 +1103,7 @@ text-align: center;
 .container-service {
   border-radius: 20px;
   padding: 10% 5%;
-  border: 1px solid white;
+  border: 1px solid rgb(0, 0, 0);
 
 }
 
@@ -1124,7 +1126,7 @@ width: 100%;
 left: 0%;
   margin: 12px;
   top: 0%;
-  border: 1px solid rgb(255, 255, 255);
+  border: 1px solid rgb(0, 0, 0);
   border-radius: 100px;
   display: flex;
  position: relative;
@@ -1135,8 +1137,9 @@ left: 0%;
 
 
 .container-stack li:hover {
-  background-color: rgb(255, 255, 255);
+  background-color: fuchsia;
   color: #000000;
+  border: 1px solid transparent;
   transition:all 1s ;
  }
 
@@ -1144,7 +1147,7 @@ left: 0%;
 
 .container-stack li:not(:hover) {
   background-color: none;
-  color: #ffffff;
+  color: #000000;
   transition:all 1s ;
  }
 
@@ -1153,7 +1156,7 @@ left: 0%;
 
 .container li  {
 display: flex;
-  color: #ffffff;
+  color: #000000;
   font-size: 1rem;
   font-weight: 200;
   left: 5%;

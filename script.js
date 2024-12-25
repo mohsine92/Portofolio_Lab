@@ -218,9 +218,9 @@ const params = {
   DENSITY_DISSIPATION: .999,
   VELOCITY_DISSIPATION: .9,
   PRESSURE_ITERATIONS: 1,
-  SPLAT_RADIUS: 4 / window.innerHeight,
+  SPLAT_RADIUS: 1 / window.innerHeight,
 
-  color: { r: 0.8, g: 0.7, b: 0.15 } // Mélange de rose, vert et jaune
+  color: { r: -0.8, g: 0.7, b: 0.15 } // Mélange de rose, vert et jaune
 
 
 };
