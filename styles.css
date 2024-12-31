@@ -13,7 +13,7 @@ body {
   font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: #ebebeb;
 cursor: none;
-background-color: white;
+background-color: rgb(0, 0, 0);
 }
 
 
@@ -55,10 +55,10 @@ background-color: white;
 
 
 ::selection {
-  background-color: rgb(255, 0, 225);
+  background-color: rgb(255, 255, 255);
   color: #000000;
+  filter: invert(100%);
 }
-
 
 canvas {
   z-index: 5;
@@ -67,7 +67,7 @@ canvas {
   left: 0%;
   width: 100%;
   height: 100%;
-  filter: invert(100%);
+  filter: invert(0%);
   mix-blend-mode:difference;
 
 border-bottom-left-radius: 0px;
@@ -77,7 +77,7 @@ border-bottom-right-radius: 0px;
 
 
 .noise {
-  display: flex;
+  display: none;
   -webkit-animation: noise 2s steps(3) infinite both;
   animation: noise 2s steps(3) infinite both;
   background: url(https://contra.com/freelance-industry-report-2021/images/background-noise.png?0140508b3ca119631050c945a1c2987c);
@@ -90,6 +90,7 @@ border-bottom-right-radius: 0px;
   width: 200%;
   will-change: auto;
   z-index: 100;
+
 }
 
 
@@ -152,8 +153,8 @@ text-align: center;
   margin-top:5%;
   font-size: 799%;
   line-height: 10%;
-  color: #000000;
 
+  color: #ffffff;
   animation: letter-breathe 3s ease-in-out infinite;
 
 }
@@ -173,7 +174,7 @@ mix-blend-mode: normal;
       font-size: 1030%;
       font-weight: 300;
       line-height: 10%;
-      color: #000000;
+      color: #ffffff;
       z-index: 15;
 
 }
@@ -279,7 +280,7 @@ html.lenis body {
 
 .disponibilty {
   filter: invert(100%);
-color: #79981d ;
+color: #ffffff ;
   background-color: rgb(0, 0, 0);
   padding: 10px;
   width: 11.5%;
@@ -327,7 +328,7 @@ border-radius: 30px;
   padding: 0px;
   width: 70%;
   text-align: start;
-  font-weight: 450;
+  font-weight: 650;
   left: 3%;
   letter-spacing: -1.7px;
   position: relative;
@@ -390,7 +391,7 @@ margin-top: -15%;
   
   .image-point  ul li {
     list-style-type: none;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
       border-radius: 0%;
       margin-bottom: 0%;
       
@@ -402,7 +403,7 @@ margin-top: -15%;
   text-align: end;
   margin-top: 40px;
   font-weight: 100;
-  color: #000000;
+  color: #ffffff;
   font-size: 12px;
 
   }
@@ -425,7 +426,7 @@ margin-top: -15%;
 font-family: 'Rubik Glitch Pop', system-ui;    font-weight: 100;
     font-style: normal;
 
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     line-height: 1.25em;
     text-transform: uppercase;
     transition: 0.5s;
@@ -652,12 +653,13 @@ border-radius: 10px;
   justify-content: start;
   display: flex;
   left: 0%;
-  height: 100%;
+  height: auto;
   width: 100%;
   rotate: 0deg;
   border-radius: 0%;
-  margin-top: 5%;
-  filter: invert(100%);
+  margin-top: -14%;
+  filter: invert(0%);
+  
 }
 
 :root{
@@ -735,19 +737,20 @@ filter: invert(0%);
 
 
 #cursor {
-  filter: invert(100%);
+  filter: invert(0%);
   position: fixed; 
   width: 14px;
   height: 20px;
   border-radius: 50%;
-  border: 1px solid rgb(255, 255, 255);
-  background-color: #ffffff;
+  border: 1px solid rgb(28, 26, 26);
+  background-color: rgb(107, 107, 107);
   filter: blur(0px);
   pointer-events: none;
   left: -9999px;
   mix-blend-mode: difference;
 z-index: 100000;
 clip-path: polygon(0 0, 0 0, 30% 50%, 0 100%, 0 98%, 50% 70%, 100% 100%, 100% 100%, 70% 50%, 100% 0, 100% 0, 50% 30%);
+
 
 }
 
@@ -773,8 +776,10 @@ clip-path: polygon(0 0, 0 0, 30% 50%, 0 100%, 0 98%, 50% 70%, 100% 100%, 100% 10
 }
 
 #app {
+  clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 100% 100%, 85% 100%, 15% 100%, 0 100%, 0% 85%);
 
-  
+
+background-color: white;
 
   border-top-right-radius: 0px;
   border-top-left-radius: 0px;
@@ -792,7 +797,7 @@ clip-path: polygon(0 0, 0 0, 30% 50%, 0 100%, 0 98%, 50% 70%, 100% 100%, 100% 10
   transform-style: preserve-3d;
   pointer-events: auto;
   left: 30%;
-  margin-top: 0%;
+  margin-top: 20%;
 }
 
 .ticket p {
@@ -1091,7 +1096,7 @@ margin-left: 35%;
   animation: letter-breathe 3s ease-in-out infinite;  animation-iteration-count: infinite;
   animation-delay: 1s;
   animation-fill-mode: both;
-  color: #000000;
+  color: #ffffff;
   font-size: 15rem;
   font-family: 'TheFont';
 text-align: center;
@@ -1103,7 +1108,7 @@ text-align: center;
 .container-service {
   border-radius: 20px;
   padding: 10% 5%;
-  border: 1px solid rgb(0, 0, 0);
+  border: 1px solid rgb(255, 255, 255);
 
 }
 
@@ -1126,7 +1131,7 @@ width: 100%;
 left: 0%;
   margin: 12px;
   top: 0%;
-  border: 1px solid rgb(0, 0, 0);
+  border: 1px solid rgb(255, 255, 255);
   border-radius: 100px;
   display: flex;
  position: relative;
@@ -1138,7 +1143,7 @@ left: 0%;
 
 .container-stack li:hover {
   background-color: fuchsia;
-  color: #000000;
+  color: #ffffff;
   border: 1px solid transparent;
   transition:all 1s ;
  }
@@ -1147,7 +1152,7 @@ left: 0%;
 
 .container-stack li:not(:hover) {
   background-color: none;
-  color: #000000;
+  color: #ffffff;
   transition:all 1s ;
  }
 
@@ -1156,7 +1161,7 @@ left: 0%;
 
 .container li  {
 display: flex;
-  color: #000000;
+  color: #ffffff;
   font-size: 1rem;
   font-weight: 200;
   left: 5%;

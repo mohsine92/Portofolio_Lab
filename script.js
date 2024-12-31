@@ -131,13 +131,15 @@ gsap.fromTo(
 
 gsap.to("#hello p, #hello2, canvas", {
 
-  y: -160,
+  y: -210,
+  width: "90%",
+  left: "5%",
       ease: "none",
       scrollTrigger: {
         trigger: "body",
         start: "top top",
         end: "100vh top",
-        scrub: 3,
+        scrub: 1,
         ease: "power1.out",
 
       },
@@ -218,9 +220,9 @@ const params = {
   DENSITY_DISSIPATION: .999,
   VELOCITY_DISSIPATION: .9,
   PRESSURE_ITERATIONS: 1,
-  SPLAT_RADIUS: 1 / window.innerHeight,
+  SPLAT_RADIUS: 2 / window.innerHeight,
 
-  color: { r: -0.8, g: 0.7, b: 0.15 } // Mélange de rose, vert et jaune
+  color: { r: 0.8, g: 0.7, b: 0.15 } // Mélange de rose, vert et jaune
 
 
 };
@@ -546,7 +548,7 @@ tl.to("#feturbulence", {
 
 
 
-
+// Cursor 
 
 const cursor = document.querySelector('#cursor');
 
@@ -554,19 +556,6 @@ window.addEventListener('mousemove', (e) => {
   cursor.style.left = `${e.clientX - 10}px`;
   cursor.style.top =  `${e.clientY - 10}px`;
 });
-
-
-function copyEditableText() {
-  // Récupère le contenu du paragraphe
-  const text = document.getElementById("editableText").textContent;
-
-  // Copie le texte dans le presse-papiers
-  navigator.clipboard.writeText(text).then(() => {
-    alert("Email copié ! : " + text);
-  }).catch(err => {
-    console.error("Échec de la copie : ", err);
-  });
-}
 
 
 

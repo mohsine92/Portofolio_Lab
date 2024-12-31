@@ -250,7 +250,7 @@
 
 
 body {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
 }
 
 #cursor {
@@ -278,7 +278,7 @@ body {
             right: 20%;
             font-size: 200%;
             line-height: 4%;
-            color: #000000;    
+            color: #ffffff;    
           }
     
     
@@ -292,7 +292,7 @@ body {
           padding: 9% 0px;
             font-size: 230%;
             line-height: 10%;
-            color: #000000;
+            color: #ffffff;
             animation: none;
       }
       
@@ -373,7 +373,7 @@ body {
       left: 80%;
       margin-top:-25% !important;
       transform: translateX(-50%) translateY(-50%);
-          color:#000000;
+          color:#ffffff;
           font-size: 13.555555px;
           letter-spacing: -0.3px;
           font-weight: 300;
@@ -391,7 +391,7 @@ body {
         width: 90%;
         text-align: start;
       border-radius: 30px;
-        font-weight: 450;
+        font-weight: 500;
         letter-spacing: 0px;
         position: relative;
         mix-blend-mode: difference;
@@ -405,7 +405,7 @@ body {
     
     
     
-    a,
+    nav a,
     p {
       text-decoration: none;
       text-transform: uppercase;
@@ -518,7 +518,7 @@ font-weight: 700;
         left: 0%;
         margin-top: -65%;
         height: 50%;        
-        filter: invert(100%);
+        filter: invert(00%);
       }
       
 
@@ -565,7 +565,7 @@ position: relative;
 .container p  {
     animation-delay: 1s;
     animation-fill-mode: both;
-    color: #000000;
+    color: #ffffff;
     text-align: center;
     font-size: 3rem;
     mix-blend-mode: difference;
@@ -583,7 +583,7 @@ position: relative;
     letter-spacing: -1px;
     justify-content: center;
     display: block;
-      color: #000000;
+      color: #ffffff;
       font-size: 2rem;
       left: 0%;
 
