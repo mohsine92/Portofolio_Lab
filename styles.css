@@ -13,7 +13,7 @@ body {
   font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: #ebebeb;
 cursor: none;
-background-color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);
 }
 
 
@@ -77,7 +77,7 @@ border-bottom-right-radius: 0px;
 
 
 .noise {
-  display: none;
+  display: flex;
   -webkit-animation: noise 2s steps(3) infinite both;
   animation: noise 2s steps(3) infinite both;
   background: url(https://contra.com/freelance-industry-report-2021/images/background-noise.png?0140508b3ca119631050c945a1c2987c);
@@ -145,16 +145,17 @@ border-bottom-right-radius: 0px;
 
 
 #hello p {
+  text-transform: none;
   font-family: 'TheFont';
   z-index: 5;
-font-weight: 600;
+font-weight: 100;
 text-align: center;
   padding:12% ;
-  margin-top:5%;
+  margin-top:15%;
   font-size: 799%;
   line-height: 10%;
 
-  color: #ffffff;
+  color: #373737;
   animation: letter-breathe 3s ease-in-out infinite;
 
 }
@@ -171,10 +172,10 @@ text-align: center;
 mix-blend-mode: normal;
       padding:13% 0px;
       margin:0%;
-      font-size: 1030%;
-      font-weight: 300;
+      font-size: 1000%;
+      font-weight: 100;
       line-height: 10%;
-      color: #ffffff;
+      color: #000000;
       z-index: 15;
 
 }
@@ -279,9 +280,9 @@ html.lenis body {
 
 
 .disponibilty {
-  filter: invert(100%);
-color: #ffffff ;
-  background-color: rgb(0, 0, 0);
+  filter: invert(0%);
+color: #000000 ;
+  background-color: rgb(255, 255, 255);
   padding: 10px;
   width: 11.5%;
   position: relative;
@@ -403,7 +404,7 @@ margin-top: -15%;
   text-align: end;
   margin-top: 40px;
   font-weight: 100;
-  color: #ffffff;
+  color: #000000;
   font-size: 12px;
 
   }
@@ -426,7 +427,7 @@ margin-top: -15%;
 font-family: 'Rubik Glitch Pop', system-ui;    font-weight: 100;
     font-style: normal;
 
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     line-height: 1.25em;
     text-transform: uppercase;
     transition: 0.5s;
@@ -652,14 +653,15 @@ border-radius: 10px;
   position: absolute;
   justify-content: start;
   display: flex;
-  left: 0%;
-  height: auto;
-  width: 100%;
+  left: 65%;
+  height: 25%;
+  width: 15%;
   rotate: 0deg;
   border-radius: 0%;
-  margin-top: -14%;
-  filter: invert(0%);
+  margin-top: 24%;
+  filter: invert(00%);
   
+  rotate: 160deg;
 }
 
 :root{
@@ -669,7 +671,7 @@ border-radius: 10px;
 
 
 h2{
-  text-transform: uppercase;
+  text-transform:capitalize;
   -webkit-font-smoothing:antialiased;
   mix-blend-mode: difference;
   color: rgb(0, 0, 0);
@@ -779,7 +781,6 @@ clip-path: polygon(0 0, 0 0, 30% 50%, 0 100%, 0 98%, 50% 70%, 100% 100%, 100% 10
   clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 100% 100%, 85% 100%, 15% 100%, 0 100%, 0% 85%);
 
 
-background-color: white;
 
   border-top-right-radius: 0px;
   border-top-left-radius: 0px;
@@ -797,7 +798,7 @@ background-color: white;
   transform-style: preserve-3d;
   pointer-events: auto;
   left: 30%;
-  margin-top: 20%;
+  margin-top: 0%;
 }
 
 .ticket p {
@@ -1096,7 +1097,7 @@ margin-left: 35%;
   animation: letter-breathe 3s ease-in-out infinite;  animation-iteration-count: infinite;
   animation-delay: 1s;
   animation-fill-mode: both;
-  color: #ffffff;
+  color: #000000;
   font-size: 15rem;
   font-family: 'TheFont';
 text-align: center;
@@ -1108,7 +1109,7 @@ text-align: center;
 .container-service {
   border-radius: 20px;
   padding: 10% 5%;
-  border: 1px solid rgb(255, 255, 255);
+  border: 1px solid rgb(0, 0, 0);
 
 }
 
@@ -1131,7 +1132,7 @@ width: 100%;
 left: 0%;
   margin: 12px;
   top: 0%;
-  border: 1px solid rgb(255, 255, 255);
+  border: 1px solid rgb(0, 0, 0);
   border-radius: 100px;
   display: flex;
  position: relative;
@@ -1152,7 +1153,7 @@ left: 0%;
 
 .container-stack li:not(:hover) {
   background-color: none;
-  color: #ffffff;
+  color: #000000;
   transition:all 1s ;
  }
 
@@ -1161,7 +1162,7 @@ left: 0%;
 
 .container li  {
 display: flex;
-  color: #ffffff;
+  color: #343434;
   font-size: 1rem;
   font-weight: 200;
   left: 5%;

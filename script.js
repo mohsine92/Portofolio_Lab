@@ -113,7 +113,7 @@ gsap.fromTo(
       trigger: ".img-home",
       start: "top -20%", // Début de l'animation quand le h1 est au centre de la vue
       end: "bottom top",
-      scrub: 5, // Augmentez la valeur pour un effet de défilement plus fluide
+      scrub: 3, // Augmentez la valeur pour un effet de défilement plus fluide
     },
     stagger: 0.4, // Augmentez le décalage entre chaque mot
     duration: 3, // Augmentez la durée pour ralentir l'animation
@@ -132,20 +132,35 @@ gsap.fromTo(
 gsap.to("#hello p, #hello2, canvas", {
 
   y: -210,
-  width: "90%",
-  left: "5%",
-      ease: "none",
+
+  borderRadius: "10%",
       scrollTrigger: {
         trigger: "body",
         start: "top top",
         end: "100vh top",
-        scrub: 1,
-        ease: "power1.out",
+
+        ease: "power4.out",
+        scrub: 3,
 
       },
     });
 
 
+
+    gsap.to(".img-home", {
+      rotate:"90deg",
+      y:"65%",
+          scrollTrigger: {
+            trigger: ".presentation2",
+            start: "top -30%",
+            end: "100vh top",
+            scrub: 2,
+            ease: "power4.out",
+
+          },
+        });
+    
+    
 
 
 
