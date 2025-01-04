@@ -131,16 +131,16 @@ gsap.fromTo(
 
 gsap.to("#hello p, #hello2, canvas", {
 
-  y: -210,
-
-  borderRadius: "10%",
+width: "95%",
+left: "2%",
+  borderRadius: "100px",
       scrollTrigger: {
         trigger: "body",
         start: "top top",
         end: "100vh top",
 
         ease: "power4.out",
-        scrub: 3,
+        scrub: 1,
 
       },
     });
@@ -161,6 +161,18 @@ gsap.to("#hello p, #hello2, canvas", {
         });
     
     
+        gsap.to("#three-container", {
+          z: 320,
+          scrollTrigger: {
+                trigger: ".presentation2",
+                start: "top -30%",
+                end: "100vh top",
+                scrub: 3,
+                ease: "power4.out",
+    
+              },
+            });
+        
 
 
 
@@ -221,6 +233,138 @@ gsap.to(".presentation2", {
 
 
 
+// Initialisation de la scène
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+renderer.setSize(window.innerWidth, window.innerHeight);
+document.getElementById('three-container').appendChild(renderer.domElement);
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+// Charger la texture de base
+const loader = new THREE.TextureLoader();
+const baseTexture = loader.load('https://plus.unsplash.com/premium_photo-1672088819323-0dd6b822b027?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+baseTexture.wrapS = THREE.RepeatWrapping;
+baseTexture.wrapT = THREE.RepeatWrapping;
+baseTexture.repeat.set(20, 20, 20, 20, 20);
+
+// Créer le matériau pour l'effet de verre net
+const material = new THREE.MeshPhysicalMaterial({
+  map: baseTexture,
+  roughness: 0, // Réduit la rugosité pour un aspect plus lisse
+  metalness: 0.3, // Un peu de métal pour améliorer le rendu
+  clearcoat: 100.1, // Augmente la brillance
+  clearcoatRoughness: 20.1,
+  reflectivity: 100, // Maximise la réflexion
+  transmission: 110.8, // Permet une plus grande transparence
+  ior: 135,
+  side: THREE.DoubleSide,
+  transparent: true,
+  opacity: 10,
+});
+
+// Fonction pour créer une géométrie avec des coins arrondis
+function createRoundedBox(width, height, depth, radius, smoothness) {
+  const shape = new THREE.Shape();
+  shape.absarc(0, 0, radius, -Math.PI / 2, -Math.PI, true);
+  shape.absarc(0, height - radius * 2, radius, Math.PI, Math.PI / 2, true);
+  shape.absarc(width - radius * 2, height - radius * 2, radius, Math.PI / 2, 0, true);
+  shape.absarc(width - radius * 2, 0, radius, 0, -Math.PI / 2, true);
+
+  const geometry = new THREE.ExtrudeGeometry(shape, {
+    depth: depth - radius * 1,
+    bevelEnabled: true,
+    bevelSegments: smoothness * 2,
+    steps: 1,
+    bevelSize: radius,
+    bevelThickness: radius,
+    curveSegments: smoothness,
+  });
+
+  geometry.center();
+  return geometry;
+}
+
+
+// Créer un cube arrondi
+const geometry = createRoundedBox(2.3, 2.3, 2.3, 0.5, 150);
+const cube = new THREE.Mesh(geometry, material);
+cube.castShadow = true;
+cube.receiveShadow = true;
+scene.add(cube);
+
+
+// Ajouter une lumière ambiante douce
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+scene.add(ambientLight);
+
+// Ajouter plusieurs lumières directionnelles pour des reflets et ombres
+const directionalLight1 = new THREE.DirectionalLight(0xffffff, 1);
+directionalLight1.position.set(5, 5, 5);
+directionalLight1.castShadow = true;
+scene.add(directionalLight1);
+
+const directionalLight2 = new THREE.DirectionalLight(0xffffff, 0.7);
+directionalLight2.position.set(-5, -5, 5);
+scene.add(directionalLight2);
+
+const directionalLight3 = new THREE.DirectionalLight(0xffffff, 0.5);
+directionalLight3.position.set(5, -5, -5);
+scene.add(directionalLight3);
+
+// Ajouter une lumière ponctuelle pour des reflets plus intenses
+const pointLight = new THREE.PointLight(0xffffff, 1.2, 50);
+pointLight.position.set(0, 5, 5);
+scene.add(pointLight);
+
+// Position de la caméra
+camera.position.set(0, 0, 9);
+
+// Variables pour une rotation lissée
+let targetRotationY = 10;
+let targetRotationX = 10;
+let currentRotationY = 10;
+let currentRotationX = 10;
+
+// Fonction pour animer le rendu
+function animate() {
+  currentRotationY += (targetRotationY - currentRotationY) * 0.05;
+  currentRotationX += (targetRotationX - currentRotationX) * 0.05;
+
+  cube.rotation.y = currentRotationY;
+  cube.rotation.x = currentRotationX;
+
+  renderer.render(scene, camera);
+  requestAnimationFrame(animate);
+}
+animate();
+
+// Fonction de gestion du scroll pour définir les cibles de rotation
+window.addEventListener('scroll', () => {
+  const scrollPosition = window.scrollY;
+  const rotationSpeed = 0.004;
+  targetRotationY = scrollPosition * rotationSpeed;
+  targetRotationX = scrollPosition * rotationSpeed / 1;
+});
+
+// Ajuster la taille du canvas au redimensionnement de la fenêtre
+window.addEventListener('resize', () => {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+});
+
+// Ajuster la rotation en fonction de la position de la souris
+window.addEventListener('mousemove', (event) => {
+  const mouseX = (event.clientX / window.innerWidth) * 6 - 1;
+  const mouseY = (event.clientY / window.innerHeight) * 6 - 1;
+  targetRotationY = mouseX * Math.PI; // Utilise un angle pour la rotation
+  targetRotationX = mouseY * Math.PI; // Utilise un angle pour la rotation
+});
+         
+
+
 
 
 
@@ -237,9 +381,13 @@ const params = {
   PRESSURE_ITERATIONS: 1,
   SPLAT_RADIUS: 2 / window.innerHeight,
 
-  color: { r: 0.8, g: 0.7, b: 0.15 } // Mélange de rose, vert et jaune
-
-
+  color: {
+    r: Math.random() - 0.7 + 0.3, // Mélange aléatoire avec une base de rose
+    g: Math.random() * 0.8 + 0.2, // Vert accentué
+    b: Math.random() * 0.5  + 0.1      // Faible présence de bleu pour éviter le cyan
+  }
+  
+  
 };
  
 

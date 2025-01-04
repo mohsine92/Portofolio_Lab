@@ -261,6 +261,10 @@ body {
         display: flex;
       }
 
+      #three-container {
+       display: none;
+      }
+      
 
     canvas {
       clip-path: polygon(0% 15%, 0 0, 15% 0%, 85% 0%, 100% 0, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 0 100%, 0% 85%);
@@ -272,7 +276,7 @@ body {
           font-weight: 100;
           text-transform: none;
           text-align: center;
-          padding:65% 10px;
+          padding:85% 10px;
           margin:5%;
             margin-right: 10%;
             right: 20%;
@@ -391,7 +395,7 @@ body {
         width: 90%;
         text-align: start;
       border-radius: 30px;
-        font-weight: 500;
+        font-weight: 700;
         letter-spacing: 0px;
         position: relative;
         mix-blend-mode: difference;
@@ -510,12 +514,12 @@ font-weight: 700;
     
     
     .img-home {
-        top: 200%;
+        top: 250%;
         width: 30%;
 
         justify-content: center;
         left: 40%;
-        margin-top: -65%;
+        margin-top: -80%;
         height: auto;        
         filter: invert(00%);
       }

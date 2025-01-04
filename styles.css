@@ -23,7 +23,7 @@ background-color: rgb(255, 255, 255);
     width: 20%;
   position: relative;
   left: 90%;
-  top:-15%;
+  top: -20% ;
   transform: translateX(-50%) translateY(-50%);
       color:#000000;
       font-size: 16.555555px;
@@ -31,6 +31,7 @@ background-color: rgb(255, 255, 255);
       font-weight: 300;
       text-align: center;
       animation-delay: 0.3s;
+
     }
   
   
@@ -70,11 +71,23 @@ canvas {
   filter: invert(0%);
   mix-blend-mode:difference;
 
-border-bottom-left-radius: 0px;
-border-bottom-right-radius: 0px;
+border-top-left-radius: 0px;
+border-top-right-radius: 0px;
 }
 
 
+
+#three-container {
+  opacity: 1;
+  z-index: 2;
+  position: absolute;
+  top: 170%;
+  right: 25%;
+  width: 100%;
+  height: 100%;
+filter: invert(00%);
+  mix-blend-mode: difference;
+}
 
 .noise {
   display: flex;
@@ -195,7 +208,7 @@ p {
 
 nav {
   position: absolute;
-  top: 0;
+  top: 15px;
   left: 0%;
   width: 100%;
   padding: 2em;
@@ -341,7 +354,7 @@ border-radius: 30px;
     "ROND" 0; 
      mix-blend-mode: difference;
 color: #ffffff;
-margin-top: -15%;
+margin-top: -18%;
 }
 
 
@@ -745,7 +758,7 @@ filter: invert(0%);
   height: 20px;
   border-radius: 50%;
   border: 1px solid rgb(28, 26, 26);
-  background-color: rgb(107, 107, 107);
+  background-color: rgb(255, 255, 255);
   filter: blur(0px);
   pointer-events: none;
   left: -9999px;
