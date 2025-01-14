@@ -73,7 +73,6 @@ requestAnimationFrame(raf);
 
 
 
-
 //img 
 
 
@@ -152,7 +151,7 @@ left: "2%",
       y:"65%",
           scrollTrigger: {
             trigger: ".presentation2",
-            start: "top -30%",
+            start: "top -70%",
             end: "100vh top",
             scrub: 2,
             ease: "power4.out",
@@ -242,12 +241,13 @@ document.getElementById('three-container').appendChild(renderer.domElement);
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
+
 // Charger la texture de base
 const loader = new THREE.TextureLoader();
 const baseTexture = loader.load('https://plus.unsplash.com/premium_photo-1672088819323-0dd6b822b027?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
 baseTexture.wrapS = THREE.RepeatWrapping;
 baseTexture.wrapT = THREE.RepeatWrapping;
-baseTexture.repeat.set(20, 20, 20, 20, 20);
+baseTexture.repeat.set(10, 10, 10, 10, 10);
 
 // Créer le matériau pour l'effet de verre net
 const material = new THREE.MeshPhysicalMaterial({
@@ -383,8 +383,10 @@ const params = {
 
   color: {
     r: Math.random() - 0.7 + 0.3, // Mélange aléatoire avec une base de rose
+
     g: Math.random() * 0.8 + 0.2, // Vert accentué
-    b: Math.random() * 0.5  + 0.1      // Faible présence de bleu pour éviter le cyan
+    b: Math.random() * 0.5  + 0.19      // Faible présence de bleu pour éviter le cyan
+
   }
   
   
@@ -725,7 +727,7 @@ window.addEventListener('mousemove', (e) => {
 
 
 const speed = 8;
-const r = gsap.timeline({ repeat: -1 });
+ const r = gsap.timeline({ repeat: -1 });
 
 const animationTimeline = gsap.timeline({ repeat: -1 });
 const o = gsap.timeline({ repeat: -1 });

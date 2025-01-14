@@ -1,6 +1,241 @@
+@media screen and (max-width: 1400px) {
 
 
 
+  #hello p {
+    font-weight: 100;
+    
+    text-align: center;
+      padding:45% 5%;
+      margin-right: 5%;
+      margin: 5%;
+      font-size: 400%;
+      line-height: 4%;
+      color: #000000;    
+    }
+
+    #hello2 p {
+      display: none;
+    }
+
+
+
+    nav {
+      position: absolute;
+      top: 0;
+      left: 10%;
+      width:90%;
+      padding: 3em;
+      display: flex;
+      z-index: 2;
+      gap: 30rem;
+ mix-blend-mode: difference;
+    }
+    
+    nav > div {
+      flex: 2.3;
+    }
+    
+
+    .disponibilty { 
+      display: none;        }
+
+    
+    
+      #three-container {
+  top: 150% ;
+  position: absolute;
+  margin-bottom: 10%;
+    }
+    
+
+    .img-home {
+      display: none;
+    }
+
+
+
+    .presentation2 {
+      position: absolute;
+      font-size: 2rem;
+      width: 85%;
+    }
+
+
+    h2 {
+      margin-top: 80%;
+    }
+
+
+.clock {
+
+position: absolute;
+}
+
+
+.image-point ul li {
+  font-size: 10px;
+}
+
+.container-stack {
+  text-align: center;
+  justify-content: center;
+  width: 20%;
+  left: 35%;
+  margin-top: 5%;
+  gap: 3rem;
+  padding: 10px;
+  display: flex;
+}
+
+.container p {
+  font-size: 8rem;
+}
+
+.container-service p{
+  padding: 20%;
+}
+
+.container-service li p {
+  left: 0%;
+  margin: 0;
+}
+
+
+#app {
+  left: 0%;
+}
+
+
+
+footer p{
+  font-size: 9rem;
+}
+
+
+
+
+}
+
+
+
+
+
+@media screen and (max-width: 1000px) {
+
+
+
+  #hello p {
+    font-weight: 100;
+    
+    text-align: center;
+      padding:45% 5%;
+      margin-right: 5%;
+      margin: 5%;
+      font-size: 400%;
+      line-height: 4%;
+      color: #000000;    
+    }
+
+    #hello2 p {
+      display: none;
+    }
+
+
+
+    nav {
+      position: absolute;
+      top: 0;
+      left: 10%;
+      width:90%;
+      padding: 3em;
+      display: flex;
+      z-index: 2;
+      gap: 30rem;
+ mix-blend-mode: difference;
+    }
+    
+    nav > div {
+      flex: 2.3;
+    }
+    
+
+    .disponibilty { 
+      display: none;        }
+
+    
+    
+      #three-container {
+  top: 150% ;
+  position: absolute;
+  margin-bottom: 10%;
+    }
+    
+
+    .img-home {
+      display: none;
+    }
+
+
+
+    .presentation2 {
+      position: absolute;
+      font-size: 2rem;
+      width: 85%;
+    }
+
+
+    h2 {
+      margin-top: 80%;
+    }
+
+
+.clock {
+
+position: absolute;
+}
+
+
+.image-point ul li {
+  font-size: 10px;
+}
+
+.container-stack {
+  text-align: center;
+  justify-content: center;
+  width: 20%;
+  left: 35%;
+  margin-top: 5%;
+  gap: 3rem;
+  padding: 10px;
+  display: flex;
+}
+
+.container p {
+  font-size: 8rem;
+}
+
+.container-service p{
+  padding: 20%;
+}
+
+.container-service li p {
+  left: 0%;
+  margin: 0;
+}
+
+
+#app {
+  left: 0%;
+}
+
+
+
+footer p{
+  font-size: 9rem;
+}
+
+}
 
 
 
@@ -13,21 +248,29 @@
       
       }
 
-    canvas {
-        border-bottom-left-radius: 40px;
-        border-bottom-right-radius: 40px;
+    #mycanvas {
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
     
+    }
+
+
+    #three-container {
+      top: 160%;
+      height: 50%;
+      width: 90%;
+      right: 10%;
+      position: absolute;
     }
     
         #hello p, #hello2 p {
           font-weight: 100;
           
           text-align: center;
-            padding:25% 10px;
-            margin:5%;
+            padding:45% 5%;
             margin-right: 5%;
-            right: 20%;
-            font-size: 700%;
+            margin: 5%;
+            font-size: 400%;
             line-height: 4%;
             color: #000000;    
           }
@@ -69,12 +312,13 @@
           }
           
 
-      .section__text___p2 {
+      .image-point .section__text___p2 {
         margin-bottom: 30px;
+        font-size: 13px;
       }
       
       .image-point ul li a {
-        font-size: 2.3rem;
+        font-size: 3.3rem;
       }
       
       
@@ -109,13 +353,13 @@
     
       .clock {
       
-        width: 50%;
+        width: 20%;
       position: absolute;
-      left: 90%;
-      top: 110%;
+      left: 80%;
+      top: 120%;
       transform: translateX(-50%) translateY(-50%);
           color:#000000;
-          font-size: 10.555555px;
+          font-size: 13.555555px;
           letter-spacing: -0.3px;
           font-weight: 300;
           text-align: center;
@@ -131,14 +375,13 @@
         width: 90%;
         text-align: start;
       border-radius: 30px;
-        font-weight: 250;
+        font-weight: 550;
         font-size: 1.6rem;
         letter-spacing: -0.7px;
         position: relative;
-        font-family: 'Helvetica';
       mix-blend-mode: difference;
       color: #ffffff;
-      margin-top: 15%;
+      margin-top: -15%;
       
       }
     
@@ -150,7 +393,7 @@
       text-decoration: none;
       text-transform: uppercase;
       font-size: 13px;
-      font-weight: 300;
+      font-weight: 200;
       color: #ffffff;
     }
     
@@ -169,13 +412,13 @@
     }
     
     nav > div {
-      flex: 3;
+      flex: 2;
     }
     
     .logo a {
       filter: none;
-      font-weight: 400;
-      font-size: 13px;
+      font-weight: 700;
+      font-size: 15px;
       left: 5%;
       mix-blend-mode: difference;
     }
@@ -186,6 +429,17 @@
    
       }
       
+      .image-point p {
+        font-size: 10px;
+      }
+
+      .image-point .p {
+        font-size: 9px;
+      }
+
+      .image-point a li {
+        font-size: 15rem;
+      }
       
       
     
@@ -193,13 +447,13 @@
         margin-top: 20%;
         margin-bottom: 20%;
     
-        padding: 2px;
+        padding: 5%;
         display: grid;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+        justify-content: start;
+        align-items: start;
+        text-align: start;
       left: 0%;
-        gap: 0.8rem;
+        gap: 1rem;
         border: 1.2px solid black;
         border-radius: 30px;
         width: 100%;
@@ -211,7 +465,9 @@
         font-weight: 200;
       }
     
-    
+      .container-service {
+        left: 0%;
+      }
     
     
     .img-home {
@@ -219,12 +475,29 @@
         position: absolute;
         justify-content: center;
         display: flex;
-        left: 0%;
-        margin-top: 30%;
+        left: 50;
+        margin-top: 70%;
+        height: auto;
+        display: none;
       }
       
 
 
+
+
+      .container p {
+        font-size: 500%;
+      }
+
+
+
+      footer p {
+        font-size: 7rem;
+        margin-bottom: 10%;
+        margin-top: 0%;
+      }
+
+      
   }
 
 
@@ -232,6 +505,30 @@
 
 
 
+  @media screen and (max-width: 800px) { 
+
+
+canvas {
+  border-radius: 0% !important;
+}
+
+    #hello p {
+      text-transform: none;
+      font-family: 'TheFont';
+      z-index: 5;
+    font-weight: 100;
+    text-align: center;
+      padding:12% ;
+      margin-top:15%;
+      font-size: 199%;
+      line-height: 10%;
+    
+      color: #373737;
+      animation: letter-breathe 3s ease-in-out infinite;
+    
+    }
+    
+  }
 
 
 
@@ -262,7 +559,8 @@ body {
       }
 
       #three-container {
-       display: none;
+       display: flex;
+       right: 10%;
       }
       
 
@@ -518,17 +816,12 @@ font-weight: 700;
         width: 30%;
 
         justify-content: center;
-        left: 40%;
+        left: 38%;
         margin-top: -80%;
         height: auto;        
         filter: invert(00%);
       }
       
-
-
-
-
-
 
 
 

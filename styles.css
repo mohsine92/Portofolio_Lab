@@ -71,8 +71,6 @@ canvas {
   filter: invert(0%);
   mix-blend-mode:difference;
 
-border-top-left-radius: 0px;
-border-top-right-radius: 0px;
 }
 
 
@@ -231,7 +229,7 @@ nav > div {
   font-size: 20px;
   left: 5%;
   color: white;
-  position: relative;
+  position: fixed;
   mix-blend-mode: difference;
 }
 
@@ -645,7 +643,7 @@ animation: none;
   width: 93%;
   margin: 15px;
   margin-top: 30%;
-border-radius: 10px;
+border-radius: 0px;
   margin-bottom: 10%;
   display: flex;
   opacity: 0; /* Les images commencent invisibles */
