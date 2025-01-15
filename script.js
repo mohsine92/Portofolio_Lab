@@ -160,17 +160,7 @@ left: "2%",
         });
     
     
-        gsap.to("#three-container", {
-          z: 320,
-          scrollTrigger: {
-                trigger: ".presentation2",
-                start: "top -30%",
-                end: "100vh top",
-                scrub: 3,
-                ease: "power4.out",
-    
-              },
-            });
+       
         
 
 

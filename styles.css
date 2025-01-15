@@ -88,7 +88,7 @@ filter: invert(00%);
 }
 
 .noise {
-  display: flex;
+  display: none;
   -webkit-animation: noise 2s steps(3) infinite both;
   animation: noise 2s steps(3) infinite both;
   background: url(https://contra.com/freelance-industry-report-2021/images/background-noise.png?0140508b3ca119631050c945a1c2987c);
@@ -1138,7 +1138,6 @@ width: 100%;
 
 .container-stack li {
 
-  animation: letter-breathe 3s ease-in-out infinite; 
    animation-iteration-count: infinite;
 left: 0%;
   margin: 12px;
