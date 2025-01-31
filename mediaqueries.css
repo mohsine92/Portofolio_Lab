@@ -23,22 +23,28 @@
     nav {
       position: absolute;
       top: 0;
-      left: 10%;
+      left: 0%;
       width:90%;
       padding: 3em;
       display: flex;
       z-index: 2;
-      gap: 30rem;
+      gap: 60rem;
  mix-blend-mode: difference;
+ justify-content: center;
+
+
     }
     
     nav > div {
-      flex: 2.3;
+      flex: 3;
+
     }
     
 
     .disponibilty { 
-      display: none;        }
+      display: none;
+      padding: 0px;
+    }
 
     
     
@@ -68,7 +74,6 @@
 
 
 .clock {
-
 position: absolute;
 }
 
@@ -89,7 +94,7 @@ position: absolute;
 }
 
 .container p {
-  font-size: 8rem;
+  font-size: 7rem;
 }
 
 .container-service p{
@@ -111,6 +116,7 @@ position: absolute;
 footer p{
   font-size: 9rem;
 }
+
 
 
 
@@ -212,7 +218,7 @@ position: absolute;
 }
 
 .container p {
-  font-size: 8rem;
+  font-size: 6rem;
 }
 
 .container-service p{
@@ -222,6 +228,7 @@ position: absolute;
 .container-service li p {
   left: 0%;
   margin: 0;
+
 }
 
 
@@ -547,7 +554,7 @@ canvas {
 
 
 body {
-  background-color: rgb(255, 255, 255);
+  background-color:rgb(190, 190, 190);
 }
 
 #cursor {
@@ -559,51 +566,44 @@ body {
       }
 
       #three-container {
+        top: 160%;
         scale: 0.8;
         display: flex;
        right: 10%;
+       filter: invert(00%);
       }
       
 
     canvas {
-      clip-path: polygon(0% 15%, 0 0, 15% 0%, 85% 0%, 100% 0, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 0 100%, 0% 85%);
+      clip-path: polygon(0% 15%, 0 0, 15% 0%, 85% 0%, 100% 0, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
       border-radius: 0px !important ;
-        filter: invert(0%);
+        filter: invert(00%);
+
+      width: 100%;
+      height: 105vh;
     }
     
         #hello p {
           font-weight: 100;
           text-transform: none;
           text-align: center;
-          padding:85% 10px;
+          padding:105% 0px;
           margin:5%;
-            margin-right: 10%;
+            margin-right: 0%;
             right: 20%;
             font-size: 200%;
             line-height: 4%;
-            color: #000000;    
+            color: #ffffff;    
           }
     
     
-    
-    #hello2 p {
-        letter-spacing: 7px;
-          font-family: 'TheFont';
-          font-weight: 200;
-          text-align: center;
-      margin-right: 10%;
-          padding: 9% 0px;
-            font-size: 230%;
-            line-height: 10%;
-            color: #000000;
-            animation: none;
-      }
       
-          .presentation2 {
+          .presentation2,.presentation2 span {
+            color: rgb(255, 255, 255);
             font-weight: 230;
             position: relative;
             font-size: 1.3rem;
-            margin-top: -10% !important;
+            margin-top: 35% !important;
           }
       
       
@@ -613,23 +613,26 @@ body {
         }
       
       
+
       h2  {
-        padding:  40% -40%!important;
-        font-size: 10px !important;
+        font-family: "Geist";
+color: white;
+        padding:  40% 10%!important;
+        font-size: 12px !important;
         margin: 0 0;
-        margin-top: 240%;
-        margin-bottom: 100%;
+        margin-top: 80%;
+        margin-bottom: 20%;
       width: 100%;
-      letter-spacing: 20px;
+      letter-spacing: 0px;
       font-weight: 250;
       text-align: start;
       }
 
       h2 span {
-        text-transform: uppercase;
-font-weight: 300;
-        margin: 10%;
-        font-size: 17px;
+        text-transform:none;
+font-weight: 100;
+        margin: 0.8%;
+        font-size: 20px;
         letter-spacing: -1px;
 
       }
@@ -651,6 +654,7 @@ font-weight: 300;
       .image__wrapper img{
         filter: none;
       display: none;
+      
       }
       
       
@@ -676,10 +680,10 @@ font-weight: 300;
       
         width: 30%;
       position: relative;
-      left: 80%;
-      margin-top:20% !important;
+      left: 10%;
+      margin: -35% ;
       transform: translateX(-50%) translateY(-50%);
-          color: #000000;
+          color: #fffefe;
           font-size: 13.555555px;
           letter-spacing: -0.3px;
           font-weight: 300;
@@ -729,7 +733,6 @@ font-weight: 700;
     
     .image-point {
     display: none;
-        background-color: #000000;
         border-radius: 5px;
         width: 90%;
         margin: 23px;
@@ -793,7 +796,7 @@ font-weight: 700;
     .container-service {
         margin-top: 20%;
         margin-bottom: 20%;
-    
+        background-color: none;
         padding: 2px;
         display: grid;
         justify-content: center;
@@ -830,11 +833,11 @@ font-weight: 700;
 
 
       .container {
-        position: relative;
-        padding: 50% 5% 30%;
+        padding: 0% 0% 0%;
         left: 0%;
         width: 100%;
         filter: invert(0%);
+
         /*background: url(https://i.pinimg.com/originals/d8/e6/eb/d8e6eb6b345ada088e2448947c483ab4.gif) no-repeat center center;*/
       }
       
@@ -848,16 +851,16 @@ font-weight: 700;
 
     
 .container-stack li {
+  text-align: center;
     animation: none; 
 position: relative;
-    left: -10%;
+    left: 0%;
     margin: 12px;
     top: 0%;
     border: 1px solid rgb(0, 0, 0);
     border-radius: 100px;
     display: none;
    position: relative;
-   padding: 10% 8%;
   
    }
      
@@ -889,8 +892,8 @@ text-transform: lowercase;
 
       top: 65% ;
       position: relative;
-      text-align: center;
-margin-bottom: 2rem; 
+
+      margin-bottom: 2rem; 
 font-weight: 300;  
  }
 
@@ -909,8 +912,8 @@ footer p {
   text-transform: none;
   animation: letter-breathe 3s ease-in-out infinite;
   font-family: 'TheFont';
-  color: #000000;
-  font-size: 3.7rem;
+  color: #d3cbcb;
+  font-size: 4rem;
   text-align: center;
 }
 

@@ -20,20 +20,10 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
-
-
-
-  
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
-    
   </head>
-  <body>
 
-  
-  
-  
+
+  <body>
   
     <div class="noise"></div>
 
@@ -46,15 +36,10 @@
 
 
     <div id="hello">
-      <p>Port0FoLiO</p>
+      <p>Port0FoLi0</p>
     </div>
-    <br/>
-    <div id="hello2">
-      <p></p>
-   </div>
+   
   
-
-
 
    <img src="https://images.unsplash.com/photo-1729830374987-977a8982ea5e?q=80&w=3415&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img">
 
@@ -62,86 +47,67 @@
       
 <nav>
   <div class="logo"><a href="#">Mohsine Essat</a></div>
-
   <div class="info"><p>Creative Developer </p></div>
-  <p class="disponibilty">  <span class="dot"></span> AVAILABLE FOR WORK  </p> 
-
+  <p class="disponibilty">  <span class="dot"></span> AVAILABLE FOR WORK</p> 
 </nav>
 
-  </div>
+
+<svg id="filter">
+  <filter id="turbulence" x="-10%" y="-20%" width="140%" height="140%">
+    <feTurbulence baseFrequency="0" numOctaves="20" seed="-21" id="feturbulence" type="fractalNoise" result="NOISE"></feTurbulence>
+    <feDisplacementMap xChannelSelector="R" yChannelSelector="G" in="SourceGraphic" in2="NOISE" scale="30"></feDisplacementMap>
+  </filter>
+</svg>
 
 
-  <svg id="filter">
-    <filter id="turbulence" x="-10%" y="-20%" width="140%" height="140%">
-      <feTurbulence baseFrequency="0" numOctaves="20" seed="-21" id="feturbulence" type="fractalNoise" result="NOISE"></feTurbulence>
-      <feDisplacementMap xChannelSelector="R" yChannelSelector="G" in="SourceGraphic" in2="NOISE" scale="30"></feDisplacementMap>
-    </filter>
-  </svg>
-
-
+<div id="MyClockDisplay" class="clock" onload="showTime()"> </div>
 
        
-  <div id="MyClockDisplay" class="clock" onload="showTime()"> </div>
-      
-
-  <br> <br>
-
-<!--<img src="https://i.pinimg.com/originals/16/ef/17/16ef17813215346697eafeab46a84f9a.gif" class="img-home">-->
 <img src="https://i.pinimg.com/736x/76/32/79/7632791c5edcf1e9f398c438994bfa0e.jpg" class="img-home">
-<!--<img src="https://i.pinimg.com/originals/aa/32/ef/aa32efb49c9643f66560c38d99e47d49.gif" class="img-home">-->
-
-<!--<img src="https://images.unsplash.com/photo-1618853606785-bae61817cc7a?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-home">-->
-
-<!--<img src="https://images.unsplash.com/photo-1729119578920-240c46516e91?q=80&w=3000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-home">-->
-
-
-
 
 
 <p class="presentation2">
-
-<br> <br>
-
-Creative developer passionate about creativity, I started self-learning for two years and then towards certified training,
- focusing on creating interactive websites that attract and engage,
- 3D experiences and animations using JavaScript and libraries like GSAP and WebGL.
-</p> 
-
-
-<!--<div class="container-service">
-<li><p> Creative website</p></li>
-<li><p>Mobile Design</p></li>
-<li><p> Motion & Animation</p></li>
-<li><p> Maintenance</p></li>
-
-<h1></h1>
-<li><h5>HTML</h5></li>
-<li><h5>CSS</h5></li>
-<li><h5>JS</h5></li>
-<li><h5>ThreeJs</h5></li>
-
-</div>-->
- 
+  <span> Creative </span>developer passionate about creativity, I started self-learning for two years and then towards certified training,
+   focusing on creating interactive websites that attract and engage,
+   3D experiences and animations using JavaScript, WebGL and libraries like GSAP.
+  </p> 
 
 
 <h2>
   <span>My</span> <span>mission</span> <span>is</span> <span>to</span> <span>create</span> <span>and</span> <span>deliver</span> <span>digital</span> <span>solutions</span>
   <span>that</span> <span>drive</span> <span>the</span> <span>success</span> <span>of</span> <span>my</span> <span>clients.</span>
   <span>My</span> <span>goal</span> <span>is</span> <span>to</span>
-  <div class="image__wrapper"><img src="https://i.pinimg.com/originals/2c/61/9b/2c619b5bea0e79e79fae9c078f2e04ce.gif" alt="image-1"></div>
+ <!-- <div class="image__wrapper">--></div>
   <span>create</span> <span>modern</span> <span>websites,</span>
-  <div class="image__wrapper"><img src="https://i.pinimg.com/originals/26/29/cb/2629cb45b91a4ebb9df412db24d44c02.gif" alt="another image"></div>
+ <!-- <div class="image__wrapper">--></div>
   <span>develop</span> <span>impactful</span> <span>brand</span> <span>identities</span> <span>and</span> <span>produce</span> <span>engaging</span>
-  <div class="image__wrapper"><img src="https://i.pinimg.com/originals/76/96/3e/76963e86b548b85d50de621e7ee95c3e.gif" alt="creative image"></div>
-  <span>creative</span> <div id="three-container"></div>
-  <span>content.</span>
+ <!-- <div class="image__wrapper">--></div><span>creative</span> <span>content.</span>
 </h2>
 
+<div id="three-container"></div>
 
 
 
+<div class="container">
+  <p aria-label="Geist Sans">serVice.</p>
+  <div class="container-service">
+    
+  <li>E-commerce</li>
+  <li>Design & motion</li>
+  <li>3D experience</li>
+  <li>SEO</li>
+  <li>Maintenance</li>
 
+  <div class="container-stack">
 
+    <li>NextJs</li>
+    <li>ReactJs</li>
+    <li>GSAP</li>
+    <li>ThreeJs</li>
+
+  </div>
+</div>
+</div>
 
 
 
@@ -158,7 +124,6 @@ Creative developer passionate about creativity, I started self-learning for two 
       
           <p class="p"></p>
       
-      <br>
           <li><a href="">Maison Almas</a><video class="image" src="Black and White Minimalist Elegant Fashion Banner (1).mp4" autoplay loop muted playsinline ></video></li>
           <p>E-commerce artisanal jewerly ⎯ Development ⋅ Design</p>
       
@@ -170,7 +135,6 @@ Creative developer passionate about creativity, I started self-learning for two 
       
           <p class="p">Soon</p>
       
-          <br>
       
           <li><a href="">EQ⋱</a><video class="image" src="Black and White Minimalist Elegant Fashion Banner (2).mp4" autoplay loop muted playsinline ></video></li>
           <p> Astophysic & Spacial Website ⎯ Development ⋅ Design</p>
@@ -229,29 +193,6 @@ Creative developer passionate about creativity, I started self-learning for two 
 
 
 
-      <div class="container">
-        <p aria-label="Geist Sans">serVice.</p>
-        <div class="container-service">
-          
-        <li>E-commerce</li>
-        <li>Strategy, design & motion</li>
-        <li>3D experience</li>
-        <li>SEO</li>
-        <li>Maintenance</li>
-        <li></li>
-
-        <div class="container-stack">
-
-          <li>NextJs</li>
-          <li>ReactJs</li>
-          <li>GSAP</li>
-          <li>ThreeJs</li>
-
-        </div>
-      </div>
-      </div>
-
-
 
       <main id="app">
 
@@ -259,7 +200,7 @@ Creative developer passionate about creativity, I started self-learning for two 
     
             <header class="front">
                 <div class="holo"></div>
-                <p>aRt <br> X <br> weB</p>
+                <p>aRt <br> X <br> web</p>
                 <aside class="divider"></aside>
             </header>
     
@@ -282,23 +223,23 @@ Creative developer passionate about creativity, I started self-learning for two 
     
                 <aside class="divider">
                     <div class="username">
-                        <img class="profile" src="https://i.pinimg.com/736x/69/de/4b/69de4bb24577cf6994778daf7e36c89c.jpg">
+                        <img class="profile" src="Capture d’écran 2024-09-16 à 23.19.55.png">
                         <span contenteditable spellcheck=false>Mohsine Essat</span> <img class="verified" src="https://assets.codepen.io/13471/verified.png">
                     </div>
                     <span class="usernum" contenteditable spellcheck=false>17082001</span>
                 </aside>
             </section>
     
-        </section>
-    
+             
     </main>
+    <footer>
+      <p>
+       2o25
+      </p>
+  
+    </footer>   
+  </div>
 
-<footer>
-    <p>
-     2o25
-    </p>
-    <h6>v:0</h6>
-  </footer>
 
     <script type="x-shader/x-fragment" id="vertShader">
       precision highp float;

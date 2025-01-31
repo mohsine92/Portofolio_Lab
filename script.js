@@ -128,18 +128,16 @@ gsap.fromTo(
 
 
 
-gsap.to("#hello p, #hello2, canvas", {
+gsap.to(" canvas", {
 
-width: "95%",
-left: "2%",
   borderRadius: "100px",
       scrollTrigger: {
         trigger: "body",
-        start: "top top",
+        start: "top 40%",
         end: "100vh top",
 
         ease: "power4.out",
-        scrub: 1,
+        scrub: 2,
 
       },
     });
@@ -158,32 +156,6 @@ left: "2%",
 
           },
         });
-    
-    
-       
-        
-
-
-
-gsap.to(".presentation2", {
-
-  y: 60,
-      ease: "none",
-      scrollTrigger: {
-        trigger: "canvas",
-        start: "top top",
-        end: "bottom top",
-        scrub: 1,
-        ease: "power1.out",
-
-      },
-    });
-
-  
-
-
-
-
 
 
 
@@ -200,25 +172,7 @@ gsap.to(".presentation2", {
         },
       });
     
-    
   
-
-  
-  
-  gsap.to(".stack", {
-
-    duration: 1.5,
-    ease: "power3.out",
-    scrollTrigger: {
-      trigger: "#project",
-      start: " top",
-      end: " 5% bottom",
-      scrub: 5,
-    },
-  });
-
-
-
 
 
 
@@ -231,24 +185,23 @@ document.getElementById('three-container').appendChild(renderer.domElement);
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
-
 // Charger la texture de base
-const loader = new THREE.TextureLoader();
-const baseTexture = loader.load('https://plus.unsplash.com/premium_photo-1672088819323-0dd6b822b027?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+const loader = new THREE.TextureLoader();     
+const baseTexture = loader.load('https://plus.unsplash.com/premium_photo-1674575954741-0f610c5dc2c0?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
 baseTexture.wrapS = THREE.RepeatWrapping;
 baseTexture.wrapT = THREE.RepeatWrapping;
-baseTexture.repeat.set(10, 10, 10, 10, 10);
+baseTexture.repeat.set( 100, 200 );
 
 // Créer le matériau pour l'effet de verre net
 const material = new THREE.MeshPhysicalMaterial({
   map: baseTexture,
-  roughness: 0, // Réduit la rugosité pour un aspect plus lisse
-  metalness: 0.3, // Un peu de métal pour améliorer le rendu
+  roughness:0, // Réduit la rugosité pour un aspect plus lisse
+  metalness: 0.13, // Un peu de métal pour améliorer le rendu
   clearcoat: 100.1, // Augmente la brillance
   clearcoatRoughness: 20.1,
   reflectivity: 100, // Maximise la réflexion
   transmission: 110.8, // Permet une plus grande transparence
-  ior: 135,
+  ior: 105,
   side: THREE.DoubleSide,
   transparent: true,
   opacity: 10,
@@ -312,10 +265,10 @@ scene.add(pointLight);
 camera.position.set(0, 0, 9);
 
 // Variables pour une rotation lissée
-let targetRotationY = 10;
-let targetRotationX = 10;
-let currentRotationY = 10;
-let currentRotationX = 10;
+let targetRotationY = 110;
+let targetRotationX = 110;
+let currentRotationY = 110;
+let currentRotationX = 110;
 
 // Fonction pour animer le rendu
 function animate() {
@@ -358,18 +311,29 @@ window.addEventListener('mousemove', (event) => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 const canvas = document.getElementsByTagName("canvas")[0];
 const image = document.getElementsByTagName("img")[0];
 canvas.width = canvas.clientWidth;
 canvas.height = canvas.clientHeight;
 
 const params = {
-  SIM_RESOLUTION: 128,
-    DYE_RESOLUTION: 2400,
+  SIM_RESOLUTION: 228,
+    DYE_RESOLUTION: 2700,
   DENSITY_DISSIPATION: .999,
   VELOCITY_DISSIPATION: .9,
-  PRESSURE_ITERATIONS: 1,
-  SPLAT_RADIUS: 2 / window.innerHeight,
+  PRESSURE_ITERATIONS: 10,
+  SPLAT_RADIUS: 4 / window.innerHeight,
 
   color: {
     r: Math.random() - 0.7 + 0.3, // Mélange aléatoire avec une base de rose
@@ -683,9 +647,6 @@ function render() {
 
 
 
-
-
-
 const tl = gsap.timeline({
   defaults: {
     ease: "none",
@@ -700,9 +661,6 @@ tl.to("#feturbulence", {
   attr: { baseFrequency: "0.01" }
 });
 
-
-
-
 // Cursor 
 
 const cursor = document.querySelector('#cursor');
@@ -713,13 +671,8 @@ window.addEventListener('mousemove', (e) => {
 });
 
 
-
-
-
-const speed = 8;
- const r = gsap.timeline({ repeat: -1 });
-
-const animationTimeline = gsap.timeline({ repeat: -1 });
+const speed = 4;
+const r = gsap.timeline({ repeat: -1 });
 const o = gsap.timeline({ repeat: -1 });
 const h = gsap.timeline({ repeat: -1 });
 
@@ -807,7 +760,7 @@ document.addEventListener("DOMContentLoaded", function () {
         opacity: 0,
         y: 10,
         scale: 0,
-        rotation: 5,
+        rotation: 0,
       },
       {
         scale:1,
@@ -818,7 +771,7 @@ document.addEventListener("DOMContentLoaded", function () {
       
 
         duration: 1,
-        ease: "power3.out",
+        ease: "bounce",
         scrollTrigger: {
           trigger: image,
           start: "top 80%", // Animation commence quand le haut de l'image atteint 80% de la fenêtre
@@ -845,3 +798,55 @@ spans.forEach(function(span, i) {
     const mappedIndex = i - (numLetters / 2)
     span.style.animationDelay = (mappedIndex * 0.25) + 's';
 });
+
+
+
+
+
+
+
+
+
+
+let current = 0;
+let target = 0;
+let ease = 0.1;
+
+let windowWidth, containerHeight, imageHeight, skewDiff;
+
+let container = document.querySelector('');
+
+function lerp(start, end, t){
+    return start * (1 - t) + end * t;
+}
+
+function setTransform(el, transform){
+    el.style.transform = transform;
+}
+
+function setupAnimation(){
+    windowWidth = window.innerWidth;
+    containerHeight = container.getBoundingClientRect().height;
+
+    document.body.style.height = `${containerHeight}px`;
+    smoothScroll()
+}
+
+function smoothScroll(){
+    current = lerp(current, target, ease);
+    current = parseFloat(current.toFixed(2));
+    target = window.scrollY
+    skewDiff = (target - current) * .015
+    setTransform(container, `translateY(${-current}px) skewY(${skewDiff}deg) `);
+    updateImages()
+    requestAnimationFrame(smoothScroll)
+}
+
+function updateImages(){
+    let ratio = current / imageHeight;
+    let intersectioRatioIndex, intersectionRatioValue;
+  
+}
+
+
+setupAnimation()
