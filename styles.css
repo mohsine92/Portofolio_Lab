@@ -8,27 +8,27 @@ html,
 body {
   align-items: center;
   justify-content: center;
-  font-family: "Work Sans", sans-serif;
   width: 100%;
   font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 cursor: none;
-background-color:rgb(190, 190, 190);
+background-color: rgb(0, 0, 0);
 }
 
 
 .clock {
-  position: relative;
+  position: absolute;
     width: 20%;
   left: 80%;
-  margin-top: 10%;
+  margin-top:55%;
+  margin-bottom: 5%;
   text-transform: translateX(-50%) translateY(-50%);
-      color:#000000;
-      font-size: 16.555555px;
+      color:#ffffff;
+      mix-blend-mode: difference;
+      font-size: .85625rem;
       letter-spacing: -0.3px;
-      font-weight: 300;
+      font-weight: 200;
       text-align: center;
       animation-delay: 0.3s;
-
     }
   
   
@@ -53,38 +53,34 @@ background-color:rgb(190, 190, 190);
 
 
 ::selection {
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0) ;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255) ;
   filter: invert(00%);
 }
 
+
 canvas {
-  display: block;
+  position: absolute;
   width: 100vw;
       height: 100%;
   z-index: 5;
-  position: absolute;
   top: 0%;
   left: 0%;
-
-  filter: invert(0%);
-
-mix-blend-mode: difference;
+border-top-right-radius: 0% !important;
+border-top-left-radius: 0% !important;
+  filter: invert(00%);
+  mix-blend-mode: difference;
 }
+
 
 
 
 #three-container {
   opacity: 1;
-  z-index: 2;
-  position: absolute;
-  top: 160%;
-  right: 25%;
-  width: 100%;
-  height: 100%;
+  z-index: 20;
+  position: relative;
 filter: invert(00%);
-mix-blend-mode: difference;
-
+padding-left: 30% ;
 }
 
 .noise {
@@ -102,13 +98,6 @@ mix-blend-mode: difference;
   will-change: auto;
   z-index: 100;
 
-}
-
-
-#home {
-  height: 100%;
-  position: absolute
-  ;
 }
 
 
@@ -149,45 +138,78 @@ mix-blend-mode: difference;
 
 
 
-#hello p {
+.first  {
   font-family: 'TheFont';
   z-index: 5;
 font-weight: 100;
-text-align: center;
-  padding:0% 10% ;
-  margin-top:53%;
-  font-size: 700%;
+  padding:0% 5% ;
+  margin-top:30%;
+  font-size: 300%;
   line-height: 0%;
 mix-blend-mode: difference;
   color: #ffffff;
-  
-
-
-  animation: letter-breathe 3s ease-in-out infinite;
-
+  position: fixed;
   display: flex;
-    align-items: center;
-    justify-content: center;
+  text-align: start;
+
+width: 100%;
+  animation: letter-breathe 3s ease-in-out infinite;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+
+ 
   }
 
   
 
 
+.dos {
+  text-align: center;
+  font-family: 'TheFont';
+  z-index: 5;
+font-weight: 100;
+  padding:0% 5% ;
+  margin-top:30%;
+  font-size: 300%;
+  line-height: 0%;
+mix-blend-mode: difference;
+  color: #ffffff;
+  position: fixed;
+  display: flex;
+  justify-content: center;
 
-#hello2 p {
-  letter-spacing: 1px;
-    text-align: center;
-mix-blend-mode: normal;
-      margin:0%;
-      font-size: 1000%;
-      font-weight: 100;
-      line-height: 10%;
-      color: #000000;
-      z-index: 15;
+  text-align: center;
 
+width: 100%;
+  animation: letter-breathe 3s ease-in-out infinite;
+  animation-delay: 1s;
+  animation-fill-mode: both;
 }
 
 
+
+.trois {
+  text-align: center;
+  font-family: 'TheFont';
+  z-index: 5;
+font-weight: 100;
+  padding:0% 5% ;
+  margin-top:30%;
+  font-size: 300%;
+  line-height: 0%;
+mix-blend-mode: difference;
+  color: #ffffff;
+  position: fixed;
+  display: flex;
+  justify-content: end;
+  
+  text-align: end;
+
+width: 100%;
+  animation: letter-breathe 3s ease-in-out infinite;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+}
 
 
 a,
@@ -195,20 +217,21 @@ p {
   text-decoration: none;
   font-size: 14px;
   font-weight: 300;
-  color: #ffffff;
+  color: #000000;
 }
 
 
 
 nav {
+  filter: invert(00%);
   position: absolute;
   top: 15px;
   left: 0%;
   width: 100%;
   padding: 2em;
   display: flex;
-  z-index: 2;
-  mix-blend-mode: difference;
+  color: rgb(0, 0, 0);
+  z-index: 20;
   text-transform: uppercase;
 
 }
@@ -218,15 +241,12 @@ nav > div {
 }
 
 .logo a {
-  font-family: "Doto", sans-serif;
 text-transform: uppercase;
   /*filter: url(#turbulence);*/
   font-weight: 300;
   font-size: 15px;
   left: 5%;
-  color: white;
-  position: fixed;
-  mix-blend-mode: difference;
+  color: rgb(0, 0, 0);
 }
 
 
@@ -264,24 +284,23 @@ html.lenis body {
 
 .disponibilty {
   filter: invert(00%);
-color: #000000 ;
-  background-color: rgb(255, 255, 255);
+color: #ffffff ;
+  background-color: rgb(0, 0, 0);
   padding: 10px;
   width: 11.5%;
   position: relative;
   left: 0%;
   top: -120%;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
- font-weight: 420;
+ font-weight: 250;
  border-radius: 30px;
 }
 
 
 .dot {
-
   width: 10px;
   height: 9px;
-  background-color: #9fcb1c;
+  background-color: #89b700;
   display: inline-block;
   border-radius: 50px;
   position: relative;
@@ -294,26 +313,14 @@ color: #000000 ;
 
 
 
-.presentation  {
-  width: 60%;
-  text-align: start;
-border-radius: 30px;
-  font-weight: 250;
-  left: 3%;
-  letter-spacing: -0.7px;
-  position: relative;
-  font-size: 2rem;
-  font-family: 'Helvetica';
 
-}
 
 .presentation2 span {
-  font-size: 4rem;
+  font-size: 2rem;
   font-weight: 100;
   letter-spacing: -1px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: rgb(0, 0, 0);
-}
+  mix-blend-mode: difference;
+  color: #ffffff;}
 
 @font-face {
   font-family: "Geist";
@@ -322,22 +329,22 @@ border-radius: 30px;
 
 
 .presentation2  {
-  font-family: "Geist";
-
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+position: relative;
   padding: 0px;
   width: 80%;
   text-align: start;
-  font-weight: 100;
+  font-weight: 150;
   left: 3%;
-  letter-spacing: -1px;
-  position: relative;
-  font-size: 3.5rem;
+  font-size: 2rem;
+  letter-spacing: -1px;  
   font-optical-sizing: auto;
   font-style: normal;
   font-variation-settings:
     "ROND" 0; 
-color: #000000;
-margin-top: 0%;
+    mix-blend-mode: difference;
+color: #ffffff;
+margin-top: 60%;
 }
 
 
@@ -353,9 +360,12 @@ margin-top: 0%;
   border-radius: 40px;
   transition: 1s;
   }
+
+  .image-container video {
+    border-radius: 30px;
+  }
   
   .image-container video:not(:hover) {
-    border-radius: 0px;
     transition: 1s;
     }
   
@@ -370,6 +380,7 @@ margin-top: 0%;
       align-items: left;
       min-height: 90vh;
       overflow: hidden;
+      margin-top: 40%;
   }
   
   .image-point ul {
@@ -388,8 +399,8 @@ margin-top: 0%;
   
   .image-point  ul li {
     list-style-type: none;
-    color: rgb(0, 0, 0);
-      border-radius: 0%;
+    mix-blend-mode: difference;
+    color: #ffffff;      border-radius: 0%;
       margin-bottom: 0%;
       
   }
@@ -400,8 +411,8 @@ margin-top: 0%;
   text-align: end;
   margin-top: 40px;
   font-weight: 100;
-  color: #000000;
-  font-size: 12px;
+  mix-blend-mode: difference;
+  color: #ffffff;  font-size: 12px;
 
   }
   
@@ -410,7 +421,7 @@ margin-top: 0%;
   text-align: end;
   font-weight: 100;
   font-size: 13px;
-  color: rgb(0, 0, 0);
+  color: rgb(142, 142, 142);
   
   }
   
@@ -423,8 +434,8 @@ margin-top: 0%;
 font-family: 'Rubik Glitch Pop', system-ui;    font-weight: 100;
     font-style: normal;
 
-    color: rgb(0, 0, 0);
-    line-height: 1.25em;
+    mix-blend-mode: difference;
+    color: #ffffff;    line-height: 1.25em;
     text-transform: uppercase;
     transition: 0.5s;
 
@@ -464,6 +475,7 @@ font-family: 'Rubik Glitch Pop', system-ui;    font-weight: 100;
 
   
   .img-project {
+    border-radius: 30%;
     margin-top: -10%;
   }
 
@@ -477,12 +489,9 @@ font-family: 'Rubik Glitch Pop', system-ui;    font-weight: 100;
 
 color: rgb(0, 0, 0);
   border-radius: 100px;
-  filter: invert(00%);
-
- background: url(https://i.pinimg.com/originals/9c/14/86/9c14863b9e64ffc65cdfda4cdc9a0b99.gif) center center   ;
-
-
   position: relative;
+  mix-blend-mode: none;
+  filter: invert(00%);
   display: block;
   margin-top: 0%;
   overflow-x: hidden;
@@ -522,8 +531,8 @@ border-radius: 30%;
   text-decoration: none;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
-  color: rgb(255, 255, 255);
   mix-blend-mode: difference;
+  color: rgb(255, 255, 255);  mix-blend-mode: difference;
     font-weight: 400;
     letter-spacing: -1.3px;
   font-size: 1.5rem;
@@ -553,8 +562,8 @@ a.visit {
   left: 5%; 
   width: 90%;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: rgb(255, 255, 255);
   mix-blend-mode: difference;
+  color: rgb(255, 255, 255);  mix-blend-mode: difference;
   font-weight: 400;
   font-size: 13px;
   text-align: start;
@@ -570,8 +579,8 @@ a.visit {
   list-style-type: none;
   text-decoration: none; 
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: rgb(255, 255, 255);
   mix-blend-mode: difference;
+  color: rgb(255, 255, 255);  mix-blend-mode: difference;
   font-weight: 400;
   font-size: 11px;
   text-align: center;
@@ -613,10 +622,10 @@ animation: none;
 
 .project-image {
   height: 270px;
-  width: 80%;
-  margin-left: 10%;
+  width: 95%;
+  margin-left: 2.3%;
   margin-top: 30%;
-border-radius: 0px;
+border-radius: 30px;
   margin-bottom: 10%;
   display: flex;
   opacity: 0; /* Les images commencent invisibles */
@@ -633,53 +642,57 @@ border-radius: 0px;
 
 
 
+
 .img-home {
   position: absolute;
   justify-content: start;
   display: flex;
   left: 65%;
-  height: 25%;
-  width: 15%;
+  height: 50%;
+  width: 20%;
   rotate: 0deg;
   border-radius: 0%;
-  margin-top: 40%;
-  filter: invert(25%);
-  border-radius: 100%;
-  
-  rotate: 160deg;
+  margin-top: 20%;
+  filter: invert(10%);
+  rotate: 0deg;
 }
 
 :root{
   --ft-size: 4rem;
 }
 
-
+.about-p {
+  display: none;
+}
 
 h2 {
-  text-transform: uppercase;
-  margin:  2%;
+  margin:  3%;
   -webkit-font-smoothing:antialiased;
-  color: rgb(0, 0, 0);
-  text-align: start;
-  max-width: 100%;
-  margin-top: 49%;
+  mix-blend-mode: difference;
+  color: #ffffff;  text-align: start;
+  max-width: 70%;
+  margin-top: 10%;
   margin-bottom: 30%;
-  font-weight: 300;
+  font-weight: 200;
 }
 
 
 h2 span {
-
-  margin-top: 38%;
-  width: 100%;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-top: 0%;
+  width: 50%;
   max-width: 100%;
   padding: 0.1%;
-  font-size: 70px;
-  letter-spacing: -3px;
+  font-size: 2rem;
+  letter-spacing: -1px;  
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "ROND" 0; 
   white-space: nowrap;
   text-align: center;
-  color: #000000;
-
+  mix-blend-mode: difference;
+  color: #ffffff;
 }
 
 .image__wrapper{
@@ -763,11 +776,9 @@ clip-path: polygon(0 0, 0 0, 30% 50%, 0 100%, 0 98%, 50% 70%, 100% 100%, 100% 10
 
 #app {
   
-  margin-top: 15%;
+  margin-top: 5%;
 filter: invert(100%);
-  background-color: white;
-  border-top-right-radius: 100px;
-  border-top-left-radius: 100px;
+
   perspective: 1200px;
   --o: 0;
   --p: 100%;
@@ -777,7 +788,6 @@ filter: invert(100%);
 }
 
 .ticket {
-border-radius: 30px;
   --scale: 1;
   transform: translate3d(0, 0, 0.1px) scale(var(--scale)) rotateY(var(--r));
   transform-style: preserve-3d;
@@ -915,7 +925,7 @@ text-transform: none;
 }
 
 .logoo {
-  filter: invert(0%);
+
   border-radius: 100%;
   width: 50%;
   place-self: center;
@@ -1086,8 +1096,8 @@ margin-left: 35%;
   animation: letter-breathe 3s ease-in-out infinite;  animation-iteration-count: infinite;
   animation-delay: 1s;
   animation-fill-mode: both;
-  color: #000000;
-  font-size: 15rem;
+  mix-blend-mode: difference;
+  color: #ffffff;  font-size: 15rem;
   font-family: 'TheFont';
 text-align: center;
 }
@@ -1097,9 +1107,9 @@ text-align: center;
 .container-service {
   padding: 10% 5%;
   border-radius: 30px;
-  border: 2px solid rgb(0, 0, 0);
-  background-color: rgba(188, 133, 133, 0);
-
+  mix-blend-mode: difference;
+  color: #ffffff;
+  border: 1px solid white;
 }
 
 
@@ -1128,9 +1138,9 @@ padding: 18% 15%;
 
 
 .container-stack li:hover {
-  background-color: rgb(24, 22, 24);
-  border: 1px solid black;
-  color: #ffffff;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(0, 0, 0);
+  color: #000000;
   border: none;
   transition:all 1s ;
  }
@@ -1138,9 +1148,9 @@ padding: 18% 15%;
 
 
 .container-stack li:not(:hover) {
-  color: #000000;
-  border: 1px solid black;
-  transition: all 0.8s ;
+  color: #ffffff;
+  border: 1px solid rgb(255, 255, 255);
+  transition: all 1s ;
  }
 
 
@@ -1148,8 +1158,8 @@ padding: 18% 15%;
 
 .container li  {
 display: flex;
-  color: #000000;
-  font-size: 1rem;
+mix-blend-mode: difference;
+color: #ffffff;  font-size: 1rem;
   font-weight: 200;
   left: 5%;
   margin-bottom: 10px;
@@ -1176,7 +1186,6 @@ display: flex;
 
 footer {
   padding-top: 20%;
- background-color: rgb(0, 0, 0);
 
 }
 
@@ -1184,7 +1193,7 @@ footer {
 footer p {
   animation: letter-breathe 3s ease-in-out infinite;
   font-family: 'TheFont';
-  color: #d6d6d6;
-  font-size: 17rem;
+  mix-blend-mode: difference;
+  color: rgb(255, 255, 255);  font-size: 17rem;
   text-align: center;
 }

@@ -30,7 +30,7 @@ function showTime(){
   m = (m < 10) ? "0" + m : m;
   s = (s < 10) ? "0" + s : s;
   
-  var time =  "◼︎ " + h +  ":" + m + ":" + s + " " + session + "";
+  var time = "FRA " + h +  ":" + m + ":" + s + " " + session + "";
   
   document.getElementById("MyClockDisplay").innerText = time;
   document.getElementById("MyClockDisplay").textContent = time;
@@ -109,7 +109,7 @@ gsap.fromTo(
     y: 0, // Le mot remonte à sa position initiale
     filter: "blur(0px)", // Retire le flou
     scrollTrigger: {
-      trigger: ".img-home",
+      trigger: "canvas",
       start: "top -20%", // Début de l'animation quand le h1 est au centre de la vue
       end: "bottom top",
       scrub: 3, // Augmentez la valeur pour un effet de défilement plus fluide
@@ -124,16 +124,12 @@ gsap.fromTo(
 
 
 
-
-
-
-
-gsap.to(" canvas", {
-
-  borderRadius: "100px",
+gsap.to(" #hello p", {
+  
+  scale:0.7,
       scrollTrigger: {
         trigger: "body",
-        start: "top 40%",
+        start: "top",
         end: "100vh top",
 
         ease: "power4.out",
@@ -144,40 +140,34 @@ gsap.to(" canvas", {
 
 
 
-    gsap.to(".img-home", {
-      rotate:"90deg",
-      y:"65%",
-          scrollTrigger: {
-            trigger: ".presentation2",
-            start: "top -70%",
-            end: "100vh top",
-            scrub: 2,
-            ease: "power4.out",
-
-          },
-        });
 
 
 
+gsap.to(" canvas", {
 
-  gsap.to("h2 span", {
-    y: 90,
-        ease: "none",
-        scrollTrigger: {
-          trigger: ".presentation2",
-          start: "top top",
-          end: "100vh top",
-          scrub: 5,
+  borderRadius: "10%",
+      scrollTrigger: {
+        trigger: ".presentation2",
+        start: "top 80%",
+        end: "100vh top",
 
-        },
-      });
+        ease: "power4.out",
+        scrub: 2,
+
+      },
+    });
+
+
+
+
     
   
-
+   
 
 
 // Initialisation de la scène
 const scene = new THREE.Scene();
+
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -186,25 +176,24 @@ renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
 // Charger la texture de base
-const loader = new THREE.TextureLoader();     
+const loader = new THREE.TextureLoader();
 const baseTexture = loader.load('https://plus.unsplash.com/premium_photo-1674575954741-0f610c5dc2c0?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-baseTexture.wrapS = THREE.RepeatWrapping;
 baseTexture.wrapT = THREE.RepeatWrapping;
-baseTexture.repeat.set( 100, 200 );
+baseTexture.repeat.set(100, 100);
 
 // Créer le matériau pour l'effet de verre net
 const material = new THREE.MeshPhysicalMaterial({
   map: baseTexture,
-  roughness:0, // Réduit la rugosité pour un aspect plus lisse
-  metalness: 0.13, // Un peu de métal pour améliorer le rendu
-  clearcoat: 100.1, // Augmente la brillance
-  clearcoatRoughness: 20.1,
-  reflectivity: 100, // Maximise la réflexion
-  transmission: 110.8, // Permet une plus grande transparence
-  ior: 105,
+  roughness: 0.1,
+  metalness: 0.10,
+  clearcoat: 10,
+  clearcoatRoughness: 0.1,
+  reflectivity: 0.1,
+  transmission: 0.9,
+  ior: 10.5,
   side: THREE.DoubleSide,
   transparent: true,
-  opacity: 10,
+  opacity: 7,
 });
 
 // Fonction pour créer une géométrie avec des coins arrondis
@@ -229,14 +218,12 @@ function createRoundedBox(width, height, depth, radius, smoothness) {
   return geometry;
 }
 
-
 // Créer un cube arrondi
 const geometry = createRoundedBox(2.3, 2.3, 2.3, 0.5, 150);
 const cube = new THREE.Mesh(geometry, material);
 cube.castShadow = true;
 cube.receiveShadow = true;
 scene.add(cube);
-
 
 // Ajouter une lumière ambiante douce
 const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
@@ -265,10 +252,10 @@ scene.add(pointLight);
 camera.position.set(0, 0, 9);
 
 // Variables pour une rotation lissée
-let targetRotationY = 110;
-let targetRotationX = 110;
-let currentRotationY = 110;
-let currentRotationX = 110;
+let targetRotationY = 0;
+let targetRotationX = 0;
+let currentRotationY = 0;
+let currentRotationX = 0;
 
 // Fonction pour animer le rendu
 function animate() {
@@ -647,19 +634,7 @@ function render() {
 
 
 
-const tl = gsap.timeline({
-  defaults: {
-    ease: "none",
-    // ease: 'power3.out',
-    repeat: -1,
-    yoyo: true,
-    duration: 4
-  }
-});
 
-tl.to("#feturbulence", {
-  attr: { baseFrequency: "0.01" }
-});
 
 // Cursor 
 
@@ -670,67 +645,6 @@ window.addEventListener('mousemove', (e) => {
   cursor.style.top =  `${e.clientY - 10}px`;
 });
 
-
-const speed = 4;
-const r = gsap.timeline({ repeat: -1 });
-const o = gsap.timeline({ repeat: -1 });
-const h = gsap.timeline({ repeat: -1 });
-
-const $ticket = document.querySelector(".ticket");
-$ticket.addEventListener('mouseenter', () => {
-    r.pause();
-    o.pause();
-    h.pause();
-})
-$ticket.addEventListener('mouseleave', () => {
-    r.play();
-    o.play();
-    h.play();
-})
-
-r.to("#app", {
-    "--r": "180deg",
-    "--p": "0%",
-    duration: speed,
-    ease: "sine.in"
-});
-r.to("#app", {
-    "--r": "360deg",
-    "--p": "100%",
-    duration: speed,
-    ease: "sine.out"
-});
-o.to("#app", {
-    "--o": 1,
-    duration: speed/2,
-    ease: "power1.in"
-});
-o.to("#app", {
-    "--o": 0,
-    duration: speed/2,
-    ease: "power1.out"
-});
-
-h.to("#app", {
-    "--h": "100%",
-    duration: speed/2,
-    ease: "sine.in"
-});
-h.to("#app", {
-    "--h": "50%",
-    duration: speed/2,
-    ease: "sine.out"
-});
-h.to("#app", {
-    "--h": "0%",
-    duration: speed/2,
-    ease: "sine.in"
-});
-h.to("#app", {
-    "--h": "50%",
-    duration: speed/2,
-    ease: "sine.out"
-});
 
 
 
@@ -806,15 +720,13 @@ spans.forEach(function(span, i) {
 
 
 
-
-
 let current = 0;
 let target = 0;
 let ease = 0.1;
 
 let windowWidth, containerHeight, imageHeight, skewDiff;
 
-let container = document.querySelector('');
+let container = document.querySelector('#three-container');
 
 function lerp(start, end, t){
     return start * (1 - t) + end * t;

@@ -67,7 +67,9 @@
       width: 85%;
     }
 
-
+   .about-p {
+    display: none;
+   }
     h2 {
       margin-top: 80%;
     }
@@ -189,7 +191,9 @@ footer p{
       font-size: 2rem;
       width: 85%;
     }
-
+    .about-p {
+      display: none;
+     }
 
     h2 {
       margin-top: 80%;
@@ -393,7 +397,9 @@ footer p{
       }
     
     
-    
+      .about-p {
+        display: none;
+       }
     
     a,
     p {
@@ -553,9 +559,6 @@ canvas {
 
 
 
-body {
-  background-color:rgb(190, 190, 190);
-}
 
 #cursor {
   display: none;
@@ -566,10 +569,13 @@ body {
       }
 
       #three-container {
-        top: 160%;
+        position: relative;
+        top: 130%;
         scale: 0.8;
         display: flex;
-       right: 10%;
+       left: 0%;
+       right: 40%;
+       margin-bottom: 40%;
        filter: invert(00%);
       }
       
@@ -580,30 +586,35 @@ body {
         filter: invert(00%);
 
       width: 100%;
-      height: 105vh;
+      height: 95vh;
     }
     
         #hello p {
-          font-weight: 100;
-          text-transform: none;
-          text-align: center;
-          padding:105% 0px;
-          margin:5%;
-            margin-right: 0%;
-            right: 20%;
-            font-size: 200%;
-            line-height: 4%;
-            color: #ffffff;    
+top: 50%;
+margin: 0%;
+font-size: 150%;
+color: white;
+padding: 0%;
+position: absolute;
           }
     
     
       
-          .presentation2,.presentation2 span {
+          .presentation2 {
             color: rgb(255, 255, 255);
-            font-weight: 230;
-            position: relative;
+            font-weight: 150;
             font-size: 1.3rem;
-            margin-top: 35% !important;
+            position: absolute;
+            line-height: 20px;
+            margin-top: 230% !important;
+          }
+
+          .presentation2 span {
+            color: white;
+            color: rgb(255, 255, 255);
+            font-weight: 150;
+            font-size: 1.3rem;
+            mix-blend-mode: difference;
           }
       
       
@@ -612,12 +623,27 @@ body {
       margin-left: 0%;
         }
       
-      
+        .about-p {
+          display: flex;
+          margin-top: 3%;
+          left: 3%;
+          line-height: 20px;
+text-transform: none;
+          position: absolute;
+          color: rgb(255, 255, 255);
+          mix-blend-mode: difference;
+          font-weight: 150;
+          font-size: 1.3rem;
+          letter-spacing: -0.8px;
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+         }
 
       h2  {
+        
+        display: none;
         font-family: "Geist";
 color: white;
-        padding:  40% 10%!important;
+        padding: 40% 10%!important;
         font-size: 12px !important;
         margin: 0 0;
         margin-top: 80%;
@@ -626,12 +652,15 @@ color: white;
       letter-spacing: 0px;
       font-weight: 250;
       text-align: start;
+      position: relative;
       }
 
       h2 span {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         text-transform:none;
 font-weight: 100;
         margin: 0.8%;
+        
         font-size: 20px;
         letter-spacing: -1px;
 
@@ -677,16 +706,17 @@ font-weight: 100;
     
     
       .clock {
-      
         width: 30%;
-      position: relative;
-      left: 10%;
-      margin: -35% ;
+        display: flex;
+      position:relative;
+      left: 58%;
+      margin-top: -55% ;
+      margin-bottom: 0%;
       transform: translateX(-50%) translateY(-50%);
-          color: #fffefe;
+          color: #000000;
           font-size: 13.555555px;
           letter-spacing: -0.3px;
-          font-weight: 300;
+          font-weight: 200;
           text-align: center;
           animation-delay: 0.3s;
         }
@@ -694,19 +724,17 @@ font-weight: 100;
       
     
       .presentation2  {
-        font-family: "Doto", sans-serif;
-
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         text-transform: none;
         padding: 0px;
         width: 90%;
         text-align: start;
       border-radius: 30px;
-        font-weight: 700;
-        letter-spacing: 0px;
+        font-weight: 150;
+        letter-spacing: -1px;
         position: relative;
         mix-blend-mode: difference;
-      color: #ffffff;
-      margin-top: 25%;
+        color: rgb(255, 255, 255);
 
       
       }
@@ -726,8 +754,7 @@ font-weight: 100;
     
 
     nav a,p {
-      font-family: "Doto", sans-serif;
-font-weight: 700;
+font-weight: 200;
         color: white;
     }
     
@@ -741,8 +768,8 @@ font-weight: 700;
     
     
     .image-point ul li a {
-       color: #fefefe;
-    border: none;
+      mix-blend-mode: difference;
+      color: rgb(255, 255, 255);    border: none;
     }
     
     
@@ -761,14 +788,14 @@ font-weight: 700;
     nav {
       position: absolute;
       top: 0;
-      left: 0%;
-      width: 100%;
+      width: 100% ;
       padding: 3em;
-      display: flex;
+      display: block;
       z-index: 2;
-      gap: 10rem;
+gap: 3rem;
       mix-blend-mode: difference;
       text-align: center;
+      justify-content: center;
 
     }
     
@@ -777,10 +804,10 @@ font-weight: 700;
     }
     
     .logo a {
-      filter: none;
-      font-weight: 700;
-      font-size: 13px;
-      left: 5%;
+      position: absolute;
+      font-weight: 200;
+      font-size: 12px;
+      text-align: center;
       mix-blend-mode: difference;
     }
     
@@ -794,25 +821,22 @@ font-weight: 700;
 
     
     .container-service {
-        margin-top: 20%;
-        margin-bottom: 20%;
         background-color: none;
-        padding: 2px;
+        padding: 0px;
         display: grid;
-        justify-content: center;
+        justify-content: end;
         align-items: center;
-        text-align: center;
-      left: 0%;
-        gap: 0.8rem;
+        text-align: end;
+        gap: 0rem;
         border:none;
         border-radius: 30px;
-        width: 100%;
+        width: 85%;
         position: relative;
       }
       
       .container-service p {
-        color: #ffffff;
-        font-weight: 100;
+        mix-blend-mode: difference;
+        color: rgb(255, 255, 255);        font-weight: 100;
       }
     
     
@@ -833,7 +857,8 @@ font-weight: 700;
 
 
       .container {
-        padding: 0% 0% 0%;
+        position: relative;
+        padding: 40% 0% 90%;
         left: 0%;
         width: 100%;
         filter: invert(0%);
@@ -851,11 +876,11 @@ font-weight: 700;
 
     
 .container-stack li {
-  text-align: center;
+  text-align: end;
     animation: none; 
 position: relative;
     left: 0%;
-    margin: 12px;
+    margin: 0px;
     top: 0%;
     border: 1px solid rgb(0, 0, 0);
     border-radius: 100px;
@@ -866,10 +891,11 @@ position: relative;
      
   
 .container p  {
+  margin-top: 0%;
     animation-delay: 1s;
     animation-fill-mode: both;
-    color: #000000;
-    text-align: center;
+    mix-blend-mode: difference;
+    color: rgb(255, 255, 255);    text-align: center;
     font-size: 3rem;
     mix-blend-mode: difference;
 text-transform: lowercase;
@@ -882,19 +908,19 @@ text-transform: lowercase;
   font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   animation-delay: 1s;
   animation-fill-mode: both;
-
+text-transform: uppercase;
     letter-spacing: -1px;
     justify-content: center;
     display: block;
-      color: #000000;
-      font-size: 2rem;
+    mix-blend-mode: difference;
+    color: rgb(255, 255, 255);      font-size: 1.5rem;
       left: 0%;
 
-      top: 65% ;
+      top: 0% ;
       position: relative;
 
-      margin-bottom: 2rem; 
-font-weight: 300;  
+      margin-bottom: 1.5rem; 
+font-weight: 150;  
  }
 
 
@@ -912,8 +938,8 @@ footer p {
   text-transform: none;
   animation: letter-breathe 3s ease-in-out infinite;
   font-family: 'TheFont';
-  color: #d3cbcb;
-  font-size: 4rem;
+  mix-blend-mode: difference;
+  color: rgb(255, 255, 255);  font-size: 4rem;
   text-align: center;
 }
 
