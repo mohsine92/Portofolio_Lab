@@ -10,8 +10,7 @@ body {
   justify-content: center;
   width: 100%;
   font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-cursor: none;
-background-color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);
 }
 
 
@@ -79,7 +78,7 @@ border-top-left-radius: 0% !important;
   opacity: 1;
   z-index: 20;
   position: relative;
-filter: invert(00%);
+filter: invert(0%);
 padding-left: 30% ;
 }
 
@@ -223,7 +222,7 @@ p {
 
 
 nav {
-  filter: invert(00%);
+  filter: invert(100%);
   position: absolute;
   top: 15px;
   left: 0%;
@@ -283,9 +282,9 @@ html.lenis body {
 
 
 .disponibilty {
-  filter: invert(00%);
-color: #ffffff ;
-  background-color: rgb(0, 0, 0);
+  filter: invert(100%);
+color: #000000 ;
+  background-color: rgb(255, 255, 255);
   padding: 10px;
   width: 11.5%;
   position: relative;
@@ -319,8 +318,9 @@ color: #ffffff ;
   font-size: 2rem;
   font-weight: 100;
   letter-spacing: -1px;
-  mix-blend-mode: difference;
-  color: #ffffff;}
+  color: #000000;
+mix-blend-mode: none;
+}
 
 @font-face {
   font-family: "Geist";
@@ -329,6 +329,8 @@ color: #ffffff ;
 
 
 .presentation2  {
+  mix-blend-mode: none;
+
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 position: relative;
   padding: 0px;
@@ -342,8 +344,7 @@ position: relative;
   font-style: normal;
   font-variation-settings:
     "ROND" 0; 
-    mix-blend-mode: difference;
-color: #ffffff;
+color: #000000;
 margin-top: 60%;
 }
 
@@ -351,22 +352,17 @@ margin-top: 60%;
 
 .img {
   height: 0px;
-  
 }
 
 
 
 .image-container video:hover {
-  border-radius: 40px;
-  transition: 1s;
+  transition: 0.5s;
   }
 
-  .image-container video {
-    border-radius: 30px;
-  }
   
   .image-container video:not(:hover) {
-    transition: 1s;
+    transition: 0.8s;
     }
   
   .section-pic-container {
@@ -380,7 +376,7 @@ margin-top: 60%;
       align-items: left;
       min-height: 90vh;
       overflow: hidden;
-      margin-top: 40%;
+      margin-top: 0%;
   }
   
   .image-point ul {
@@ -461,22 +457,21 @@ font-family: 'Rubik Glitch Pop', system-ui;    font-weight: 100;
       z-index: 1;
   width: 0;
   transition: width 0.5s;
-
+filter: invert(100%);
   }
   
   
   ul li:hover .image {
       width: 550px;
       height: 350px;
-      border-radius: 50px;
-
+      border-radius: 0%;
+      transition: width 0.8s;
   }
   
 
   
   .img-project {
-    border-radius: 30%;
-    margin-top: -10%;
+    margin-top: 10%;
   }
 
 
@@ -486,12 +481,14 @@ font-family: 'Rubik Glitch Pop', system-ui;    font-weight: 100;
 
 /* Project mobile version */
 #project-phone {
-
+background: url(https://i.pinimg.com/originals/9c/14/86/9c14863b9e64ffc65cdfda4cdc9a0b99.gif) ;
+background-size: cover;
 color: rgb(0, 0, 0);
-  border-radius: 100px;
+border: 1px solid black;
+  border-radius: 40px;
   position: relative;
   mix-blend-mode: none;
-  filter: invert(00%);
+  filter: invert(0%);
   display: block;
   margin-top: 0%;
   overflow-x: hidden;
@@ -538,7 +535,7 @@ border-radius: 30%;
   font-size: 1.5rem;
   font-weight: 200;
   left: 0%;
-  text-align: start;
+  text-align: end;
   align-items: center;
   position: relative;
   justify-content: center;
@@ -564,13 +561,13 @@ a.visit {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   mix-blend-mode: difference;
   color: rgb(255, 255, 255);  mix-blend-mode: difference;
-  font-weight: 400;
-  font-size: 13px;
+  font-weight: 300;
+  font-size: 15px;
   text-align: start;
   position: relative;
   letter-spacing: -0.4px;
   top: -20px;
-  text-transform: uppercase;
+  text-transform: lowercase;
 }
 
 
@@ -580,10 +577,9 @@ a.visit {
   text-decoration: none; 
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   mix-blend-mode: difference;
-  color: rgb(255, 255, 255);  mix-blend-mode: difference;
+  color: rgb(175, 175, 175);  mix-blend-mode: difference;
   font-weight: 400;
-  font-size: 11px;
-  text-align: center;
+  font-size: 14px ;
 position: relative;
 left: 77%;
 top: -5px;
@@ -625,7 +621,7 @@ animation: none;
   width: 95%;
   margin-left: 2.3%;
   margin-top: 30%;
-border-radius: 30px;
+border-radius: 0px;
   margin-bottom: 10%;
   display: flex;
   opacity: 0; /* Les images commencent invisibles */
@@ -648,12 +644,12 @@ border-radius: 30px;
   justify-content: start;
   display: flex;
   left: 65%;
-  height: 50%;
-  width: 20%;
+  height: auto;
+  width: auto;
   rotate: 0deg;
   border-radius: 0%;
   margin-top: 20%;
-  filter: invert(10%);
+  filter: invert(00%);
   rotate: 0deg;
 }
 
@@ -671,9 +667,9 @@ h2 {
   mix-blend-mode: difference;
   color: #ffffff;  text-align: start;
   max-width: 70%;
-  margin-top: 10%;
+  margin-top: 0%;
   margin-bottom: 30%;
-  font-weight: 200;
+  font-weight: 250;
 }
 
 
@@ -736,31 +732,6 @@ filter: invert(0%);
 
 
 
-#cursor {
-  filter: invert(0%);
-  position: fixed; 
-  width: 14px;
-  height: 20px;
-  border-radius: 50%;
-  border: 1px solid rgb(28, 26, 26);
-  background-color: rgb(255, 255, 255);
-  filter: blur(0px);
-  pointer-events: none;
-  left: -9999px;
-  mix-blend-mode: difference;
-z-index: 100000;
-clip-path: polygon(0 0, 0 0, 30% 50%, 0 100%, 0 98%, 50% 70%, 100% 100%, 100% 100%, 70% 50%, 100% 0, 100% 0, 50% 30%);
-
-
-}
-
-
-
-
-
-
-
-
 
 
 
@@ -777,7 +748,7 @@ clip-path: polygon(0 0, 0 0, 30% 50%, 0 100%, 0 98%, 50% 70%, 100% 100%, 100% 10
 #app {
   
   margin-top: 5%;
-filter: invert(100%);
+filter: invert(00%);
 
   perspective: 1200px;
   --o: 0;
@@ -1016,7 +987,7 @@ font-weight: 100;
 }
 
 .profile {
-  filter: invert(100%);
+  filter: invert(0%);
 
   border-radius: 100%;
   width: 28px;
@@ -1027,7 +998,7 @@ font-weight: 100;
 }
 
 .verified {
-  filter: invert(100%);
+  filter: invert(0%);
 
   width: 18px;
   margin-left: 5px;
@@ -1087,7 +1058,7 @@ margin-left: 35%;
 
 .container {
   position: relative;
-  padding: 0 5% 30%;
+  padding: 0 5% 20%;
   left: 0%;
 
 }
@@ -1193,7 +1164,6 @@ footer {
 footer p {
   animation: letter-breathe 3s ease-in-out infinite;
   font-family: 'TheFont';
-  mix-blend-mode: difference;
-  color: rgb(255, 255, 255);  font-size: 17rem;
+  color: rgb(0, 0, 0);  font-size: 17rem;
   text-align: center;
 }

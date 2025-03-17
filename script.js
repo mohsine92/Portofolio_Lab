@@ -98,13 +98,14 @@ const words = document.querySelectorAll("h2 span, .image__wrapper, .image__wrapp
 gsap.fromTo(
   words,
   {
-    opacity: 0,
+    opacity: 0.8,
     y: 10, // Légèrement décalé vers le bas
     filter: "blur(40px)", // État initial : flou
   },
   {
     opacity: 1,
     ease: "power1.out",
+
 
     y: 0, // Le mot remonte à sa position initiale
     filter: "blur(0px)", // Retire le flou
@@ -140,7 +141,21 @@ gsap.to(" #hello p", {
 
 
 
+    gsap.registerPlugin(ScrollTrigger);
 
+    gsap.to("#three-container", {
+        y: -900, // Ajuste la valeur selon l'effet souhaité
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".presentation2",
+            start: "bottom bottom", // Débute quand le bas de l'élément atteint le bas du viewport
+            scrub: 1, // Effet fluide au scroll
+        }
+    });
+    
+
+
+    
 
 
 gsap.to(" canvas", {
@@ -316,14 +331,14 @@ canvas.height = canvas.clientHeight;
 
 const params = {
   SIM_RESOLUTION: 228,
-    DYE_RESOLUTION: 2700,
+    DYE_RESOLUTION: 2800,
   DENSITY_DISSIPATION: .999,
   VELOCITY_DISSIPATION: .9,
   PRESSURE_ITERATIONS: 10,
-  SPLAT_RADIUS: 4 / window.innerHeight,
+  SPLAT_RADIUS: 3 / window.innerHeight,
 
   color: {
-    r: Math.random() - 0.7 + 0.3, // Mélange aléatoire avec une base de rose
+    r: Math.random() * 0.7 + 0.3, // Mélange aléatoire avec une base de rose
 
     g: Math.random() * 0.8 + 0.2, // Vert accentué
     b: Math.random() * 0.5  + 0.19      // Faible présence de bleu pour éviter le cyan
@@ -636,16 +651,6 @@ function render() {
 
 
 
-// Cursor 
-
-const cursor = document.querySelector('#cursor');
-
-window.addEventListener('mousemove', (e) => {
-  cursor.style.left = `${e.clientX - 10}px`;
-  cursor.style.top =  `${e.clientY - 10}px`;
-});
-
-
 
 
 
@@ -715,50 +720,68 @@ spans.forEach(function(span, i) {
 
 
 
+// CARD 3D CONTACT
 
 
+const speed = 7;
+const r = gsap.timeline({ repeat: -1 });
+const o = gsap.timeline({ repeat: -1 });
+const h = gsap.timeline({ repeat: -1 });
 
+const $ticket = document.querySelector(".ticket");
+$ticket.addEventListener('mouseenter', () => {
+    r.pause();
+    o.pause();
+    h.pause();
+})
+$ticket.addEventListener('mouseleave', () => {
+    r.play();
+    o.play();
+    h.play();
+})
 
+r.to("#app", {
+    "--r": "180deg",
+    "--p": "0%",
+    duration: speed,
+    ease: "sine.in"
+});
+r.to("#app", {
+    "--r": "360deg",
+    "--p": "100%",
+    duration: speed,
+    ease: "sine.out"
+});
+o.to("#app", {
+    "--o": 1,
+    duration: speed/2,
+    ease: "power1.in"
+});
+o.to("#app", {
+    "--o": 0,
+    duration: speed/2,
+    ease: "power1.out"
+});
 
-let current = 0;
-let target = 0;
-let ease = 0.1;
+h.to("#app", {
+    "--h": "100%",
+    duration: speed/2,
+    ease: "sine.in"
+});
+h.to("#app", {
+    "--h": "50%",
+    duration: speed/2,
+    ease: "sine.out"
+});
+h.to("#app", {
+    "--h": "0%",
+    duration: speed/2,
+    ease: "sine.in"
+});
+h.to("#app", {
+    "--h": "50%",
+    duration: speed/2,
+    ease: "sine.out"
+});
 
-let windowWidth, containerHeight, imageHeight, skewDiff;
-
-let container = document.querySelector('#three-container');
-
-function lerp(start, end, t){
-    return start * (1 - t) + end * t;
-}
-
-function setTransform(el, transform){
-    el.style.transform = transform;
-}
-
-function setupAnimation(){
-    windowWidth = window.innerWidth;
-    containerHeight = container.getBoundingClientRect().height;
-
-    document.body.style.height = `${containerHeight}px`;
-    smoothScroll()
-}
-
-function smoothScroll(){
-    current = lerp(current, target, ease);
-    current = parseFloat(current.toFixed(2));
-    target = window.scrollY
-    skewDiff = (target - current) * .015
-    setTransform(container, `translateY(${-current}px) skewY(${skewDiff}deg) `);
-    updateImages()
-    requestAnimationFrame(smoothScroll)
-}
-
-function updateImages(){
-    let ratio = current / imageHeight;
-    let intersectioRatioIndex, intersectionRatioValue;
-  
-}
-
-
-setupAnimation()
+Resources

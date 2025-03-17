@@ -569,21 +569,20 @@ canvas {
       }
 
       #three-container {
-        position: relative;
         top: 130%;
         scale: 0.8;
         display: flex;
        left: 0%;
        right: 40%;
        margin-bottom: 40%;
-       filter: invert(00%);
+       filter: invert(0%);
       }
       
 
     canvas {
       clip-path: polygon(0% 15%, 0 0, 15% 0%, 85% 0%, 100% 0, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
       border-radius: 0px !important ;
-        filter: invert(00%);
+        filter: invert(0%);
 
       width: 100%;
       height: 95vh;
@@ -614,7 +613,6 @@ position: absolute;
             color: rgb(255, 255, 255);
             font-weight: 150;
             font-size: 1.3rem;
-            mix-blend-mode: difference;
           }
       
       
@@ -623,21 +621,6 @@ position: absolute;
       margin-left: 0%;
         }
       
-        .about-p {
-          display: flex;
-          margin-top: 3%;
-          left: 3%;
-          line-height: 20px;
-text-transform: none;
-          position: absolute;
-          color: rgb(255, 255, 255);
-          mix-blend-mode: difference;
-          font-weight: 150;
-          font-size: 1.3rem;
-          letter-spacing: -0.8px;
-          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-         }
-
       h2  {
         
         display: none;
@@ -747,7 +730,7 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
     p {
       text-decoration: none;
       text-transform: uppercase;
-      font-size: 13px;
+      font-size: 15px;
       font-weight: 700;
       color: #000000;
     }
@@ -755,7 +738,7 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
 
     nav a,p {
 font-weight: 200;
-        color: white;
+        color: rgb(255, 255, 255);
     }
     
     .image-point {
@@ -836,6 +819,7 @@ gap: 3rem;
       
       .container-service p {
         mix-blend-mode: difference;
+        text-transform: center;
         color: rgb(255, 255, 255);        font-weight: 100;
       }
     
@@ -863,7 +847,6 @@ gap: 3rem;
         width: 100%;
         filter: invert(0%);
 
-        /*background: url(https://i.pinimg.com/originals/d8/e6/eb/d8e6eb6b345ada088e2448947c483ab4.gif) no-repeat center center;*/
       }
       
 
@@ -876,13 +859,12 @@ gap: 3rem;
 
     
 .container-stack li {
-  text-align: end;
+  text-align: center;
     animation: none; 
 position: relative;
     left: 0%;
     margin: 0px;
     top: 0%;
-    border: 1px solid rgb(0, 0, 0);
     border-radius: 100px;
     display: none;
    position: relative;
@@ -895,7 +877,7 @@ position: relative;
     animation-delay: 1s;
     animation-fill-mode: both;
     mix-blend-mode: difference;
-    color: rgb(255, 255, 255);    text-align: center;
+    color: rgb(0, 0, 0);    text-align: center;
     font-size: 3rem;
     mix-blend-mode: difference;
 text-transform: lowercase;
@@ -913,7 +895,7 @@ text-transform: uppercase;
     justify-content: center;
     display: block;
     mix-blend-mode: difference;
-    color: rgb(255, 255, 255);      font-size: 1.5rem;
+    color: rgb(0, 0, 0);      font-size: 1.5rem;
       left: 0%;
 
       top: 0% ;
@@ -938,8 +920,7 @@ footer p {
   text-transform: none;
   animation: letter-breathe 3s ease-in-out infinite;
   font-family: 'TheFont';
-  mix-blend-mode: difference;
-  color: rgb(255, 255, 255);  font-size: 4rem;
+  color: rgb(0, 0, 0);  font-size: 4rem;
   text-align: center;
 }
 
