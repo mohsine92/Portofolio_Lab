@@ -1,5 +1,8 @@
 
-//O'Clock
+
+
+
+// Clock
 
 document.addEventListener("DOMContentLoaded", function () {
   // Initialisez AOS
@@ -30,7 +33,7 @@ function showTime(){
   m = (m < 10) ? "0" + m : m;
   s = (s < 10) ? "0" + s : s;
   
-  var time = "FRA " + h +  ":" + m + ":" + s + " " + session + "";
+  var time = "• " + h +  ":" + m + ":" + s + " " + session + "";
   
   document.getElementById("MyClockDisplay").innerText = time;
   document.getElementById("MyClockDisplay").textContent = time;
@@ -47,33 +50,7 @@ showTime();
 
 
 
-
-
-
-// lenis scroll
-const lenis = new Lenis();
-
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
-
-
-  
-  
-
-
-}
-
-requestAnimationFrame(raf);
-
-
-
-
-
-
-
-
-//img 
+// IMG APPEAR - Project Section - DESKTOP
 
 
 let imagee = document.querySelectorAll('  .image');
@@ -91,9 +68,9 @@ document.addEventListener('mousemove', showImage);
 
 
 
+// GSAP & SCROLLTRIGGER EFFECT
 
-
-const words = document.querySelectorAll("h2 span, .image__wrapper, .image__wrapper-1");
+const words = document.querySelectorAll("h2 span");
 
 gsap.fromTo(
   words,
@@ -141,20 +118,6 @@ gsap.to(" #hello p", {
 
 
 
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap.to("#three-container", {
-        y: -900, // Ajuste la valeur selon l'effet souhaité
-        ease: "power2.out",
-        scrollTrigger: {
-            trigger: ".presentation2",
-            start: "bottom bottom", // Débute quand le bas de l'élément atteint le bas du viewport
-            scrub: 1, // Effet fluide au scroll
-        }
-    });
-    
-
-
     
 
 
@@ -175,12 +138,28 @@ gsap.to(" canvas", {
 
 
 
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.to("#three-container", {
+        y: -900, // Ajuste la valeur selon l'effet souhaité
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".presentation2",
+            start: "bottom bottom", // Débute quand le bas de l'élément atteint le bas du viewport
+            scrub: 1, // Effet fluide au scroll
+        }
+    });
     
-  
+
+    
+
+
+  // END OF GSAP & SCROLLTRIGGER EFFECT
    
 
 
-// Initialisation de la scène
+
+// Initialisation de la scène - CUBE THREE.JS
 const scene = new THREE.Scene();
 
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -309,6 +288,7 @@ window.addEventListener('mousemove', (event) => {
 });
          
 
+// END OF CUBE THREE.JS
 
 
 
@@ -321,8 +301,7 @@ window.addEventListener('mousemove', (event) => {
 
 
 
-
-
+// CANVAS - HERO SECTION
 
 const canvas = document.getElementsByTagName("canvas")[0];
 const image = document.getElementsByTagName("img")[0];
@@ -648,6 +627,7 @@ function render() {
 }
 
 
+// CANVAS - HERO SECTION
 
 
 
@@ -659,47 +639,6 @@ function render() {
 
 
 
-
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
-  // Créer un effet sticky avec ScrollTrigger pour la section complète
-  ScrollTrigger.create({
-    trigger: "#project-phone",
-    start: "bottom ", // Commence quand le haut de la section atteint le haut de la page
-    end: "bottom top", // Termine quand le bas de la section atteint le haut de la page
-    pinSpacing: false // Supprime l'espacement entre le contenu épinglé et le suivant
-  });
-
-  // Animation pour chaque image
-  gsap.utils.toArray('.project-image').forEach(function (image) {
-    gsap.fromTo(image, 
-      {
-        opacity: 0,
-        y: 10,
-        scale: 0,
-        rotation: 0,
-      },
-      {
-        scale:1,
-        opacity: 1,
-        y: 0,
-        x:0,                 
-        rotation:0,
-      
-
-        duration: 1,
-        ease: "bounce",
-        scrollTrigger: {
-          trigger: image,
-          start: "top 80%", // Animation commence quand le haut de l'image atteint 80% de la fenêtre
-          end: "top 50%", // Animation se termine quand le haut de l'image atteint 50% de la fenêtre
-          scrub: true // Animation fluide liée au scroll
-        }
-      });
-  });
-});
 
 
 
@@ -721,7 +660,6 @@ spans.forEach(function(span, i) {
 
 
 // CARD 3D CONTACT
-
 
 const speed = 7;
 const r = gsap.timeline({ repeat: -1 });
