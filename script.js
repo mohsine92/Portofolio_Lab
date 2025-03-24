@@ -90,10 +90,10 @@ gsap.fromTo(
       trigger: "canvas",
       start: "top -20%", // Début de l'animation quand le h1 est au centre de la vue
       end: "bottom top",
-      scrub: 3, // Augmentez la valeur pour un effet de défilement plus fluide
+      scrub: 2, // Augmentez la valeur pour un effet de défilement plus fluide
     },
     stagger: 0.4, // Augmentez le décalage entre chaque mot
-    duration: 3, // Augmentez la durée pour ralentir l'animation
+    duration: 2, // Augmentez la durée pour ralentir l'animation
   }
 );
 
