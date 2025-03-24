@@ -123,7 +123,7 @@ gsap.to(" #hello p", {
 
 gsap.to(" canvas", {
 
-  borderRadius: "10%",
+ opacity: 0,
       scrollTrigger: {
         trigger: ".presentation2",
         start: "top 80%",
@@ -138,7 +138,7 @@ gsap.to(" canvas", {
 
 
 
-    gsap.registerPlugin(ScrollTrigger);
+    /*gsap.registerPlugin(ScrollTrigger);
 
     gsap.to("#three-container", {
         y: -900, // Ajuste la valeur selon l'effet souhaité
@@ -148,7 +148,7 @@ gsap.to(" canvas", {
             start: "bottom bottom", // Débute quand le bas de l'élément atteint le bas du viewport
             scrub: 1, // Effet fluide au scroll
         }
-    });
+    });*/
     
 
     
@@ -159,140 +159,132 @@ gsap.to(" canvas", {
 
 
 
-// Initialisation de la scène - CUBE THREE.JS
-const scene = new THREE.Scene();
+  const scene = new THREE.Scene();
 
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-renderer.setSize(window.innerWidth, window.innerHeight);
-document.getElementById('three-container').appendChild(renderer.domElement);
-renderer.shadowMap.enabled = true;
-renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+  const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+  const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  document.getElementById('three-container').appendChild(renderer.domElement);
+  renderer.shadowMap.enabled = true;
+  renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
-// Charger la texture de base
-const loader = new THREE.TextureLoader();
-const baseTexture = loader.load('https://plus.unsplash.com/premium_photo-1674575954741-0f610c5dc2c0?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-baseTexture.wrapT = THREE.RepeatWrapping;
-baseTexture.repeat.set(100, 100);
+  // Charger la texture de base
+  const loader = new THREE.TextureLoader();
+  const baseTexture = loader.load('https://plus.unsplash.com/premium_photo-1674575954741-0f610c5dc2c0?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  baseTexture.wrapT = THREE.RepeatWrapping;
+  baseTexture.repeat.set(100, 100);
 
-// Créer le matériau pour l'effet de verre net
-const material = new THREE.MeshPhysicalMaterial({
-  map: baseTexture,
-  roughness: 0.1,
-  metalness: 0.10,
-  clearcoat: 10,
-  clearcoatRoughness: 0.1,
-  reflectivity: 0.1,
-  transmission: 0.9,
-  ior: 10.5,
-  side: THREE.DoubleSide,
-  transparent: true,
-  opacity: 7,
-});
-
-// Fonction pour créer une géométrie avec des coins arrondis
-function createRoundedBox(width, height, depth, radius, smoothness) {
-  const shape = new THREE.Shape();
-  shape.absarc(0, 0, radius, -Math.PI / 2, -Math.PI, true);
-  shape.absarc(0, height - radius * 2, radius, Math.PI, Math.PI / 2, true);
-  shape.absarc(width - radius * 2, height - radius * 2, radius, Math.PI / 2, 0, true);
-  shape.absarc(width - radius * 2, 0, radius, 0, -Math.PI / 2, true);
-
-  const geometry = new THREE.ExtrudeGeometry(shape, {
-    depth: depth - radius * 1,
-    bevelEnabled: true,
-    bevelSegments: smoothness * 2,
-    steps: 1,
-    bevelSize: radius,
-    bevelThickness: radius,
-    curveSegments: smoothness,
+  // Créer le matériau pour l'effet de verre net
+  const material = new THREE.MeshPhysicalMaterial({
+    map: baseTexture,
+    roughness: 0.1,
+    metalness: 0.10,
+    clearcoat: 10,
+    clearcoatRoughness: 0.1,
+    reflectivity: 0.1,
+    transmission: 0.9,
+    ior: 10.5,
+    side: THREE.DoubleSide,
+    transparent: true,
+    opacity: 7,
   });
 
-  geometry.center();
-  return geometry;
-}
+  // Fonction pour créer une géométrie avec des coins arrondis
+  function createRoundedBox(width, height, depth, radius, smoothness) {
+    const shape = new THREE.Shape();
+    shape.absarc(0, 0, radius, -Math.PI / 2, -Math.PI, true);
+    shape.absarc(0, height - radius * 2, radius, Math.PI, Math.PI / 2, true);
+    shape.absarc(width - radius * 2, height - radius * 2, radius, Math.PI / 2, 0, true);
+    shape.absarc(width - radius * 2, 0, radius, 0, -Math.PI / 2, true);
 
-// Créer un cube arrondi
-const geometry = createRoundedBox(2.3, 2.3, 2.3, 0.5, 150);
-const cube = new THREE.Mesh(geometry, material);
-cube.castShadow = true;
-cube.receiveShadow = true;
-scene.add(cube);
+    const geometry = new THREE.ExtrudeGeometry(shape, {
+      depth: depth - radius * 1,
+      bevelEnabled: true,
+      bevelSegments: smoothness * 2,
+      steps: 1,
+      bevelSize: radius,
+      bevelThickness: radius,
+      curveSegments: smoothness,
+    });
 
-// Ajouter une lumière ambiante douce
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
-scene.add(ambientLight);
+    geometry.center();
+    return geometry;
+  }
 
-// Ajouter plusieurs lumières directionnelles pour des reflets et ombres
-const directionalLight1 = new THREE.DirectionalLight(0xffffff, 1);
-directionalLight1.position.set(5, 5, 5);
-directionalLight1.castShadow = true;
-scene.add(directionalLight1);
+  // Créer un cube arrondi
+  const geometry = createRoundedBox(2.3, 2.3, 2.3, 0.5, 150);
+  const cube = new THREE.Mesh(geometry, material);
+  cube.castShadow = true;
+  cube.receiveShadow = true;
+  scene.add(cube);
 
-const directionalLight2 = new THREE.DirectionalLight(0xffffff, 0.7);
-directionalLight2.position.set(-5, -5, 5);
-scene.add(directionalLight2);
+  // Ajouter une lumière ambiante douce
+  const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+  scene.add(ambientLight);
 
-const directionalLight3 = new THREE.DirectionalLight(0xffffff, 0.5);
-directionalLight3.position.set(5, -5, -5);
-scene.add(directionalLight3);
+  // Ajouter plusieurs lumières directionnelles pour des reflets et ombres
+  const directionalLight1 = new THREE.DirectionalLight(0xffffff, 1);
+  directionalLight1.position.set(5, 5, 5);
+  directionalLight1.castShadow = true;
+  scene.add(directionalLight1);
 
-// Ajouter une lumière ponctuelle pour des reflets plus intenses
-const pointLight = new THREE.PointLight(0xffffff, 1.2, 50);
-pointLight.position.set(0, 5, 5);
-scene.add(pointLight);
+  const directionalLight2 = new THREE.DirectionalLight(0xffffff, 0.7);
+  directionalLight2.position.set(-5, -5, 5);
+  scene.add(directionalLight2);
 
-// Position de la caméra
-camera.position.set(0, 0, 9);
+  const directionalLight3 = new THREE.DirectionalLight(0xffffff, 0.5);
+  directionalLight3.position.set(5, -5, -5);
+  scene.add(directionalLight3);
 
-// Variables pour une rotation lissée
-let targetRotationY = 0;
-let targetRotationX = 0;
-let currentRotationY = 0;
-let currentRotationX = 0;
+  // Ajouter une lumière ponctuelle pour des reflets plus intenses
+  const pointLight = new THREE.PointLight(0xffffff, 1.2, 50);
+  pointLight.position.set(0, 5, 5);
+  scene.add(pointLight);
 
-// Fonction pour animer le rendu
-function animate() {
-  currentRotationY += (targetRotationY - currentRotationY) * 0.05;
-  currentRotationX += (targetRotationX - currentRotationX) * 0.05;
+  // Position de la caméra
+  camera.position.set(0, 0, 9);
 
-  cube.rotation.y = currentRotationY;
-  cube.rotation.x = currentRotationX;
+  // Variables pour une rotation lissée
+  let targetRotationY = 0;
+  let targetRotationX = 0;
+  let currentRotationY = 0;
+  let currentRotationX = 0;
 
-  renderer.render(scene, camera);
-  requestAnimationFrame(animate);
-}
-animate();
+  // Fonction pour animer le rendu
+  function animate() {
+    currentRotationY += (targetRotationY - currentRotationY) * 0.05;
+    currentRotationX += (targetRotationX - currentRotationX) * 0.05;
 
-// Fonction de gestion du scroll pour définir les cibles de rotation
-window.addEventListener('scroll', () => {
-  const scrollPosition = window.scrollY;
-  const rotationSpeed = 0.004;
-  targetRotationY = scrollPosition * rotationSpeed;
-  targetRotationX = scrollPosition * rotationSpeed / 1;
-});
+    cube.rotation.y = currentRotationY;
+    cube.rotation.x = currentRotationX;
 
-// Ajuster la taille du canvas au redimensionnement de la fenêtre
-window.addEventListener('resize', () => {
-  camera.aspect = window.innerWidth / window.innerHeight;
-  camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth, window.innerHeight);
-});
+    renderer.render(scene, camera);
+    requestAnimationFrame(animate);
+  }
+  animate();
 
-// Ajuster la rotation en fonction de la position de la souris
-window.addEventListener('mousemove', (event) => {
-  const mouseX = (event.clientX / window.innerWidth) * 6 - 1;
-  const mouseY = (event.clientY / window.innerHeight) * 6 - 1;
-  targetRotationY = mouseX * Math.PI; // Utilise un angle pour la rotation
-  targetRotationX = mouseY * Math.PI; // Utilise un angle pour la rotation
-});
-         
+  // Fonction de gestion du scroll pour définir les cibles de rotation
+  window.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY;
+    const rotationSpeed = 0.004;
+    targetRotationY = scrollPosition * rotationSpeed;
+    targetRotationX = scrollPosition * rotationSpeed / 1;
+  });
 
-// END OF CUBE THREE.JS
+  // Ajuster la taille du canvas au redimensionnement de la fenêtre
+  window.addEventListener('resize', () => {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+  });
 
-
-
-
+  // Ajuster la rotation en fonction de la position de la souris
+  window.addEventListener('mousemove', (event) => {
+    const mouseX = (event.clientX / window.innerWidth) * 6 - 1;
+    const mouseY = (event.clientY / window.innerHeight) * 6 - 1;
+    targetRotationY = mouseX * Math.PI; // Utilise un angle pour la rotation
+    targetRotationX = mouseY * Math.PI; // Utilise un angle pour la rotation
+  });
 
 
 
@@ -632,16 +624,5 @@ function render() {
 
 
 
-
-
-
-const spans = document.querySelectorAll('p span');
-
-const numLetters = spans.length;
-
-spans.forEach(function(span, i) {
-    const mappedIndex = i - (numLetters / 2)
-    span.style.animationDelay = (mappedIndex * 0.25) + 's';
-});
 
 
