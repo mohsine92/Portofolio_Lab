@@ -1,4 +1,4 @@
-<h1 align="left">Portofolio Lab</h1>
+<h1 align="left">Folio Lab</h1>
 
 ###
 
@@ -14,7 +14,7 @@
 
 ###
 
-<h4 align="left">🔭 Portofolio Lab is not just a website it's where I explore advanced concepts of animation and interactivity using modern technologies for the web. Each interaction is designed to be fluid and immersive, especially with responsive effects and 3D.</h4>
+<h4 align="left">🔭 Folio Lab is not just a website it's where I explore advanced concepts of animation and interactivity using modern technologies for the web. Each interaction is designed to be fluid and immersive, especially with responsive effects and 3D.</h4>
 
 ###
 
