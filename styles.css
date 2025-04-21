@@ -13,7 +13,7 @@ body {
   justify-content: center;
   width: 100%;
   font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-background-color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
 }
 
 
@@ -24,7 +24,7 @@ background-color: rgb(255, 255, 255);
   margin-top:70%;
   margin-bottom: 5%;
   text-transform: translateX(-50%) translateY(-50%);
-      color:#000000;
+      color:#ffffff;
       font-size: 1rem;
       letter-spacing: -0.3px;
       font-weight: 200;
@@ -46,7 +46,7 @@ canvas {
   left: 0%;
   border-top-right-radius: 0% !important;
   border-top-left-radius: 0% !important;
-  filter: invert(90%);
+  filter: invert(0%);
   mix-blend-mode: difference;
 }
 
@@ -59,7 +59,7 @@ canvas {
   left: 0%;
   top: 155%;
   position: absolute;
-filter: invert(00%);
+filter: invert(100%);
 mix-blend-mode: difference;
 padding-left: 30% ;
 }
@@ -233,14 +233,17 @@ color: #ffffff ;
 
 
 
-
+::selection {
+  background-color: white;
+  color: #000000;
+}
 
 
 .presentation2 span {
   font-size: 2rem;
   font-weight: 100;
   letter-spacing: -1px;
-  color: #000000;
+  color: #ffffff;
 mix-blend-mode: none;
 }
 
@@ -265,7 +268,7 @@ position: relative;
   font-style: normal;
   font-variation-settings:
     "ROND" 0; 
-color: #000000;
+color: #ffffff;
 margin-top: 80%;
 }
 
@@ -274,7 +277,7 @@ margin-top: 80%;
 h2 {
   margin:  3%;
   -webkit-font-smoothing:antialiased;
-  color: #000000;  text-align: start;
+    text-align: start;
   max-width: 70%;
   margin-top: 0%;
   margin-bottom: 30%;
@@ -296,7 +299,7 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
     "ROND" 0; 
   white-space: nowrap;
   text-align: center;
-    color: #000000;
+    color: #ffffff;
 }
 
 
@@ -308,6 +311,7 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
 
 
   .image-point {
+
     border-radius: 30px;
       justify-content: left;
       align-items: left;
@@ -370,7 +374,6 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
     font-weight: 100;
     font-style: normal;
 
-    mix-blend-mode: difference;
     color: #ffffff;  
     line-height: 1.25em;
     text-transform: uppercase;
@@ -390,29 +393,33 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
   }
   
   .image-point ul li .image {
+    filter: invert(0%);
+
       position: absolute;
       top: 0;
       left: 0;
-      translate: -50% -40%;
+      translate: -50% -50%;
       pointer-events: none;
       z-index: 1;
        width: 0;
   transition: width 0.5s;
-filter: invert(100%);
 border-radius: 0px;
 
   }
   
   
   ul li:hover .image {
-      width: 550px;
+      width: 450px;
       height: 350px;
-      border-radius: 30px;
-
       transition: width 0.8s;
   }
   
 
+  ul li:hover img {
+    width: 450px;
+    height: 150px;
+    transition: width 1.8s;
+}
   
   .img-project {
     margin-top: 10%;
@@ -567,6 +574,8 @@ border-radius: 20px;
 }
 
 #app {
+  mix-blend-mode: difference;
+  filter: invert(0%);
   margin-top: 5%;
   perspective: 1200px;
   --o: 0;
@@ -615,8 +624,10 @@ text-transform: none;
 
 .back p {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: #ffffff;
-  left: 10px;
+  color: #000000;
+  left: 0px;
+  margin-top: -5px;
+  margin-left: 0;
 }
 
 .front,
@@ -678,7 +689,7 @@ text-transform: none;
 
 
 .holo {
-  --space: 5%;
+/*  --space: 5%;
   --red: hsl(0, 12%, 70%);
   --orange: hsl(0, 0%, 100%);
   --yellow: hsl(60, 25%, 68%);
@@ -698,8 +709,9 @@ text-transform: none;
 
   mix-blend-mode: screen;
   
-  filter: blur(10px) brightness(0.8) contrast(10.2) ; /* Ajustements pour un effet glass subtil */
-  opacity: var(--o); 
+  filter: blur(10px) brightness(0.8) contrast(10.2) ; /* Ajustements pour un effet glass subtil 
+  opacity: var(--o); */
+  background-color: rgb(233, 233, 233);
 }
 
 
@@ -710,13 +722,15 @@ text-transform: none;
   z-index: 2;
 }
 
- a {
+ #app a {
   font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: #ffffff;
-  font-weight: 300;
+  color: #000000;
+  font-weight: 200;
+  margin-bottom: 25%;
 }
 
 .logoo {
+  filter: invert(00%);
 
   border-radius: 100%;
   width: 50%;
@@ -725,7 +739,7 @@ text-transform: none;
 }
 
 .back .logoo {
-  filter: invert(100%);
+  filter: invert(00%);
   position: absolute;
   right: var(--gutter);
   top: 13%;
@@ -742,10 +756,10 @@ text-transform: none;
 
 h3 {
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 200;
   line-height: 2;
   margin: 1.2em 0;
-
+color: #000000;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
 }
@@ -755,19 +769,22 @@ h3 {
 [contenteditable] {
   outline: none;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-font-weight: 100;
+font-weight: 200;
+color: #000000;
 }
 
 
 [contenteditable]:focus {
-  background: rgba(0, 0, 0, 0.8);
-  color: rgb(255, 255, 255);
+  background: rgba(164, 17, 17, 0.8);
+  color: rgb(0, 0, 0);
 }
 
 .qr {
-  max-width: 40%;
+  margin-top: 8%;
+margin-left: -2.5%;
+  max-width: 50%;
   display: block;
-  filter: invert(100%);
+  filter: invert(00%);
   image-rendering: optimize-speed;
   image-rendering: crisp-edges;
 }
@@ -805,28 +822,35 @@ font-weight: 100;
   display: flex;
   align-items: center;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-weight: 600;
+  font-weight: 200;
+  color: #000000;
 }
 
-.profile {
-  filter: invert(0%);
 
+
+.profile {
+  filter: invert(00%);
+  box-shadow: 0 0 0 0.33px rgb(0, 0, 0);
   border-radius: 100%;
   width: 28px;
-  box-shadow: 0 0 0 0.33px rgb(0, 0, 0);
   margin-right: 10px;
   image-rendering: optimize-speed;
   image-rendering: crisp-edges;
 }
 
 .verified {
-  filter: invert(0%);
-
+  filter: invert(00%);
+color: #000000;
   width: 18px;
   margin-left: 5px;
 }
 .usernum {
-  font-size: 20px;
+  display: flex;
+  align-items: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 200;
+  color: #000000;
+  font-size: 15px;
 }
 
 img {
@@ -888,7 +912,7 @@ margin-left: 35%;
   animation: letter-breathe 3s ease-in-out infinite;  animation-iteration-count: infinite;
   animation-delay: 1s;
   animation-fill-mode: both;
-  color: #000000;  font-size: 15rem;
+  color: #ffffff;  font-size: 15rem;
   font-family: 'TheFont';
 text-align: center;
 }
@@ -898,8 +922,8 @@ text-align: center;
 .container-service {
   padding: 10% 5%;
   border-radius: 30px;
-  color: #000000;
-  border: 1px solid rgb(0, 0, 0);
+  color: #ffffff;
+  border: 1px solid rgb(255, 255, 255);
 }
 
 
@@ -927,19 +951,18 @@ padding: 18% 15%;
 
 
 .container-stack li:hover {
-  background-color: rgb(0, 0, 0);
-  color: #ffffff;
+  background-color: rgb(255, 255, 255);
+  color: #000000;
   border: none;
-  transition:all 1s ;
+  transition: all 1s ;
  }
 
 
 
 .container-stack li:not(:hover) {
-  color: #000000;
-  border: 1px solid rgb(255, 255, 255);
+  color: #ffffff;
   transition: all 1s ;
-  border: 0.8px solid black;
+  border: 1px solid rgb(255, 255, 255);
 
  }
 
@@ -948,7 +971,7 @@ padding: 18% 15%;
 
 .container li  {
 display: flex;
-color: #000000;  font-size: 1rem;
+color: #ffffff;  font-size: 1rem;
   font-weight: 200;
   left: 5%;
   margin-bottom: 10px;
@@ -973,6 +996,14 @@ footer {
 footer p {
   animation: letter-breathe 3s ease-in-out infinite;
   font-family: 'TheFont';
-  color: rgb(0, 0, 0);  font-size: 17rem;
+  color: rgb(235, 235, 235);  font-size: 17rem;
   text-align: center;
+}
+
+.image-footer {
+height: 300px;
+width: 100%;
+position: relative;
+margin-top: 100%;
+
 }

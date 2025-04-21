@@ -104,7 +104,7 @@ gsap.fromTo(
 
 gsap.to(" #hello p", {
   
-  scale:0.7,
+  scale:0.9,
       scrollTrigger: {
         trigger: "body",
         start: "top",
