@@ -234,8 +234,8 @@ color: #ffffff ;
 
 
 ::selection {
-  background-color: white;
-  color: #000000;
+  background-color: rgb(107, 161, 255);
+  color: #ffffff;
 }
 
 
@@ -996,14 +996,6 @@ footer {
 footer p {
   animation: letter-breathe 3s ease-in-out infinite;
   font-family: 'TheFont';
-  color: rgb(235, 235, 235);  font-size: 17rem;
+  color: rgb(235, 235, 235);  font-size: 20rem;
   text-align: center;
-}
-
-.image-footer {
-height: 300px;
-width: 100%;
-position: relative;
-margin-top: 100%;
-
 }

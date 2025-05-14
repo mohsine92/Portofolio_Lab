@@ -70,7 +70,7 @@ document.addEventListener('mousemove', showImage);
 
 // GSAP & SCROLLTRIGGER EFFECT
 
-const words = document.querySelectorAll("h2 span");
+/*const words = document.querySelectorAll("h2 span");
 
 gsap.fromTo(
   words,
@@ -95,7 +95,7 @@ gsap.fromTo(
     stagger: 0.4, // Augmentez le décalage entre chaque mot
     duration: 2, // Augmentez la durée pour ralentir l'animation
   }
-);
+);*/
 
 
 
