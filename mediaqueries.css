@@ -635,6 +635,7 @@ position: fixed;
     
     
       .clock {
+        position: relative;
         top: 70.5%;
         font-size: 11px;
         display: flex;   
@@ -651,7 +652,6 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
         text-align: start;
       border-radius: 30px;
         font-weight: 150;
-        letter-spacing: -1px;
         position: relative;
         mix-blend-mode: difference;
         color: rgb(255, 255, 255);
@@ -760,13 +760,8 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
       .container-service p {
         mix-blend-mode: difference;
         text-transform: center;
-        color: rgb(255, 255, 255);        font-weight: 100;
+        color: rgb(0, 0, 0);        font-weight: 100;
       }
-    
-    
-    
-      
-
 
 
       .container {
@@ -774,14 +769,9 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
         padding: 30% 0% 10%;
         left: 0%;
         width: 100%;
-        filter: invert(100%);
 
       }
-      
-
-
-
-
+    
       .container-stack {
         display: none;
       }
@@ -805,11 +795,10 @@ position: relative;
   margin-top: 0%;
     animation-delay: 1s;
     animation-fill-mode: both;
-    mix-blend-mode: difference;
-    color: rgb(0, 0, 0);    text-align: center;
+    color: rgb(0, 0, 0);  
+      text-align: center;
     font-size: 3rem;
-    mix-blend-mode: difference;
-text-transform: lowercase;
+    text-transform: none;
   }
 
 
@@ -823,13 +812,11 @@ text-transform: uppercase;
     letter-spacing: -1px;
     justify-content: center;
     display: block;
-    mix-blend-mode: difference;
-    color: rgb(0, 0, 0);      font-size: 1.5rem;
+    color: rgb(0, 0, 0);    
+      font-size: 1.5rem;
       left: 0%;
-
       top: 0% ;
       position: relative;
-
       margin-bottom: 1.5rem; 
 font-weight: 150;  
  }
@@ -886,7 +873,7 @@ footer p {
   text-transform: none;
   animation: letter-breathe 3s ease-in-out infinite;
   font-family: 'TheFont';
-  color: rgb(213, 213, 213);  font-size: 5rem;
+  color: rgb(0, 0, 0);  font-size: 5rem;
   text-align: center;
 }
 

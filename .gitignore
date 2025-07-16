@@ -1,0 +1,9 @@
+.git
+.vscode
+package.json
+package-lock.json
+projectNames.js
+Project One.code-workspace
+node_modules
+CNAME
+assets

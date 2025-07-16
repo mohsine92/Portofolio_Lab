@@ -13,18 +13,18 @@ body {
   justify-content: center;
   width: 100%;
   font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-background-color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);
 }
 
 
 .clock {
-  position: absolute;
+  position: relative;
     width: 20%;
   left: 80%;
-  margin-top:70%;
+  margin-top:-10%;
   margin-bottom: 5%;
   text-transform: translateX(-50%) translateY(-50%);
-      color:#ffffff;
+      color:#000000;
       font-size: 1rem;
       letter-spacing: -0.3px;
       font-weight: 200;
@@ -86,7 +86,6 @@ padding-left: 30% ;
 
 
 
-
 .first  {
   font-family: 'TheFont';
   z-index: 5;
@@ -95,18 +94,15 @@ font-weight: 100;
   margin-top:30%;
   font-size: 350%;
   line-height: 0%;
-mix-blend-mode: difference;
+  mix-blend-mode: difference;
   color: #ffffff;
-  position: fixed;
+    position: fixed;
   display: flex;
   text-align: start;
-
-width: 100%;
+  width: 100%;
   animation: letter-breathe 2s ease-in-out infinite;
   animation-delay: 1s;
   animation-fill-mode: both;
-
- 
   }
 
   
@@ -126,10 +122,8 @@ mix-blend-mode: difference;
   position: fixed;
   display: flex;
   justify-content: center;
-
   text-align: center;
-
-width: 100%;
+ width: 100%;
   animation: letter-breathe 2s ease-in-out infinite;
   animation-delay: 1s;
   animation-fill-mode: both;
@@ -199,14 +193,10 @@ text-transform: uppercase;
 }
 
 
-
-
-
-
 .disponibilty {
-  filter: invert(00%);
-color: #ffffff ;
-  background-color: rgb(0, 0, 0);
+  filter: invert(100%);
+color: #000000 ;
+  background-color: rgb(255, 255, 255);
   padding: 10px;
   width: 11.5%;
   position: relative;
@@ -231,10 +221,8 @@ color: #ffffff ;
 }
 
 
-
-
 ::selection {
-  background-color: rgb(107, 161, 255);
+  background-color: rgb(0, 0, 0);
   color: #ffffff;
 }
 
@@ -243,7 +231,7 @@ color: #ffffff ;
   font-size: 2rem;
   font-weight: 100;
   letter-spacing: -1px;
-  color: #ffffff;
+  color: #000000;
 mix-blend-mode: none;
 }
 
@@ -254,22 +242,21 @@ mix-blend-mode: none;
 
 
 .presentation2  {
-
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 position: relative;
-  padding: 0px;
-  width: 80%;
+  padding-bottom: 20%;
+  width: 90%;
   text-align: start;
   font-weight: 150;
   left: 3%;
   font-size: 2rem;
-  letter-spacing: -1px;  
   font-optical-sizing: auto;
   font-style: normal;
   font-variation-settings:
     "ROND" 0; 
-color: #ffffff;
+color: #000000;
 margin-top: 80%;
+
 }
 
 
@@ -433,11 +420,10 @@ border-radius: 0px;
 /* Project mobile version */
 
 #project-phone {
-background: url(https://i.pinimg.com/originals/9c/14/86/9c14863b9e64ffc65cdfda4cdc9a0b99.gif) ;
 background-size: cover;
 color: rgb(0, 0, 0);
 border: 1px solid black;
-  border-radius: 40px;
+  border-radius: 70px;
   position: relative;
   mix-blend-mode: none;
   display: block;
@@ -535,6 +521,10 @@ top: -50px;
 
 }
 
+.image {
+  filter: invert(100%) !important;
+
+}
 
 
 
@@ -558,7 +548,7 @@ border-radius: 20px;
   display: flex;
   transform: translateY(50px); /* Les images commencent un peu plus bas */
   transition: opacity 0.5s ease, transform 0.5s ease; /* Ajoute une transition CSS par défaut */
-  filter: invert(0%) !important;
+  filter: invert(100%);
 
 }
 
@@ -634,7 +624,8 @@ text-transform: none;
 .back {
   grid-area: 1/1;
   background-color: #695078;
-;
+  filter: invert(100%);
+
   background-image: radial-gradient(
       circle at var(--p) 50%,
       rgb(0, 0, 0) 10%,
@@ -731,7 +722,6 @@ text-transform: none;
 
 .logoo {
   filter: invert(00%);
-
   border-radius: 100%;
   width: 50%;
   place-self: center;
@@ -829,7 +819,7 @@ margin-left: -2.5%;
 
 
 .profile {
-  filter: invert(00%);
+  filter: invert(100%);
   box-shadow: 0 0 0 0.33px rgb(0, 0, 0);
   border-radius: 100%;
   width: 28px;
@@ -839,7 +829,7 @@ margin-left: -2.5%;
 }
 
 .verified {
-  filter: invert(00%);
+  filter: invert(100%);
 color: #000000;
   width: 18px;
   margin-left: 5px;
@@ -876,6 +866,7 @@ position: relative;
   padding: 100px;
   z-index: 999;
   width: 100%;
+  filter: invert(100%);
 }
 
 .ticket {
@@ -912,7 +903,7 @@ margin-left: 35%;
   animation: letter-breathe 3s ease-in-out infinite;  animation-iteration-count: infinite;
   animation-delay: 1s;
   animation-fill-mode: both;
-  color: #ffffff;  font-size: 15rem;
+  color: #000000;  font-size: 15rem;
   font-family: 'TheFont';
 text-align: center;
 }
@@ -922,8 +913,8 @@ text-align: center;
 .container-service {
   padding: 10% 5%;
   border-radius: 30px;
-  color: #ffffff;
-  border: 1px solid rgb(255, 255, 255);
+  color: #000000;
+  border: 1px solid rgb(0, 0, 0);
 }
 
 
@@ -951,8 +942,8 @@ padding: 18% 15%;
 
 
 .container-stack li:hover {
-  background-color: rgb(255, 255, 255);
-  color: #000000;
+  background-color: rgb(0, 0, 0);
+  color: #ffffff;
   border: none;
   transition: all 1s ;
  }
@@ -960,9 +951,9 @@ padding: 18% 15%;
 
 
 .container-stack li:not(:hover) {
-  color: #ffffff;
+  color: #000000;
   transition: all 1s ;
-  border: 1px solid rgb(255, 255, 255);
+  border: 1px solid rgb(0, 0, 0);
 
  }
 
@@ -971,7 +962,7 @@ padding: 18% 15%;
 
 .container li  {
 display: flex;
-color: #ffffff;  font-size: 1rem;
+color: #000000;  font-size: 1rem;
   font-weight: 200;
   left: 5%;
   margin-bottom: 10px;
@@ -988,7 +979,7 @@ color: #ffffff;  font-size: 1rem;
 }
 
 footer {
-  padding-top: 20%;
+  padding-top: 10%;
 
 }
 
@@ -996,6 +987,6 @@ footer {
 footer p {
   animation: letter-breathe 3s ease-in-out infinite;
   font-family: 'TheFont';
-  color: rgb(235, 235, 235);  font-size: 20rem;
+  color: rgb(0, 0, 0);  font-size: 20rem;
   text-align: center;
 }
